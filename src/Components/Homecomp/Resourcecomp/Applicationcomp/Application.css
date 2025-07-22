@@ -1,0 +1,40 @@
+.application-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.application-left img {
+  max-width: 500px;
+  width: 100%;
+}
+
+.application-right {
+  max-width: 400px;
+}
+
+.application-right h2 {
+  font-size: 28px;
+  color: #003873;
+}
+
+.application-right p {
+  font-size: 18px;
+  margin-top: 1em;
+  font-weight: 200;
+  color: #344ea1;
+}
+
+.arrow-button {
+  background-color: #003873;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}

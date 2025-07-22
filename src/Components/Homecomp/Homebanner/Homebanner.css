@@ -1,0 +1,101 @@
+.video-banner-container {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.video-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 56, 115, 0.8); 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.text-content {
+  color: white;
+  max-width: 90%;
+}
+
+.text-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.text-content button {
+  padding: 12px 28px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 4px;
+}
+
+.text-content button:hover {
+  background: white;
+  color: #003873;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 14px;
+  width: 14px;
+  margin: 0 8px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.dot.active,
+.dot:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .video-banner-container {
+    height: 75vh;
+  }
+
+  .text-content h1 {
+    font-size: 2rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .text-content button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
