@@ -5,7 +5,7 @@ import Paragraph from "./Paragraphcomp/Paragraph"
 import ProductCards from "./Productcomp/Productcards"
 import Industries from "./Industriescomp/Industries"
 import Tabs from "../Homecomp/Resourcecomp/Tabcomp/Tabs"
-
+import ContactUs from './Contactuscomp/Contactus';
 const Homepage = () => {
     return (
         <div>
@@ -18,6 +18,7 @@ const Homepage = () => {
     <ProductCards/>
     <Industries/>
     <Tabs/>
+    <ContactUs/>
         </div>
     );
 }

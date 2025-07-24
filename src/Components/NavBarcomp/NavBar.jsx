@@ -34,9 +34,9 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
 const NavLink = styled(Link)(({ theme }) => ({
   textDecoration: 'none',
   color: '#003873',
-  fontFamily: '"Poppins", sans-serif',
-  fontWeight: 400,
-  fontSize: '1.1em',
+  fontFamily: '"Montserrat", sans-serif',
+  fontWeight: 300,
+  fontSize: '1em',
   margin: theme.spacing(0, 2),
   whiteSpace: 'nowrap',
   transition: 'color 0.3s ease-in-out',
@@ -140,47 +140,47 @@ const handleResourcesPopoverClose = () => {
     }}>
       <MenuItem 
         component={Link} 
-        to="/surround-view-cameras" 
+        to="/Product 1" 
         onClick={() => {
           handlePopoverClose();
           setMobileOpen(false);
           setMobileMenuAnchor(null);
         }}
       >
-        Surround View Cameras
+        Product 1
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/forward-facing-cameras" 
+        to="/Product 2" 
         onClick={() => {
           handlePopoverClose();
           setMobileOpen(false);
           setMobileMenuAnchor(null);
         }}
       >
-        Forward Facing Cameras
+        Product 2
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/rear-view-cameras" 
+        to="/Product 3" 
         onClick={() => {
           handlePopoverClose();
           setMobileOpen(false);
           setMobileMenuAnchor(null);
         }}
       >
-        Rear View Cameras
+       Product 3
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/driver-monitoring-cameras" 
+        to="/Product 4" 
         onClick={() => {
           handlePopoverClose();
           setMobileOpen(false);
           setMobileMenuAnchor(null);
         }}
       >
-        In-Cabin Monitoring Cameras
+       Product 4
       </MenuItem>
     </Box>
   );
@@ -206,7 +206,7 @@ const handleResourcesPopoverClose = () => {
           setMobileOpen(false);
         }}
       >
-        Agricultural Vehicles
+        Industries 1
       </MenuItem>
       <MenuItem 
         component={Link} 
@@ -216,9 +216,9 @@ const handleResourcesPopoverClose = () => {
           setMobileOpen(false);
         }}
       >
-        Mining Vehicles
+       Industries 2
       </MenuItem>
-      <MenuItem 
+      {/* <MenuItem 
         component={Link} 
         to="/industries/autonomous-delivery-robot-cameras" 
         onClick={() => {
@@ -278,7 +278,7 @@ const handleResourcesPopoverClose = () => {
         }}
       >
         Lawn Mowers
-      </MenuItem> 
+      </MenuItem>  */}
     </Box>
   );
 const ResourcesMenu = (
@@ -477,7 +477,7 @@ const ResourcesMenu = (
         <ListItem disablePadding>
           <ListItemButton 
             component={Link} 
-            to="/contact-us" 
+            to="/company/contact-us" 
             onClick={handleDrawerToggle}
             sx={{ '&:hover': { color: '#00aeef' } }}
           >
@@ -514,7 +514,7 @@ const ResourcesMenu = (
     {isDesktop && (
       <Box sx={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
         <NavLink to="/">Home</NavLink>
-        <Divider orientation="vertical" flexItem />
+        {/* <Divider orientation="vertical" flexItem /> */}
       <NavLink
   {...(open && { 'aria-owns': 'products-menu' })}
   aria-haspopup="true"
@@ -527,7 +527,7 @@ const ResourcesMenu = (
               {isDesktop && (
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
                   {/* ... existing nav items ... */}
-                  <Divider orientation="vertical" flexItem />
+                  {/* <Divider orientation="vertical" flexItem /> */}
                   <NavLink
                     aria-haspopup="true"
                     onMouseOver={handleIndustriesPopoverOpen}
@@ -540,7 +540,7 @@ const ResourcesMenu = (
               <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent:"space-around" }}>
               {isDesktop && (
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
-                  <Divider orientation="vertical" flexItem />
+                  {/* <Divider orientation="vertical" flexItem /> */}
                   <NavLink
                     aria-haspopup="true"
                     onMouseOver={handleResourcesPopoverOpen}
@@ -550,8 +550,7 @@ const ResourcesMenu = (
                 </Box>
               )}
             </Box>
-        <Divider orientation="vertical" flexItem />
-        <NavLink to="/contact-us">Contact Us</NavLink>
+        <NavLink to="/company/contact-us">Contact Us</NavLink>
       </Box>
     )}
       

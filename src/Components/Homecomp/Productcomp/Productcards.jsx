@@ -37,13 +37,15 @@ const ProductCards = () => {
   return (
    <div className="product-section">
       <h2 className="product-title">Products</h2>
+            <div className="mainContainer">
+
       <div className="card-container">
         {productData.map((item, index) => (
           <div
             className="product-card"
             key={index}
             data-aos="fade-right"
-            data-aos-delay={index * 300} // stagger delay for each card
+            data-aos-delay={index * 300}
           >
             <img src={item.image} alt={item.title} className="product-image" />
             <h4 className="product-heading">{item.title}</h4>
@@ -51,6 +53,7 @@ const ProductCards = () => {
             <div className="arrow-button">➜</div>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );

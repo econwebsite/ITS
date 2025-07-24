@@ -9,6 +9,7 @@ import TotalHome from "./Components/Homecomp/TotalHome";
 import ScrollToTop from "./ScrollToTop";
 import Footer from "./Components/Footercomp/Footer"
 import "./App.css";
+import ContactUs from './Components/Homecomp/Contactuscomp/Contactus';
 
 
 const App = () => {
@@ -24,6 +25,8 @@ const App = () => {
           <NavBar />
           <Routes>
             <Route path="/" element={<TotalHome />} />
+           <Route path="/company/contact-us" element={<ContactUs />} />
+
           </Routes>
           <Footer/>
         </div>

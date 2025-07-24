@@ -2,11 +2,13 @@
   background-color: #f1f2f2;
   padding: 1em;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .industries-title {
   font-size: 2rem;
-  color: #1b2c55;
+  color: #344ea1;
+  font-weight: 400;
   margin-bottom: 30px;
 }
 
@@ -32,7 +34,7 @@
   width: 220px;
   height: 220px;
   object-fit: contain;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
   transition: transform 0.5s ease;
 }
 .industry-img.active {

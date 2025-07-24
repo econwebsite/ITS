@@ -21,8 +21,9 @@
 }
 
 .footer-logo {
-  width: 300px;
-  height: 86px;
+  width: 240px;
+  height: 72px;
+  margin-bottom: 10px;
   max-width: 100%;
 }
 
@@ -108,13 +109,14 @@
 }
 
 .subscribe-box button:hover {
-  background-color: #112157;
+  background-color: #00aeef;
 }
 
 
 @media (max-width: 768px) {
   .footer-container {
     padding: 20px 10px;
+    gap: 5px;
   }
   .footer-col.center{
     flex: 1 1 100px;
@@ -173,4 +175,11 @@
   .subscribe-box button {
     width: 150px;
   }
+  .footer-col.right {
+  flex: 0;
+}
+.footer-logo {
+  margin-bottom:5px;
+}
+
 }

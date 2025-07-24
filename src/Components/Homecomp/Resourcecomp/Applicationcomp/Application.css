@@ -10,10 +10,13 @@
 .application-left img {
   max-width: 500px;
   width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .application-right {
   max-width: 400px;
+  text-align: left;
 }
 
 .application-right h2 {
@@ -37,4 +40,48 @@
   margin-top: 20px;
   cursor: pointer;
   border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.arrow-button:hover {
+  background-color: #00509e;
+}
+
+@media (max-width: 1024px) {
+  .application-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .application-right {
+    max-width: 100%;
+  }
+
+  .application-right h2 {
+    font-size: 24px;
+  }
+
+  .application-right p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .application-left img {
+    max-width: 100%;
+  }
+
+  .application-right h2 {
+    font-size: 20px;
+  }
+
+  .application-right p {
+    font-size: 14px;
+  }
+
+  .arrow-button {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
 }

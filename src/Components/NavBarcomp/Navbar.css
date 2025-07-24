@@ -12,7 +12,6 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  /* margin-bottom: 5px; */
 }
 
 .Toggle-background{
@@ -79,7 +78,7 @@ width: 95% !important;
     margin: 0 10px;
     text-decoration: none !important;
     color: #003873;
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 1.1em;
     white-space: nowrap;

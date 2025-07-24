@@ -30,6 +30,8 @@ const Industries = () => {
   return (
     <div className="industries-section">
       <h2 className="industries-title">Industries</h2>
+                  <div className="mainContainer">
+
       <div className="industries-grid">
         {comp.map((item, index) => (
           <div
@@ -48,6 +50,7 @@ const Industries = () => {
             </p>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );
