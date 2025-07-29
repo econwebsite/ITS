@@ -25,10 +25,17 @@ const Footer = () => {
 
             <div className="footer-col center">
               <h3>Contact Us</h3>
-              <p><i className="ri-phone-fill" style={{color:"#00aeef"}}></i> +1 408 766 7503</p>
-              <p><i className="ri-mail-fill" style={{color:"#00aeef"}}></i> camerasolutions@e-consystems.com</p>
+              <p>
+                <a href="tel:+14087667503" style={{ color: "inherit", textDecoration: "none" }}>
+                  <i className="ri-phone-fill" style={{ color: "#00aeef" }}></i> +1 408 766 7503
+                </a>
+              </p>
+              <p>
+                <a href="mailto:camerasolutions@e-consystems.com" style={{ color: "inherit", textDecoration: "none" }}>
+                  <i className="ri-mail-fill" style={{ color: "#00aeef" }}></i> camerasolutions@e-consystems.com
+                </a>
+              </p>
             </div>
-
             <div className="footer-col right">
               <h3>Stay Updated</h3>
               <div className="subscribe-box">

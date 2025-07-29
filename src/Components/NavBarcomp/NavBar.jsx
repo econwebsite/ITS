@@ -503,8 +503,8 @@ const ResourcesMenu = (
         src={dentallogo} 
         alt="Dental Logo" 
         style={{ 
-          height: isDesktop ? '80px' : '56px', 
-          width: isDesktop ? '260px' : 'auto', 
+          height: isDesktop ? '65px' : '56px', 
+          width: isDesktop ? '240px' : 'auto', 
           objectFit: 'contain',
           margin:"5px",
           cursor: 'pointer'
