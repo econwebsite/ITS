@@ -1,0 +1,188 @@
+.Marketcomp-Wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.Marketcomp-Wrapper h1 {
+  font-size: 2em;
+  text-align: center;
+  padding: 40px 20px;
+  color: #344ea1;
+  font-weight: 300;
+}
+
+.Marketcomp-Tabs {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.Marketcomp-TabItem {
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  color: #333;
+  font-weight: 400;
+}
+
+.Marketcomp-TabItem.active {
+  background-color: #4190fc;
+  color: white;
+  font-weight: 500;
+}
+
+.Marketcomp-tab-paragraph {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 20px;
+  line-height: 1.6;
+  color: #003873;
+  background-color: #f6f8f8;
+}
+
+.Marketcomp-SectionBlock {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+}
+
+.Marketcomp-section-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1px;
+}
+
+.Marketcomp-text-side {
+  flex: 1 1 500px;
+}
+
+.Marketcomp-text-side h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #344ea1;
+}
+
+.Marketcomp-text-side p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.Marketcomp-image-side {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.Marketcomp-image-side img {
+  max-width: 100%;
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.Marketcomp-product-heading {
+  font-size: 20px;
+  margin: 24px 0;
+  color: #344ea1;
+  text-align: center;
+  width: 100%;
+  
+}
+
+.Marketcomp-product-grid-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+    display: flex;
+  justify-content: center;
+}
+.Marketcomp-product-grid {
+ display: flex;
+
+  justify-content: center; 
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+
+.Marketcomp-product-card {
+ width: 100%;
+  max-width: 260px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.Marketcomp-product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Marketcomp-product-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.Marketcomp-product-card h4 {
+  margin: 8px 0 6px;
+  font-size: 15px;
+  color: #333;
+}
+
+.Marketcomp-product-card p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .Marketcomp-product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .Marketcomp-section-content {
+    flex-direction: column;
+  }
+  
+  .Marketcomp-image-side {
+    order: -1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .Marketcomp-product-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}

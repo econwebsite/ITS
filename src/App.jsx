@@ -10,6 +10,7 @@ import ScrollToTop from "./ScrollToTop";
 import Footer from "./Components/Footercomp/Footer"
 import "./App.css";
 import ContactUs from './Components/Homecomp/Contactuscomp/Contactus';
+import Industries from './Components/Industriescomp/Industries';
 
 
 const App = () => {
@@ -26,6 +27,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<TotalHome />} />
            <Route path="/company/contact-us" element={<ContactUs />} />
+          <Route path="/industries" element={<Industries />} />
+
 
           </Routes>
           <Footer/>
