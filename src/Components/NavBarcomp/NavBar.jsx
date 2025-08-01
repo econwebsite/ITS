@@ -200,24 +200,15 @@ const handleResourcesPopoverClose = () => {
     }}>
       <MenuItem 
         component={Link} 
-        to="/industries/agricultural-vehicle-camera-systems" 
+        to="/industries" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
         }}
       >
-        Industries 1
+        Industries
       </MenuItem>
-      <MenuItem 
-        component={Link} 
-        to="/industries/mining-vehicle-camera-systems" 
-        onClick={() => {
-          handleIndustriesPopoverClose();
-          setMobileOpen(false);
-        }}
-      >
-       Industries 2
-      </MenuItem>
+     
       {/* <MenuItem 
         component={Link} 
         to="/industries/autonomous-delivery-robot-cameras" 
