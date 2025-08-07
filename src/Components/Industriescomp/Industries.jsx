@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import './industries.css';
 import industries from "../../assets/industries.png"
 import prductimg from "../../assets/homepage/bullet-camera.png"
+
+
+const slugify = (text) => text.toLowerCase().replace(/ /g, '-');
+const deslugify = (slug) => {
+  const match = tabContentData.find((t) => slugify(t.tab) === slug);
+  return match?.tab || tabContentData[0].tab;
+};
 
 const tabContentData = [
   {
@@ -238,9 +246,20 @@ const tabContentData = [
 ];
 
 const tabs = tabContentData.map((item) => item.tab);
+
 export default function SmartCities() {
-  const [activeTab, setActiveTab] = useState(tabs[0]);
+  const { tabSlug } = useParams();
+  const navigate = useNavigate();
+
+  const [activeTab, setActiveTab] = useState(() => deslugify(tabSlug));
+
+  useEffect(() => {
+    const validTab = deslugify(tabSlug);
+    setActiveTab(validTab);
+  }, [tabSlug]);
+
   const currentTab = tabContentData.find((t) => t.tab === activeTab);
+
   useEffect(() => {
     AOS.init({
       duration: 600,
@@ -250,82 +269,81 @@ export default function SmartCities() {
     });
   }, []);
 
-useEffect(() => {
-  setTimeout(() => {
-    AOS.refresh();
-  }, 100);
-}, [activeTab]);
+  useEffect(() => {
+    setTimeout(() => {
+      AOS.refresh();
+    }, 100);
+  }, [activeTab]);
 
+  const handleTabClick = (tab) => {
+    navigate(`/${slugify(tab)}`);
+  };
 
   return (
-    <div style={{backgroundColor:"#f1f2f2"}}>
-    <div className="Marketcomp-Wrapper">
-            <div className="mainContainer">
+    <div style={{ backgroundColor: "#f1f2f2" }}>
+      <div className="Marketcomp-Wrapper">
+        <div className="mainContainer">
+          <h1>MARKETS WE SERVE</h1>
 
-      <h1>MARKETS WE SERVE</h1>
-
-
-      <div className="Marketcomp-Tabs">
-        {tabs.map((tab) => (
-          <button
-            key={tab}
-            className={`Marketcomp-TabItem ${activeTab === tab ? 'active' : ''}`}
-            onClick={() => setActiveTab(tab)}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
-      <div className='Marketcomp-tabcontent' key={activeTab}>
-
-       {currentTab?.paragraph && (
-        <div className="Marketcomp-tab-paragraph">
-          {Array.isArray(currentTab.paragraph) ? (
-            currentTab.paragraph.map((para, idx) => <p key={idx}>{para}</p>)
-          ) : (
-            <p>{currentTab.paragraph}</p>
-          )}
-        </div>
-      )}
-
-        {currentTab?.sections.map((section, idx) => (
-          <div key={idx} className="Marketcomp-SectionBlock">
-          <div
-  className={`Marketcomp-section-content ${idx % 2 !== 0 ? 'reverse' : ''}`}
-  data-aos={idx % 2 === 0 ? 'fade-right' : 'fade-left'}
->
-
-
-              <div className="Marketcomp-text-side" data-aos="fade-up-left">
-                <h2>{section.title}</h2>
-                <p>{section.description}</p>
-              </div>
-              <div className="Marketcomp-image-side">
-                <img src={section.image} alt={section.title} />
-              </div>
-            </div>
+          <div className="Marketcomp-Tabs">
+            {tabs.map((tab) => (
+              <button
+                key={tab}
+                className={`Marketcomp-TabItem ${activeTab === tab ? 'active' : ''}`}
+                onClick={() => handleTabClick(tab)}
+              >
+                {tab}
+              </button>
+            ))}
           </div>
-        ))}
 
-        {currentTab?.products && (
-          <>
-            <h3 className="Marketcomp-product-heading">Recommended Products</h3>
-            <div className="Marketcomp-product-grid-container">
-              <div className="Marketcomp-product-grid">
-                {currentTab.products.map((product, index) => (
-                 <div className="Marketcomp-product-card" key={index} data-aos="zoom-in">
-                    <img src={product.image} alt={product.name} />
-                    <h4>{product.name}</h4>
-                    <p>{product.description}</p>
-                  </div>
-                ))}
+          <div className='Marketcomp-tabcontent' key={activeTab}>
+            {currentTab?.paragraph && (
+              <div className="Marketcomp-tab-paragraph">
+                {Array.isArray(currentTab.paragraph) ? (
+                  currentTab.paragraph.map((para, idx) => <p key={idx}>{para}</p>)
+                ) : (
+                  <p>{currentTab.paragraph}</p>
+                )}
               </div>
-            </div>
-          </>
-        )}
+            )}
+
+            {currentTab?.sections.map((section, idx) => (
+              <div key={idx} className="Marketcomp-SectionBlock">
+                <div
+                  className={`Marketcomp-section-content ${idx % 2 !== 0 ? 'reverse' : ''}`}
+                  data-aos={idx % 2 === 0 ? 'fade-right' : 'fade-left'}
+                >
+                  <div className="Marketcomp-text-side" data-aos="fade-up-left">
+                    <h2>{section.title}</h2>
+                    <p>{section.description}</p>
+                  </div>
+                  <div className="Marketcomp-image-side">
+                    <img src={section.image} alt={section.title} />
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {currentTab?.products && (
+              <>
+                <h3 className="Marketcomp-product-heading">Recommended Products</h3>
+                <div className="Marketcomp-product-grid-container">
+                  <div className="Marketcomp-product-grid">
+                    {currentTab.products.map((product, index) => (
+                      <div className="Marketcomp-product-card" key={index} data-aos="zoom-in">
+                        <img src={product.image} alt={product.name} />
+                        <h4>{product.name}</h4>
+                        <p>{product.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
     </div>
   );
 }

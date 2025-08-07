@@ -35,7 +35,7 @@ const NavLink = styled(Link)(({ theme }) => ({
   textDecoration: 'none',
   color: '#003873',
   fontFamily: '"Montserrat", sans-serif',
-  fontWeight: 300,
+  fontWeight: 400,
   fontSize: '1em',
   margin: theme.spacing(0, 2),
   whiteSpace: 'nowrap',
@@ -130,7 +130,7 @@ const handleResourcesPopoverClose = () => {
       width: 300,
       '& .MuiMenuItem-root': {
         color: '#344ea1',
-        fontSize: '1.1em',
+        fontSize: '1em',
         transition: 'all 0.2s ease-in-out',
         '&:hover': {
           backgroundColor: '#00aeef',
@@ -140,7 +140,7 @@ const handleResourcesPopoverClose = () => {
     }}>
       <MenuItem 
         component={Link} 
-        to="/Product 1" 
+        to="/" 
         onClick={() => {
           handlePopoverClose();
           setMobileOpen(false);
@@ -151,7 +151,7 @@ const handleResourcesPopoverClose = () => {
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/Product 2" 
+        to="/" 
         onClick={() => {
           handlePopoverClose();
           setMobileOpen(false);
@@ -162,7 +162,7 @@ const handleResourcesPopoverClose = () => {
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/Product 3" 
+        to="/" 
         onClick={() => {
           handlePopoverClose();
           setMobileOpen(false);
@@ -173,7 +173,7 @@ const handleResourcesPopoverClose = () => {
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/Product 4" 
+        to="/" 
         onClick={() => {
           handlePopoverClose();
           setMobileOpen(false);
@@ -190,7 +190,7 @@ const handleResourcesPopoverClose = () => {
       width: 300,
       '& .MuiMenuItem-root': {
         color: '#344ea1',
-        fontSize: '1.1em',
+        fontSize: '1em',
         transition: 'all 0.2s ease-in-out',
         '&:hover': {
           backgroundColor: '#00aeef',
@@ -200,76 +200,57 @@ const handleResourcesPopoverClose = () => {
     }}>
       <MenuItem 
         component={Link} 
-        to="/industries" 
+        to="/smart-cities" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
         }}
       >
-        Industries
+        Smart Cities
       </MenuItem>
      
-      {/* <MenuItem 
+      <MenuItem 
         component={Link} 
-        to="/industries/autonomous-delivery-robot-cameras" 
+        to="/traffic-management" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
         }}
       >
-        Delivery Robots
+        Traffic Management
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/industries/rugged-cameras-for-construction-vehicles" 
+        to="/tolling-&-highway-infrastructure" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
         }}
       >
-        Construction Vehicles
+        Tolling & Highway Infrastructure
       </MenuItem> 
       <MenuItem 
         component={Link} 
-        to="/industries/garbage-truck-vision-systems" 
+        to="/parking-lot-management" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
         }}
       >
-        Garbage Trucks
+       Parking Lot Management
       </MenuItem> 
     
       <MenuItem 
         component={Link} 
-        to="/industries/autonomous-vehicle-vision-systems" 
+        to="/public-safety-&-law-enforcement" 
         onClick={() => {
           handleIndustriesPopoverClose();
           setMobileOpen(false);
         }}
       >
-        Autonomous Vehicles
+        Public safety & law enforcement
       </MenuItem>
-      <MenuItem 
-        component={Link} 
-        to="/industries/delivery-truck-vision-systems" 
-        onClick={() => {
-          handleIndustriesPopoverClose();
-          setMobileOpen(false);
-        }}
-      >
-        Delivery Trucks
-      </MenuItem>
-      <MenuItem 
-        component={Link} 
-        to="/industries/autonomous-lawn-mower-vision-systems" 
-        onClick={() => {
-          handleIndustriesPopoverClose();
-          setMobileOpen(false);
-        }}
-      >
-        Lawn Mowers
-      </MenuItem>  */}
+      
     </Box>
   );
 const ResourcesMenu = (
@@ -278,7 +259,7 @@ const ResourcesMenu = (
     width: 250,
     '& .MuiMenuItem-root': {
       color: '#344ea1',
-      fontSize: '1.1em',
+      fontSize: '1em',
       transition: 'all 0.2s ease-in-out',
       '&:hover': {
         backgroundColor: '#00aeef',

@@ -1,8 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "./Footer.css";
 import logo from "../../assets/footer-logo.png";
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [isValid, setIsValid] = useState(true);
+  const [message, setMessage] = useState('');
+
+  const validateEmail = async () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) return false;
+    try {
+      const response = await axios.post(
+        'https://api.dental.e-consystems.com/api/validateEmail',
+        { email }
+      );
+      return (
+        ['valid', 'catch-all', 'role-basic'].includes(response.data.status) &&
+        !response.data.free_email
+      );
+    } catch (error) {
+      console.error('Email validation error:', error);
+      return false;
+    }
+  };
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    setMessage('');
+    if (!email) {
+      setIsValid(false);
+      setMessage('Please enter an email address.');
+      return;
+    }
+
+    const isValidEmail = await validateEmail();
+    if (!isValidEmail) {
+      setIsValid(false);
+      setMessage('Please enter a valid business email address.');
+      return;
+    }
+
+    try {
+      await axios.post('https://api.dental.e-consystems.com/api/emailSubscription', { email });
+      setEmail('');
+      setIsValid(true);
+      setMessage('Thank you for subscribing!');
+    } catch (error) {
+      console.error('Subscription error:', error);
+      setMessage('Subscription failed. Please try again.');
+    }
+  };
+
   return (
     <div className="footer">
       <div className="footer-overlay">
@@ -36,12 +86,27 @@ const Footer = () => {
                 </a>
               </p>
             </div>
+
             <div className="footer-col right">
               <h3>Stay Updated</h3>
-              <div className="subscribe-box">
-                <input type="email" placeholder="Enter your email" />
-                <button>Subscribe</button>
-              </div>
+              <form onSubmit={handleSubscribe}>
+                <div className="subscribe-box">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className={!isValid ? "input-error" : ""}
+                    required
+                  />
+                  <button type="submit">Subscribe</button>
+                </div>
+                {message && (
+                  <p style={{ color: isValid ? 'green' : 'white', fontSize: '13px', marginTop: '5px' }}>
+                    {message}
+                  </p>
+                )}
+              </form>
             </div>
           </div>
         </div>
