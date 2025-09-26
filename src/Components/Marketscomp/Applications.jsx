@@ -22,7 +22,7 @@ const tabContent = {
       desc: "AI-powered traffic lights and sensors to reduce congestion and improve city mobility.",
     },
     {
-      img: "https://cdn-icons-png.flaticon.com/512/2331/2331716.png",
+      img: "https://cdn-icons-png.flaticon.com/512/3062/3062634.png",
       title: "Accident Detection",
       desc: "Early detection of accidents and emergencies for quick response and reduced risks.",
     },
