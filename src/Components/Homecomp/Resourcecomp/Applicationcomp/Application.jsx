@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // ✅ import useNavigate
 import "./Application.css";
 import appImg from "../../../../assets/homepage/application.png";
 
 const Applications = () => {
+  const navigate = useNavigate();
+
+  const handleArrowClick = () => {
+    navigate("/market"); // ✅ redirect to Market.jsx route
+  };
+
   return (
     <div className="application-container">
       <div className="application-left">
@@ -14,7 +21,9 @@ const Applications = () => {
           End-to-end solution for ANPR, speed tracking, lane and signal
           violation, and wrong-way detection.
         </p>
-        <button className="arrow-button">➜</button>
+        <button className="arrow-button" onClick={handleArrowClick}>
+          ➜
+        </button>
       </div>
     </div>
   );

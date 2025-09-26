@@ -1,0 +1,105 @@
+.product-variants-section {
+  background: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin: 60px 0;
+  font-weight: 600;
+  color: #1e2d3d;
+}
+
+/* Full-width background for each block */
+.variant-block {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 10%;
+  margin-bottom: 40px;
+}
+
+/* Overlay for better readability */
+.variant-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35); /* dark overlay */
+  z-index: 0;
+}
+
+/* Table container */
+.variant-specs {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+  flex: 1;
+}
+
+/* Left / Right alignment */
+.variant-block.align-left {
+  justify-content: flex-start;
+}
+.variant-block.align-right {
+  justify-content: flex-end;
+}
+
+/* Table Styling */
+.variant-specs table {
+  width: 100%;
+  border-collapse: collapse;
+  /* border-radius: 12px; */
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.variant-specs thead {
+  background: #0c5db9;
+  color: #fff;
+}
+
+.variant-specs th {
+  padding: 14px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.variant-specs tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.variant-specs tbody tr:last-child td {
+  border-bottom: none;
+}
+.variant-specs tbody tr:nth-child(odd) {
+  background-color: #f7f9fc; /* a very light blue/grey/white mix */
+}
+
+.variant-specs tbody tr:nth-child(even) {
+  background-color: #ffffff; /* plain white */
+}
+
+/* ✅ Responsive */
+@media (max-width: 992px) {
+  .variant-block {
+    justify-content: center !important;
+    padding: 40px 20px;
+  }
+  .variant-specs {
+    width: 100%;
+    max-width: 90%;
+  }
+}

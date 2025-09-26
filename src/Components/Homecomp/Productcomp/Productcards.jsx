@@ -1,4 +1,5 @@
 import React,{useEffect } from 'react';
+import { useNavigate } from "react-router-dom";   // ✅ import navigation
 import AOS from 'aos';
 import ptz from "../../../assets/homepage/ptz-camera.png"
 import bullet from "../../../assets/homepage/bullet-camera.png"
@@ -11,6 +12,7 @@ const productData = [
     title: "PTZ Camera Series",
     description: "Dynamic monitoring for traffic violations, red light enforcement, and near-miss detection at intersections.",
     image: ptz,
+    link: "/ptz-camera", // ✅ only PTZ has link
   },
   {
     title: "Bullet Camera Series",
@@ -30,6 +32,7 @@ const productData = [
 ];
 
 const ProductCards = () => {
+  const navigate = useNavigate();
      useEffect(() => {
     AOS.init({ once: true, duration: 1000 });
   }, []);
@@ -46,6 +49,8 @@ const ProductCards = () => {
             key={index}
             data-aos="fade-right"
             data-aos-delay={index * 300}
+            onClick={() => item.link && navigate(item.link)} // ✅ only clickable if link exists
+              style={{ cursor: item.link ? "pointer" : "default" }} // ✅ pointer only for PTZ
           >
             <img src={item.image} alt={item.title} className="product-image" />
             <h4 className="product-heading">{item.title}</h4>

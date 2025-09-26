@@ -1,0 +1,19 @@
+.ptz-content {
+  max-width: 800px;         /* keeps content narrow and readable */
+  margin: 0 auto;           /* center horizontally */
+  text-align: center;       /* center align text */
+  padding: 2rem 1rem;       /* spacing for all devices */
+}
+
+.ptz-content h2 {
+  font-size: 2rem;          /* larger heading */
+  margin-bottom: 1rem;      /* space below heading */
+  font-weight: 600;
+}
+
+.ptz-content p {
+  font-size: 1.125rem;      /* slightly larger than normal */
+  line-height: 1.6;         /* better readability */
+  margin: 0 auto;           /* center paragraph */
+  color: #444;              /* softer text color */
+}

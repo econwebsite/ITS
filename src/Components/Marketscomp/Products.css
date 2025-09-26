@@ -1,0 +1,103 @@
+.products-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #f9fbfd;
+}
+
+.products-title {
+     font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #196793;
+  /* font-weight: 700; */
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.product-card {
+    width: 300px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  /* font-weight: 600; */
+  margin-bottom: 1.2rem;
+  color: #1a2a4f;
+}
+
+/* ✅ Fancy Button */
+.know-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #1e5799, #145279);
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  width: 45px;
+  height: 45px;
+  box-shadow: 0 4px 15px rgba(30, 87, 153, 0.2);
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+}
+
+.know-more-btn .btn-text {
+  position: absolute;
+  left: 20px;
+  opacity: 0;
+  white-space: nowrap;
+  transition: all 0.4s ease;
+}
+
+.know-more-btn .btn-icon {
+  transition: all 0.4s ease;
+  position: absolute;
+  font-size: 18px;
+  left: 33%;
+  transform: translateX(-50%);
+  transform: rotate(334deg);
+}
+
+.know-more-btn:hover {
+  width: 150px;
+  background: linear-gradient(90deg, #2989d8, #1e5799);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 87, 153, 0.3);
+}
+
+.know-more-btn:hover .btn-text {
+  opacity: 1;
+}
+
+.know-more-btn:hover .btn-icon {
+  left: calc(100% - 25px);
+transform: rotate(0deg);
+}

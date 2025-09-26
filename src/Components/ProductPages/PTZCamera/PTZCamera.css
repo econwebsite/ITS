@@ -1,0 +1,19 @@
+.ptz-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.ptz-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.ptz-content p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  color: #444;
+}
