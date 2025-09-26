@@ -1,4 +1,7 @@
 .products-section {
+   width: 100%;
+  max-width: 1400px;   /* same container width */
+  margin: 0 auto;
   padding: 3rem 1rem;
   text-align: center;
   background-color: #f9fbfd;
