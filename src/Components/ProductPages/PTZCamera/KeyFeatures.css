@@ -4,12 +4,11 @@
   position: relative;
   text-align: center;
 }
-
 .section-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 50px;
-  font-weight: 600;
-  color: #1e2d3d;
+  font-weight: unset !important;
+  color: #196793 !important;
 }
 
 /* Timeline */
@@ -190,12 +189,12 @@
   .keyfeatures-section {
     padding: 60px 15px;
   }
-  
+
   .section-title {
     font-size: 1.75rem;
     margin-bottom: 40px;
   }
-  
+
   /* Hide timeline elements on mobile */
   .timeline-line,
   .Pointer-top,
@@ -207,7 +206,7 @@
   .number-circle-right {
     display: none;
   }
-  
+
   /* Stack timeline items vertically */
   .timeline {
     display: flex;
@@ -215,7 +214,7 @@
     align-items: center;
     gap: 30px;
   }
-  
+
   .timeline-item,
   .timeline-item.left,
   .timeline-item.right {
@@ -227,7 +226,7 @@
     flex-direction: column;
     align-items: center;
   }
-  
+
   .content-box {
     max-width: 100%;
     width: 100%;
@@ -238,7 +237,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
   }
-  
+
   .content-box h3 {
     font-size: 1.1rem;
     padding: 10px 15px;
@@ -247,12 +246,12 @@
     background: #455a64;
     border-radius: 5px;
   }
-  
+
   .content-box p {
     font-size: 0.95rem;
     line-height: 1.5;
   }
-  
+
   .label {
     display: none; /* Hide the number label on mobile since we removed circles */
   }
@@ -263,25 +262,25 @@
   .keyfeatures-section {
     padding: 50px 10px;
   }
-  
+
   .section-title {
     font-size: 1.5rem;
     margin-bottom: 30px;
   }
-  
+
   .timeline {
     gap: 20px;
   }
-  
+
   .content-box {
     padding: 20px 15px;
   }
-  
+
   .content-box h3 {
     font-size: 1rem;
     padding: 8px 12px;
   }
-  
+
   .content-box p {
     font-size: 0.9rem;
   }
@@ -292,19 +291,19 @@
   .timeline-item.left .pointer-line {
     right: 45%;
   }
-  
+
   .timeline-item.right .pointer-line {
     left: 45%;
   }
-  
+
   .number-circle-left {
     left: 35%;
   }
-  
+
   .number-circle-right {
     left: -8%;
   }
-  
+
   .content-box {
     max-width: 300px;
   }

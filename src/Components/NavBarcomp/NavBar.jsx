@@ -140,14 +140,14 @@ const handleResourcesPopoverClose = () => {
     }}>
       <MenuItem 
         component={Link} 
-        to="/" 
+        to="/ptz-camera" 
         onClick={() => {
           handlePopoverClose();
           setMobileOpen(false);
           setMobileMenuAnchor(null);
         }}
       >
-        Product 1
+        PTZ Camera
       </MenuItem>
       <MenuItem 
         component={Link} 
