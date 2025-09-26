@@ -6,9 +6,9 @@
 
 .applications-title {
   font-size: 1.8rem;
-    /* font-weight: bold; */
+    font-weight: unset !important;
     margin-bottom: 2rem;
-    color: #196793;
+    color: #196793 !important;
 }
 
 /* Desktop Tabs */

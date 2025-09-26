@@ -7,8 +7,8 @@
 .products-title {
      font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: #196793;
-  /* font-weight: 700; */
+    color: #196793 !important;
+  font-weight: unset !important;
 }
 
 .products-grid {

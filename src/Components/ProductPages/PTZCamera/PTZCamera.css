@@ -8,7 +8,7 @@
 .ptz-content h2 {
       font-size: 1.8rem;
     margin-bottom: 1rem;
-    /* font-weight: 600; */
+    font-weight: unset !important;
     color: #196793;
 }
 

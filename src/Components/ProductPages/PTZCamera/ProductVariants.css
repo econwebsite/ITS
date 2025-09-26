@@ -4,10 +4,10 @@
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 60px 0;
-  font-weight: 600;
-  color: #1e2d3d;
+  font-weight: unset !important;
+  color: #196793 !important;
 }
 
 /* Full-width background for each block */
