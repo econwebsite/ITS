@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./PTZBanner.css";
 
-// Temporary free images (you can replace with your own later)
+// Temporary free images need to replace later)
 const banners = [
   {
     image: "https://source.unsplash.com/1600x600/?traffic,camera",

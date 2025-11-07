@@ -31,9 +31,9 @@ const App = () => {
            <Route path="/company/contact-us" element={<ContactUs />} />
           <Route path="/:tabSlug?" element={<Industries />} />
 
-  {/* ✅ PTZ Camera page */}
+  {/* PTZ Camera page */}
             <Route path="/ptz-camera" element={<PTZCamera />} />
-            {/* ✅ Applications page route */}
+            {/* Applications page route */}
            <Route path="/market" element={<Market />} />
           </Routes>
           <Footer/>

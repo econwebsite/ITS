@@ -10,7 +10,7 @@
   color: #196793 !important;
 }
 
-/* Full-width background for each block */
+/* background for each block */
 .variant-block {
   position: relative;
   width: 100%;
@@ -24,7 +24,7 @@
   margin-bottom: 40px;
 }
 
-/* Overlay for better readability */
+/* Overlay  */
 .variant-block::before {
   content: "";
   position: absolute;
@@ -44,7 +44,7 @@
   flex: 1;
 }
 
-/* Left / Right alignment */
+/* Left / Right align css code */
 .variant-block.align-left {
   justify-content: flex-start;
 }
@@ -93,7 +93,7 @@
   background-color: #ffffff; /* plain white */
 }
 
-/* ✅ Responsive */
+/* Responsive */
 @media (max-width: 992px) {
   .variant-block {
     justify-content: center !important;

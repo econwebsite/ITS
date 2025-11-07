@@ -1,6 +1,6 @@
 import React from "react";
 import "./Certifications.css";
-import certificationsImage from "./its-certifications-en.jpg"; // Make sure to place your image in the same folder
+import certificationsImage from "./its-certifications-en.jpg"; 
 
 const Certifications = () => {
   return (
