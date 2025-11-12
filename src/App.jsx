@@ -13,6 +13,9 @@ import ContactUs from './Components/Homecomp/Contactuscomp/Contactus';
 import Industries from './Components/Industriescomp/Industries';
 import PTZCamera from "./Components/ProductPages/PTZCamera/PTZCamera";
 import Market from "./Components/Marketscomp/Market";
+import RoadInspection from './Components/solutions/RoadInspection/RoadInspection';
+import StopArm from './Components/solutions/StopArm/StopArm';
+import ANPR from './Components/solutions/ANPR/ANPR';
 
 
 const App = () => {
@@ -35,6 +38,9 @@ const App = () => {
             <Route path="/ptz-camera" element={<PTZCamera />} />
             {/* Applications page route */}
            <Route path="/market" element={<Market />} />
+           <Route path="/road-inspection" element={<RoadInspection />} />
+           <Route path="/stop-arm" element={<StopArm />} />
+           <Route path="/anpr" element={<ANPR />} />
           </Routes>
           <Footer/>
         </div>

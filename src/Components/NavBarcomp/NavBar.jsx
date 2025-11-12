@@ -64,6 +64,7 @@ const NavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMenuAnchor, setMobileMenuAnchor] = useState(null);
   const [anchorElIndustries, setAnchorElIndustries] = useState(null);
+  const [anchorElSolutions, setAnchorElSolutions] = useState(null);
   const isDesktop = useMediaQuery('(min-width:1024px)');
   const closeTimeoutRef = useRef(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false); 
@@ -86,8 +87,17 @@ const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
     clearTimeout(closeTimeoutRef.current);
     setAnchorElIndustries(event.currentTarget);
   };
+    const handleSolutionsPopoverOpen = (event) => {
+    clearTimeout(closeTimeoutRef.current);
+    setAnchorElSolutions(event.currentTarget);
+  };
 
-  const handleIndustriesPopoverClose = () => {
+  const handleSolutionsPopoverClose = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setAnchorElSolutions(null);
+    }, 100);
+  };
+    const handleIndustriesPopoverClose = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setAnchorElIndustries(null);
     }, 100);
@@ -121,6 +131,7 @@ const handleResourcesPopoverClose = () => {
 };
   const open = Boolean(anchorEl);
   const openIndustries = Boolean(anchorElIndustries);
+  const openSolutions = Boolean(anchorElSolutions);
 
 
 
@@ -250,6 +261,55 @@ const handleResourcesPopoverClose = () => {
       >
         Public safety & law enforcement
       </MenuItem>
+      
+    </Box>
+  );
+  const SolutionsMenu = (
+    <Box sx={{ 
+      p: 1, 
+      width: 300,
+      '& .MuiMenuItem-root': {
+        color: '#344ea1',
+        fontSize: '1em',
+        transition: 'all 0.2s ease-in-out',
+        '&:hover': {
+          backgroundColor: '#00aeef',
+          color: 'white',
+        }
+      }
+    }}>
+      <MenuItem 
+        component={Link} 
+        to="/road-inspection" 
+        onClick={() => {
+          handleSolutionsPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+        Road Inspection
+      </MenuItem>
+     
+      <MenuItem 
+        component={Link} 
+        to="/stop-arm" 
+        onClick={() => {
+          handleSolutionsPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+       Stop Arm
+      </MenuItem>
+      <MenuItem 
+        component={Link} 
+        to="/anpr" 
+        onClick={() => {
+          handleSolutionsPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+       ANPR
+      </MenuItem> 
+     
       
     </Box>
   );
@@ -512,6 +572,20 @@ const ResourcesMenu = (
               <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent:"space-around" }}>
               {isDesktop && (
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
+                  {/* ... existing nav items ... */}
+                  {/* <Divider orientation="vertical" flexItem /> */}
+                  <NavLink
+                    aria-haspopup="true"
+                    onMouseOver={handleSolutionsPopoverOpen}
+                  >
+                    Solutions
+                  </NavLink>
+                </Box>
+              )}
+            </Box>
+              <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent:"space-around" }}>
+              {isDesktop && (
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
                   {/* <Divider orientation="vertical" flexItem /> */}
                   <NavLink
                     aria-haspopup="true"
@@ -591,6 +665,22 @@ const ResourcesMenu = (
           disableRestoreFocus
         >
           {IndustriesMenu}
+        </Popover>
+        <Popover
+          id="solutions-menu"
+          open={openSolutions}
+          anchorEl={anchorElSolutions}
+          onClose={handleSolutionsPopoverClose}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+          transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+          PaperProps={{ 
+            sx: { border: '1px solid #00aeef' },
+            onMouseEnter: handlePopoverEnter,
+            onMouseLeave: handlePopoverLeave
+          }}
+          disableRestoreFocus
+        >
+          {SolutionsMenu}
         </Popover>
         <Popover
   open={Boolean(anchorElResources)}

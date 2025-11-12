@@ -1,0 +1,23 @@
+.mainPara {
+    font-size: 16px!important;
+    line-height: 1.5;
+    padding: 0 10px !important;
+    color: #1f3b70 !important;
+    text-align: justify !important;
+}
+.modularCard{
+    box-shadow: 3px 7px 5px rgb(0 0 0 / 35%);
+    border-radius: 10px;
+    background-color: #e2e5e7;
+}
+.modularCard:hover{
+    box-shadow: 3px 7px 5px rgb(0 0 0 / 50%);
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+.modularCard svg {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+    color: #1f3b70;
+}
