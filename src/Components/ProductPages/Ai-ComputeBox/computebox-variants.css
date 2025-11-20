@@ -1,7 +1,7 @@
 .compute-box-variants {
   width: 100%;
-  margin: 0 auto 48px auto;
-  padding: 24px;
+  margin: 0 auto 14px auto;
+  padding: 35px 20px;
   /* background: #f8fafc; */
   display: flex;
       flex-direction: column;
@@ -11,7 +11,7 @@
 
 .compute-box-variants h2 {
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   font-size: 2rem;
   font-weight: unset;
   color: #196793;

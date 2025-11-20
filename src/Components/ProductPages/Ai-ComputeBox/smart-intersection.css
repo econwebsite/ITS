@@ -1,14 +1,14 @@
 .smart-int-section {
   width: 100%;
-  padding: 100px 20px;
+  padding: 35px 20px;
   position: relative;
   /* background: #ffffff; */
   overflow: hidden;
-background: radial-gradient(circle, #0ea5e940, #19679310, transparent);
+/* background: radial-gradient(circle, #0ea5e940, #19679310, transparent); */
 }
 
 /* Soft ambient blur shape */
-.smart-int-bg-shape {
+/* .smart-int-bg-shape {
   position: absolute;
   top: -20%;
   right: -10%;
@@ -17,7 +17,7 @@ background: radial-gradient(circle, #0ea5e940, #19679310, transparent);
   background: radial-gradient(circle, #0ea5e940, #19679310, transparent);
   filter: blur(120px);
   z-index: 1;
-}
+} */
 
 .smart-int-container {
   display: flex;
@@ -51,7 +51,7 @@ background: radial-gradient(circle, #0ea5e940, #19679310, transparent);
 }
 
 .smart-int-left p {
-  font-size: 1.2rem;
+  font-size: 16px;
   color: #475569;
   line-height: 1.8;
   max-width: 90%;

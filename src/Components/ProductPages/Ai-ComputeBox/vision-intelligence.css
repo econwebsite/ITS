@@ -1,6 +1,6 @@
 .vision-intelligence-section {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+  padding: 35px 20px;
+  /* background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%); */
   font-family: "Poppins", sans-serif;
   position: relative;
   overflow: hidden;
@@ -19,7 +19,8 @@
 }
 
 .vision-title {
-      margin-bottom: 20px;
+     margin-top: 20px;
+    margin-bottom: 25px;
     font-size: 1.8rem;
     font-weight: 400 !important;
     color: #196793 !important;
@@ -56,18 +57,20 @@
 }
 
 .point-indicator {
-  background: linear-gradient(135deg, #196793, #0096d6);
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 0.9rem;
-  flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(25, 103, 147, 0.3);
+      /* background: linear-gradient(135deg, #196793, #0096d6); */
+    color: #188b38;
+    width: 30px;
+    font-size: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 20px;
+    flex-shrink: 0;
+    /* box-shadow: 0 4px 12px rgba(25, 103, 147, 0.3); */
+    border: 1px solid #0096d6;
 }
 
 .point-content h3 {

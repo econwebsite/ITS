@@ -1,7 +1,7 @@
 .ptz-comparison {
   font-family: "Poppins", "Amazon Ember", Arial, sans-serif;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  padding: 80px 0;
+  /* background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); */
+  padding: 30px 0;
   min-height: 100vh;
 }
 
@@ -21,6 +21,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+      margin: 30px 0;
 }
 
 .section-subtitle {
@@ -134,7 +135,7 @@
   margin: 0 auto 15px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: unset;
   transition: all 0.3s ease;
 }
 
@@ -166,7 +167,6 @@
   align-items: center;
   padding: 8px 0;
   font-size: 0.9rem;
-  color: #e2e8f0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -411,7 +411,7 @@
   height: 60px;
   border-radius: 10px;
   overflow: hidden;
-  margin-right: 20px;
+  /* margin-right: 20px; */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -444,7 +444,7 @@
   align-items: center;
 }
 
-.specs-section h4::before,
+/* .specs-section h4::before,
 .features-section h4::before {
   content: "📊";
   margin-right: 10px;
@@ -452,7 +452,7 @@
 
 .features-section h4::before {
   content: "⭐";
-}
+} */
 
 .mobile-spec-row {
   display: flex;
@@ -535,6 +535,12 @@
     font-size: 1rem;
     margin-bottom: 40px;
   }
+  .feature-item{
+    color: #474c52;
+  }
+   .spec-value {
+    border-bottom: unset;
+  }
 }
 
 @media (max-width: 480px) {
@@ -556,7 +562,7 @@
   }
   
   .card-header .product-image {
-    margin-right: 0;
+    /* margin-right: 0; */
     margin-bottom: 15px;
   }
   

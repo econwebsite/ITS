@@ -84,7 +84,7 @@
   height: 160px;
   margin-bottom: 10px;
   object-fit: contain;
-  box-shadow: none;
+  box-shadow: unset;
 }
 
 .product-heading {

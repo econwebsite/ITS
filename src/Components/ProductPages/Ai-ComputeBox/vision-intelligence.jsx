@@ -36,7 +36,7 @@ const VisionIntelligence = () => {
         <div className="vision-content">
           <div className="vision-text">
             <div className="vision-point">
-              <div className="point-indicator">01</div>
+              <div className="point-indicator">✓</div>
               <div className="point-content">
                 <h3>3D Spatial Modeling</h3>
                 <p>
@@ -46,7 +46,7 @@ const VisionIntelligence = () => {
             </div>
 
             <div className="vision-point">
-              <div className="point-indicator">02</div>
+              <div className="point-indicator">✓</div>
               <div className="point-content">
                 <h3>Precision Zone Tracking</h3>
                 <p>
@@ -56,7 +56,7 @@ const VisionIntelligence = () => {
             </div>
 
             <div className="vision-point">
-              <div className="point-indicator">03</div>
+              <div className="point-indicator">✓</div>
               <div className="point-content">
                 <h3>Real-time Analytics & Control</h3>
                 <p>

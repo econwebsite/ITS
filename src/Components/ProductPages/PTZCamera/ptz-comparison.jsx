@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./ptz-comparison.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import cameraimage from "../../../assets/ptz-cameras/5mp-ai-turret-camera-thumb.png";
 
 const variants = [
   {
     id: 1,
     title: "Core AI",
-    image: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&h=750&w=1600",
+    image: cameraimage,
     specs: {
       Resolution: "2MP",
       "On-board NPU": "1.2 TOPS",
@@ -22,7 +23,7 @@ const variants = [
   {
     id: 2,
     title: "Edge AI+",
-    image: "https://images.pexels.com/photos/267614/pexels-photo-267614.jpeg?auto=compress&cs=tinysrgb&h=750&w=1600",
+    image: cameraimage,
     specs: {
       Resolution: "8MP",
       "On-board NPU": "15 TOPS",
@@ -70,8 +71,8 @@ const PTZComparison = () => {
                   key={variant.id}
                   onClick={() => setSelectedVariant(variant.id)}
                 >
-                  {variant.popular && <div className="popular-badge">Most Popular</div>}
-                  <div className="variant-badge">{variant.badge}</div>
+                  {/* {variant.popular && <div className="popular-badge">Most Popular</div>}
+                  <div className="variant-badge">{variant.badge}</div> */}
                   <div className="product-image">
                     <img src={variant.image} alt={variant.title} />
                   </div>
@@ -106,7 +107,7 @@ const PTZComparison = () => {
             </div>
 
             {/* Action Row */}
-            <div className="table-footer">
+            {/* <div className="table-footer">
               <div className="footer-cell"></div>
               {variants.map((variant) => (
                 <div className="footer-cell" key={variant.id}>
@@ -115,7 +116,7 @@ const PTZComparison = () => {
                   </button>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -129,7 +130,7 @@ const PTZComparison = () => {
                 onClick={() => setSelectedVariant(variant.id)}
               >
                 {variant.title}
-                {variant.popular && <span className="mobile-badge">Popular</span>}
+                {/* {variant.popular && <span className="mobile-badge">Popular</span>} */}
               </button>
             ))}
           </div>
@@ -141,14 +142,14 @@ const PTZComparison = () => {
                 key={variant.id}
                 data-aos="fade-up"
               >
-                {variant.popular && <div className="mobile-popular-badge">Most Popular</div>}
+                {/* {variant.popular } */}
                 <div className="card-header">
                   <div className="product-image">
                     <img src={variant.image} alt={variant.title} />
                   </div>
                   <div className="product-info">
                     <h3>{variant.title}</h3>
-                    <div className="variant-badge">{variant.badge}</div>
+                    {/* <div className="variant-badge">{variant.badge}</div> */}
                   </div>
                 </div>
 
@@ -174,11 +175,11 @@ const PTZComparison = () => {
                   </div>
                 </div>
 
-                <div className="card-footer">
+                {/* <div className="card-footer">
                   <button className={`cta-button ${variant.popular ? 'primary' : 'secondary'}`}>
                     {variant.popular ? 'Buy Now' : 'Learn More'}
                   </button>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>

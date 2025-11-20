@@ -1,7 +1,7 @@
 /* whycomputebox.css */
 .compute-features-section {
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 35px 20px;
   text-align: center;
   font-family: "Poppins", sans-serif;
   color: #1a1a1a;
@@ -13,7 +13,7 @@
 }
 
 .compute-features-section h2 {
-  margin-bottom: 30px;
+  margin-bottom: 40px;;
   font-size: 1.8rem;
   font-weight: unset !important;
   color: #196793 !important;
