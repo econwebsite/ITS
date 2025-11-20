@@ -1,0 +1,93 @@
+/* Root Section */
+.bullet-applications {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafb;
+}
+
+.bullet-title-section {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.bullet-title-primary {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 400 !important;
+  color: #196793 !important;
+}
+
+/* Grid Layout */
+.bullet-applications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Card Styles */
+.bullet-application-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.bullet-application-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.bullet-application-card:hover img {
+  transform: scale(1.05);
+}
+
+.bullet-application-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlay */
+.bullet-application-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px 8px;
+  background: rgba(25, 103, 147, 0.85); /* e-con blue overlay */
+  color: #fff;
+  text-align: center;
+}
+
+.bullet-application-overlay h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .bullet-title-primary {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .bullet-application-card img {
+    height: 180px;
+  }
+
+  .bullet-application-overlay h4 {
+    font-size: 0.9rem;
+  }
+}

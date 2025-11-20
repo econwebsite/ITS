@@ -1,0 +1,119 @@
+/* ================================
+   Compute Box Banner Styles
+   ================================ */
+
+.computeBox-banner {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+/* Banner image container */
+.banner-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Banner image styling */
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay content */
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.banner-overlay h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.banner-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 22px;
+  max-width: 850px;
+  line-height: 1.6;
+}
+
+/* CTA Button */
+.banner-button {
+  padding: 12px 26px;
+  border: 1px solid #fff;
+  background-color: rgba(30, 47, 122, 0.8);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.banner-button:hover {
+  background-color: #00aeef;
+  transform: scale(1.05);
+}
+
+/*Responsive Design */
+
+@media (max-width: 1024px) {
+  .banner-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .banner-overlay p {
+    font-size: 1.1rem;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .computeBox-banner {
+    height: 50vh;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner-overlay p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .banner-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-overlay h1 {
+    font-size: 1.6rem;
+  }
+
+  .banner-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .banner-button {
+    font-size: 0.85rem;
+    padding: 8px 18px;
+  }
+}

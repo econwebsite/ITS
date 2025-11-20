@@ -1,0 +1,149 @@
+/* Root Section */
+.compute-applications {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafb;
+}
+
+.compute-title-section {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.compute-title-primary {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 400 !important;
+  color: #196793 !important;
+}
+
+/* Grid Layout */
+.compute-applications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Card Styles */
+.compute-application-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.compute-application-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.compute-application-card:hover img {
+  transform: scale(1.05);
+}
+
+.compute-application-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlay */
+.compute-application-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px 8px;
+  background: rgba(25, 103, 147, 0.85);
+  color: #fff;
+  text-align: center;
+}
+
+.compute-application-overlay h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .compute-applications-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .compute-applications {
+    padding: 50px 20px;
+  }
+  
+  .compute-title-primary {
+    font-size: 1.7rem;
+  }
+  
+  .compute-applications-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .compute-applications {
+    padding: 40px 15px;
+  }
+  
+  .compute-title-primary {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+  
+  .compute-title-section {
+    margin-bottom: 25px;
+  }
+  
+  .compute-applications-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 400px;
+  }
+  
+  .compute-application-card img {
+    height: 200px;
+  }
+  
+  .compute-application-overlay h4 {
+    font-size: 0.9rem;
+    padding: 12px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .compute-applications {
+    padding: 30px 12px;
+  }
+  
+  .compute-title-primary {
+    font-size: 1.5rem;
+  }
+  
+  .compute-application-card img {
+    height: 180px;
+  }
+  
+  .compute-application-overlay h4 {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+}

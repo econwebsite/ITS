@@ -12,10 +12,9 @@ import "./App.css";
 import ContactUs from './Components/Homecomp/Contactuscomp/Contactus';
 import Industries from './Components/Industriescomp/Industries';
 import PTZCamera from "./Components/ProductPages/PTZCamera/PTZCamera";
+import BulletCamera from "./Components/ProductPages/BulletCamera/BulletCamera";
+import AiComputeBox from './Components/ProductPages/Ai-ComputeBox/Ai-ComputeBox';
 import Market from "./Components/Marketscomp/Market";
-import RoadInspection from './Components/solutions/RoadInspection/RoadInspection';
-import StopArm from './Components/solutions/StopArm/StopArm';
-import ANPR from './Components/solutions/ANPR/ANPR';
 
 
 const App = () => {
@@ -36,11 +35,10 @@ const App = () => {
 
   {/* PTZ Camera page */}
             <Route path="/ptz-camera" element={<PTZCamera />} />
+             <Route path="/bullet-camera" element={<BulletCamera />} />
+             <Route path="/ai-compute-box" element={<AiComputeBox/>} />
             {/* Applications page route */}
            <Route path="/market" element={<Market />} />
-           <Route path="/road-inspection" element={<RoadInspection />} />
-           <Route path="/stop-arm" element={<StopArm />} />
-           <Route path="/anpr" element={<ANPR />} />
           </Routes>
           <Footer/>
         </div>

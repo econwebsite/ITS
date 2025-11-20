@@ -1,0 +1,160 @@
+/* =============================================
+   BULLET VARIANTS - PRODUCT STYLE CARDS
+   ============================================= */
+
+.bullet-variants-wrapper {
+  padding: 20px 20px;
+  /* background: #f9fafb; */
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 15px;
+}
+
+.variants-title {
+  font-size: 1.9rem;
+  color: #196793;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.variants-subtitle {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  color: #475569;
+}
+
+/* Layout */
+.variants-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 35px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Card */
+.variant-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 0px 0px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  transition: all 0.35s ease;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.variant-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  border-color: #196793;
+}
+.bullet-variants-wrapper .variant-header {
+    width: 100%;
+    background: #196793;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 12px 12px 0 0;
+    padding: 18px 12px;
+    font-size: 1.05rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Header */
+.variant-header h3 {
+  font-size: 1.4rem;
+  /* color: #0096d6; */
+  margin-bottom: 5px;
+}
+
+.variant-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  background: #e0f4ff;
+  color: #0070a8;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+/* Clean table-like layout */
+.variant-features {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  row-gap: 12px;
+  column-gap: 15px;
+  margin-bottom: 25px;
+  text-align: left;
+  padding: 10px;
+}
+
+.variant-features div {
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+/* Label column */
+.variant-label {
+  font-weight: 600;
+  color: #196793;
+}
+
+/* Value column */
+.variant-value {
+  color: #1e293b;
+}
+
+/* Responsive: stack items on mobile */
+@media (max-width: 600px) {
+  .variant-features {
+    grid-template-columns: 1fr;
+  }
+
+  .variant-label {
+    margin-top: 8px;
+  }
+}
+
+
+/* Button */
+.variant-button {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  background: #196793;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+.variant-button:hover {
+  background: #0096d6;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .variants-title {
+    font-size: 1.6rem;
+  }
+
+  .variant-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .variants-title {
+    font-size: 1.4rem;
+  }
+
+  .variant-header h3 {
+    font-size: 1.2rem;
+  }
+}

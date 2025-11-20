@@ -1,0 +1,945 @@
+.vision-intelligence-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Header Styles */
+.vision-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.vision-title {
+      margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 400 !important;
+    color: #196793 !important;
+}
+
+.title-underline {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #196793, #0096d6);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Main Content Layout */
+.vision-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.vision-text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Vision Points */
+.vision-point {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.point-indicator {
+  background: linear-gradient(135deg, #196793, #0096d6);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(25, 103, 147, 0.3);
+}
+
+.point-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #196793;
+  margin-bottom: 12px;
+}
+
+.point-content p {
+  color: #666;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Enhanced Visual Section */
+.vision-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visual-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  border: 1px solid #e8f4fd;
+  max-width: 550px;
+  width: 100%;
+}
+
+.visual-header {
+  background: linear-gradient(135deg, #196793, #0096d6);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.visual-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.visual-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.visual-dots span:nth-child(1) { background: #ff5f57; }
+.visual-dots span:nth-child(2) { background: #ffbd2e; }
+.visual-dots span:nth-child(3) { background: #28ca42; }
+
+.visual-title {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.visual-content {
+  padding: 25px;
+  background: linear-gradient(160deg, #0a1929, #1a365d);
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enhanced Intersection Scene */
+.intersection-scene {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: #1e3a5f;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Roads */
+.road {
+  position: absolute;
+  background: #2d4a6e;
+}
+
+.horizontal-road {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  transform: translateY(-50%);
+}
+
+.vertical-road {
+  left: 50%;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+/* Lane Markings */
+.lane-markings {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.lane-line {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.center-line {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 15px,
+    rgba(255, 255, 255, 0.8) 15px,
+    rgba(255, 255, 255, 0.8) 25px
+  );
+}
+
+.left-lane, .right-lane {
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.left-lane {
+  transform: translateY(-25px);
+}
+
+.right-lane {
+  transform: translateY(25px);
+}
+
+/* Crosswalk */
+.crosswalk {
+  position: absolute;
+  display: flex;
+  gap: 4px;
+}
+
+.north-crosswalk {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.crosswalk-line {
+  width: 6px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Stop Lines */
+.stop-line {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.north-stop, .south-stop {
+  width: 60px;
+  height: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.north-stop { top: 40%; }
+.south-stop { top: 60%; }
+
+.east-stop, .west-stop {
+  width: 4px;
+  height: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.east-stop { left: 60%; }
+.west-stop { left: 40%; }
+
+/* Traffic Lights */
+.traffic-light {
+  position: absolute;
+  width: 14px;
+  height: 36px;
+  background: #222;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 0;
+  gap: 2px;
+  border: 1px solid #333;
+}
+
+.north-light { top: 32%; left: 45%; }
+.south-light { top: 68%; left: 55%; }
+.east-light { top: 45%; left: 60%; transform: rotate(90deg); }
+.west-light { top: 55%; left: 40%; transform: rotate(90deg); }
+
+.light {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #444;
+  transition: all 0.5s ease;
+}
+
+.light.active.red { background: #ff4444; box-shadow: 0 0 10px #ff4444; }
+.light.active.yellow { background: #ffaa00; box-shadow: 0 0 10px #ffaa00; }
+.light.active.green { background: #44ff44; box-shadow: 0 0 10px #44ff44; }
+
+/* Detection Zones */
+.detection-zone {
+  position: absolute;
+  border: 2px dashed rgba(0, 150, 214, 0.6);
+  border-radius: 5px;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.crosswalk-zone {
+  top: 28%;
+  left: 40%;
+  width: 80px;
+  height: 40px;
+}
+
+.intersection-zone {
+  top: 40%;
+  left: 40%;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+/* Enhanced Moving Objects */
+.moving-object {
+  position: absolute;
+}
+
+.object-trail {
+  position: absolute;
+  background: linear-gradient(90deg, rgba(0, 150, 214, 0.4), transparent);
+  opacity: 0.6;
+}
+
+.object-label {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  white-space: nowrap;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Vehicles */
+.vehicle {
+  position: relative;
+}
+
+.car-west-east, .car-east-west {
+  width: 30px;
+  height: 15px;
+}
+
+.car-west-east .car-body {
+  width: 100%;
+  height: 10px;
+  background: #0096d6;
+  border-radius: 3px 3px 0 0;
+}
+
+.car-west-east .car-top {
+  width: 22px;
+  height: 8px;
+  background: #0077b3;
+  border-radius: 3px 3px 0 0;
+  position: absolute;
+  top: -6px;
+  left: 4px;
+}
+
+.car-east-west .suv-body {
+  width: 100%;
+  height: 100%;
+  background: #ff6b35;
+  border-radius: 4px;
+}
+
+/* Pedestrian */
+.pedestrian {
+  position: relative;
+  width: 10px;
+  height: 20px;
+}
+
+.person-head {
+  width: 8px;
+  height: 8px;
+  background: #7ec100;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 1px;
+}
+
+.person-body {
+  width: 3px;
+  height: 12px;
+  background: #7ec100;
+  position: absolute;
+  top: 8px;
+  left: 4px;
+}
+
+/* Cyclist */
+.cyclist {
+  position: relative;
+  width: 25px;
+  height: 15px;
+}
+
+.bike-frame {
+  width: 22px;
+  height: 3px;
+  background: #ffaa00;
+  position: absolute;
+  top: 8px;
+  left: 2px;
+  transform: rotate(15deg);
+}
+
+.bike-wheels {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.wheel {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #ffaa00;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.wheel:nth-child(1) { top: 0; left: 0; }
+.wheel:nth-child(2) { top: 5px; left: 15px; }
+
+/* PRECISE OBJECT ANIMATIONS */
+
+/* Car 1 - West to East (Left to Right) */
+.car-1 {
+  top: 47%;
+  left: -40px;
+  animation: moveRight 12s linear infinite;
+}
+
+.car-1 .object-label {
+  color: #0096d6;
+}
+
+.trail-1 {
+  width: 100px;
+  height: 3px;
+  left: -100px;
+  top: 7px;
+  transform: rotate(180deg);
+}
+
+/* Car 2 - East to West (Right to Left) */
+.car-2 {
+  top: 53%;
+  left: 100%;
+  animation: moveLeft 14s linear infinite 3s;
+}
+
+.car-2 .object-label {
+  color: #ff6b35;
+}
+
+.trail-2 {
+  width: 100px;
+  height: 3px;
+  left: 30px;
+  top: 7px;
+}
+
+/* Cyclist - South to North (Stopped at Red Light) */
+.cyclist-1 {
+  top: 70%;
+  left: 48%;
+  animation: gentleBounce 2s ease-in-out infinite;
+}
+
+.cyclist-1 .object-label {
+  color: #ffaa00;
+  top: -25px;
+}
+
+.stop-indicator {
+  position: absolute;
+  background: rgba(255, 68, 68, 0.9);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-size: 0.6rem;
+  font-weight: 500;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+/* Pedestrian - Crossing West to East */
+.pedestrian-1 {
+  top: 32%;
+  left: 35%;
+  animation: moveRightSlow 18s linear infinite 5s;
+}
+
+.pedestrian-1 .object-label {
+  color: #7ec100;
+}
+
+.trail-3 {
+  width: 80px;
+  height: 2px;
+  left: -80px;
+  top: 10px;
+  transform: rotate(180deg);
+  background: linear-gradient(90deg, rgba(126, 193, 0, 0.4), transparent);
+}
+
+/* Animation Keyframes */
+@keyframes moveRight {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(200px); } /* Enter intersection */
+  30% { transform: translateX(400px); } /* Cross intersection */
+  45% { transform: translateX(600px); } /* Exit intersection */
+  100% { transform: translateX(600px); }
+}
+
+@keyframes moveLeft {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(-200px); }
+  30% { transform: translateX(-400px); }
+  45% { transform: translateX(-600px); }
+  100% { transform: translateX(-600px); }
+}
+
+@keyframes moveRightSlow {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(150px); } /* Slow crossing */
+  50% { transform: translateX(300px); } /* Complete crossing */
+  100% { transform: translateX(300px); }
+}
+
+@keyframes gentleBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); } /* Subtle waiting bounce */
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+/* Analytics Overlay */
+.analytics-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.tracking-line {
+  position: absolute;
+  background: rgba(0, 150, 214, 0.3);
+  height: 2px;
+  animation: scan 4s linear infinite;
+}
+
+.scan-line-1 { top: 30%; left: 0; width: 40%; animation-delay: 0s; }
+.scan-line-2 { top: 50%; left: 0; width: 60%; animation-delay: 1.3s; }
+.scan-line-3 { top: 70%; left: 0; width: 50%; animation-delay: 2.6s; }
+
+.prediction-path {
+  position: absolute;
+  border: 1px dashed rgba(126, 193, 0, 0.5);
+  border-radius: 10px;
+  animation: pathPulse 2s ease-in-out infinite;
+}
+
+.car-1-path {
+  top: 47%;
+  left: 0;
+  width: 400px;
+  height: 4px;
+  animation-delay: 0.5s;
+}
+
+.car-2-path {
+  top: 53%;
+  left: 200px;
+  width: 400px;
+  height: 4px;
+  animation-delay: 1s;
+}
+
+.pedestrian-path {
+  top: 32%;
+  left: 35%;
+  width: 300px;
+  height: 3px;
+  animation-delay: 1.5s;
+}
+
+@keyframes scan {
+  0% { transform: translateX(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(200%); opacity: 0; }
+}
+
+@keyframes pathPulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.6; }
+}
+
+/* Status Indicators */
+.status-indicators {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.status-tag {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+.vehicles-tag { border-left: 3px solid #0096d6; }
+.pedestrians-tag { border-left: 3px solid #7ec100; }
+.cyclists-tag { border-left: 3px solid #ffaa00; }
+.safety-tag { border-left: 3px solid #28ca42; }
+
+/* Flow Indicators */
+.flow-indicator {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  backdrop-filter: blur(5px);
+}
+
+.east-west-flow {
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #44ff44;
+}
+
+.north-south-flow {
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #ff4444;
+}
+
+.flow-arrow {
+  font-size: 1rem;
+}
+
+.stop-arrow {
+  font-size: 0.9rem;
+}
+
+/* Visual Stats */
+.visual-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 15px 20px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #196793;
+}
+
+/* Scenario Explanation */
+.scenario-explanation {
+  background: white;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin: 30px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8f4fd;
+}
+
+.scenario-explanation h3 {
+  color: #196793;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.scenario-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.scenario-point {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #196793;
+}
+
+.scenario-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.scenario-point span {
+  color: #2d3748;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Features Tags */
+.vision-features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-tag {
+  background: rgba(25, 103, 147, 0.1);
+  color: #196793;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 1px solid rgba(25, 103, 147, 0.2);
+  transition: all 0.3s ease;
+}
+
+.feature-tag:hover {
+  background: #196793;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(25, 103, 147, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .vision-content {
+    gap: 40px;
+  }
+  
+  .vision-title {
+    font-size: 2.2rem;
+  }
+  
+  .visual-card {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vision-intelligence-section {
+    padding: 60px 20px;
+  }
+  
+  .vision-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .vision-title {
+    font-size: 2rem;
+  }
+  
+  .vision-text {
+    gap: 30px;
+  }
+  
+  .vision-point {
+    gap: 20px;
+  }
+  
+  .point-indicator {
+    width: 45px;
+    height: 45px;
+    font-size: 0.85rem;
+  }
+  
+  .point-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .visual-card {
+    max-width: 450px;
+  }
+  
+  .visual-content {
+    min-height: 350px;
+  }
+  
+  .intersection-scene {
+    height: 300px;
+  }
+  
+  .scenario-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .vision-intelligence-section {
+    padding: 40px 15px;
+  }
+  
+  .vision-header {
+    margin-bottom: 40px;
+  }
+  
+  .vision-title {
+    font-size: 1.7rem;
+  }
+  
+  .vision-point {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .point-indicator {
+    align-self: center;
+  }
+  
+  .point-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .point-content p {
+    font-size: 0.95rem;
+  }
+  
+  .visual-content {
+    padding: 15px;
+    min-height: 280px;
+  }
+  
+  .intersection-scene {
+    height: 250px;
+  }
+  
+  .visual-stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .stat-item {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+  .vision-features {
+    gap: 12px;
+  }
+  
+  .feature-tag {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+  
+  .scenario-explanation {
+    padding: 20px;
+  }
+}
+/* Pedestrian Walk Signals */
+.pedestrian-signal {
+  position: absolute;
+  width: 12px;
+  height: 25px;
+  background: #222;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px 0;
+  gap: 2px;
+}
+
+.north-ped-signal {
+  top: 25%;
+  left: 58%;
+}
+
+.walk-signal, .dont-walk-signal {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #444;
+  transition: all 0.5s ease;
+}
+
+.walk-signal.walk-active {
+  background: #44ff44;
+  box-shadow: 0 0 8px #44ff44;
+}
+
+.dont-walk-signal.dont-walk-active {
+  background: #ff4444;
+  box-shadow: 0 0 8px #ff4444;
+}
