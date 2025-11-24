@@ -22,45 +22,55 @@ const PTZFeatures = () => {
 
   const features = [
     {
-      title: "AI-Based Auto Tracking",
-      desc: "Automatically detects and follows vehicles or pedestrians — ideal for real-time violation capture, near-miss alerts, and traffic event tracking.",
+      title: "Edge AI Analytics",
+      desc: "Performs real-time object detection, vehicle classification, auto tracking and incident analysis using an onboard NPU — reducing bandwidth and enabling faster edge decisions.",
       number: "01",
     },
     {
-      title: "Edge AI Analytics",
-      desc: "Performs real-time object detection, vehicle classification, and incident analysis using an onboard NPU — reducing bandwidth and enabling faster edge decisions.",
+      title: "Superior Low-Light and HDR Imaging",
+      desc: "Ensures superior clarity, color accuracy, and detail in both bright daylight and dim nighttime environments.",
       number: "02",
-    },
-    {
-      title: "Exceptional Low-Light Imaging / HDR",
-      desc: "Sony-based imaging ensures superior clarity, color accuracy, and detail in both bright daylight and dim nighttime environments.",
-      number: "03",
     },
     {
       title: "Smart PTZ Control (Software-Based)",
       desc: "Provides adaptive, software-driven pan-tilt-zoom control for dynamic scene tracking and responsive monitoring across wide areas.",
-      number: "04",
+      number: "03",
     },
     {
       title: "PoE-Powered Connectivity",
       desc: "Simplifies installation through single-cable power and data transfer — ideal for scalable, citywide deployments.",
-      number: "05",
+      number: "04",
     },
     {
       title: "Rugged Weatherproof Design",
       desc: "IP66-rated housing ensures consistent performance in rain, dust, and extreme temperatures.",
-      number: "06",
+      number: "05",
     },
     {
       title: "Seamless Smart Integration",
       desc: "ONVIF-compliant, allowing easy integration with existing VMS, ITS, and traffic management platforms.",
+      number: "06",
+    },
+    {
+      title: "Low Power & Solar-Compatible Design",
+      desc: "Delivers power-efficient performance for reliable operation in remote and solar-powered environments.",
       number: "07",
+    },
+    {
+      title: "Real-Time Event Detection and Alerts",
+      desc: "Automatically identifies and flags critical traffic events—such as accidents, congestion, and violations—enabling faster response times and improved situational awareness.",
+      number: "08",
+    },
+    {
+      title: "Multi-Camera Synchronization",
+      desc: "Supports synchronization with other cameras or sensors for unified monitoring across intersections, corridors, or large city zones.",
+      number: "09",
     },
   ];
 
   return (
     <section id="smart-ptz" className="ptz-features-section">
-      <h2>Why Choose Smart PTZ Cameras?</h2>
+      <h2>Why Choose the Smart Edge-AI Incident Camera?</h2>
 
       <div className="features">
         {features.map((feature, index) => (

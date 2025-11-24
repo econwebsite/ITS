@@ -13,10 +13,6 @@ const PTZApplications = () => {
     },
     {
       img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
-      title: "Near-miss detection",
-    },
-    {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
       title: "Lane discipline monitoring",
     },
     {
@@ -38,6 +34,10 @@ const PTZApplications = () => {
     {
       img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
       title: "Pedestrian safety monitoring",
+    },
+    {
+      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      title: "Average Speed Detection",
     },
   ];
 

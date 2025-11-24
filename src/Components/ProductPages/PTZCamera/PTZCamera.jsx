@@ -3,6 +3,7 @@ import PTZBanner from "./PTZBanner";
 import AboutProduct from "./about-product";
 import PTZSpecs from "./ptz-specs";
 import PTZFeatures from "./ptz-features";
+import EdgeToCloud from "./EdgeToCloud";
 import PTZApplications from "./ptz-applications";
 import PTZComparison from "./ptz-comparison";
 import KeyFeatures from "./KeyFeatures";
@@ -26,6 +27,7 @@ const PTZCamera = () => {
       </section> */}
        <AboutProduct />
         <PTZFeatures/>
+        <EdgeToCloud/>
          <PTZSpecs />
         <PTZApplications/>
         <PTZComparison/>

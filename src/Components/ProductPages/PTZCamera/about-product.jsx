@@ -33,29 +33,19 @@ useEffect(() => {
             {/* Left: Text Section */}
             <div className="col-lg-8 mt-3 aboutParaMain text-left text-lg-start">
               <h2 className="titlePrimary">
-                Smart PTZ Camera for Intelligent Traffic Monitoring
+                Smart Edge-AI Camera for Traffic Incident Detection
               </h2>
 
               <p className="paragraphtext">
-                e-con Systems’ Smart PTZ Camera is engineered for next-generation
-                smart city surveillance, combining advanced Sony-based imaging
-                with powerful on-device edge AI processing to deliver real-time
-                situational awareness and decision-making.
+              e-con Systems' Smart Edge-AI Traffic Incident Detection Camera is designed for ITS hardware vendors, software analytics companies, and smart mobility integrators who need a reliable, high-performance platform for next-generation traffic applications. With on-device AI and Sony-class imaging, it detects, tracks, and analyzes critical road events in real time — from violations and intersections to near-misses and incident response.
               </p>
 
               <p className="paragraphtext">
-                This AI-powered camera solution autonomously detects, tracks, and
-                analyzes critical road events—helping operators respond faster
-                and smarter. Ideal for traffic violation detection, intersection
-                monitoring, near-miss detection and more.
+               Equipped with a high-sensitivity Sony sensor, integrated edge AI engine, PoE connectivity, and an IP66-rated enclosure, it ensures consistent, high-quality imaging and 24x7 outdoor reliability in low light and harsh weather. The integrator-ready architecture supports ONVIF, RTSP, standard protocols, and APIs — making it fully compatible with cloud platforms, custom AI models, and third-party software.
               </p>
 
               <p className="paragraphtext">
-                Featuring a Sony image sensor optimized for high-sensitivity and
-                HDR performance, an integrated edge AI engine, PoE connectivity,
-                and rugged IP66-rated design, it delivers consistent, high-quality
-                imaging and reliable 24×7 operation — even in low-light or harsh
-                outdoor conditions.
+                All core hardware engineering — sensor tuning, thermal design, optics, and ruggedization — is already done, helping you skip months of development. Run your own AI models on the onboard NPU or use our preloaded event-detection algorithms, and deploy seamlessly across gantries, poles, intersections, highways, and tunnels. This allows you to accelerate time-to-market and focus on software innovation rather than camera hardware.
               </p>
 
               <div className="d-flex flex-wrap gap-3 mt-3 justify-content-center justify-content-lg-start text-center text-lg-start">
@@ -112,12 +102,12 @@ useEffect(() => {
       <a
         href={cameraFront}
         data-fancybox="gallery"
-        data-caption="Turret Camera Front View"
+        data-caption="Smart Edge-AI Camera for Traffic Incident Detection"
       >
         <img
           src={cameraFront}
           className="carousel-image d-block mx-auto img-fluid"
-          alt="Turret Camera Front View"
+          alt="Smart Edge-AI Camera for Traffic Incident Detection"
         />
       </a>
     </div>
@@ -126,12 +116,12 @@ useEffect(() => {
       <a
         href={cameraSide}
         data-fancybox="gallery"
-        data-caption="Turret Camera Side View"
+        data-caption="Smart Edge-AI Camera for Traffic Incident Detection"
       >
         <img
           src={cameraSide}
           className="carousel-image d-block mx-auto img-fluid"
-          alt="Turret Camera Side View"
+          alt="Smart Edge-AI Camera for Traffic Incident Detection"
         />
       </a>
     </div>

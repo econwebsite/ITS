@@ -1,0 +1,115 @@
+.edge-cloud-section {
+  padding: 70px 20px;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.edge-cloud-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1300px;
+  width: 100%;
+}
+
+/* LEFT SIDE IMAGE */
+.edge-cloud-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.edge-cloud-image {
+  width: 100%;
+  max-width: 550px;
+  object-fit: contain;
+}
+
+/* RIGHT SECTION */
+.edge-cloud-content {
+  flex: 1.2;
+}
+
+.edge-cloud-title {
+  font-size: 1.8rem;
+  color: #196793;
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+
+.edge-cloud-block {
+  margin-bottom: 30px;
+}
+
+.edge-cloud-block h3 {
+  font-size: 1.25rem;
+  color: #42a1d7;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.edge-cloud-block p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.edge-cloud-block ul {
+  margin: 10px 0 0 18px;
+  padding: 0;
+  color: #475569;
+   list-style: none; /* remove default bullets */
+}
+
+.edge-cloud-block ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* CUSTOM TICK MARK ✔ */
+.edge-cloud-block ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+  color: #196793; /* EXACT CHECKMARK COLOR */
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .edge-cloud-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .edge-cloud-content {
+    text-align: left;
+  }
+
+  .edge-cloud-image {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 576px) {
+  .edge-cloud-title {
+    font-size: 1.6rem;
+  }
+
+  .edge-cloud-image {
+    max-width: 330px;
+  }
+
+  .edge-cloud-container {
+    gap: 40px;
+  }
+}
