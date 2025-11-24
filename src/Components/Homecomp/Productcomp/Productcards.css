@@ -88,11 +88,11 @@
 }
 
 .product-heading {
-  font-size: 1.2em;
-  font-weight: 200;
-  color: #003873;
-  margin-bottom: 10px;
-  text-align: left;
+     font-size: 1em;
+    font-weight: 500;
+    color: #003873;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 .product-description {

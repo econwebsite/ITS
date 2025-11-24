@@ -11,7 +11,7 @@ import Footer from "./Components/Footercomp/Footer"
 import "./App.css";
 import ContactUs from './Components/Homecomp/Contactuscomp/Contactus';
 import Industries from './Components/Industriescomp/Industries';
-import PTZCamera from "./Components/ProductPages/PTZCamera/PTZCamera";
+import IncidentDetectionCamera from "./Components/ProductPages/PTZCamera/PTZCamera";
 import BulletCamera from "./Components/ProductPages/BulletCamera/BulletCamera";
 import AiComputeBox from './Components/ProductPages/Ai-ComputeBox/Ai-ComputeBox';
 import ClovisCentral from './Components/ProductPages/ClovisCentral/Cloviscentral';
@@ -35,7 +35,7 @@ const App = () => {
           <Route path="/:tabSlug?" element={<Industries />} />
 
   {/* PTZ Camera page */}
-            <Route path="/ptz-camera" element={<PTZCamera />} />
+            <Route path="/incident-detection-camera" element={<IncidentDetectionCamera />} />
              <Route path="/bullet-camera" element={<BulletCamera />} />
              <Route path="/ai-compute-box" element={<AiComputeBox/>} />
              <Route path="/video-management-systems" element={<ClovisCentral/>} />

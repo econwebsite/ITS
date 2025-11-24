@@ -9,25 +9,28 @@ import "./Productcards.css"
 
 const productData = [
   {
-    title: "PTZ Camera Series",
+    title: "Incident Detection Camera",
     description: "Dynamic monitoring for traffic violations, red light enforcement, and near-miss detection at intersections.",
     image: ptz,
-    link: "/ptz-camera", // ✅ only PTZ has link
+    link: "/incident-detection-camera", 
   },
   {
     title: "Bullet Camera Series",
     description: "Reliable fixed-view cameras for lane discipline, speed enforcement, and tolling applications.",
     image: bullet,
+    link: "/bullet-camera",
   },
   {
-    title: "Camera Modules for ITS",
+    title: "Clovis Central",
     description: "Advanced imaging with global shutter, HDR, low light performance, and high-speed GigE connectivity.",
     image: cameramodules,
+    link: "/video-management-systems",
   },
   {
     title: "AI Vision Box Series",
     description: "AI Vision Box for real-time edge analytics with NPU, multi-camera support, and rugged design for ITS.",
     image: aivision,
+    link: "/ai-compute-box",
   },
 ];
 
