@@ -22,8 +22,8 @@ const WhySmartBullet = () => {
 
   const bulletFeatures = [
     {
-      title: "Built-In Edge Compute Box for ANPR",
-      desc: "Integrates imaging, AI analytics, and compute in one compact housing — enabling on-device ANPR, classification, and event detection without external servers.",
+      title: "Built-in Edge Compute Box",
+      desc: "Integrates imaging, AI analytics, and compute in one compact housing.",
       number: "01",
     },
     {
@@ -33,7 +33,7 @@ const WhySmartBullet = () => {
     },
     {
       title: "Real-Time Edge AI Analytics",
-      desc: "Built-in NPUs enable intelligent, on-device analysis such as vehicle classification, violation detection, and motion tracking — reducing reliance on backend servers.",
+      desc: "Built-in NPUs enable smart on-device analysis such as vehicle classification, violation detection, and motion tracking — reducing reliance on backend servers.",
       number: "03",
     },
     {
@@ -52,7 +52,7 @@ const WhySmartBullet = () => {
       number: "06",
     },
     {
-      title: "Smart Sensor Fusion & Integration",
+      title: "Multi-Sensor Fusion ",
       desc: "Easily integrates with radar, LiDAR, and trigger sensors for synchronized, multi-sensor enforcement and traffic analytics.",
       number: "07",
     },

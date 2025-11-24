@@ -23,27 +23,27 @@ const ClovisEvmsWhy = () => {
   const steps = [
     {
       title: "End-to-End Integration",
-      desc: "Seamlessly connects with e-con's edge AI vision systems, enabling on-device analytics and automated evidence video uploads without manual intervention.",
+      desc: "With e-con’s edge AI vision systems, enabling on-device analytics and automated video uploads.",
       number: "01",
     },
     {
       title: "API-Based Connectivity",
-      desc: "Ensures smooth, reliable integration with enforcement platforms, ticketing systems, and MIS dashboards for effortless evidence transfer.",
+      desc: "API-Based Connectivity for enforcement, ticketing, and MIS systems to ensure smooth evidence transfer.",
       number: "02",
     },
     {
-      title: "Reliable & Scalable Storage",
-      desc: "Built with redundant backups, health monitoring, and a fault-tolerant storage pipeline to ensure uninterrupted long-term evidence retention.",
+      title: "Reliable & Scalable Storage Architecture ",
+      desc: "Reliable & Scalable Storage Architecture with redundant backups, health monitoring, and fault-tolerant design for uninterrupted evidence retention.",
       number: "03",
     },
     {
-      title: "High Uptime & Security",
-      desc: "Powered by encryption, access control, redundant clusters, and protected pathways to ensure security and maximum system availability.",
+      title: "High Uptime & Data Security ",
+      desc: "High Uptime & Data Security through redundant storage, encryption, and access control.",
       number: "04",
     },
     {
       title: "Central Command Integration",
-      desc: "Connects with CCC and law enforcement dashboards to deliver real-time situational awareness, playback, and violation intelligence.",
+      desc: "Central Command Integration with CCC and law enforcement dashboards for real-time situational awareness.",
       number: "05",
     },
   ];

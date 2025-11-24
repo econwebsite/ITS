@@ -34,25 +34,15 @@ const AboutAIComputeBox = () => {
               </h2>
 
               <p className="paragraphtext">
-                The Rugged AI Vision Box from e-con Systems™ is an advanced edge
-                computing solution designed for vehicle and pedestrian
-                detection, incident management, and intersection analytics in
-                Intelligent Transportation Systems (ITS).
+                The Robust AI Vision Box from e-con Systems is an advanced edge computing platform designed for vehicle and pedestrian detection, incident management, and intersection analytics.
               </p>
 
               <p className="paragraphtext">
-                Built on industry-leading platforms — NVIDIA® Orin NX,
-                Qualcomm®, and Ambarella® — this vision box combines edge AI
-                performance, ruggedized reliability, and multi-camera
-                connectivity to deliver real-time computer vision analytics
-                directly at the edge.
+                Built on industry-leading platforms such as NVIDIA® Orin NX, Qualcomm®, and Ambarella®, this AI vision box combines edge AI performance, ruggedized reliability, and multi-camera connectivity to deliver real-time computer vision analytics—directly at the edge.
               </p>
 
               <p className="paragraphtext">
-                It enables on-device ANPR, vehicle classification, and
-                behavioral analytics, transmitting only final metadata to the
-                cloud — optimizing bandwidth, reducing latency, and ensuring
-                faster response times for critical traffic events.
+               It enables on-device ANPR, vehicle classification, and behavioral analytics, transmitting only final metadata to the cloud. This minimizes bandwidth usage, reduces latency, and ensures faster response times for critical traffic events. 
               </p>
 
               {/* BUTTONS */}

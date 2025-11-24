@@ -24,16 +24,16 @@ const WhyComputeBox = () => {
   const features = [
     {
       title: "NEMA TS2-Compliant Design",
-      desc: "Built to meet NEMA TS2 standards for traffic cabinet environments — ensuring long-term reliability, vibration tolerance, and environmental resilience.",
+      desc: "Built to meet NEMA TS2 standards for traffic cabinet environments—ensuring long-term reliability, vibration tolerance, and environmental resilience.",
       number: "01",
     },
     {
       title: "High-Performance Edge AI",
-      desc: "Delivers up to 157 TOPS with NVIDIA® Orin NX, 48 TOPS with Qualcomm®, and 15 TOPS with Ambarella® — tailored for diverse ITS workloads.",
+      desc: "Delivers up to 157 TOPS with NVIDIA® Orin NX (super mode), 48 TOPS with Qualcomm®, and 15 TOPS with Ambarella® — tailored for diverse ITS workloads.",
       number: "02",
     },
     {
-      title: "Built-In Edge Compute for ANPR",
+      title: "Built-in Edge Compute for ANPR",
       desc: "Integrates imaging, AI analytics, and compute in one compact housing — enabling on-device license plate recognition, vehicle classification, and event detection without relying on external servers.",
       number: "03",
     },

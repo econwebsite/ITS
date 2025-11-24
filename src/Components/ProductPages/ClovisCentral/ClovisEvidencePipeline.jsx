@@ -27,15 +27,11 @@ const ClovisEvidencePipeline = () => {
           <h2 className="pipeline-title">Building Reliable Digital Evidence Pipelines</h2>
 
           <p className="pipeline-desc">
-            The Clovis Central EVMS transforms raw traffic footage into actionable, legally
-            valid evidence — simplifying violation processing, accelerating reporting,
-            and ensuring full transparency throughout the enforcement workflow.
+            The Clovis Central EVMS transforms raw traffic footage into actionable, legally valid evidence — simplifying violation processing, accelerating reporting, and ensuring transparency.
           </p>
 
           <p className="pipeline-desc">
-            Combined with e-con Systems’ Smart PTZ Cameras, Smart Bullet Cameras, and AI Compute
-            Box, it delivers a complete enforcement ecosystem that empowers cities and law
-            enforcement authorities to enforce smarter, faster, and more accurately.
+           Combined with e-con Systems' Smart PTZ Cameras, Smart Bullet cameras, and AI Compute Box,  it delivers a complete enforcement ecosystem that empowers cities and authorities to enforce smarter, faster, and more accurately.
           </p>
         </div>
 

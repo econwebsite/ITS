@@ -5,19 +5,15 @@ const ApplicationsEvms = () => {
   const applications = [
     {
       img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
-      title: "Highway ANPR & Automated Tolling",
-    },
-    {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
       title: "Red-Light & Stop-Line Violation Detection",
     },
     {
       img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
-      title: "Parking Lot & Access Control Management",
+      title: "Stop-Line & Lane Violation Detection",
     },
     {
       img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
-      title: "Speed & Lane Discipline Monitoring",
+      title: "Incident Evidence Review & Reporting",
     },
   ];
 

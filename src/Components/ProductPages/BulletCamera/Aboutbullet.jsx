@@ -36,20 +36,11 @@ const AboutBullet = () => {
               </h2>
 
               <p className="paragraphtext">
-                e-con Systems’ high-performance Bullet Cameras are purpose-built
-                for ANPR/ALPR, law enforcement, and traffic management. Designed
-                for outdoor deployment across highways, toll plazas, parking
-                areas, and intersections — these cameras combine Sony-based
-                high-resolution global shutter sensors with integrated edge
-                compute to deliver exceptional imaging, on-device analytics, and
-                24×7 reliability.
+               e-con Systems’ high-performance Bullet Cameras are purpose-built for ANPR/ALPR, law enforcement, and traffic management. Designed for outdoor deployment across highways, toll plazas, parking areas, and intersections, these cameras combine Sony-based high-resolution global shutter sensors with integrated edge compute to deliver exceptional imaging, on-device analytics, and 24×7 reliability.
               </p>
 
               <p className="paragraphtext">
-                With optical zoom options, strobe-assisted IR night vision, and
-                AI-powered edge processing, they enable real-time vehicle
-                recognition, violation detection, and traffic flow analysis —
-                even under challenging lighting or weather conditions.
+                With optical zoom options, strobe-assisted IR night vision, and AI-powered edge processing, they enable real-time vehicle recognition, violation detection, and traffic flow analysis — even in challenging lighting or weather conditions.
               </p>
 
               <div className="d-flex flex-wrap gap-3 mt-3 justify-content-center justify-content-lg-start text-center text-lg-start">

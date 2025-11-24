@@ -40,7 +40,7 @@ const VisionIntelligence = () => {
               <div className="point-content">
                 <h3>3D Spatial Modeling</h3>
                 <p>
-                 The e-con Systems™ Rugged AI Vision Box integrates advanced vision-tracking algorithms that construct a 3D spatial model of vehicles, pedestrians, and cyclists approaching an intersection.
+                 e-con Systems robust AI compute Box integrates advanced vision-tracking algorithms that construct a 3D spatial model of vehicles, pedestrians, and cyclists approaching an intersection.
                 </p>
               </div>
             </div>
@@ -50,7 +50,7 @@ const VisionIntelligence = () => {
               <div className="point-content">
                 <h3>Precision Zone Tracking</h3>
                 <p>
-                  It tracks each object through custom-defined zones — such as crosswalks, stop lines, and turning lanes — ensuring precise detection and classification until they exit the frame.
+                 It tracks each object through custom-defined zones such as crosswalks, stop lines, and turning lanes. This ensures precise detection and classification until they exit the zone.
                 </p>
               </div>
             </div>
@@ -60,7 +60,7 @@ const VisionIntelligence = () => {
               <div className="point-content">
                 <h3>Real-time Analytics & Control</h3>
                 <p>
-                 This enables real-time trajectory analysis, incident prediction, and adaptive signal control, helping reduce congestion, near-miss events, and pedestrian risks at complex junctions.
+                This enables real-time trajectory analysis, incident prediction, and adaptive signal control, helping reduce congestion, near-miss events, and pedestrian risks at complex junctions.
                 </p>
               </div>
             </div>

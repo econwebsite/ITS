@@ -22,22 +22,15 @@ const ClovisEvms = () => {
           </h2>
 
           <p className="paragraphtext">
-            The Clovis Central is a secure, centralized device management
-            solution built for traffic enforcement and legal evidence handling.
+            The Clovis Central is a secure, centralized device management solution built for traffic enforcement and legal evidence handling.
           </p>
 
           <p className="paragraphtext">
-            It enables automatic ingestion, tagging, storage, and retrieval of
-            video evidence captured during red-light, speeding, and other
-            traffic violations. This ensures that every frame is authenticated,
-            time-stamped, and legally admissible.
+            It enables automatic ingestion, tagging, storage, and retrieval of video evidence captured during red-light, speeding, and other traffic violations. This ensures that every frame is authenticated, time-stamped, and legally admissible.
           </p>
 
           <p className="paragraphtext">
-            Designed for law enforcement, smart city authorities, and traffic
-            command centers, EVMS brings together advanced video analytics,
-            compliance-driven storage, and seamless integration with enforcement
-            systems — all within a unified, scalable platform.
+           Designed for law enforcement, smart city authorities, and traffic command centers, EVMS brings together advanced video analytics, compliance-driven storage, and seamless integration with enforcement systems — all within a unified, scalable platform.
           </p>
 
           <div className="evms-btn-wrapper">

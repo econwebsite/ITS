@@ -28,22 +28,15 @@ const ComputeVision = () => {
 
         <div className="cv-content">
           <p>
-            Powered by deep learning and image recognition, the Vision Box
-            processes multiple camera feeds to identify vehicles, pedestrians,
-            traffic signs, and events in real time — even under low light,
-            glare, or rain.
+           Powered by deep learning and image recognition, the Vision Box processes multiple camera feeds to identify vehicles, pedestrians, traffic signs, and events in real time — even under low light, glare, or rain.
           </p>
 
           <p>
-            Using techniques such as background subtraction, CNN-based object
-            detection, and multi-object tracking, it ensures accurate analytics
-            in all traffic conditions.
+            Using techniques such as background subtraction, CNN-based object detection, and multi-object tracking, it ensures accurate analytics in all traffic conditions.
           </p>
 
           <p>
-            This edge-first architecture minimizes cloud dependency, reduces
-            network load, and ensures millisecond-level decision-making —
-            critical for intersection safety and congestion control.
+           This edge-first architecture minimizes cloud dependency, reduces network load, and ensures millisecond-level decision-making — critical for intersection safety and congestion control.
           </p>
         </div>
       </div>
