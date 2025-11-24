@@ -1,0 +1,99 @@
+.evms-section {
+  padding: 80px 20px;
+  background: transparent;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.evms-title {
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin-bottom: 50px;
+ color: #196793 !important;
+}
+
+/* Grid */
+.evms-grid {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+/* Card */
+.evms-card {
+  position: relative;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 0px;
+  text-align: left;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+
+.evms-card.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.evms-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 56, 115, 0.15);
+  border: 1px solid #0096d6;
+}
+
+/* Card title */
+.evms-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0096d6;
+  margin-bottom: 12px;
+}
+
+/* Card text */
+.evms-card p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #475569;
+}
+
+/* Watermark number */
+.evms-number {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2.8rem;
+  font-weight: normal;
+  color: rgba(0, 50, 120, 0.06);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .evms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .evms-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .evms-card {
+    padding: 28px;
+  }
+
+  .evms-number {
+    font-size: 3rem;
+  }
+}

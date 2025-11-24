@@ -14,6 +14,7 @@ import Industries from './Components/Industriescomp/Industries';
 import PTZCamera from "./Components/ProductPages/PTZCamera/PTZCamera";
 import BulletCamera from "./Components/ProductPages/BulletCamera/BulletCamera";
 import AiComputeBox from './Components/ProductPages/Ai-ComputeBox/Ai-ComputeBox';
+import ClovisCentral from './Components/ProductPages/ClovisCentral/Cloviscentral';
 import Market from "./Components/Marketscomp/Market";
 
 
@@ -37,6 +38,7 @@ const App = () => {
             <Route path="/ptz-camera" element={<PTZCamera />} />
              <Route path="/bullet-camera" element={<BulletCamera />} />
              <Route path="/ai-compute-box" element={<AiComputeBox/>} />
+             <Route path="/video-management-systems" element={<ClovisCentral/>} />
             {/* Applications page route */}
            <Route path="/market" element={<Market />} />
           </Routes>

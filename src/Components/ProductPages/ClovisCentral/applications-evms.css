@@ -1,0 +1,90 @@
+/* Root Section */
+.evms-app-section {
+  padding: 65px 20px;
+  background: #f7f9fc;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.evms-app-title {
+  font-size: 1.9rem;
+  font-weight: normal;
+  color: #196793 !important;
+  margin-bottom: 45px;
+}
+
+/* Grid */
+.evms-app-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 26px;
+}
+
+/* Cards */
+.evms-app-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+}
+
+.evms-app-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 30px rgba(0, 56, 115, 0.18);
+}
+
+/* Images */
+.evms-app-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.evms-app-card:hover .evms-app-img {
+  transform: scale(1.06);
+}
+
+/* Overlay */
+.evms-app-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px 10px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 56, 115, 0.9),
+    rgba(0, 56, 115, 0.65)
+  );
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.evms-app-overlay h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .evms-app-img {
+    height: 190px;
+  }
+
+  .evms-app-title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .evms-app-img {
+    height: 165px;
+  }
+}

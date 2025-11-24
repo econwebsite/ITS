@@ -1,0 +1,114 @@
+/* ====================================
+   EVMS SECTION WITH IMAGE + CONTENT
+   ==================================== */
+
+.evms-section {
+  width: 100%;
+  padding: 2rem 1rem;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.evmspara-grid {
+  display: grid;
+  max-width: 1300px;
+  width: 100%;
+  grid-template-columns: 1fr 2fr !important;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* Image Section */
+.evms-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.evms-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Right Content Section */
+.evms-content .titlePrimary {
+  text-align: left;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #003873;
+  font-size: 26px;
+}
+
+.evms-content .paragraphtext {
+  text-align: justify;
+  margin-bottom: 8px;
+  padding: 5px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* CTA Button Wrapper */
+.evms-btn-wrapper {
+  margin-top: 22px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Pastel Blue CTA Button */
+.btn-blue {
+  background-color: #7ab8ff !important;   /* Soft pastel blue */
+  color: #003873;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 22px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-blue:hover {
+  background-color: #559fee !important;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Shared button enhancement */
+.btn-with-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .evmspara-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .evms-image-wrapper {
+    max-height: 320px;
+  }
+
+  .evms-content .titlePrimary {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .evms-content .titlePrimary {
+    font-size: 20px;
+  }
+
+  .evms-content .paragraphtext {
+    font-size: 0.9rem;
+  }
+
+  .btn-blue {
+    padding: 9px 18px;
+    font-size: 0.9rem;
+  }
+}

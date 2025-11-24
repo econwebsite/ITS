@@ -173,14 +173,14 @@ const handleResourcesPopoverClose = () => {
       </MenuItem>
       <MenuItem 
         component={Link} 
-        to="/" 
+        to="/video-management-systems" 
         onClick={() => {
           handlePopoverClose();
           setMobileOpen(false);
           setMobileMenuAnchor(null);
         }}
       >
-       Product 4
+       Clovis Central
       </MenuItem>
     </Box>
   );

@@ -1,0 +1,119 @@
+/* ================================
+   Clovis Banner Styles
+   ================================ */
+
+.clovis-banner {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+/* Banner image container */
+.clovis-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Banner image styling */
+.clovis-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay with text content */
+.clovis-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.clovis-overlay h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.clovis-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* CTA Button */
+.clovis-button {
+  padding: 12px 25px;
+  border: none;
+  background-color: #1e2f7ac9;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 1px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.clovis-button:hover {
+  background-color: #00aeef;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  .clovis-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .clovis-overlay p {
+    font-size: 1.1rem;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clovis-banner {
+    height: 50vh;
+  }
+
+  .clovis-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .clovis-overlay p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .clovis-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clovis-overlay h1 {
+    font-size: 1.6rem;
+  }
+
+  .clovis-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .clovis-button {
+    font-size: 0.85rem;
+    padding: 8px 18px;
+  }
+}
