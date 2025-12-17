@@ -6,8 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 // Temporary images (same as provided)
-import cameraFront from "../../../assets/ptz-cameras/5mp-ai-turret-camera-thumb.png";
-import cameraSide from "../../../assets/ptz-cameras/ai-turret-camera-thumb.png";
+import visionBox from "../../../assets/ai-compute-box/ai-compute-box-thumb.png";
 
 const AboutAIComputeBox = () => {
   useEffect(() => {
@@ -69,90 +68,7 @@ const AboutAIComputeBox = () => {
 
             {/* RIGHT: IMAGE CAROUSEL */}
             <div className="col-lg-4 px-0 d-flex flex-column">
-              <div className="carousel-container">
-                <div
-                  id="carouselComputeBox"
-                  className="carousel slide"
-                  data-bs-ride="carousel"
-                  data-bs-interval="5000"
-                >
-                  {/* Indicators */}
-                  <div className="carousel-indicators">
-                    <button
-                      type="button"
-                      data-bs-target="#carouselComputeBox"
-                      data-bs-slide-to="0"
-                      className="active"
-                      aria-current="true"
-                      aria-label="Slide 1"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselComputeBox"
-                      data-bs-slide-to="1"
-                      aria-label="Slide 2"
-                    ></button>
-                  </div>
-
-                  {/* Slides */}
-                  <div className="carousel-inner text-center">
-                    <div className="carousel-item active">
-                      <a
-                        href={cameraFront}
-                        data-fancybox="gallery"
-                        data-caption="Compute Box – Front View"
-                      >
-                        <img
-                          src={cameraFront}
-                          className="carousel-image d-block mx-auto img-fluid"
-                          alt="Compute Box Front View"
-                        />
-                      </a>
-                    </div>
-
-                    <div className="carousel-item">
-                      <a
-                        href={cameraSide}
-                        data-fancybox="gallery"
-                        data-caption="Compute Box – Side View"
-                      >
-                        <img
-                          src={cameraSide}
-                          className="carousel-image d-block mx-auto img-fluid"
-                          alt="Compute Box Side View"
-                        />
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Controls */}
-                  <button
-                    className="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselComputeBox"
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      className="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Previous</span>
-                  </button>
-
-                  <button
-                    className="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselComputeBox"
-                    data-bs-slide="next"
-                  >
-                    <span
-                      className="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
+              <img src={visionBox} alt="AI Compute Box" className="img-fluid mb-3" />
             </div>
             {/* END CAROUSEL */}
           </div>

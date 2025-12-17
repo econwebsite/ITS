@@ -1,5 +1,6 @@
 import React from "react";
 import "./clovis-evms.css";
+import clovisThumbnail from '../../../assets/clovis-central/clovis-evms-thumbnail.png'
 
 const ClovisEvms = () => {
   return (
@@ -9,7 +10,7 @@ const ClovisEvms = () => {
         {/* Left Image - PNG */}
         <div className="evms-image-wrapper">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Surveillance_camera.png/640px-Surveillance_camera.png"
+            src={clovisThumbnail}
             alt="Traffic Enforcement Camera"
             className="evms-image"
           />

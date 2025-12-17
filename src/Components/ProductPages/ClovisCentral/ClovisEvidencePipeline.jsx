@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./clovis-evidence-pipeline.css";
+import pipelineImage from '../../../assets/clovis-central/clovis-evidence-pipeline.jpg'
 
 const ClovisEvidencePipeline = () => {
   useEffect(() => {
@@ -37,7 +38,7 @@ const ClovisEvidencePipeline = () => {
 
         <div className="pipeline-image">
           <img
-            src="https://images.unsplash.com/photo-1581092795360-fd1ca04f10f1?auto=format&fit=crop&w=1200&q=60"
+            src={pipelineImage}
             alt="Digital Evidence Pipeline"
           />
         </div>

@@ -1,22 +1,26 @@
 import React from "react";
 import "./bullet-applications.css";
+import laneDetectionImg from '../../../assets/bullet-camera/lane-discipline.jpg'
+import parkinglotManagementImg from '../../../assets/bullet-camera/parking-management.jpg'
+import redLightViolationImg from '../../../assets/bullet-camera/red-light-violation.jpg'
+import tollingSystemImg from '../../../assets/bullet-camera/tolling-highway-infrastructure.jpg'
 
 const BulletApplications = () => {
   const applications = [
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: tollingSystemImg,
       title: "Automated Tolling ",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: redLightViolationImg,
       title: "Red-Light & Stop-Line Violation Detection ",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: parkinglotManagementImg,
       title: "Parking Lot & Access Control Management ",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: laneDetectionImg,
       title: "Speed & Lane Discipline Monitoring ",
     },
   ];

@@ -4,8 +4,8 @@ import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import cameraFront from "../../../assets/ptz-cameras/5mp-ai-turret-camera-thumb.png";
-import cameraSide from "../../../assets/ptz-cameras/ai-turret-camera-thumb.png";
+import cameraFront from "../../../assets/ptz-cameras/incident-detection-camera-for-intelligent-traffic-monitoring-thumb.jpg";
+import cameraSide from "../../../assets/ptz-cameras/smart-incident-detection-for-intelligent-traffic-monitoring-thumb.png";
 
 const AboutProduct = () => {
 useEffect(() => {

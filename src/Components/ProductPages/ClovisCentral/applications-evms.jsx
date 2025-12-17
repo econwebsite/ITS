@@ -1,18 +1,21 @@
 import React from "react";
 import "./applications-evms.css";
+import laneDetectionImg from '../../../assets/bullet-camera/lane-discipline.jpg'
+import incidentProofImg from '../../../assets/clovis-central/incident-evidence-review.jpg'
+import redLightViolationImg from '../../../assets/bullet-camera/red-light-violation.jpg'
 
 const ApplicationsEvms = () => {
   const applications = [
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: redLightViolationImg,
       title: "Red-Light & Stop-Line Violation Detection",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: laneDetectionImg,
       title: "Stop-Line & Lane Violation Detection",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: incidentProofImg,
       title: "Incident Evidence Review & Reporting",
     },
   ];

@@ -1,42 +1,51 @@
 import React from "react";
 import "./ptz-applications.css";
+import redLightViolation from "../../../assets/ptz-cameras/red-light-violation.jpg";
+import intersectionMonitoring from "../../../assets/ptz-cameras/intersection-monitoring.jpg"
+import laneDiscipline from "../../../assets/ptz-cameras/lane-discipline.jpg"
+import incidentDetection from "../../../assets/ptz-cameras/incident-detection.jpg"
+import vehicleCounting from "../../../assets/ptz-cameras/vehicle-counting.jpg"
+import wrongwayDetection from "../../../assets/ptz-cameras/wrong-way-detection.jpg"
+import illegalParking from "../../../assets/ptz-cameras/illegal-parking-detection.jpg"
+import pedestrianSafety from "../../../assets/ptz-cameras/pedestrian-monitoring.jpg"
+import averageSpeed from "../../../assets/ptz-cameras/average-speed.jpg"
 
 const PTZApplications = () => {
   const applications = [
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: redLightViolation,
       title: "Red-light and stop-line violation detection",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: intersectionMonitoring,
       title: "Intersection monitoring",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: laneDiscipline,
       title: "Lane discipline monitoring",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: incidentDetection,
       title: "Incident/accident detection",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: vehicleCounting,
       title: "Vehicle counting and classification",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: wrongwayDetection,
       title: "Wrong-way detection",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: illegalParking,
       title: "Illegal parking detection",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: pedestrianSafety,
       title: "Pedestrian safety monitoring",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: averageSpeed,
       title: "Average Speed Detection",
     },
   ];

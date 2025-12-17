@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./smart-intersection.css";
-import Smartedge from "../../../assets/compute-box/edge-to-cloud.png";
+import Smartedge from "../../../assets/ai-compute-box/smart-intersection.jpg";
 
 const Smartintersection = () => {
   useEffect(() => {

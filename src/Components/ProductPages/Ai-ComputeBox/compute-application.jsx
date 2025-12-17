@@ -1,5 +1,10 @@
 import React from "react";
 import "./compute-application.css";
+import laneDetectionImg from '../../../assets/ai-compute-box/lane-violation-detection.jpg'
+import anprImg from '../../../assets/ai-compute-box/anpr.jpg'
+import redLightViolationImg from '../../../assets/bullet-camera/red-light-violation.jpg'
+import pedestrianImg from '../../../assets/ai-compute-box/pedestrian-detection.jpg'
+import vehicleClassificationImg from '../../../assets/ai-compute-box/vehicle-detection-classification.jpg'
 
 const ComputeApplication = () => {
   const applications = [
@@ -8,23 +13,23 @@ const ComputeApplication = () => {
       title: "Adaptive Traffic Signal Control ",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: anprImg,
       title: "Automatic License Plate Recognition (ALPR) ",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: redLightViolationImg,
       title: "Red-Light & Speed Violation Detection ",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: laneDetectionImg,
       title: "Vehicle Detection & Classification ",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: pedestrianImg,
       title: "Pedestrian & Vulnerable Road User (VRU) Safety ",
     },
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: vehicleClassificationImg,
       title: "Congestion & Flow Analytics ",
     },
   ];

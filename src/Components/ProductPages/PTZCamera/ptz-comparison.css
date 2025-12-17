@@ -130,8 +130,8 @@
 }
 
 .product-image {
-  width: 120px;
-  height: 80px;
+  /* width: 120px;
+  height: 80px; */
   margin: 0 auto 15px;
   border-radius: 12px;
   overflow: hidden;

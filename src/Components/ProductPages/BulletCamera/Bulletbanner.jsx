@@ -1,9 +1,10 @@
 import React from "react";
 import "./Bulletbanner.css";
+import bannerImg from '../../../assets/bullet-camera/bullet-camera-banner.jpg'
 
 const BulletBanner = () => {
   const banner = {
-    image: "https://source.unsplash.com/1600x600/?security,camera", // Temporary placeholder image
+    image: bannerImg,
     title: "Smart Bullet Cameras for ANPR/ALPR",
     subtitle:
       "e-con Systems’ high-performance Bullet Cameras are purpose-built for ANPR/ALPR, law enforcement, and traffic management.",

@@ -24,7 +24,7 @@ const RoadInspection = () => {
                 <div className="position-absolute top-0 start-0 end-0 bottom-0" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}></div>
                 <div className="position-relative h-100 d-flex align-items-center justify-content-center text-center px-4">
                     <div data-aos="fade-up">
-                        <Title level={1} className="text-white display-4 fw-bold">Advanced ANPR & Traffic Management System</Title>
+                        <Title level={1} className="text-white display-4 fw-bold">Smart Road Asset Management & Inspection System</Title>
                     </div>
                 </div>
             </div>
@@ -35,13 +35,13 @@ const RoadInspection = () => {
                     <Row justify="center">
                         <Col xs={24} md={22} lg={22} className="text-center">
                             <Paragraph className="text-justify mainPara" data-aos="fade-up">
-                                At e-con Systems, we provide state-of-the-art Automatic Number-Plate Recognition (ANPR) solutions for law enforcement, tolling, and smart city applications. Our system is built for accuracy, speed, and reliability in any environment.
+                                At e-con Systems, we enable smart city authorities, contractors, and infrastructuredevelopers to transform how roads are inspected and maintained.Our AI-powered, vision-based system captures, analyzes, and visualizes every detail ofyour road network — helping you move from manual audits to data-driven maintenancedecisions.
                             </Paragraph>
                             <Paragraph className="mt-3 text-justify mainPara" data-aos="fade-up" data-aos-delay="100">
-                                Inaccurate plate reads and system downtime can compromise security and revenue. Our ANPR system utilizes advanced AI and high-resolution imaging to deliver exceptional read rates, day or night, in all weather conditions.
+                                Traditional road inspection relies on manual surveys and limited sampling — time-consuming, inconsistent, and prone to error.
                             </Paragraph>
                              <Paragraph className="mt-3 text-justify mainPara" data-aos="fade-up" data-aos-delay="200">
-                                Our modular ANPR system is designed for easy integration and scalability. It provides real-time alerts, detailed analytics, and seamless data sharing with existing platforms, offering the flexibility to build a solution tailored to your needs.
+                                With e-con’s embedded vision and edge AI system, teams gain continuous, objectiveinsights into surface conditions like potholes, cracks, rutting, and uneven wear —enabling faster maintenance, improved safety, and longer pavement life.
                             </Paragraph>
                         </Col>
                     </Row>

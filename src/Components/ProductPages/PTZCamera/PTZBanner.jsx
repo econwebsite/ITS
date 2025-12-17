@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./PTZBanner.css";
-
+import banner1 from "../../../assets/ptz-cameras/ai-powered-incident-detection-camera.jpg"
+import banner2 from "../../../assets/ptz-cameras/incident-detection-camera-dynamic-monitoring.jpg"
+import banner3 from "../../../assets/ptz-cameras/intelligence-surveillance-camera.jpg"
 // Temporary free images need to replace later)
 const banners = [
   {
-    image: "https://source.unsplash.com/1600x600/?traffic,camera",
+    image: banner1,
     title: "AI-Powered PTZ Cameras",
     subtitle: "Smarter traffic enforcement with full coverage and AI vision.",
   },
   {
-    image: "https://source.unsplash.com/1600x600/?city,roads",
+    image: banner2,
     title: "Dynamic Monitoring",
     subtitle: "Reliable detection for red light enforcement and violations.",
   },
   {
-    image: "https://source.unsplash.com/1600x600/?surveillance,technology",
+    image: banner3,
     title: "Intelligent Surveillance",
     subtitle: "High-performance PTZ cameras for urban traffic solutions.",
   },

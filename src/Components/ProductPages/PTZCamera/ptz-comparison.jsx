@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ptz-comparison.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import cameraimage from "../../../assets/ptz-cameras/5mp-ai-turret-camera-thumb.png";
+import cameraimage from "../../../assets/ptz-cameras/incident-detection-camera-for-intelligent-traffic-monitoring-thumb.jpg";
 
 const variants = [
   {

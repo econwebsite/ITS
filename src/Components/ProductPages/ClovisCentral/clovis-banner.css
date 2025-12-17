@@ -55,6 +55,10 @@
 
 /* CTA Button */
 .clovis-button {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 12px 25px;
   border: none;
   background-color: #1e2f7ac9;
@@ -67,7 +71,6 @@
 
 .clovis-button:hover {
   background-color: #00aeef;
-  transform: scale(1.05);
 }
 
 /* Responsive Design */

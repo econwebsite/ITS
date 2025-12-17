@@ -1,9 +1,10 @@
 import React from "react";
 import "./ComputeBoxbanner.css";
+import bannerImg from '../../../assets/ai-compute-box/ai-compute-box-banner.jpg'
 
 const ComputeBoxBanner = () => {
   const banner = {
-    image: "https://source.unsplash.com/1600x600/?traffic,ai,computing", // Temporary AI/ITS themed placeholder
+    image: bannerImg,
     title: "AI Compute Box for Intelligent Intersections",
     subtitle:
       "The Rugged AI Vision Box from e-con Systems™ is an advanced edge computing solution designed for vehicle and pedestrian detection, incident management, and intersection analytics in Intelligent Transportation Systems (ITS).",
