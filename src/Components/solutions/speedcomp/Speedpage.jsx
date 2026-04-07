@@ -1,4 +1,4 @@
-import './speedpage.css';
+import './Speedpage.css';
 import SpeedBanner from './bannercomp/Speedbanner';
 import SpeedOverview from './overviewcomp/Speedoverview';
 import SpeedSolutions from './solutionscomp/Speedsolutions';
