@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import Applications from "../Applicationcomp/Application";
 import Videos from "../Videoscomp/Videostab";
 import Blogs from "../Blogcomp/Blogs";
 import CaseStudies from "../Casestudycomp/CaseStudies";
 import './Tabs.css';
 
 const Tabs = () => {
-  const [activeTab, setActiveTab] = useState("Applications");
+  const [activeTab, setActiveTab] = useState("Case Studies");
 
   const renderComponent = () => {
     switch (activeTab) {
-      case "Applications":
-        return <Applications />;
       case "Videos":
         return <Videos />;
       case "Blogs":
@@ -19,14 +16,14 @@ const Tabs = () => {
       case "Case Studies":
         return <CaseStudies />;
       default:
-        return <Applications />;
+        return  <Videos />;
     }
   };
 
   return (
     <div>
       <div className="tab-buttons">
-        {["Applications", "Videos", "Blogs", "Case Studies"].map((tab) => (
+        {["Case Studies", "Videos", "Blogs"].map((tab) => (
           <button
             key={tab}
             className={activeTab === tab ? "active" : ""}

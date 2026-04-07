@@ -60,7 +60,7 @@ display: flex;
 }
 
 .VideoStab-hashtags span {
-  font-size: 14px;
+  font-size: 10px;
   color: #007bff;
   background-color: #eef4ff;
   padding: 2px 6px;
@@ -81,4 +81,13 @@ display: flex;
   .VideoStab-grid {
     justify-content: center;
   }
+}
+
+/* Hide fslightbox navigation arrows */
+.fslightbox-slide-btn-next-container {
+  display: none !important;
+}
+
+.fslightbox-slide-btn-previous-container {
+  display: none !important;
 }

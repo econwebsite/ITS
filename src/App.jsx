@@ -14,10 +14,14 @@ import Industries from './Components/Industriescomp/Industries';
 import IncidentDetectionCamera from "./Components/ProductPages/PTZCamera/PTZCamera";
 import BulletCamera from "./Components/ProductPages/BulletCamera/BulletCamera";
 import AiComputeBox from './Components/ProductPages/Ai-ComputeBox/Ai-ComputeBox';
-import ClovisCentral from './Components/ProductPages/ClovisCentral/Cloviscentral';
+import TrafficEnforcement from './Components/solutions/trafficeEnforcement/Itspage';
+import SpeedPage from './Components/solutions/speedcomp/Speedpage';
+import RLVDPage from './Components/solutions/rlvdcomp/RLVDpage';    
+import SBSAPage from './Components/solutions/sbsacomp/sbsapage';
 import Market from "./Components/Marketscomp/Market";
-
-
+import Hubpageblog from './Components/Hubpage Comp/Bloghubpages/Hubpageblog';
+import Casehubpage from './Components/Hubpage Comp/Casestudyhubpage/casehubpage';
+import AlprSoftware from './Components/ProductPages/alpr-software/AlprSoftware';
 const App = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -33,14 +37,18 @@ const App = () => {
             <Route path="/" element={<TotalHome />} />
            <Route path="/company/contact-us" element={<ContactUs />} />
           <Route path="/:tabSlug?" element={<Industries />} />
-
-  {/* PTZ Camera page */}
             <Route path="/incident-detection-camera" element={<IncidentDetectionCamera />} />
-             <Route path="/bullet-camera" element={<BulletCamera />} />
-             <Route path="/ai-compute-box" element={<AiComputeBox/>} />
-             <Route path="/video-management-systems" element={<ClovisCentral/>} />
+             <Route path="/products/anpr-alpr-bullet-cameras" element={<BulletCamera />} />
+             <Route path="/products/ai-vision-box" element={<AiComputeBox/>} />
+             <Route path="/products/license-plate-recognition-software" element={<AlprSoftware/>} />
+              <Route path="/solutions/traffic-enforcement" element={<TrafficEnforcement />} />
+              <Route path="/solutions/speed-enforcement" element={<SpeedPage />} />
+              <Route path="/solutions/red-light-violations" element={<RLVDPage />} />
+              <Route path="/solutions/school-bus-stop-arm" element={<SBSAPage />} />
             {/* Applications page route */}
            <Route path="/market" element={<Market />} />
+           <Route path="/blog" element={<Hubpageblog />} />
+            <Route path="/case-study" element={<Casehubpage />} />
           </Routes>
           <Footer/>
         </div>

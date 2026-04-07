@@ -11,7 +11,7 @@ const products = [
   {
     title: "Bullet Camera Series",
     img: "https://via.placeholder.com/200x150.png?text=Bullet+Camera",
-    link: "/bullet-camera",
+    link: "/products/anpr-alpr-bullet-cameras",
   },
   {
     title: "Camera Modules for ITS",

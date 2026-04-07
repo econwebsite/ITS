@@ -79,7 +79,7 @@
   background: #e0f4ff;
   color: #0070a8;
   border-radius: 6px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 /* Clean table-like layout */
@@ -108,7 +108,14 @@
 .variant-value {
   color: #1e293b;
 }
-
+.variant-label.full{
+  color: #196793;
+}
+.variant-label.full, .variant-value.full {
+  grid-column: span 2;
+  font-size: .8em;
+  font-style: italic;
+}
 /* Responsive: stack items on mobile */
 @media (max-width: 600px) {
   .variant-features {

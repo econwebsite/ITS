@@ -1,0 +1,146 @@
+.sbsa-cta {
+  background: #050d1a;
+  padding: 88px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated blue wave BG */
+.sbsa-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(13,194,237,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13,194,237,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.sbsa-cta::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(13,194,237,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.sbsa-cta__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Shield icon */
+.sbsa-cta__icon-wrap {
+  width: 72px;
+  height: 72px;
+  background: rgba(13,194,237,0.1);
+  border: 1px solid rgba(13,194,237,0.25);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+}
+
+.sbsa-cta__icon-wrap svg {
+  width: 34px;
+  height: 34px;
+  stroke: #0dc2ed;
+  fill: none;
+}
+
+.sbsa-cta__eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #0dc2ed;
+  margin-bottom: 18px;
+}
+
+.sbsa-cta__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(24px, 3.2vw, 40px);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 18px;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+}
+
+.sbsa-cta__sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.72;
+  margin: 0 0 44px;
+}
+
+.sbsa-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #0dc2ed;
+  color: #050d1a;
+  border: none;
+  padding: 17px 42px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 24px rgba(13,194,237,0.35);
+}
+
+.sbsa-cta__btn:hover {
+  background: #2cd0f8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 36px rgba(13,194,237,0.45);
+}
+
+.sbsa-cta__btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* Trust strip */
+.sbsa-cta__trust {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  margin-top: 44px;
+  padding-top: 36px;
+  border-top: 1px solid rgba(13,194,237,0.12);
+}
+
+.sbsa-cta-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.38);
+  font-weight: 600;
+}
+
+.sbsa-cta-trust-item svg {
+  width: 16px;
+  height: 16px;
+  stroke: rgba(13,194,237,0.6);
+  fill: none;
+}
+
+@media (max-width: 600px) {
+  .sbsa-cta { padding: 60px 24px; }
+  .sbsa-cta__trust { gap: 16px; }
+}

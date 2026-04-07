@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Snowfall from 'react-snowfall';
 import './Industries.css';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
@@ -7,13 +6,14 @@ import smart from "../../../assets/homepage/smart-cities.png";
 import traffic from "../../../assets/homepage/traffic-enforcement.png";
 import tolling from "../../../assets/homepage/tolling-infrastucture.png";
 import parking from "../../../assets/homepage/parking-management.png";
+import publicSafety from "../../../assets/homepage/public-safety.png";
 
 const cards = [
   { id: 1, title: 'Smart Cities', color: '#E4E0E1', image: smart, link: "/smart-cities" },
   { id: 2, title: 'Traffic Management', color: '#ADB2D4', image: traffic, link: "/traffic-management" },
   { id: 3, title: 'Tolling & Highway Infrastructure', color: '#DCCFC0', image: tolling, link: "/tolling-&-highway-infrastructure" },
   { id: 4, title: 'Parking Lot Management', color: '#D0DDD0', image: parking, link: "/parking-lot-management" },
-  { id: 5, title: 'Public safety & law enforcement', color: '#E6B2BA', image: parking, link: "/public-safety-&-law-enforcement" },
+  { id: 5, title: 'Public safety & law enforcement', color: '#E6B2BA', image: publicSafety, link: "/public-safety-&-law-enforcement" },
 ];
 
 export default function Carousel() {
@@ -45,19 +45,7 @@ export default function Carousel() {
   return (
     <div className="Industries-wrapper">
      <div className="Industries-snow-container">
-    <Snowfall
-      snowflakeCount={150}
-      color="white"
-      style={{
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
-        top: 0,
-        left: 0,
-        pointerEvents: 'none',
-        zIndex: 0,
-      }}
-    />
+   
 
       <div className="Industries-content">
         <h2 className="Industries-title">Industries</h2>
@@ -82,13 +70,11 @@ export default function Carousel() {
                   opacity: absOffset > 2 ? 0 : 1,
                 }}
               >
-                <Link to={card.link} className="Industries-link">
+               
                   <img src={card.image} alt={card.title} />
-                </Link>
                 <h3>{card.title}</h3>
-                <Link to={card.link}>
-                  <button className="Industries-btn">Know more</button>
-                </Link>
+                  
+          
               </div>
             );
           })}

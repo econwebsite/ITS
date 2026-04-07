@@ -78,7 +78,8 @@
 
 .carousel-image {
   border-radius: 10px;
-  max-width: 340px;
+  width: 280px;
+  max-width: 280px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }

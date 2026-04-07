@@ -26,11 +26,12 @@ const PTZCamera = () => {
         </p>
       </section> */}
        <AboutProduct />
+       
+         <PTZSpecs />
         <PTZFeatures/>
         <EdgeToCloud/>
-         <PTZSpecs />
-        <PTZApplications/>
         <PTZComparison/>
+        <PTZApplications/>
       {/* Key Features Section */}
       {/* <KeyFeatures /> */}
       {/* <ProductVariants />

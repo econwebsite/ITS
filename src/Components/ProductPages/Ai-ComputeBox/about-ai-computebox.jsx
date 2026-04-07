@@ -4,7 +4,7 @@ import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-
+import Modelbutton from "../../Button comp/Modelbutton";
 // Temporary images (same as provided)
 import visionBox from "../../../assets/ai-compute-box/ai-compute-box-thumb.png";
 
@@ -29,11 +29,11 @@ const AboutAIComputeBox = () => {
             {/* LEFT: TEXT SECTION */}
             <div className="col-lg-8 mt-3 aboutComputePara text-left text-lg-start">
               <h2 className="titlePrimary">
-                AI Compute Box for Intelligent Intersections
+                AI Vision Box for Intelligent roads
               </h2>
 
               <p className="paragraphtext">
-                The Robust AI Vision Box from e-con Systems is an advanced edge computing platform designed for vehicle and pedestrian detection, incident management, and intersection analytics.
+                The Robust AI Vision Box from e-con Systems is an advanced edge computing platform designed for vehicle and pedestrian detection, incident detection, and intersection analytics.
               </p>
 
               <p className="paragraphtext">
@@ -49,9 +49,19 @@ const AboutAIComputeBox = () => {
                 {/* Documents */}
                 <div className="cardKnowMore p-3">
                   <p className="mb-2 fw-semibold section-label">Documents:</p>
-                  <button className="btn btn-success btn-with-icon btn-darkgreen">
-                    <i className="bi bi-download me-2"></i> Download
-                  </button>
+                  <Modelbutton 
+            className="computebox-download-button gtm-btn" 
+            text="Download" 
+            backgroundColor="#1e2f7ac9" 
+            animationColor="#69ba2f" 
+            hoverColor="#00aeef"
+            padding="5px 15px"
+            fontSize="14px" 
+            productName={`ProductDocument`}
+            title={`AI Vision Box`}
+            docName="e-con-its-camera-brochure-ai-vision-box.pdf"
+            type= 'download'
+          />
                 </div>
 
                 {/* Contact Us */}
@@ -59,9 +69,17 @@ const AboutAIComputeBox = () => {
                   <p className="mb-2 fw-semibold section-label">
                     For more details:
                   </p>
-                  <button className="btn btn-primary btn-with-icon contactus-product">
-                    Contact Us
-                  </button>
+                <Modelbutton 
+            className="computebox-contactbutton gtm-btn" 
+            text="Contact Us" 
+            backgroundColor="#69ba2f" 
+            animationColor="#00aeef" 
+            hoverColor="#00aeef"
+            padding="5px 15px"
+            fontSize="14px" 
+            productName={`AI Compute Box`}
+            type= 'contact'
+          />
                 </div>
               </div>
             </div>

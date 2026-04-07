@@ -21,6 +21,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* Overlay with text content */
@@ -38,6 +39,7 @@
   color: white;
   text-align: center;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .banner-overlay h1 {
@@ -53,7 +55,7 @@
   line-height: 1.6;
 }
 
-/* CTA Button */
+/* CTA Button (fallback) */
 .banner-button {
   padding: 12px 25px;
   border: none;
@@ -70,7 +72,12 @@
   transform: scale(1.05);
 }
 
-/*Responsive Design */
+/* Modelbutton custom styling */
+.bullet-cameravariant-button {
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
 
 @media (max-width: 1024px) {
   .banner-overlay h1 {
@@ -89,7 +96,7 @@
   }
 
   .banner-overlay h1 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .banner-overlay p {
@@ -103,17 +110,90 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .bullet-banner {
+    height: 45vh;
+  }
+
+  .banner-overlay {
+    padding: 15px;
+  }
+
   .banner-overlay h1 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .banner-overlay p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+
+  .bullet-cameravariant-button {
+    padding: 8px 18px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* ========== SMALL DEVICES (below 560px) - HIDE IMAGE, SHOW ONLY OVERLAY ========== */
+@media (max-width: 559px) {
+  .bullet-banner {
+    height: 320px;                /* Fixed height for the overlay */
+  }
+
+  .banner-image {
+    display: none;                /* Hide the image */
+  }
+
+  .banner-overlay {
+    background: rgba(0, 0, 0, 0.45);  /* Keep same overlay background */
+    padding: 20px 15px;
+    justify-content: center;
+    height: 300px !important;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
   }
 
   .banner-overlay p {
     font-size: 0.9rem;
+    margin-bottom: 12px;
+    max-width: 95%;
   }
 
-  .banner-button {
+  .bullet-cameravariant-button {
+    padding: 6px 14px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Extra fine-tuning for very small devices */
+@media (max-width: 480px) {
+  .bullet-banner {
+    height: 280px;                /* Slightly shorter */
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.4rem;
+  }
+
+  .banner-overlay p {
     font-size: 0.85rem;
-    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .bullet-banner {
+    height: 260px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.3rem;
+  }
+
+  .banner-overlay p {
+    font-size: 0.8rem;
   }
 }

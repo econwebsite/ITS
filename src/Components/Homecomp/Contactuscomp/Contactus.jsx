@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { Form, Input, Select, Row, Col, message, Spin } from 'antd';
 import axios from 'axios';
 import './Contactus.css';
-import contactus from "../../../assets/homepage/application.png";
+import contactus from "../../../assets/homepage/contact-us-its.png";
 import countryList from 'react-select-country-list';
 import { Helmet } from 'react-helmet-async';
 
@@ -279,8 +279,8 @@ const ContactUs = () => {
   return (
     <div className='contact-us-total'>
       {isContactPage && <Helmet>
-        <title>Contact Us</title>
-        <meta name='description' content='Have questions or need support? Reach out to e-con Systems for inquiries, assistance, or more information about our products and services.' />
+        <title>Contact Us | ITS Experts</title>
+        <meta name='description' content='Contact e-con Systems for support and inquiries on ITS solutions, traffic monitoring cameras, ANPR/ALPR software, and intelligent transportation systems.' />
       </Helmet>}
       
       <h1 className='contact-us-title'>CONTACT US</h1>
@@ -434,6 +434,7 @@ const ContactUs = () => {
                         htmlType="submit"
                         text="Submit"
                         backgroundColor="#344ea1"
+                        className="gtm-btn"
                       />
                     </Form.Item>
                   </Col>

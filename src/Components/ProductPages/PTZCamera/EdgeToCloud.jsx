@@ -1,6 +1,6 @@
 import React from "react";
 import "./edge-to-cloud.css";
-
+import edgeToCloudImg from "../../../assets/ptz-cameras/edge-to-cloud.png";
 const EdgeToCloud = () => {
   return (
     <section className="edge-cloud-section">
@@ -9,7 +9,7 @@ const EdgeToCloud = () => {
         {/* LEFT SIDE IMAGE ILLUSTRATION */}
         <div className="edge-cloud-image-wrapper">
           <img
-            src="src\assets\ptz-cameras\edge-to-cloud.png"
+            src={edgeToCloudImg}
             alt="Edge to Cloud Diagram"
             className="edge-cloud-image"
           />

@@ -1,0 +1,45 @@
+.sbsa-deploy {
+  background: #f3fbfe; padding: 80px 40px;
+}
+.sbsa-deploy__inner { max-width: 1140px; margin: 0 auto; }
+.sbsa-deploy__header { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: end; margin-bottom: 52px; }
+.sbsa-deploy__eyebrow { font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #0dc2ed; margin-bottom: 12px; }
+.sbsa-deploy__title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(24px, 3vw, 36px); font-weight: 800; color: #06101e;
+  margin: 0; letter-spacing: -0.02em; line-height: 1.2;
+}
+.sbsa-deploy__sub { font-size: 15px; color: #4a5568; line-height: 1.7; margin: 0; }
+.sbsa-deploy__cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.sbsa-deploy-card {
+  background: #06101e; border-radius: 10px; overflow: hidden;
+  transition: transform 0.22s; position: relative;
+}
+.sbsa-deploy-card:hover { transform: translateY(-5px); }
+.sbsa-deploy-card__stripe {
+  height: 4px; background: linear-gradient(90deg, #0dc2ed, rgba(13,194,237,0.2));
+  transform: scaleX(0.3); transform-origin: left; transition: transform 0.3s;
+}
+.sbsa-deploy-card:hover .sbsa-deploy-card__stripe { transform: scaleX(1); }
+.sbsa-deploy-card__body { padding: 32px 28px; }
+.sbsa-deploy-card__num {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 52px; font-weight: 800; color: rgba(13,194,237,0.06);
+  line-height: 1; margin-bottom: 14px; letter-spacing: -0.04em;
+}
+.sbsa-deploy-card__icon {
+  width: 52px; height: 52px; background: rgba(13,194,237,0.08);
+  border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+}
+.sbsa-deploy-card__icon svg { width: 26px; height: 26px; stroke: #0dc2ed; fill: none; }
+.sbsa-deploy-card__type { font-size: 10px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #0dc2ed; margin-bottom: 8px; }
+.sbsa-deploy-card__title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 12px; line-height: 1.2;
+}
+.sbsa-deploy-card__text { font-size: 13.5px; color: rgba(255,255,255,0.42); line-height: 1.65; margin: 0; }
+@media (max-width: 900px) {
+  .sbsa-deploy__header { grid-template-columns: 1fr; gap: 20px; }
+  .sbsa-deploy__cards { grid-template-columns: 1fr; }
+  .sbsa-deploy { padding: 56px 24px; }
+}

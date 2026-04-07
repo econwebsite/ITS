@@ -1,0 +1,136 @@
+.hubtot-blog {
+  background-color: #f1f2f2;
+  overflow-x: hidden;
+}
+
+.hubtot-blog h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  color: #003873;
+  padding: .5em;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.hubpageblog {
+  display: flex;
+  margin-top: 50px;
+  gap: 10px; 
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.hubblog-column {
+  flex: 1;
+  display: flex;
+  align-items: stretch; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.hubblog-left,
+.hubblog-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: stretch;
+}
+
+.hubblog-border-box,
+.hubblog-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 100%;
+}
+.hubblog-border-box{
+  min-height: 900px;
+}
+.hubpageblog a{
+  width: 100%;
+}
+.hubblog-border-box img,
+.hubblog-card img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.hubblog-border-box h2,
+.hubblog-card h6 {
+  font-size: 1.3em;
+  color: #003873;
+  text-align: left;
+}
+
+.hubblog-border-box p,
+.hubblog-card p {
+  font-size: 1em;
+  color: #344ea1;
+  text-align: justify;
+}
+
+.Hubread-more {
+  padding: 10px 25px;
+  margin-top: 5px;
+  align-self: flex-start; 
+}
+
+.hubblog-card {
+  text-align: justify;
+}
+
+.hubblog-card-row {
+  display: flex;
+  gap: 20px;
+}
+
+.hubblog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px; 
+  width: 100%; 
+}
+
+.hubblog-right .hubblog-card {
+  flex: 1;
+}
+
+
+.hubblog-card-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hubblog-card {
+  flex: 1 1 calc(50% - 20px); 
+}
+
+@media (max-width: 768px) {
+  .hubpageblog {
+    flex-direction: column;
+  }
+  .hubtot-blog h1 {
+    font-size: 2.5em;
+  }
+  .hubblog-card-row {
+    flex-direction: column;
+  }
+
+  .hubblog-card {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .Hubread-more {
+    align-self: center; 
+  }
+}

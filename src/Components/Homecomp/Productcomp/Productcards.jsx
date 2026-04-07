@@ -1,37 +1,37 @@
 import React,{useEffect } from 'react';
 import { useNavigate } from "react-router-dom";   // ✅ import navigation
 import AOS from 'aos';
-import ptz from "../../../assets/homepage/ptz-camera.png"
-import bullet from "../../../assets/homepage/bullet-camera.png"
-import cameramodules from "../../../assets/homepage/camera-module.png"
-import aivision from "../../../assets/homepage/ai-visionbox.png"
+import alpr from "../../../assets/alpr/alpr-software-suite-thumb.jpg"
+import bullet from "../../../assets/homepage/alpr-camera.png"
+// import cameramodules from "../../../assets/clovis-central/clovis-evms-thumbnail.png"
+import aivision from "../../../assets/ai-compute-box/ai-compute-box-thumb.png";
 import "./Productcards.css"
 
 const productData = [
   {
-    title: "Incident Detection Camera",
-    description: "Dynamic monitoring for traffic violations, red light enforcement, and near-miss detection at intersections.",
-    image: ptz,
-    link: "/incident-detection-camera", 
-  },
-  {
-    title: "Bullet Camera Series",
-    description: "Reliable fixed-view cameras for lane discipline, speed enforcement, and tolling applications.",
+    title: "ALPR Camera series",
+    description: "Reliable fixed-view cameras for traffic enforcement, tolling and parking applications.",
     image: bullet,
-    link: "/bullet-camera",
-  },
-  {
-    title: "Clovis Central",
-    description: "Advanced imaging with global shutter, HDR, low light performance, and high-speed GigE connectivity.",
-    image: cameramodules,
-    link: "/video-management-systems",
+    link: "/products/anpr-alpr-bullet-cameras",
   },
   {
     title: "AI Vision Box Series",
-    description: "AI Vision Box for real-time edge analytics with NPU, multi-camera support, and rugged design for ITS.",
+    description: "AI Vision Box with multi-camera support and a rugged design for mobile and fixed deployments.",
     image: aivision,
-    link: "/ai-compute-box",
+    link: "/products/ai-vision-box",
   },
+  {
+    title: "ALPR SDK",
+    description: "AI-based ALPR SDK optimized for edge and cloud deployments.",
+    image: alpr,
+    link: "/products/license-plate-recognition-software",
+  },
+  // {
+  //   title: "Evidence Video Management System",
+  //   description: "Advanced imaging with global shutter, HDR, low light performance, and high-speed GigE connectivity.",
+  //   image: cameramodules,
+  //   link: "/products/evidence-video-management-system",
+  // },
 ];
 
 const ProductCards = () => {

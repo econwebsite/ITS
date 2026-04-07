@@ -1,0 +1,180 @@
+.rlvd-how {
+  background: #0f0f14;
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rlvd-how::before {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  right: -80px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(220,38,38,0.05) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.rlvd-how__inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.rlvd-how__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.rlvd-how__eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #dc2626;
+  margin-bottom: 14px;
+}
+
+.rlvd-how__title {
+  font-family: 'Exo 2', sans-serif;
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* Steps grid */
+.rlvd-how__steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+  margin-bottom: 36px;
+}
+
+.rlvd-step {
+  background: #17171e;
+  padding: 28px 20px 24px;
+  position: relative;
+  border-top: 2px solid transparent;
+  transition: border-color 0.25s, background 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.rlvd-step:hover {
+  border-top-color: #dc2626;
+  background: #1e1e28;
+}
+
+.rlvd-step__num {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: rgba(220,38,38,0.08);
+  line-height: 1;
+  margin-bottom: 14px;
+  letter-spacing: -0.04em;
+}
+
+.rlvd-step__icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(220,38,38,0.08);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.rlvd-step__icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: #dc2626;
+  fill: none;
+}
+
+.rlvd-step__title {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.rlvd-step__text {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.42);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+/* Arrow connectors between steps */
+.rlvd-how__steps-wrap {
+  position: relative;
+}
+
+/* Trigger strip */
+.rlvd-how__triggers {
+  background: #17171e;
+  border: 1px solid rgba(220,38,38,0.14);
+  border-radius: 6px;
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.rlvd-how__triggers-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.rlvd-how__trigger-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.rlvd-trigger-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(220,38,38,0.08);
+  border: 1px solid rgba(220,38,38,0.2);
+  color: #f87171;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 3px;
+}
+
+.rlvd-trigger-tag svg {
+  width: 13px;
+  height: 13px;
+  stroke: #dc2626;
+  fill: none;
+}
+
+@media (max-width: 900px) {
+  .rlvd-how__steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .rlvd-how__steps {
+    grid-template-columns: 1fr;
+  }
+  .rlvd-how { padding: 56px 24px; }
+}

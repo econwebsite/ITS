@@ -4,12 +4,12 @@ import laneDetectionImg from '../../../assets/ai-compute-box/lane-violation-dete
 import anprImg from '../../../assets/ai-compute-box/anpr.jpg'
 import redLightViolationImg from '../../../assets/bullet-camera/red-light-violation.jpg'
 import pedestrianImg from '../../../assets/ai-compute-box/pedestrian-detection.jpg'
-import vehicleClassificationImg from '../../../assets/ai-compute-box/vehicle-detection-classification.jpg'
-
+import adptiveTrafficImg from '../../../assets/ai-compute-box/adaptive-traffic-signal-control.jpg'
+import congestionFlowImg from '../../../assets/ai-compute-box/congestion-flow-analytics.jpg'
 const ComputeApplication = () => {
   const applications = [
     {
-      img: "https://e-consystems.com/images/markets/its/smart-cities.jpg",
+      img: adptiveTrafficImg,
       title: "Adaptive Traffic Signal Control ",
     },
     {
@@ -29,9 +29,9 @@ const ComputeApplication = () => {
       title: "Pedestrian & Vulnerable Road User (VRU) Safety ",
     },
     {
-      img: vehicleClassificationImg,
+      img: congestionFlowImg,
       title: "Congestion & Flow Analytics ",
-    },
+    }
   ];
 
   return (

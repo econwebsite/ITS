@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./ProductVariants.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 const variants = [
   {
     id: 1,
@@ -69,6 +68,7 @@ const ProductVariants = () => {
                     <td>{spec.value}</td>
                   </tr>
                 ))}
+          
               </tbody>
             </table>
           </div>

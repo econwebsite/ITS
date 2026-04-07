@@ -29,7 +29,7 @@ const Smartintersection = () => {
         <div className="smart-int-left">
           <h2>Future-Ready for Smart Intersections</h2>
           <p>
-            With upgradeable AI frameworks, support for multi-sensor fusion (radar, LiDAR, and cameras), and edge-to-cloud orchestration, the Rugged AI Vision Box delivers the compute backbone for next-generation intelligent intersections — enabling safer, smarter, and more connected urban mobility.
+           With upgradeable AI frameworks, support for multi-sensor fusion (radar, LiDAR, and cameras), V2X readiness, and edge-to-cloud orchestration, the Rugged AI Vision Box delivers the compute backbone for next-generation intelligent intersections — enabling safer, smarter, and more connected urban mobility.
           </p>
         </div>
 

@@ -1,0 +1,80 @@
+.modelaclass {
+    display: inline-block; 
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    outline: none;
+    transition: color 0.4s ease, background-color 0.4s ease;
+    z-index: 1;
+    background-color:  #69ba2f; 
+    color: white; 
+  }
+  
+  .modelaclass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #344ea1; 
+    transition: left 0.4s ease;
+    z-index: -1;
+  }
+  .ant-message {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  .modelaclass:hover {
+    background-color: #344ea1;
+    color: white; 
+  }
+  
+  .modelaclass:hover::before {
+    left: 0;
+  }
+
+  input::placeholder,
+textarea::placeholder {
+    color: #344ea1;
+    opacity: 1; 
+}
+
+
+.ant-input::placeholder,
+.ant-input-textarea::placeholder {
+    color: #69ba2f;
+    opacity: 1; 
+}
+.ant-select .ant-select-selector .ant-select-selection-placeholder {
+    color: #003873; 
+}
+
+.ant-select-item-option-content {
+    color: #003873; 
+}
+
+.ant-select-selector .ant-select-selection-item {
+    color: #003873; 
+}
+.custom-modal .ant-modal-title {
+  color: #003873; 
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+
+
+  @media (max-width: 600px) {
+    .modelaclass {
+      padding: 8px 20px; 
+      font-size: 0.9em; 
+    }
+  }

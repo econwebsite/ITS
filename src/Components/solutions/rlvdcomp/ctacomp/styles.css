@@ -1,0 +1,151 @@
+.rlvd-cta {
+  background: #0f0f14;
+  padding: 88px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rlvd-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent,
+    transparent 40px,
+    rgba(220,38,38,0.02) 40px,
+    rgba(220,38,38,0.02) 41px
+  );
+  pointer-events: none;
+}
+
+.rlvd-cta::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(220,38,38,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.rlvd-cta__inner {
+  max-width: 740px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.rlvd-cta__icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(220,38,38,0.1);
+  border: 1px solid rgba(220,38,38,0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+}
+
+.rlvd-cta__icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: #dc2626;
+  fill: none;
+}
+
+.rlvd-cta__eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #dc2626;
+  margin-bottom: 18px;
+}
+
+.rlvd-cta__title {
+  font-family: 'Exo 2', sans-serif;
+  font-size: clamp(24px, 3.2vw, 40px);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 18px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.rlvd-cta__sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.7;
+  margin: 0 0 40px;
+}
+
+.rlvd-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  padding: 17px 40px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 24px rgba(220,38,38,0.3);
+}
+
+.rlvd-cta__btn:hover {
+  background: #ef4444;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 36px rgba(220,38,38,0.4);
+}
+
+.rlvd-cta__btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+.rlvd-cta__divider {
+  width: 48px;
+  height: 2px;
+  background: rgba(220,38,38,0.3);
+  margin: 44px auto 36px;
+  border-radius: 1px;
+}
+
+.rlvd-cta__trust {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.rlvd-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.38);
+  font-weight: 600;
+}
+
+.rlvd-trust-item svg {
+  width: 16px;
+  height: 16px;
+  stroke: rgba(220,38,38,0.6);
+  fill: none;
+}
+
+@media (max-width: 600px) {
+  .rlvd-cta { padding: 60px 24px; }
+  .rlvd-cta__trust { gap: 18px; }
+}

@@ -1,63 +1,48 @@
 import React, { useState, useEffect } from "react";
 import "./PTZBanner.css";
 import banner1 from "../../../assets/ptz-cameras/ai-powered-incident-detection-camera.jpg"
-import banner2 from "../../../assets/ptz-cameras/incident-detection-camera-dynamic-monitoring.jpg"
-import banner3 from "../../../assets/ptz-cameras/intelligence-surveillance-camera.jpg"
+import Modelbutton from "../../Button comp/Modelbutton";
 // Temporary free images need to replace later)
 const banners = [
   {
     image: banner1,
-    title: "AI-Powered PTZ Cameras",
-    subtitle: "Smarter traffic enforcement with full coverage and AI vision.",
-  },
-  {
-    image: banner2,
-    title: "Dynamic Monitoring",
-    subtitle: "Reliable detection for red light enforcement and violations.",
-  },
-  {
-    image: banner3,
-    title: "Intelligent Surveillance",
-    subtitle: "High-performance PTZ cameras for urban traffic solutions.",
-  },
+    title: "AI-Powered Incident Detection Cameras",
+    subtitle: "Smarter traffic enforcement driven by real-time AI vision.",
+  }
 ];
 
 const PTZBanner = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
 
-  // Auto-slide every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % banners.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+
 
   return (
     <div className="ptz-banner">
       <div className="banner-slide">
         <img
-          src={banners[activeIndex].image}
-          alt={banners[activeIndex].title}
+          src={banners[0].image}
+          alt={banners[0].title}
           className="banner-image"
         />
         <div className="banner-overlay">
-          <h1>{banners[activeIndex].title}</h1>
-          <p>{banners[activeIndex].subtitle}</p>
-          <button className="banner-button">Talk to an Expert &gt;&gt;</button>
+          <h1>{banners[0].title}</h1>
+          <p>{banners[0].subtitle}</p>
+          <Modelbutton 
+            className="ptz-cameravariant-button" 
+            text="Talk to an Expert &gt;&gt;" 
+            backgroundColor="#1e2f7ac9" 
+            animationColor="#69ba2f" 
+            hoverColor="#00aeef"
+            padding="12px 25px"
+            fontSize="14px"
+            borderRadius="0"
+            border="1px solid #fff"
+            productName="Incident Detection Camera"
+            title="Incident Detection Camera"
+          />
         </div>
       </div>
 
-      {/* Dot Indicators */}
-      <div className="banner-dots">
-        {banners.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === activeIndex ? "active" : ""}`}
-            onClick={() => setActiveIndex(index)}
-          />
-        ))}
-      </div>
+
     </div>
   );
 };

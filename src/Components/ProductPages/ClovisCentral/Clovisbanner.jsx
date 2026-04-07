@@ -1,13 +1,13 @@
 import React from "react";
 import "./clovis-banner.css";
 import bannerImg from '../../../assets/clovis-central/clovis-central-banner.jpg'
-
+import Modelbutton from "../../Button comp/Modelbutton";
 const ClovisBanner = () => {
   const banner = {
     image: bannerImg, 
-    title: "Evidence Video Management System (EVMS) for Traffic Enforcement",
+    title: "Centralized EVMS for Traffic Enforcement",
     subtitle:
-      "The Clovis Central is a secure, centralized device management solution built for traffic enforcement and legal evidence handling.",
+      "Designed for traffic authorities",
   };
 
   return (
@@ -19,9 +19,20 @@ const ClovisBanner = () => {
           className="clovis-image"
         />
         <div className="clovis-overlay">
-          {/* <h1>{banner.title}</h1>
-          <p>{banner.subtitle}</p> */}
-          <button className="clovis-button">Talk to an Expert &gt;&gt;</button>
+           <h1>{banner.title}</h1>
+          <p>{banner.subtitle}</p>
+          <Modelbutton 
+            className="clovis-banner-button" 
+            text="Talk to an Expert &gt;&gt;" 
+            backgroundColor="#1e2f7ac9" 
+            animationColor="#69ba2f" 
+            hoverColor="#00aeef"
+            padding="12px 25px"
+            fontSize="14px"
+            borderRadius="0"
+            border="1px solid #fff"
+            productName="Evidence Video Management System"
+          />
         </div>
       </div>
     </div>

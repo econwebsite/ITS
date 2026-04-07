@@ -92,7 +92,8 @@
     font-weight: 500;
     color: #003873;
     margin-bottom: 10px;
-    text-align: left;
+    text-align: center;
+    min-height: 35px;
 }
 
 .product-description {
@@ -100,6 +101,7 @@
   color: #344ea1;
   margin-bottom: 20px;
   text-align: center;
+  min-height: 80px;
 }
 
 .arrow-button {

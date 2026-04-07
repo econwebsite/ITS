@@ -20,8 +20,10 @@
 }
 
 .application-right h2 {
-  font-size: 28px;
-  color: #003873;
+  text-align: left;
+    font-size: 2rem;
+    color: #344ea1;
+    margin-top: 10px;
 }
 
 .application-right p {
@@ -40,6 +42,7 @@
   margin-top: 20px;
   cursor: pointer;
   border-radius: 50%;
+  text-decoration: none;
   transition: background 0.3s ease;
 }
 

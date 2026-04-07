@@ -1,0 +1,610 @@
+/* Reset and Base Styles */
+.alpr-software {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.alpr-software a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.alpr-software img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container */
+.alpr-software .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+/* Hero Banner */
+.alpr-software .hero-banner {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 0px;
+}
+
+.alpr-software .hero-banner__image {
+    width: 100%;
+}
+
+.alpr-software .hero-banner__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .alpr-software .hero-banner__image {
+        height: 320px;
+    }
+}
+
+@media (max-width: 576px) {
+    .alpr-software .hero-banner__image {
+        height: 220px;
+    }
+}
+
+/* Section Common Styles */
+.alpr-software section {
+    padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+    .alpr-software section {
+        padding: 70px 0;
+    }
+}
+
+.alpr-software .section-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.alpr-software .section-title {
+    font-size: 2em;
+    color: #065d8f;
+    margin: 0 0 20px 0 !important;
+}
+.alpr-software .workflow .section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+} 
+.alpr-software .workflow .section-title {
+    margin-bottom: 20px;
+}
+
+/* Paragraph Section */
+.alpr-software .alpr-para {
+    background: white;
+    padding: 2em 0;
+}
+
+.alpr-software .alprPara {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.alpr-software .alprPara p {
+    font-size: 1.05rem;
+    color: #6b7280;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+/* Workflow Section */
+.alpr-software .workflow {
+    /* background-color: #082f72; */
+        background-color: #f9f9f9;
+    padding: 2em 0;
+}
+
+.alpr-software .workflow-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.alpr-software .workflow-step {
+    text-align: left;
+    padding: 30px;
+    display: flex;
+    transition: all 0.3s ease;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.alpr-software .workflow-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.41);
+    border: 1px solid rgb(25 103 150);
+}
+
+.alpr-software .step-number {
+        /* width: 60px; */
+    /* height: 60px; */
+    color: #d2d2d2;
+    /* border: 1px solid rgba(100, 100, 179, 0.98); */
+    /* border-radius: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.alpr-software .step-title {
+       /* font-weight: 700; */
+    color: #475569;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.alpr-software .step-description {
+    color: #f1f1f1;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.alpr-software .workflow hr {
+    background-color: #f1f8f9;
+    margin: 20px 0;
+    border: none;
+    height: 1px;
+}
+
+@media (max-width: 768px) {
+    .alpr-software .workflow {
+        padding: 60px 0;
+    }
+
+    .alpr-software .workflow-steps {
+        gap: 30px;
+    }
+
+    .alpr-software .step-title {
+        font-size: 1rem;
+    }
+
+    .alpr-software .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+}
+
+/* Software Features Zigzag */
+.alpr-software .software-features-zigzag {
+    background: white;
+    padding: 2em 0;
+}
+
+.alpr-software .zigzag-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.alpr-software .zigzag-header h2 {
+      font-size: 1.8rem;
+    margin: 30px 0;
+    text-align: center;
+    font-weight: unset !important;
+    color: #196793 !important;
+}
+
+.alpr-software .zigzag-row {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    margin-bottom: 0px;
+}
+
+.alpr-software .zigzag-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.alpr-software .zigzag-image img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 18px;
+    display: block;
+}
+
+.alpr-software .zigzag-content {
+    max-width: 520px;
+}
+
+.alpr-software .zigzag-content h3 {
+    font-size: 22px;
+    font-weight: normal;
+    color: #1373a1;
+    margin-bottom: 15px;
+}
+
+.alpr-software .zigzag-content p {
+    font-size: 1.05rem;
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+@media (max-width: 992px) {
+    .alpr-software .zigzag-row {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .alpr-software .software-features-zigzag {
+        padding: 70px 0;
+    }
+
+    .alpr-software .zigzag-row,
+    .alpr-software .zigzag-row.reverse {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    .alpr-software .zigzag-content {
+        max-width: 100%;
+    }
+
+    .alpr-software .zigzag-image img {
+        max-width: 100%;
+    }
+}
+
+/* Performance Section */
+.alpr-software .performance {
+    background: #f9fafb;
+    padding: 2em 0;
+}
+
+.alpr-software .performance-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.alpr-software .performance-detail {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.alpr-software .performance-detail:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.alpr-software .performance-detail img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+}
+
+.alpr-software .detail-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1373a1;
+    margin-bottom: 15px;
+    padding-left: 0;
+    border-left: none;
+}
+
+.alpr-software .detail-description {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+/* Applications Section */
+.alpr-software .applications {
+    background: white;
+    padding: 2em 0;
+}
+
+.alpr-software .applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.alpr-software .application-card {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 350px;
+}
+
+.alpr-software .application-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.alpr-software .application-card:hover .application-image {
+    transform: scale(1.1);
+}
+
+.alpr-software .application-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgb(2 18 62 / 90%) 0%, rgb(24 40 84 / 95%) 50%, transparent 100%);
+    padding: 15px 5px;
+    color: white;
+}
+
+.alpr-software .application-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.alpr-software .application-description {
+    color: #bfdbfe;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Hardware Section */
+.alpr-software .hardware {
+    background-color: #f9fafb;
+    padding: 2em 0;
+}
+
+.alpr-software .hardware-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 992px) {
+    .alpr-software .hardware-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+.alpr-software .hardware-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1373a1;
+    margin-bottom: 35px;
+    padding-left: 20px;
+    border-left: 5px solid #1D4E9D;
+}
+
+.alpr-software .hardware-items {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.alpr-software .hardware-item {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.alpr-software .hardware-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.alpr-software .hardware-icon {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.alpr-software .hardware-icon-img {
+    width: 200px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.alpr-software .hardware-item-title {
+    font-weight: 600;
+    color: #111827;
+    font-size: 16px;
+    margin-bottom: 5px;
+    line-height: 1.5em;
+}
+
+.alpr-software .hardware-item-subtitle {
+    color: #6b7280;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.alpr-software .hardware-details {
+    flex-grow: 1;
+}
+
+/* Explore Link */
+.alpr-software .explore-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #7896b1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-top: 10px;
+}
+
+.alpr-software .explore-link .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.alpr-software .hardware-item:hover .explore-link {
+    color: #105170;
+}
+
+.alpr-software .hardware-item:hover .explore-link .arrow {
+    transform: translateX(6px);
+}
+
+.alpr-software .explore-link::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: #1D4E9D;
+    display: block;
+    margin-top: 3px;
+    transition: width 0.3s ease;
+}
+
+.alpr-software .hardware-item:hover .explore-link::after {
+    width: 100%;
+}
+
+/* Contact CTA Section */
+.alpr-software .contact-cta {
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    padding: 2em 20px;
+}
+
+.alpr-software .contact-cta-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.alpr-software .contact-cta-content {
+    max-width: 650px;
+}
+
+.alpr-software .contact-cta-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 18px;
+    line-height: 1.3;
+}
+
+.alpr-software .contact-cta-description {
+    font-size: 1.05rem;
+    color: #c7d2fe;
+    line-height: 1.7;
+}
+
+.alpr-software .contact-cta-action {
+    flex-shrink: 0;
+}
+
+.alpr-software .contact-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 34px;
+    background-color: #ffffff;
+    color: #1d4ed8;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.alpr-software .contact-cta-btn .arrow {
+    transition: transform 0.3s ease;
+}
+
+.alpr-software .contact-cta-btn:hover {
+    background-color: #e0e7ff;
+}
+
+.alpr-software .contact-cta-btn:hover .arrow {
+    transform: translateX(6px);
+}
+
+/* Animation Classes */
+.alpr-software .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.alpr-software .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .alpr-software .contact-cta-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .alpr-software .contact-cta-btn {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .alpr-software .section-title {
+        font-size: 1.7rem;
+    }
+
+    .alpr-software .hardware-icon-img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .alpr-software .contact-cta-title {
+        font-size: 1.7rem;
+    }
+
+    .alpr-software .contact-cta-description {
+        font-size: 0.95rem;
+    }
+
+    .alpr-software .hardware-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .alpr-software .zigzag-row {
+        gap: 30px;
+    }
+}

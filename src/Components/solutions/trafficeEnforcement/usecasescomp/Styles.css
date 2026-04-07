@@ -1,0 +1,164 @@
+.its-usecases {
+  background: #f7f5f0;
+  padding: 80px 40px;
+}
+
+.its-usecases__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.its-usecases__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.its-usecases__eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffb000;
+  margin-bottom: 12px;
+}
+
+.its-usecases__title {
+  font-size: clamp(24px, 3vw, 36px);
+  color: #0e1117;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* Main use case cards - large horizontal layout */
+.its-usecases__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 40px;
+}
+
+.its-uc-row {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 0;
+  background: #0e1117;
+  align-items: stretch;
+  transition: background 0.2s;
+  cursor: default;
+}
+
+.its-uc-row:hover {
+  background: #161a23;
+}
+
+.its-uc-row__num {
+  background: #0dc2ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #0e1117;
+  min-height: 100px;
+  flex-shrink: 0;
+}
+
+.its-uc-row__body {
+  padding: 28px 32px;
+  border-left: 1px solid #222730;
+}
+
+.its-uc-row__title {
+  font-size: 19px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.its-uc-row__text {
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  line-height: 1.65;
+  margin: 0;
+  max-width: 680px;
+}
+
+.its-uc-row__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 28px;
+  border-left: 1px solid #222730;
+  min-width: 120px;
+}
+
+.its-uc-row__visual svg {
+  width: 56px;
+  height: 56px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.its-uc-row:hover .its-uc-row__visual svg {
+  opacity: 1;
+}
+
+/* Extended use cases strip */
+.its-usecases__extended {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.its-usecases__extended p{
+  font-size: 15px;
+  color: #000000;
+  margin-bottom: 0px;
+}
+.its-usecases__extended-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.its-usecases__extended-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.its-uc-tag {
+        background: rgb(51 191 199 / 2%);
+    border: 1px solid rgb(0 255 196 / 20%);
+    color: #0aadad;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .its-uc-row {
+    grid-template-columns: 48px 1fr;
+  }
+
+  .its-uc-row__visual {
+    display: none;
+  }
+
+  .its-uc-row__body {
+    padding: 20px 20px;
+  }
+
+  .its-usecases {
+    padding: 56px 24px;
+  }
+}

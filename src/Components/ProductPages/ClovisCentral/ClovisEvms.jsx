@@ -1,7 +1,7 @@
 import React from "react";
 import "./clovis-evms.css";
 import clovisThumbnail from '../../../assets/clovis-central/clovis-evms-thumbnail.png'
-
+import Modelbutton from "../../Button comp/Modelbutton";
 const ClovisEvms = () => {
   return (
     <section className="evms-section">
@@ -35,9 +35,18 @@ const ClovisEvms = () => {
           </p>
 
           <div className="evms-btn-wrapper">
-            <button className="btn-blue btn-with-icon">
-              Contact Us
-            </button>
+           <Modelbutton 
+            className="clovis-contact-button" 
+            text="Contact Us" 
+            backgroundColor="#00aeef" 
+            animationColor="#69ba2f" 
+            hoverColor="#00aeef"
+            padding="10px 22px"
+            fontSize="14px"
+            borderRadius="5px"
+            border="none"
+            productName="Evidence Video Management System"
+          />
           </div>
         </div>
 

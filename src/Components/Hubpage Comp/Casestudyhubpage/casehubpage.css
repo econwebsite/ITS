@@ -1,0 +1,237 @@
+.casehubpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f2f2;
+  overflow-x: hidden;
+}
+
+.casehubpage h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  color: #003873;
+  margin-top: 40px;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.casepageblog {
+  display: flex;
+  margin-top: 40px;
+  height: auto;
+}
+
+.casehubpage-column {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.casehubpage-left {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.casehubpage-border-box {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  box-sizing: border-box;
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.casehubpage-border-box img {
+  width: 100%;
+  height: 400px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.casehubpage-border-box h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-size: 1.3em; 
+  color: #003873; 
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.casehubpage-border-box p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-size: 0.9em; 
+  color: #344ea1; 
+  text-align: justify;
+}
+
+.casehubpage-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.casehubpage-card-row {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+  flex: 1;
+}
+
+.casehubpage-card {
+  border: 1px solid #ddd;
+  padding: 20px; 
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row; 
+  align-items: stretch;
+  width: 100%; 
+  box-sizing: border-box;
+  min-height: 300px; 
+  margin-bottom: 2px; 
+}
+
+.casehubpage-card-left {
+  flex: 0.9;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.casehubpage-card-right {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: flex-start; 
+}
+
+.casehubpage-card-left img {
+  width: 100%; 
+  height: 300px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.casehubpage-card-right h6 {
+  margin-bottom: 10px;
+  line-height: 1.5em;
+  font-size: 1.1em;
+  color: #003873;
+  text-align:left;
+}
+
+.casepageblog a{
+  width: 100%;
+}
+.casehubpage-card-right p {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  color: #344ea1;
+  text-align: justify;
+}
+
+.Caseread-more {
+  margin-top: 10px;
+  padding: 8px 30px;
+  background-color: #344ea1;
+  color: #fff;
+  font-size: 0.9em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.Caseread-more:hover {
+  background-color: #69ba2f;
+}
+.casehubpage-right a{
+  text-decoration: none;
+  color: inherit;
+}
+@media (max-width: 768px) {
+  .casehubpage h1 {
+    font-size: 2em;
+  }
+  .casepageblog {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .casehubpage-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .casehubpage-border-box img {
+    height: auto;
+    max-height: 300px; 
+    margin-bottom: 15px;
+    border-radius: 15px;
+  }
+  .casehubpage h1 {
+    margin-top: 30px;
+  }
+
+  .casehubpage-border-box h2 {
+    font-size: 1.2em;
+    text-align: left;
+  }
+
+  .casehubpage-border-box p {
+    font-size: 1em;
+    text-align: justify;
+  }
+
+  .casehubpage-card {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .casehubpage-card-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .casehubpage-card-right {
+    align-items: center;
+    text-align: justify;
+  }
+
+  .casehubpage-card-right h6
+  .casehubpage-card-right p {
+    text-align: justify;
+  }
+
+  .Caseread-more {
+    padding: 8px 20px;
+  }
+  
+.casehubpage-border-box {
+  
+  align-items: center;
+}
+.casehubpage-card-right p {
+  font-size: 1em;
+}
+}

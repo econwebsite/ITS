@@ -1,0 +1,129 @@
+.its-overview {
+  background: #f7f5f0;
+  padding: 80px 40px;
+  position: relative;
+}
+.its-overview__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.its-overview__header {
+  margin-bottom: 52px;
+}
+
+.its-overview__eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #0dc2ed;
+  margin-bottom: 12px;
+}
+
+.its-overview__title {
+  font-size: clamp(24px, 3vw, 36px);
+  color: #0e1117;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.its-overview__lead {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.75;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.its-overview__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  margin-top: 48px;
+}
+
+.its-overview__pillar {
+  background: #0e1117;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.25s;
+}
+
+.its-overview__pillar:hover {
+  background: #161a23;
+}
+
+.its-overview__pillar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #2ae1e1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.its-overview__pillar:hover::after {
+  transform: scaleX(1);
+}
+
+.its-overview__pillar-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: rgb(0 231 255 / 66%);
+  line-height: 1;
+  margin-bottom: 16px;
+  letter-spacing: -0.04em;
+}
+
+.its-overview__pillar-icon {
+  width: 44px;
+  height: 44px;
+  background: #00e7ff2b;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.its-overview__pillar-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: #2ae1e1;
+  fill: none;
+}
+
+.its-overview__pillar-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.its-overview__pillar-text {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .its-overview__grid {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .its-overview {
+    padding: 56px 24px;
+  }
+}

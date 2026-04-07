@@ -1,0 +1,52 @@
+.newanimation {
+  display: inline-block; 
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  outline: none;
+  transition: color 0.4s ease, background-color 0.4s ease;
+  z-index: 1;
+  background-color: var(--background-color, #344ea1); 
+  color: var(--text-color, white); 
+}
+
+.newanimation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--animation-color, #69ba2f); 
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.newanimation:hover {
+  background-color: var(--hover-color, #69ba2f);
+  color: white; 
+}
+
+.newanimation:hover::before {
+  left: 0;
+}
+.buttonLink{
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .buttonLink{
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .newanimation {
+    padding: 8px 20px;
+    font-size: 0.9em; 
+  }
+}

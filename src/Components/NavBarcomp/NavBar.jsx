@@ -69,9 +69,14 @@ const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false); 
   const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
   const [anchorElResources, setAnchorElResources] = useState(null);
-const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
+  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
+
+  // --- NEW: Solutions state ---
+  const [anchorElSolutions, setAnchorElSolutions] = useState(null);
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
 
   const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
+
   const handlePopoverOpen = (event) => {
     clearTimeout(closeTimeoutRef.current);
     setAnchorEl(event.currentTarget);
@@ -82,6 +87,7 @@ const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
       setAnchorEl(null);
     }, 100); 
   };
+
   const handleIndustriesPopoverOpen = (event) => {
     clearTimeout(closeTimeoutRef.current);
     setAnchorElIndustries(event.currentTarget);
@@ -92,171 +98,55 @@ const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
       setAnchorElIndustries(null);
     }, 100);
   };
+
   const handlePopoverEnter = () => {
     clearTimeout(closeTimeoutRef.current);
     if (!open) setAnchorEl(anchorEl);
   };
+
   useEffect(() => {
     if (!mobileOpen) {
       setMobileMenuOpen(false);
-       setMobileIndustriesOpen(false);
-    setMobileResourcesOpen(false);
+      setMobileIndustriesOpen(false);
+      setMobileResourcesOpen(false);
+      setMobileSolutionsOpen(false); // reset solutions on drawer close
     }
   }, [mobileOpen]);
 
   const handlePopoverLeave = () => {
     setAnchorEl(null);
     setAnchorElIndustries(null);
-  setAnchorElResources(null);
-  };
-  const handleResourcesPopoverOpen = (event) => {
-  clearTimeout(closeTimeoutRef.current);
-  setAnchorElResources(event.currentTarget);
-};
-
-const handleResourcesPopoverClose = () => {
-  closeTimeoutRef.current = setTimeout(() => {
     setAnchorElResources(null);
-  }, 100);
-};
+    setAnchorElSolutions(null); // close solutions too
+  };
+
+  const handleResourcesPopoverOpen = (event) => {
+    clearTimeout(closeTimeoutRef.current);
+    setAnchorElResources(event.currentTarget);
+  };
+
+  const handleResourcesPopoverClose = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setAnchorElResources(null);
+    }, 100);
+  };
+
+  // --- NEW: Solutions handlers ---
+  const handleSolutionsPopoverOpen = (event) => {
+    clearTimeout(closeTimeoutRef.current);
+    setAnchorElSolutions(event.currentTarget);
+  };
+
+  const handleSolutionsPopoverClose = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setAnchorElSolutions(null);
+    }, 100);
+  };
+
   const open = Boolean(anchorEl);
   const openIndustries = Boolean(anchorElIndustries);
 
-
-
-  const SolutionMenu = (
-    <Box sx={{ 
-      p: 1, 
-      width: 300,
-      '& .MuiMenuItem-root': {
-        color: '#344ea1',
-        fontSize: '1em',
-        transition: 'all 0.2s ease-in-out',
-        '&:hover': {
-          backgroundColor: '#00aeef',
-          color: 'white',
-        }
-      }
-    }}>
-      <MenuItem 
-        component={Link} 
-        to="/incident-detection-camera" 
-        onClick={() => {
-          handlePopoverClose();
-          setMobileOpen(false);
-          setMobileMenuAnchor(null);
-        }}
-      >
-        Incident Detection Camera
-      </MenuItem>
-      <MenuItem 
-        component={Link} 
-        to="/bullet-camera" 
-        onClick={() => {
-          handlePopoverClose();
-          setMobileOpen(false);
-          setMobileMenuAnchor(null);
-        }}
-      >
-        Bullet Camera
-      </MenuItem>
-      <MenuItem 
-        component={Link} 
-        to="/ai-compute-box" 
-        onClick={() => {
-          handlePopoverClose();
-          setMobileOpen(false);
-          setMobileMenuAnchor(null);
-        }}
-      >
-       AI Compute Box 
-      </MenuItem>
-      <MenuItem 
-        component={Link} 
-        to="/video-management-systems" 
-        onClick={() => {
-          handlePopoverClose();
-          setMobileOpen(false);
-          setMobileMenuAnchor(null);
-        }}
-      >
-       Clovis Central
-      </MenuItem>
-    </Box>
-  );
-  const IndustriesMenu = (
-    <Box sx={{ 
-      p: 1, 
-      width: 300,
-      '& .MuiMenuItem-root': {
-        color: '#344ea1',
-        fontSize: '1em',
-        transition: 'all 0.2s ease-in-out',
-        '&:hover': {
-          backgroundColor: '#00aeef',
-          color: 'white',
-        }
-      }
-    }}>
-      <MenuItem 
-        component={Link} 
-        to="/smart-cities" 
-        onClick={() => {
-          handleIndustriesPopoverClose();
-          setMobileOpen(false);
-        }}
-      >
-        Smart Cities
-      </MenuItem>
-     
-      <MenuItem 
-        component={Link} 
-        to="/traffic-management" 
-        onClick={() => {
-          handleIndustriesPopoverClose();
-          setMobileOpen(false);
-        }}
-      >
-        Traffic Management
-      </MenuItem>
-      <MenuItem 
-        component={Link} 
-        to="/tolling-&-highway-infrastructure" 
-        onClick={() => {
-          handleIndustriesPopoverClose();
-          setMobileOpen(false);
-        }}
-      >
-        Tolling & Highway Infrastructure
-      </MenuItem> 
-      <MenuItem 
-        component={Link} 
-        to="/parking-lot-management" 
-        onClick={() => {
-          handleIndustriesPopoverClose();
-          setMobileOpen(false);
-        }}
-      >
-       Parking Lot Management
-      </MenuItem> 
-    
-      <MenuItem 
-        component={Link} 
-        to="/public-safety-&-law-enforcement" 
-        onClick={() => {
-          handleIndustriesPopoverClose();
-          setMobileOpen(false);
-        }}
-      >
-        Public safety & law enforcement
-      </MenuItem>
-      
-    </Box>
-  );
-const ResourcesMenu = (
-  <Box sx={{ 
-    p: 1, 
-    width: 250,
+  const menuItemStyles = {
     '& .MuiMenuItem-root': {
       color: '#344ea1',
       fontSize: '1em',
@@ -266,26 +156,106 @@ const ResourcesMenu = (
         color: 'white',
       }
     }
-  }}>
-    <MenuItem 
-      component={Link} 
-      to="/blog" 
-      onClick={handleResourcesPopoverClose}
-    >
-      Blogs
-    </MenuItem>
-    <MenuItem 
-      component={Link} 
-      to="/case-study" 
-      onClick={handleResourcesPopoverClose}
-    >
-      Case Study
-    </MenuItem>
-  </Box>
-);
+  };
+
+  const SolutionMenu = (
+    <Box sx={{ p: 1, width: 300, ...menuItemStyles }}>
+      <MenuItem 
+        component={Link} 
+        to="/products/anpr-alpr-bullet-cameras" 
+        onClick={() => {
+          handlePopoverClose();
+          setMobileOpen(false);
+          setMobileMenuAnchor(null);
+        }}
+      >
+        ALPR Cameras
+      </MenuItem>
+      <MenuItem 
+        component={Link} 
+        to="/products/ai-vision-box" 
+        onClick={() => {
+          handlePopoverClose();
+          setMobileOpen(false);
+          setMobileMenuAnchor(null);
+        }}
+      >
+        AI Vision Box
+      </MenuItem>
+      <MenuItem 
+        component={Link} 
+        to="/products/license-plate-recognition-software" 
+        onClick={() => {
+          handlePopoverClose();
+          setMobileOpen(false);
+          setMobileMenuAnchor(null);
+        }}
+      >
+        ALPR SDK
+      </MenuItem>
+    </Box>
+  );
+
+  const IndustriesMenu = (
+    <Box sx={{ p: 1, width: 300, ...menuItemStyles }}>
+      <MenuItem component={Link} to="/smart-cities" onClick={() => { handleIndustriesPopoverClose(); setMobileOpen(false); }}>
+        Smart Cities
+      </MenuItem>
+      <MenuItem component={Link} to="/traffic-management" onClick={() => { handleIndustriesPopoverClose(); setMobileOpen(false); }}>
+        Traffic Management
+      </MenuItem>
+      <MenuItem component={Link} to="/tolling-&-highway-infrastructure" onClick={() => { handleIndustriesPopoverClose(); setMobileOpen(false); }}>
+        Tolling & Highway Infrastructure
+      </MenuItem>
+      <MenuItem component={Link} to="/parking-lot-management" onClick={() => { handleIndustriesPopoverClose(); setMobileOpen(false); }}>
+        Parking Lot Management
+      </MenuItem>
+      <MenuItem component={Link} to="/public-safety-&-law-enforcement" onClick={() => { handleIndustriesPopoverClose(); setMobileOpen(false); }}>
+        Public safety & law enforcement
+      </MenuItem>
+    </Box>
+  );
+
+  const ResourcesMenu = (
+    <Box sx={{ p: 1, width: 250, ...menuItemStyles }}>
+      <MenuItem component={Link} to="/blog" onClick={handleResourcesPopoverClose}>
+        Blogs
+      </MenuItem>
+      <MenuItem component={Link} to="/case-study" onClick={handleResourcesPopoverClose}>
+        Case Study
+      </MenuItem>
+    </Box>
+  );
+
+  // --- NEW: Solutions Menu ---
+  const SolutionsMenu = (
+    <Box sx={{ p: 1, width: 280, ...menuItemStyles }}>
+      <MenuItem
+        component={Link}
+        to="/solutions/traffic-enforcement"
+        onClick={() => {
+          handleSolutionsPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+        Traffic Enforcement Camera
+      </MenuItem>
+      <MenuItem
+        component={Link}
+        to="/solutions/speed-enforcement"
+        onClick={() => {
+          handleSolutionsPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+        Speed Enforcement Camera
+      </MenuItem>
+    </Box>
+  );
+
   const drawerContent = (
     <>
-     <Box sx={{ 
+      <Box sx={{ 
         p: 2, 
         borderBottom: '1px solid white',
         display: 'flex',
@@ -302,161 +272,81 @@ const ResourcesMenu = (
       </Box>
       <List sx={{ p: 1 }}>
         <ListItem disablePadding>
-          <ListItemButton 
-            component={Link} 
-            to="/" 
-            onClick={handleDrawerToggle}
-            sx={{ '&:hover': { color: '#00aeef' } }}
-          >
-            <ListItemText 
-              primary="Home" 
-              primaryTypographyProps={{ style: { color: 'white' } }} 
-            />
+          <ListItemButton component={Link} to="/" onClick={handleDrawerToggle} sx={{ '&:hover': { color: '#00aeef' } }}>
+            <ListItemText primary="Home" primaryTypographyProps={{ style: { color: 'white' } }} />
           </ListItemButton>
-
         </ListItem>
+
+        {/* Products */}
         <ListItem disablePadding>
-          <ListItemButton 
-            onClick={(e) => setMobileMenuOpen(!mobileMenuOpen)}
-            sx={{ '&:hover': { color: '#00aeef' } }}
-          >
-            <ListItemText 
-              primary="Products" 
-              primaryTypographyProps={{ style: { color: 'white' } }} 
-            />
+          <ListItemButton onClick={() => setMobileMenuOpen(!mobileMenuOpen)} sx={{ '&:hover': { color: '#00aeef' } }}>
+            <ListItemText primary="Products" primaryTypographyProps={{ style: { color: 'white' } }} />
             {mobileMenuOpen ? <ExpandLess sx={{ color: 'white' }} /> : <ExpandMore sx={{ color: 'white' }} />}
           </ListItemButton>
         </ListItem>
         {mobileMenuOpen && (
-         <List sx={{ pl: 2 }}>
-         {[
-           { label: 'Surround View Cameras', path: '/surround-view-cameras' },
-           { label: 'Forward Facing Cameras', path: '/forward-facing-cameras' },
-           { label: 'Rear View Cameras', path: '/rear-view-cameras' },
-           { label: 'In-Cabin Monitoring Cameras', path: '/driver-monitoring-cameras' },
-         ].map((item, index) => (
-           <ListItem key={index} disablePadding>
-             <ListItemButton
-               component={Link}
-               to={item.path}
-               onClick={handleDrawerToggle}
-               sx={{
-                 '&:hover .MuiListItemText-primary': { color: '#00aeef' },
-                 pl: 2,
-               }}
-             >
-               <ListItemText
-                 primary={item.label}
-                 primaryTypographyProps={{
-                   sx: { color: 'white', fontSize: '0.85em', textAlign: 'left' },
-                 }}
-               />
-             </ListItemButton>
-           </ListItem>
-         ))}
-       </List>
-       
-          
-        )}
-
-       <ListItem disablePadding>
-          <ListItemButton 
-            onClick={() => setMobileIndustriesOpen(!mobileIndustriesOpen)}
-            sx={{ '&:hover': { color: '#00aeef' } }}
-          >
-            <ListItemText 
-              primary="Industries" 
-              primaryTypographyProps={{ style: { color: 'white' } }} 
-            />
-            {mobileIndustriesOpen ? <ExpandLess sx={{ color: 'white' }} /> : <ExpandMore sx={{ color: 'white' }} />}
-          </ListItemButton>
-        </ListItem>
-        {mobileIndustriesOpen && (
           <List sx={{ pl: 2 }}>
             {[
-              { label: 'Agricultural Vehicles', path: '/industries/agricultural-vehicle-camera-systems' },
-              { label: 'Mining Vehicles', path: '/industries/mining-vehicle-camera-systems' },
-              { label: 'Delivery Robots', path: '/industries/autonomous-delivery-robot-cameras' },
-              { label: 'Construction Vehicles', path: '/industries/rugged-cameras-for-construction-vehicles' },
-              { label: 'Garbage Trucks', path: '/industries/garbage-truck-vision-systems' },
-              { label: 'Autonomous Vehicles', path: '/industries/autonomous-vehicle-vision-systems' },
-              { label: 'Delivery Trucks', path: '/industries/delivery-truck-vision-systems' },
-              { label: 'Lawn Mowers', path: '/industries/autonomous-lawn-mower-vision-systems' },
-
-   
+              { label: 'ALPR Cameras', path: '/products/anpr-alpr-bullet-cameras' },
+              { label: 'AI Vision Box', path: '/products/ai-vision-box' },
+              { label: 'ALPR SDK', path: '/products/license-plate-recognition-software' },
             ].map((item, index) => (
               <ListItem key={index} disablePadding>
-                <ListItemButton
-                  component={Link}
-                  to={item.path}
-                  onClick={handleDrawerToggle}
-                  sx={{
-                    '&:hover .MuiListItemText-primary': { color: '#00aeef' },
-                    pl: 2,
-                  }}
-                >
-                  <ListItemText
-                    primary={item.label}
-                    primaryTypographyProps={{
-                      sx: { color: 'white', fontSize: '0.85em', textAlign: 'left' },
-                    }}
-                  />
+                <ListItemButton component={Link} to={item.path} onClick={handleDrawerToggle} sx={{ '&:hover .MuiListItemText-primary': { color: '#00aeef' }, pl: 2 }}>
+                  <ListItemText primary={item.label} primaryTypographyProps={{ sx: { color: 'white', fontSize: '0.85em', textAlign: 'left' } }} />
                 </ListItemButton>
               </ListItem>
             ))}
           </List>
         )}
+
+        {/* NEW: Solutions (Mobile) */}
         <ListItem disablePadding>
-          <ListItemButton 
-            onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)}
-            sx={{ '&:hover': { color: '#00aeef' } }}
-          >
-            <ListItemText 
-              primary="Resources" 
-              primaryTypographyProps={{ style: { color: 'white' } }} 
-            />
-            {mobileResourcesOpen  ? <ExpandLess sx={{ color: 'white' }} /> : <ExpandMore sx={{ color: 'white' }} />}
+          <ListItemButton onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)} sx={{ '&:hover': { color: '#00aeef' } }}>
+            <ListItemText primary="Solutions" primaryTypographyProps={{ style: { color: 'white' } }} />
+            {mobileSolutionsOpen ? <ExpandLess sx={{ color: 'white' }} /> : <ExpandMore sx={{ color: 'white' }} />}
+          </ListItemButton>
+        </ListItem>
+        {mobileSolutionsOpen && (
+          <List sx={{ pl: 2 }}>
+            {[
+              { label: 'Traffic Enforcement Camera', path: '/solutions/traffic-enforcement' },
+              { label: 'Speed Enforcement Camera', path: '/solutions/speed-enforcement' },
+            ].map((item, index) => (
+              <ListItem key={index} disablePadding>
+                <ListItemButton component={Link} to={item.path} onClick={handleDrawerToggle} sx={{ '&:hover .MuiListItemText-primary': { color: '#00aeef' }, pl: 2 }}>
+                  <ListItemText primary={item.label} primaryTypographyProps={{ sx: { color: 'white', fontSize: '0.85em', textAlign: 'left' } }} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        )}
+
+        {/* Resources */}
+        <ListItem disablePadding>
+          <ListItemButton onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)} sx={{ '&:hover': { color: '#00aeef' } }}>
+            <ListItemText primary="Resources" primaryTypographyProps={{ style: { color: 'white' } }} />
+            {mobileResourcesOpen ? <ExpandLess sx={{ color: 'white' }} /> : <ExpandMore sx={{ color: 'white' }} />}
           </ListItemButton>
         </ListItem>
         {mobileResourcesOpen && (
           <List sx={{ pl: 2 }}>
             {[
-             
               { label: 'Blogs', path: '/blog' },
-              { label: 'Case Study', path:"/case-study" },
+              { label: 'Case Study', path: '/case-study' },
             ].map((item, index) => (
               <ListItem key={index} disablePadding>
-                <ListItemButton
-                  component={Link}
-                  to={item.path}
-                  onClick={handleDrawerToggle}
-                  sx={{
-                    '&:hover .MuiListItemText-primary': { color: '#00aeef' },
-                    pl: 2,
-                  }}
-                >
-                  <ListItemText
-                    primary={item.label}
-                    primaryTypographyProps={{
-                      sx: { color: 'white', fontSize: '0.85em', textAlign: 'left' },
-                    }}
-                  />
+                <ListItemButton component={Link} to={item.path} onClick={handleDrawerToggle} sx={{ '&:hover .MuiListItemText-primary': { color: '#00aeef' }, pl: 2 }}>
+                  <ListItemText primary={item.label} primaryTypographyProps={{ sx: { color: 'white', fontSize: '0.85em', textAlign: 'left' } }} />
                 </ListItemButton>
               </ListItem>
             ))}
           </List>
-        )}     
+        )}
+
         <ListItem disablePadding>
-          <ListItemButton 
-            component={Link} 
-            to="/company/contact-us" 
-            onClick={handleDrawerToggle}
-            sx={{ '&:hover': { color: '#00aeef' } }}
-          >
-            <ListItemText 
-              primary="Contact Us" 
-              primaryTypographyProps={{ style: { color: 'white' } }} 
-            />
+          <ListItemButton component={Link} to="/company/contact-us" onClick={handleDrawerToggle} sx={{ '&:hover': { color: '#00aeef' } }}>
+            <ListItemText primary="Contact Us" primaryTypographyProps={{ style: { color: 'white' } }} />
           </ListItemButton>
         </ListItem>
       </List>
@@ -467,96 +357,86 @@ const ResourcesMenu = (
     <>
       <StyledAppBar position="sticky">
         <Container maxWidth="xl">
-        <Toolbar disableGutters>
-  <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent:"space-around" }}>
-    
-    <a href="https://www.e-consystems.com/">
-      <img 
-        src={dentallogo} 
-        alt="Dental Logo" 
-        style={{ 
-          height: isDesktop ? '65px' : '56px', 
-          width: isDesktop ? '240px' : 'auto', 
-          objectFit: 'contain',
-          margin:"5px",
-          cursor: 'pointer'
-        }} 
-      />
-    </a>
-    {isDesktop && (
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
-        <NavLink to="/">Home</NavLink>
-        {/* <Divider orientation="vertical" flexItem /> */}
-      <NavLink
-  {...(open && { 'aria-owns': 'products-menu' })}
-  aria-haspopup="true"
-  onMouseOver={handlePopoverOpen}
->
-  Products
-</NavLink>
+          <Toolbar disableGutters>
+            <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: "space-around" }}>
+              
+              <a href="https://www.e-consystems.com/">
+                <img 
+                  src={dentallogo} 
+                  alt="Logo" 
+                  style={{ 
+                    height: isDesktop ? '65px' : '56px', 
+                    width: isDesktop ? '240px' : 'auto', 
+                    objectFit: 'contain',
+                    margin: "5px",
+                    cursor: 'pointer'
+                  }} 
+                />
+              </a>
 
-        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent:"space-around" }}>
               {isDesktop && (
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
-                  {/* ... existing nav items ... */}
-                  {/* <Divider orientation="vertical" flexItem /> */}
+                  <NavLink to="/">Home</NavLink>
+
+                  {/* Products */}
+                  <NavLink
+                    {...(open && { 'aria-owns': 'products-menu' })}
+                    aria-haspopup="true"
+                    onMouseOver={handlePopoverOpen}
+                  >
+                    Products
+                  </NavLink>
+
+                  {/* NEW: Solutions */}
                   <NavLink
                     aria-haspopup="true"
-                    onMouseOver={handleIndustriesPopoverOpen}
+                    onMouseOver={handleSolutionsPopoverOpen}
                   >
-                    Industries
+                    Solutions
                   </NavLink>
+
+                  {/* Resources */}
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <NavLink
+                      aria-haspopup="true"
+                      onMouseOver={handleResourcesPopoverOpen}
+                    >
+                      Resources
+                    </NavLink>
+                  </Box>
+
+                  <NavLink to="/company/contact-us">Contact Us</NavLink>
                 </Box>
               )}
-            </Box>
-              <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent:"space-around" }}>
-              {isDesktop && (
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
-                  {/* <Divider orientation="vertical" flexItem /> */}
-                  <NavLink
-                    aria-haspopup="true"
-                    onMouseOver={handleResourcesPopoverOpen}
-                  >
-                    Resources
-                  </NavLink>
+
+              {isDesktop ? (
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <PhoneIcon sx={{ color: '#003873', fontSize: '24px' }} />
+                  <Box>
+                    <Typography variant="body2" sx={{ color: '#00aeef', fontSize: '1em' }}>
+                      Call us
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#003873', fontSize: '14px', whiteSpace: 'nowrap' }}>
+                      +1 408 766 7503
+                    </Typography>
+                  </Box>
                 </Box>
+              ) : (
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="end"
+                  onClick={handleDrawerToggle}
+                  sx={{ color: '#003873' }}
+                >
+                  <MenuIcon />
+                </IconButton>
               )}
             </Box>
-        <NavLink to="/company/contact-us">Contact Us</NavLink>
-      </Box>
-    )}
-      
-
-    {isDesktop ? (
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-        <PhoneIcon sx={{ color: '#003873', fontSize: '24px' }} />
-        <Box>
-          <Typography variant="body2" sx={{ color: '#00aeef', fontSize: '1em' }}>
-            Call us
-          </Typography>
-          <Typography variant="body2" sx={{ color: '#003873', fontSize: '14px', whiteSpace: 'nowrap' }}>
-            +1 408 766 7503
-          </Typography>
-        </Box>
-      </Box>
-    ) : (
-      /* Mobile Menu Icon */
-      <IconButton
-        color="inherit"
-        aria-label="open drawer"
-        edge="end"
-        onClick={handleDrawerToggle}
-        sx={{ color: '#003873' }}
-      >
-        <MenuIcon />
-      </IconButton>
-    )}
-    
-  </Box>
-</Toolbar>
-
+          </Toolbar>
         </Container>
 
+        {/* Products Popover */}
         <Popover
           id="products-menu"
           open={open}
@@ -570,87 +450,48 @@ const ResourcesMenu = (
             onMouseLeave: handlePopoverLeave
           }}
           disableRestoreFocus
-
         >
           {SolutionMenu}
         </Popover>
 
-
+        {/* NEW: Solutions Popover */}
         <Popover
-          id="industries-menu"
-          open={openIndustries}
-          anchorEl={anchorElIndustries}
-          onClose={handleIndustriesPopoverClose}
+          id="solutions-menu"
+          open={Boolean(anchorElSolutions)}
+          anchorEl={anchorElSolutions}
+          onClose={handleSolutionsPopoverClose}
           anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
           transformOrigin={{ vertical: 'top', horizontal: 'left' }}
-          PaperProps={{ 
+          PaperProps={{
             sx: { border: '1px solid #00aeef' },
-            onMouseEnter: handlePopoverEnter,
+            onMouseEnter: () => clearTimeout(closeTimeoutRef.current),
             onMouseLeave: handlePopoverLeave
           }}
           disableRestoreFocus
         >
-          {IndustriesMenu}
+          {SolutionsMenu}
         </Popover>
-        <Popover
-  open={Boolean(anchorElResources)}
-  anchorEl={anchorElResources}
-  onClose={handleResourcesPopoverClose}
-  anchorOrigin={{
-    vertical: 'bottom',
-    horizontal: 'left',
-  }}
-  transformOrigin={{
-    vertical: 'top',
-    horizontal: 'left',
-  }}
-  disableRestoreFocus
-  PaperProps={{ onMouseEnter: handlePopoverEnter, onMouseLeave: handleResourcesPopoverClose }}
->
-  {ResourcesMenu}
-</Popover>
 
-      </StyledAppBar>
-      <StyledDrawer
-        anchor="right"
-        open={mobileOpen}
-        onClose={handleDrawerToggle}
-      >
-        {drawerContent}
-      </StyledDrawer>
-      <StyledDrawer
-        anchor="right"
-        open={mobileOpen}
-        onClose={handleDrawerToggle}
-      >
-        {drawerContent}
+        {/* Resources Popover */}
         <Popover
-          open={Boolean(mobileMenuAnchor)}
-          anchorEl={mobileMenuAnchor}
-          onClose={() => setMobileMenuAnchor(null)}
-          anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+          open={Boolean(anchorElResources)}
+          anchorEl={anchorElResources}
+          onClose={handleResourcesPopoverClose}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
           transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+          disableRestoreFocus
+          PaperProps={{ 
+            sx: { border: '1px solid #00aeef' },
+            onMouseEnter: () => clearTimeout(closeTimeoutRef.current), 
+            onMouseLeave: handleResourcesPopoverClose 
+          }}
         >
-          {SolutionMenu}
+          {ResourcesMenu}
         </Popover>
-      <Popover
-  open={Boolean(anchorElResources)}
-  anchorEl={anchorElResources}
-  onClose={handleResourcesPopoverClose}
-  anchorOrigin={{
-    vertical: 'bottom',
-    horizontal: 'left',
-  }}
-  transformOrigin={{
-    vertical: 'top',
-    horizontal: 'left',
-  }}
-  disableRestoreFocus
-  PaperProps={{ onMouseEnter: handlePopoverEnter, onMouseLeave: handleResourcesPopoverClose }}
->
-  {ResourcesMenu}
-</Popover>
+      </StyledAppBar>
 
+      <StyledDrawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle}>
+        {drawerContent}
       </StyledDrawer>
     </>
   );

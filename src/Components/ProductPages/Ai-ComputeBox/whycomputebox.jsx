@@ -23,8 +23,8 @@ const WhyComputeBox = () => {
 
   const features = [
     {
-      title: "NEMA TS2-Compliant Design",
-      desc: "Built to meet NEMA TS2 standards for traffic cabinet environments—ensuring long-term reliability, vibration tolerance, and environmental resilience.",
+      title: "NEMA-Compliant Design",
+      desc: "Built to meet NEMA standards for traffic cabinet environments—ensuring long-term reliability, vibration tolerance, and environmental resilience.",
       number: "01",
     },
     {
@@ -49,7 +49,7 @@ const WhyComputeBox = () => {
     },
     {
       title: "Optimized for Traffic Vision AI",
-      desc: "Supports advanced CNN-based detection, tracking, and classification models for vehicles, pedestrians, and vulnerable road users.",
+      desc: "Supports advanced AI-based detection, tracking, and classification models for vehicles, pedestrians, and vulnerable road users.",
       number: "06",
     },
     {
@@ -61,7 +61,7 @@ const WhyComputeBox = () => {
 
   return (
     <section id="why-compute-box" className="compute-features-section">
-      <h2>Why e-con's Compute Box</h2>
+      <h2>Why e-con's AI Vision Box</h2>
 
       <div className="compute-features">
         {features.map((feature, index) => (

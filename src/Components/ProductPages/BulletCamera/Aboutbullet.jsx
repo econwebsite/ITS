@@ -4,10 +4,9 @@ import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-
+import Modelbutton from "../../Button comp/Modelbutton";
 // Temporary images (replace later if needed)
-import cameraFront from "../../../assets/ptz-cameras/5mp-ai-turret-camera-thumb.png";
-import cameraSide from "../../../assets/ptz-cameras/ai-turret-camera-thumb.png";
+import bulletCameraImg from "../../../assets/bullet-camera/automatic-number-plate-recognition-camera-thumb.png";
 
 const AboutBullet = () => {
   useEffect(() => {
@@ -30,127 +29,82 @@ const AboutBullet = () => {
         <div className="col-lg-11">
           <div className="row">
             {/* Left: Text Section */}
-            <div className="col-lg-8 mt-3 aboutParaMain text-left text-lg-start">
+            <div className="col-lg-8 mt-3 aboutParaMain text-left text-lg-start ps-0">
               <h2 className="titlePrimary">
-                Smart Bullet Cameras for ANPR/ALPR
+                Automatic Number Plate Recognition Cameras
               </h2>
 
               <p className="paragraphtext">
-               e-con Systems’ high-performance Bullet Cameras are purpose-built for ANPR/ALPR, law enforcement, and traffic management. Designed for outdoor deployment across highways, toll plazas, parking areas, and intersections, these cameras combine Sony-based high-resolution global shutter sensors with integrated edge compute to deliver exceptional imaging, on-device analytics, and 24×7 reliability.
+               e-con Systems' ALPR cameras are purpose-built for law enforcement and traffic management. They are designed to handle real-world challenges such as fast-moving vehicles, multi-lane traffic, glare, low-light conditions, and adverse weather.
               </p>
 
               <p className="paragraphtext">
-                With optical zoom options, strobe-assisted IR night vision, and AI-powered edge processing, they enable real-time vehicle recognition, violation detection, and traffic flow analysis — even in challenging lighting or weather conditions.
+                Engineered for outdoor deployment, these cameras are used across highways, toll plazas, parking areas, and intersections. They support both edge-based processing and cloud-based architectures, offering flexibility for fixed and mobile deployments.
               </p>
-
-              <div className="d-flex flex-wrap gap-3 mt-3 justify-content-center justify-content-lg-start text-center text-lg-start">
-                {/* Download Datasheet */}
-                <div className="cardKnowMore p-3">
-                  <p className="mb-2 fw-semibold section-label">Documents:</p>
-                  <button className="btn btn-success btn-with-icon btn-darkgreen">
-                    <i className="bi bi-download me-2"></i> Download
-                  </button>
-                </div>
-
-                {/* Contact Us */}
-                <div className="cardKnowMore p-3">
-                  <p className="mb-2 fw-semibold section-label">
-                    For more details:
-                  </p>
-                  <button className="btn btn-primary btn-with-icon contactus-product">
-                    Contact Us
-                  </button>
-                </div>
-              </div>
+              <p className="paragraphtext">High-resolution imaging with global shutter and rolling shutter sensor options enables accurate license plate recognition and reliable vehicle detection, even in complex multi-lane traffic.</p>
+              <p className="paragraphtext">Beyond enforcement imaging, overview camera configurations capture the broader scene. They provide vehicle context such as make, model, and recognition (MMR), along with surrounding environmental details. This added context strengthens evidence quality and supports investigations, auditing, and traffic analysis.</p>
+              <p className="paragraphtext">Depending on deployment needs, the cameras can perform real-time edge analytics or stream data to centralized cloud-based ALPR engines. This flexibility helps reduce false positives and delivers actionable insights for Traffic Control Center (TCC) operations.</p>
+              <p className="paragraphtext">Rugged and IP-rated for harsh roadside environments, e-con Systems' ANPR (ALPR) cameras integrate seamlessly into modern Intelligent Transportation Systems (ITS).</p>
             </div>
+            <div className="col-lg-4 px-0 d-flex flex-column align-items-center justify-content-center">
+              <div className="col-12 mx-auto">
 
-            {/* Right: Carousel Section */}
-            <div className="col-lg-4 px-0 d-flex flex-column">
-              <div className="carousel-container">
-                <div
-                  id="carouselBulletIndicators"
-                  className="carousel slide"
-                  data-bs-ride="carousel"
-                  data-bs-interval="5000"
+                <a
+                  href={bulletCameraImg}
+                  data-fancybox="gallery"
+                  data-caption="Bullet Camera Front View"
                 >
-                  {/* Carousel Indicators */}
-                  <div className="carousel-indicators">
-                    <button
-                      type="button"
-                      data-bs-target="#carouselBulletIndicators"
-                      data-bs-slide-to="0"
-                      className="active"
-                      aria-current="true"
-                      aria-label="Slide 1"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselBulletIndicators"
-                      data-bs-slide-to="1"
-                      aria-label="Slide 2"
-                    ></button>
-                  </div>
-
-                  {/* Carousel Items */}
-                  <div className="carousel-inner text-center">
-                    <div className="carousel-item active">
-                      <a
-                        href={cameraFront}
-                        data-fancybox="gallery"
-                        data-caption="Bullet Camera Front View"
-                      >
-                        <img
-                          src={cameraFront}
-                          className="carousel-image d-block mx-auto img-fluid"
-                          alt="Bullet Camera Front View"
-                        />
-                      </a>
-                    </div>
-
-                    <div className="carousel-item">
-                      <a
-                        href={cameraSide}
-                        data-fancybox="gallery"
-                        data-caption="Bullet Camera Side View"
-                      >
-                        <img
-                          src={cameraSide}
-                          className="carousel-image d-block mx-auto img-fluid"
-                          alt="Bullet Camera Side View"
-                        />
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Controls */}
-                  <button
-                    className="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselBulletIndicators"
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      className="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Previous</span>
-                  </button>
-                  <button
-                    className="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselBulletIndicators"
-                    data-bs-slide="next"
-                  >
-                    <span
-                      className="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Next</span>
-                  </button>
-                </div>
+                  <img
+                    src={bulletCameraImg}
+                    className="carousel-image d-block mx-auto img-fluid"
+                    alt="Bullet Camera Front View"
+                  />
+                </a>
               </div>
             </div>
-            {/* End of Carousel */}
+          </div>
+        </div>
+        <div className="col-lg-11">
+          <div className="row aboutParaMain">
+            
+            <div className="d-flex flex-wrap gap-3 mt-3 justify-content-center justify-content-lg-start text-center text-lg-start">
+              {/* Download Datasheet */}
+              <div className="cardKnowMore p-3">
+                <p className="mb-2 fw-semibold section-label">Datasheet:</p>
+                <Modelbutton
+                  className="bullet-cameravariant-button gtm-btn"
+                  text="Download"
+                  backgroundColor="#1e2f7ac9"
+                  animationColor="#69ba2f"
+                  hoverColor="#00aeef"
+                  padding="10px 30px"
+                  fontSize="14px"
+                  productName={`ProductDocument`}
+                  title={`ALPR Camera`}
+                  docName="e-con-its-camera-brochure.pdf"
+                  type='download'
+                />
+              </div>
+
+              {/* Contact Us */}
+              <div className="cardKnowMore p-3">
+                <p className="mb-2 fw-semibold section-label">
+                  For more details:
+                </p>
+                <Modelbutton
+                  className="bullet-cameravariant-button gtm-btn"
+                  text="Contact Us"
+                  backgroundColor="#69ba2f"
+                  animationColor="#00aeef"
+                  hoverColor="#00aeef"
+                  padding="10px 30px"
+                  fontSize="14px"
+                  productName={`Bullet Camera`}
+                  type='contact'
+                />
+
+              </div>
+            </div>
           </div>
         </div>
       </div>

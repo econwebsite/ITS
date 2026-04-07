@@ -1,56 +1,47 @@
 import React, { useState } from 'react';
 import './Homebanner.css';
-import homevideo1 from "../../../assets/homepage/homevideo1.mov"
-import homevideo2 from "../../../assets/homepage/homevideo2.mp4"
 import homevideo3 from "../../../assets/homepage/homevideo3.mp4"
-
+import Modelbutton from "../../Button comp/Modelbutton";
 const videos = [
   {
     src: homevideo3,
-    title: 'Smart Camera Solution for ITS',
-    subtitle: 'Reliable cameras build for intelligent traffic solution.',
-  },
-  {
-    src: homevideo2,
-    title: 'Smart camera',
-    subtitle: 'Reliable cameras build for intelligent traffic solution',
-  },
-  {
-    src: homevideo1,
-    title: 'Smart camera',
-    subtitle: 'Reliable cameras build for intelligent traffic solution',
-  },
+    title: 'Vision That Powers Safer Roads',
+    subtitle: 'Reliable imaging and edge intelligence for intelligent transportation systems',
+  }
 ];
 
 const VideoBanner = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <div className="video-banner-container">
       <video
-        key={activeIndex}
+        key={0}
         className="video-banner"
-        src={videos[activeIndex].src}
+        src={videos[0].src}
         autoPlay
         muted
         loop
       />
       <div className="overlay">
         <div className="text-content">
-          <h1>{videos[activeIndex].title}</h1>
-          <p>{videos[activeIndex].subtitle}</p>
-          <button>Talk to an Expert &gt;&gt;</button>
+          <h1>{videos[0].title}</h1>
+          <p>{videos[0].subtitle}</p>
+          <Modelbutton 
+            className="ptz-cameravariant-button gtm-btn" 
+            text="Talk to an ITS Expert &gt;&gt;" 
+            backgroundColor="transparent" 
+            animationColor="#69ba2f" 
+            hoverColor="#00aeef"
+            padding="12px 25px"
+            fontSize="14px"
+            borderRadius="2px"
+            border="2px solid #fff"
+            productName="Incident Detection Camera"
+            title="Incident Detection Camera"
+          />
         </div>
       </div>
-      <div className="carousel-dots">
-        {videos.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === activeIndex ? 'active' : ''}`}
-            onClick={() => setActiveIndex(index)}
-          />
-        ))}
-      </div>
+   
     </div>
   );
 };

@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import cameraFront from "../../../assets/ptz-cameras/incident-detection-camera-for-intelligent-traffic-monitoring-thumb.jpg";
 import cameraSide from "../../../assets/ptz-cameras/smart-incident-detection-for-intelligent-traffic-monitoring-thumb.png";
-
+import Modelbutton from "../../Button comp/Modelbutton";
 const AboutProduct = () => {
 useEffect(() => {
   Fancybox.bind("[data-fancybox='gallery']", {
@@ -52,9 +52,20 @@ useEffect(() => {
                 {/* Download Datasheet */}
                 <div className="cardKnowMore p-3">
                   <p className="mb-2 fw-semibold section-label">Documents:</p>
-                  <button className="btn btn-success btn-with-icon btn-darkgreen">
-                    <i className="bi bi-download me-2"></i> Download
-                  </button>
+                   <Modelbutton 
+            className="ptz-download-button" 
+            text="Download" 
+            backgroundColor="#1e2f7ac9" 
+            animationColor="#69ba2f" 
+            hoverColor="#00aeef"
+            padding="5px 15px"
+            fontSize="14px" 
+            productName={`Incident Detection Camera- Documents`}
+            title={`Documents`}
+            docName="e-con-incident-detection-camera-technical-documents.pdf"
+            type= 'download'
+          />
+                  
                 </div>
 
                 {/* Contact Us */}
@@ -62,9 +73,17 @@ useEffect(() => {
                   <p className="mb-2 fw-semibold section-label">
                     For more details:
                   </p>
-                  <button className="btn btn-primary btn-with-icon contactus-product">
-                    Contact Us
-                  </button>
+                  <Modelbutton 
+            className="ptz-cameravariant-button" 
+            text="Contact Us" 
+            backgroundColor="#69ba2f" 
+            animationColor="#00aeef" 
+            hoverColor="#00aeef"
+            padding="5px 15px"
+            fontSize="14px" 
+            productName={`Incident Detection Camera`}
+            type= 'contact'
+          />
                 </div>
               </div>
             </div>

@@ -1,0 +1,367 @@
+/* Testimonial Section Styles */
+.testimonial-section {
+  width: 100%;
+  padding: 30px 20px;
+  /* background: linear-gradient(135deg, #ffffff 0%, #f5f8fc 100%); */
+  margin: 2rem 0;
+}
+
+.testimonial-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Testimonial Header */
+.testimonial-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonial-title {
+     text-align: center;
+    font-size: 2rem;
+    color: #344ea1;
+    margin-top: 10px;
+    margin-bottom: 2rem;
+}
+
+.testimonial-subtitle {
+  font-size: 1rem;
+  color: #666;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Testimonials Grid */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: stretch;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  /* background: white; */
+  border-radius: 12px;
+  overflow: hidden;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); */
+  transition: all 0.3s ease;
+  /* border: 1px solid #e8eef5; */
+}
+
+.testimonial-card:hover {
+ 
+  transform: translateY(-5px);
+  border-color: #344ea1;
+}
+
+/* Video Box */
+.video-box {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+}
+
+.video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  transition: 0.3s ease;
+}
+
+.video-box:hover .video-thumb {
+  transform: scale(1.03);
+}
+
+/* Play Icon Overlay */
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  background: rgba(255, 0, 0, 0.85);
+  width: 73px;
+  height: 46px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.video-box:hover .play-icon {
+  background: rgba(255, 0, 0, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Video Content */
+.video-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.video-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #344ea1;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+}
+
+.video-description {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Video Modal Overlay */
+.video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Video Modal Content */
+.video-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Video Player Wrapper */
+.video-player-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-bottom: 0;
+}
+
+.video-player-wrapper iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Modal Close Button */
+.modal-close-btn {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.modal-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonial-title {
+    font-size: 1.75rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .video-content {
+    padding: 1.25rem;
+  }
+
+  .video-title {
+    font-size: 1rem;
+  }
+
+  .video-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 40px 15px;
+  }
+
+  .testimonial-title {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .video-modal-content {
+    max-width: 95vw;
+    aspect-ratio: 16 / 9;
+  }
+
+  .modal-close-btn {
+    top: -40px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .play-icon {
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 8px;
+  }
+
+  .video-content {
+    padding: 1rem;
+  }
+
+  .video-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .video-description {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-section {
+    padding: 30px 10px;
+    margin: 1rem 0;
+  }
+
+  .testimonial-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .testimonial-header {
+    margin-bottom: 2rem;
+  }
+
+  .testimonial-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .video-box {
+    aspect-ratio: 16 / 9;
+  }
+
+  .video-modal-overlay {
+    padding: 10px;
+  }
+
+  .video-modal-content {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .modal-close-btn {
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 1.25rem;
+  }
+
+  .play-icon {
+    width: 50px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .video-content {
+    padding: 0.75rem;
+  }
+
+  .video-title {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .video-description {
+    font-size: 0.75rem;
+  }
+}

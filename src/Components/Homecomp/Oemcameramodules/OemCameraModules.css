@@ -1,0 +1,235 @@
+/* OEM Camera Modules Section */
+.oemcamera-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f8fc 100%);
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.oemcamera-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.oemcamera-title {
+      text-align: center;
+    font-size: 2rem;
+    color: #344ea1;
+    margin-top: 10px;
+    margin-bottom: 2rem;
+}
+
+/* Legend Styles */
+.legend-section {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.legend-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.legend-text {
+  white-space: nowrap;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Custom Table Styling */
+.custom-table {
+  font-size: 0.95rem;
+}
+
+.custom-table .ant-table-thead > tr > th {
+  background: #f5f5f5;
+  color: #1b2c55;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 16px 12px !important;
+}
+
+.custom-table .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #e8eef7;
+}
+
+.custom-table .ant-table-tbody > tr:hover > td {
+  background: #f8fafd;
+}
+
+.optical-format-text {
+  font-weight: 600;
+  color: #1b2c55;
+}
+
+.camera-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.camera-link {
+  color: #1b2c55;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.camera-link:hover {
+  color: #2d4a8f;
+  border-bottom-color: #3498db;
+}
+
+/* Mobile Cards View */
+.mobile-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.mobile-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-optical-format {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1b2c55;
+  margin: 0;
+}
+
+.mobile-cameras {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-camera-item {
+  padding: 12px;
+  background: #f8fafd;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.mobile-mp-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1b2c55;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mobile-camera-name {
+  display: block;
+  color: #1b2c55;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.mobile-camera-name:hover {
+  color: #2d4a8f;
+}
+
+.mobile-no-data {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .oemcamera-section {
+    padding: 40px 15px;
+  }
+
+  .oemcamera-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .legend-section {
+    padding: 15px;
+    margin-bottom: 25px;
+  }
+
+  .legend-item {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .oemcamera-section {
+    padding: 30px 10px;
+  }
+
+  .oemcamera-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .legend-section {
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+
+  .legend-item {
+    font-size: 0.8rem;
+  }
+
+  .mobile-card {
+    padding: 15px;
+  }
+
+  .mobile-optical-format {
+    font-size: 1.1rem;
+  }
+
+  .mobile-camera-name {
+    font-size: 0.85rem;
+  }
+}

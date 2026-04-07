@@ -32,7 +32,7 @@ const ClovisEvidencePipeline = () => {
           </p>
 
           <p className="pipeline-desc">
-           Combined with e-con Systems' Smart PTZ Cameras, Smart Bullet cameras, and AI Compute Box,  it delivers a complete enforcement ecosystem that empowers cities and authorities to enforce smarter, faster, and more accurately.
+           Combined with e-con Systems' Smart AI Cameras, Smart Bullet cameras, and AI Compute Box,  it delivers a complete enforcement ecosystem that empowers cities and authorities to enforce smarter, faster, and more accurately.
           </p>
         </div>
 

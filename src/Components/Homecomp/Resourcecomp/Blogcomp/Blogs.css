@@ -1,0 +1,87 @@
+.BlogStab-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.BlogStab-grid {
+display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.BlogStab-card {
+ width: 350px;
+  flex-shrink: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+   border: 2px solid #c5c5c5;         
+  border-radius: 6px;                  
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transition: transform 0.2s;
+  padding: 5px;
+}
+.BlogStab-card a {
+  text-decoration: none;
+  color: inherit;
+}
+.BlogStab-card:hover {
+  transform: translateY(-5px);
+}
+
+.BlogStab-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #ccc;
+}
+
+.BlogStab-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.BlogStab-cardTitle {
+  font-size: 16px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.BlogStab-hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.BlogStab-hashtags span {
+  font-size: 14px;
+  color: #007bff;
+  background-color: #eef4ff;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+@media (max-width: 1024px) {
+  .BlogStab-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .BlogStab-card {
+    width: 100%;
+  }
+
+  .BlogStab-grid {
+    justify-content: center;
+  }
+}

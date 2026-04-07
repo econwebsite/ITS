@@ -28,12 +28,12 @@ const WhySmartBullet = () => {
     },
     {
       title: "High-Resolution Global Shutter Imaging",
-      desc: "Sony-based global shutter sensors capture clear, distortion-free frames of fast-moving vehicles — ensuring accurate plate and vehicle recognition at high speeds.",
+      desc: "Global shutter sensors capture clear, distortion-free frames of fast-moving vehicles — ensuring accurate plate and vehicle recognition at high speeds.",
       number: "02",
     },
     {
       title: "Real-Time Edge AI Analytics",
-      desc: "Built-in NPUs enable smart on-device analysis such as vehicle classification, violation detection, and motion tracking — reducing reliance on backend servers.",
+      desc: "Built-in AI engines enable smart on-device analysis such as vehicle classification, violation detection, and motion tracking.",
       number: "03",
     },
     {
@@ -43,7 +43,7 @@ const WhySmartBullet = () => {
     },
     {
       title: "Rugged & Weatherproof Reliability",
-      desc: "Designed for continuous outdoor operation with IP66/IP67 housing, vibration resistance, and temperature endurance for harsh roadside environments.",
+      desc: "Designed for continuous outdoor operation with IP66 housing, vibration resistance, and temperature endurance for harsh roadside environments.",
       number: "05",
     },
     {
@@ -58,14 +58,14 @@ const WhySmartBullet = () => {
     },
     {
       title: "Simplified Connectivity & Deployment",
-      desc: "PoE-based Ethernet connectivity enables single-cable power and data transmission — streamlining installation and scalability.",
+      desc: "Supports PoE-based Ethernet or wireless connectivity, enabling seamless installation and scalability.",
       number: "08",
     },
   ];
 
   return (
     <section id="smart-bullet" className="bullet-features-section">
-      <h2>Why Choose Smart Bullet Cameras?</h2>
+      <h2>Why Choose Smart ANPR Cameras?</h2>
 
       <div className="bullet-features-grid">
         {bulletFeatures.map((item, index) => (

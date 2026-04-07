@@ -18,6 +18,7 @@
 
 .footer-logo-row {
   width: 100%;
+  margin: 2em 0;
 }
 
 .footer-logo {
@@ -45,7 +46,7 @@
 }
 
 .footer-col.center {
-  flex: 1 1 300px;
+  flex: 1 1 29%;
 }
 
 .footer-col.right {
@@ -65,10 +66,12 @@
   margin: 0;
 }
 
-.footer-links li {
+.footer-links li,.footer-links li a {
   margin-bottom: 10px;
   font-size: 16px;
   font-weight: 200;
+  color: #fff !important;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -98,7 +101,7 @@
   outline: none;
 }
 
-.subscribe-box button {
+.subscribe-box .footerproceed-btn  {
   padding: 10px 20px;
   border-radius: 25px;
   background-color: #1e2f7a;
@@ -112,7 +115,12 @@
   background-color: #00aeef;
 }
 
-
+.Footer-errorMessage{
+  color:red;
+}
+.Footer-successMessage{
+  color:green;
+}
 @media (max-width: 768px) {
   .footer-container {
     padding: 20px 10px;
@@ -124,7 +132,7 @@
 
   .footer-logo-row {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
 
   .footer-logo {

@@ -1,13 +1,12 @@
 import React from "react";
 import "./ComputeBoxbanner.css";
-import bannerImg from '../../../assets/ai-compute-box/ai-compute-box-banner.jpg'
-
+import bannerImg from '../../../assets/ai-compute-box/ai-vision-compute-box-banner.jpg'
+import Modelbutton from "../../Button comp/Modelbutton";
 const ComputeBoxBanner = () => {
   const banner = {
     image: bannerImg,
-    title: "AI Compute Box for Intelligent Intersections",
-    subtitle:
-      "The Rugged AI Vision Box from e-con Systems™ is an advanced edge computing solution designed for vehicle and pedestrian detection, incident management, and intersection analytics in Intelligent Transportation Systems (ITS).",
+    title: "AI Vision Box for Advanced Analytics",
+    subtitle:"Real time edge AI for safer roads",
   };
 
   return (
@@ -22,7 +21,19 @@ const ComputeBoxBanner = () => {
         <div className="banner-overlay">
           <h1>{banner.title}</h1>
           <p>{banner.subtitle}</p>
-          <button className="banner-button">Talk to an Expert &gt;&gt;</button>
+           <Modelbutton 
+            className="computebox-banner-button gtm-btn" 
+            text="Talk to an ITS Expert &gt;&gt;" 
+            backgroundColor="#1e2f7ac9" 
+            animationColor="#69ba2f" 
+            hoverColor="#00aeef"
+            padding="12px 25px"
+            fontSize="14px"
+            borderRadius="0"
+            border="1px solid #fff"
+            productName="AI Compute Box Series"
+            title="AI Compute Box Series"
+          />
         </div>
       </div>
     </div>

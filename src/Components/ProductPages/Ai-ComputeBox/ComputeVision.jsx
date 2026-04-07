@@ -28,7 +28,7 @@ const ComputeVision = () => {
 
         <div className="cv-content">
           <p>
-           Powered by deep learning and image recognition, the Vision Box processes multiple camera feeds to identify vehicles, pedestrians, traffic signs, and events in real time — even under low light, glare, or rain.
+           Powered by deep learning and image recognition, the Vision Box can be used to process multiple camera feeds to identify vehicles, pedestrians, traffic signs, and events in real time — even under low light, glare, or rain.
           </p>
 
           <p>

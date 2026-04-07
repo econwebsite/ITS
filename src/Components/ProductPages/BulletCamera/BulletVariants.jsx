@@ -1,33 +1,55 @@
 import React from "react";
 import "./BulletVariants.css";
-
+import Modelbutton from "../../Button comp/Modelbutton";
 const variants = [
   {
-    name: "Bullet 5MP",
-    tagline: "High-Performance",
-    resolution: "5 MP (Sony-based)",
-    zoom: "4× Optical",
-    night: "Strobe IR Night Vision",
-    ai: "Edge NPU for ANPR/ALPR",
-    connectivity: "PoE Ethernet",
-    storage: "SD Card",
+    name: "Traffic Monitoring",
+    resolution: "8 MP",
+    shutter:"Rolling",
+    chroma: "Color",
+    zoom: "3× Zoom",
+    npu:"4 TOPS",
+    processor: "Neuron",
+    storage: "-",
+    network: "-",
+    interface: "GigE",
+    useCase: "Traffic analytics & parking monitoring",
+    power: "PoE or 12 V DC"
   },
   {
-    name: "Bullet Pro 8MP",
-    tagline: "Advanced Professional Variant",
-    resolution: "8 MP (Sony-based)",
-    zoom: "18× Optical",
-    night: "Enhanced Strobe IR",
-    ai: "High-Performance NPU",
-    connectivity: "PoE Ethernet",
-    storage: "SD Card",
+    name: "High-Speed Enforcement",
+    resolution: "5 MP",
+    shutter:"Global",
+    chroma: "Color",
+    zoom: "18× Zoom",
+    npu:"12 TOPS",
+    processor: "Ambarella",
+    storage: "SSD / SD Card",
+    network: "LTE/ WIFI",
+    interface: "GigE",
+    useCase: "Highway speed enforcement & Tolling ",
+    power: "PoE or 12 V DC"
+  },
+  {
+    name: "Urban ITS",
+    resolution: "3 MP",
+    shutter:"Global",
+    chroma: "Color / Mono",
+    zoom: "10× Zoom",
+    npu:"4 TOPS",
+    processor: "Neuron",
+    storage: "SSD",
+    network: "-",
+    interface: "GigE",
+    useCase: "Tolling, intersections & multi-lane urban roads",
+    power: "PoE or 12 V DC"
   },
 ];
 
 const BulletVariants = () => {
   return (
     <section className="bullet-variants-wrapper">
-      <h2 className="variants-title">Bullet Camera Variants</h2>
+      <h2 className="variants-title">AI-Powered Smart ANPR Camera Variants</h2>
       {/* <p className="variants-subtitle">
         Choose the ideal bullet camera variant for your traffic enforcement and 
         ANPR/ALPR applications.
@@ -38,30 +60,47 @@ const BulletVariants = () => {
           <div key={index} className="variant-card">
             <div className="variant-header">
               <h3>{variant.name}</h3>
-              <span className="variant-tag">{variant.tagline}</span>
+              {/* <span className="variant-tag">{variant.resolution}</span> */}
             </div>
 
                     <div className="variant-features">
-            <div className="variant-label">Resolution</div>
-            <div className="variant-value">{variant.resolution}</div>
+                 <div className="variant-label">Resolution</div>
+                <div className="variant-value">{variant.resolution}</div> 
+                <div className="variant-label">Shutter Type</div>
+                <div className="variant-value">{variant.shutter}</div>
+                <div className="variant-label">Chroma</div>
+                <div className="variant-value">{variant.chroma}</div>
+                <div className="variant-label">Optical Zoom</div>
+                <div className="variant-value">{variant.zoom}</div>
+                <div className="variant-label">On-board NPU</div>
+                <div className="variant-value">{variant.npu}</div>
+                <div className="variant-label"> Storage</div>
+                <div className="variant-value">{variant.storage}</div>
+                <div className="variant-label">Network </div>
+                <div className="variant-value">{variant.network}</div>
+                <div className="variant-label">Interface</div>
+                <div className="variant-value">{variant.interface}</div>
+                
+                <div className="variant-label">Power</div>
+                <div className="variant-value">{variant.power}</div>
+                <div className="variant-label full">Primary Use Case</div>
+                <div className="variant-value full">{variant.useCase}</div>
 
-            <div className="variant-label">Optical Zoom</div>
-            <div className="variant-value">{variant.zoom}</div>
-
-            <div className="variant-label">Night Vision</div>
-            <div className="variant-value">{variant.night}</div>
-
-            <div className="variant-label">On-board AI</div>
-            <div className="variant-value">{variant.ai}</div>
-
-            <div className="variant-label">Connectivity</div>
-            <div className="variant-value">{variant.connectivity}</div>
-
-            <div className="variant-label">Storage</div>
-            <div className="variant-value">{variant.storage}</div>
             </div>
 
-            {/* <button className="variant-button">Explore Variant →</button> */}
+           <div className="variant-button-wrapper mb-4">
+              <Modelbutton 
+            className="bullet-cameravariant-button gtm-btn" 
+            text="Contact Us" 
+            backgroundColor="#69ba2f" 
+            animationColor="#00aeef" 
+            hoverColor="#00aeef"
+            padding="2px 10px"
+            fontSize="14px" 
+            productName={`Bullet Camera - ${variant.name}`}
+            title={`Bullet Camera - ${variant.name}`}
+          />
+            </div>
           </div>
         ))}
       </div>

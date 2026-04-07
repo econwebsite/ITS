@@ -3,7 +3,7 @@ import "./ptz-comparison.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import cameraimage from "../../../assets/ptz-cameras/incident-detection-camera-for-intelligent-traffic-monitoring-thumb.jpg";
-
+import Modelbutton from "../../Button comp/Modelbutton";
 const variants = [
   {
     id: 1,
@@ -51,7 +51,7 @@ const PTZComparison = () => {
     <section className="ptz-comparison" id="ptz-comparison">
       <div className="container">
         <h2 className="section-title" data-aos="fade-up">
-          Compare Models
+           Incident Detection Camera Variants
         </h2>
         {/* <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
           Choose the perfect PTZ camera for your needs
@@ -107,16 +107,25 @@ const PTZComparison = () => {
             </div>
 
             {/* Action Row */}
-            {/* <div className="table-footer">
+    <div className="table-footer"> 
               <div className="footer-cell"></div>
               {variants.map((variant) => (
                 <div className="footer-cell" key={variant.id}>
-                  <button className={`cta-button ${variant.popular ? 'primary' : 'secondary'}`}>
-                    {variant.popular ? 'Buy Now' : 'Learn More'}
-                  </button>
+                 <Modelbutton 
+            className="PTZ-contact-button" 
+            text="Contact Us" 
+            backgroundColor="#00aeef" 
+            animationColor="#69ba2f" 
+            hoverColor="#00aeef"
+            padding="10px 22px"
+            fontSize="14px"
+            borderRadius="5px"
+            border="none"
+            productName={`Incident Detection Camera - ${variant.title}`}
+          />
                 </div>
               ))}
-            </div> */}
+            </div> 
           </div>
         </div>
 
