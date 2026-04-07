@@ -16,8 +16,6 @@ import BulletCamera from "./Components/ProductPages/BulletCamera/BulletCamera";
 import AiComputeBox from './Components/ProductPages/Ai-ComputeBox/Ai-ComputeBox';
 import TrafficEnforcement from './Components/solutions/trafficeEnforcement/Itspage';
 import SpeedPage from './Components/solutions/speedcomp/Speedpage';
-import RLVDPage from './Components/solutions/rlvdcomp/RLVDpage';    
-import SBSAPage from './Components/solutions/sbsacomp/sbsapage';
 import Market from "./Components/Marketscomp/Market";
 import Hubpageblog from './Components/Hubpage Comp/Bloghubpages/Hubpageblog';
 import Casehubpage from './Components/Hubpage Comp/Casestudyhubpage/casehubpage';
@@ -43,8 +41,6 @@ const App = () => {
              <Route path="/products/license-plate-recognition-software" element={<AlprSoftware/>} />
               <Route path="/solutions/traffic-enforcement" element={<TrafficEnforcement />} />
               <Route path="/solutions/speed-enforcement" element={<SpeedPage />} />
-              <Route path="/solutions/red-light-violations" element={<RLVDPage />} />
-              <Route path="/solutions/school-bus-stop-arm" element={<SBSAPage />} />
             {/* Applications page route */}
            <Route path="/market" element={<Market />} />
            <Route path="/blog" element={<Hubpageblog />} />
