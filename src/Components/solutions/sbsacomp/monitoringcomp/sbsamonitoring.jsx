@@ -1,4 +1,4 @@
-import './styles.css';
+import './Styles.css';
 
 const bars = [
   { label: 'Day Routes', pct: '92%', width: '92%' },

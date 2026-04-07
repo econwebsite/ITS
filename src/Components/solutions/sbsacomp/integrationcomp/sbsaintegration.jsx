@@ -1,4 +1,4 @@
-import './styles.css';
+import './Sstyles.css';
 
 const SBSAIntegration = () => {
   return (

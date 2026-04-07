@@ -1,4 +1,4 @@
-import './styles.css';
+import './Styles.css';
 
 const benefits = [
   'Minimize manual workflows',
