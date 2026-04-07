@@ -18,7 +18,7 @@ import TrafficEnforcement from './Components/solutions/trafficeEnforcement/Itspa
 import SpeedPage from './Components/solutions/speedcomp/Speedpage';
 import Market from "./Components/Marketscomp/Market";
 import Hubpageblog from './Components/HubpageComp/Bloghubpages/Hubpageblog';
-import Casehubpage from './Components/HubpageComp/Casestudyhubpage/casehubpage';
+import Casehubpage from './Components/HubpageComp/Casestudyhubpage/Casehubpage';
 import AlprSoftware from './Components/ProductPages/alpr-software/AlprSoftware';
 const App = () => {
   useEffect(() => {
