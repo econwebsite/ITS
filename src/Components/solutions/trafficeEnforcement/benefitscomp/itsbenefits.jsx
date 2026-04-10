@@ -16,7 +16,7 @@ const ITSBenefits = () => {
           <div>
             {/* <p className="its-benefits__eyebrow">Why Choose Us</p> */}
             <h2 className="its-benefits__title">
-              Benefits of Our Traffic Enforcement Vision Solutions
+              <em>Benefits</em> of Our Traffic Enforcement Vision Solutions
             </h2>
             
           </div>

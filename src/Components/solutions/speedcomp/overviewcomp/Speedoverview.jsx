@@ -43,7 +43,7 @@ const SpeedOverview = () => {
         <div className="spd-overview__left">
           {/* <p className="spd-overview__eyebrow">What We Solve</p> */}
           <h2 className="spd-overview__title">
-            Vision Based Speed Enforcement Cameras
+            Vision Based <em>Speed Enforcement</em> Cameras
           </h2>
           <p className="spd-overview__text">
             Speed enforcement cameras are automated imaging systems that detect, document, and support enforcement of speeding violations in real time. These solutions help reduce speed-related crashes, protect vulnerable road users, and improve compliance across highways, school zones, and urban corridors.

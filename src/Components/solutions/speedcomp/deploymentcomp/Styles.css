@@ -1,5 +1,5 @@
 .spd-deployment {
-  background: #f4f9f8;
+  background: #ffffff;
   padding: 80px 40px;
 }
 
@@ -21,7 +21,7 @@
   font-size: clamp(24px, 3vw, 36px);
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #0dc2ed;
+  color: #5a7da2;
   margin-bottom: 12px;
 }
 
@@ -31,6 +31,7 @@
   margin: 0;
   letter-spacing: -0.01em;
   line-height: 1.2;
+  font-weight: normal;
 }
 
 .spd-deployment__subtitle {
@@ -50,7 +51,7 @@
 }
 
 .spd-model-card {
-  background: #08111e;
+  background: #f4f9ff;
   border-radius: 6px;
   overflow: hidden;
   position: relative;
@@ -97,20 +98,20 @@
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgb(0 231 255 / 66%);
+  color: rgb(62 105 148);
   margin-bottom: 8px;
 }
 
 .spd-model-card__title {
   font-size: 18px;
-  color: #ffffff;
+  color: #426b95;
   margin-bottom: 10px;
   line-height: 1.2;
 }
 
 .spd-model-card__text {
-  font-size: 13.5px;
-  color: #ffffffe6;
+  font-size: 15px;
+  color: #1b1f26e6;
   line-height: 1.65;
   margin: 0;
 }

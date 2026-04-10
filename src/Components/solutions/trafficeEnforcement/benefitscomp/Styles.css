@@ -1,5 +1,5 @@
 .its-benefits {
-  background: #0e1117;
+  background: #efefef;
   padding: 80px 40px;
   position: relative;
   overflow: hidden;
@@ -47,15 +47,19 @@
 
 .its-benefits__title {
   font-size: clamp(24px, 3vw, 36px);
-  color: #ffffff;
+  color: #0e1117;
   margin: 0 0 20px;
   letter-spacing: -0.02em;
   line-height: 1.2;
+  font-weight: normal;
 }
-
+.its-benefits__title em {
+  font-style: normal;
+  color: #3e6994;
+}
 .its-benefits__subtitle {
   font-size: 15px;
-  color: #fff;
+  color: #0e1117;
   line-height: 1.7;
       margin: 6px 12px 17px 10px;
 }
@@ -73,14 +77,14 @@
   align-items: center;
   gap: 16px;
   padding: 18px 22px;
-  background: #161a23;
+  background: #165b84;
   border-left: 3px solid transparent;
   transition: border-color 0.2s, background 0.2s;
 }
 
 .its-benefit-item:hover {
-  background: #1c2130;
-  border-left-color: #0dc2ed;;
+  background: #0e3a5d;
+  border-left-color: #1d74a3;
 }
 
 .its-benefit-item__check {
@@ -97,14 +101,14 @@
 .its-benefit-item__check svg {
   width: 16px;
   height: 16px;
-  stroke: #2ae1e1;
+  stroke: #09b0ef;
   fill: none;
 }
 
 .its-benefit-item__text {
   font-size: 15px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.85);
+  color: #fff;
   line-height: 1.4;
 }
 

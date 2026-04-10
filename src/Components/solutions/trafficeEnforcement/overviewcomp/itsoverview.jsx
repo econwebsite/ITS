@@ -47,7 +47,7 @@ const ITSOverview = () => {
       <div className="its-overview__inner">
         <div className="its-overview__header">
           {/* <p className="its-overview__eyebrow">What Is Traffic Enforcement</p> */}
-          <h2 className="its-overview__title">Vision‑Based Traffic Enforcement Solutions</h2>
+          <h2 className="its-overview__title">Vision‑Based <em>Traffic Enforcement</em> Solutions</h2>
           <p className="its-overview__lead">
             Traffic enforcement cameras are automated imaging devices deployed on public roads to detect, identify,
             and document traffic law violations — including speeding, red‑light running, and illegal school bus

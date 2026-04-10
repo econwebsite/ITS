@@ -1,5 +1,5 @@
 .its-usecases {
-  background: #f7f5f0;
+  background: #ffffff;
   padding: 80px 40px;
 }
 
@@ -27,8 +27,12 @@
   color: #0e1117;
   margin: 0;
   letter-spacing: -0.02em;
+  font-weight: normal;
 }
-
+.its-usecases__title em{
+  font-style: normal;
+  color: #3e6994;
+}
 /* Main use case cards - large horizontal layout */
 .its-usecases__list {
   display: flex;
@@ -41,43 +45,41 @@
   display: grid;
   grid-template-columns: 72px 1fr auto;
   gap: 0;
-  background: #0e1117;
+  background: #efefef;
   align-items: stretch;
   transition: background 0.2s;
   cursor: default;
 }
 
 .its-uc-row:hover {
-  background: #161a23;
+  background: #ced1d8;
 }
 
 .its-uc-row__num {
-  background: #0dc2ed;
+  background: #3e6994;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Syne', sans-serif;
   font-size: 18px;
   font-weight: 800;
-  color: #0e1117;
+  color: #d3d4d5;
   min-height: 100px;
   flex-shrink: 0;
 }
 
 .its-uc-row__body {
   padding: 28px 32px;
-  border-left: 1px solid #222730;
 }
 
 .its-uc-row__title {
   font-size: 19px;
-  color: #ffffff;
+  color: #2f3038;
   margin-bottom: 8px;
 }
 
 .its-uc-row__text {
   font-size: 15px;
-  color: rgb(255, 255, 255);
+  color: rgb(37 38 52);
   line-height: 1.65;
   margin: 0;
   max-width: 680px;
@@ -88,7 +90,7 @@
   align-items: center;
   justify-content: center;
   padding: 20px 28px;
-  border-left: 1px solid #222730;
+  border-left: 1px solid #e8e9eb;
   min-width: 120px;
 }
 
@@ -136,8 +138,8 @@
 
 .its-uc-tag {
         background: rgb(51 191 199 / 2%);
-    border: 1px solid rgb(0 255 196 / 20%);
-    color: #0aadad;
+    border: 1px solid rgb(16 140 177 / 20%);
+    color: #3e6994;
   font-size: 15px;
   font-weight: 600;
   padding: 6px 14px;

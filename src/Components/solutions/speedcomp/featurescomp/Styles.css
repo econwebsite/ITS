@@ -1,5 +1,5 @@
 .spd-features {
-  background: #08111e;
+  background: #efefef;
   padding: 80px 40px;
   position: relative;
   overflow: hidden;
@@ -36,12 +36,15 @@
 
 .spd-features__title {
   font-size: clamp(26px, 3.2vw, 36px);
-  color: #ffffff;
+  color: #0d0d11;
   margin: 0;
   letter-spacing: -0.01em;
       font-weight: normal;
 }
-
+.spd-features__title em{
+  font-style: normal;
+  color: #426b95;
+}
 /* Feature rows - alternating left/right */
 .spd-features__list {
   display: flex;
@@ -65,7 +68,7 @@
 }
 
 .spd-feat-row__content {
-  background: #0d1c2e;
+  background: #104065;
   padding: 44px 40px;
   display: flex;
   flex-direction: column;
@@ -75,7 +78,7 @@
 }
 
 .spd-feat-row:hover .spd-feat-row__content {
-  background: #111f32;
+  background: #082240;
 }
 
 .spd-feat-row__num {
@@ -101,7 +104,7 @@
 }
 
 .spd-feat-row__visual {
-  background: #08111e;
+  background: #0e375a;
   display: flex;
   align-items: center;
   justify-content: center;

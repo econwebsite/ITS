@@ -1,5 +1,5 @@
 .spd-cta {
-  background: #f4f9f8;
+  background: #ffffff;
   padding: 80px 40px;
   position: relative;
   overflow: hidden;
@@ -29,6 +29,7 @@
   margin: 0 0 14px;
   letter-spacing: -0.01em;
   line-height: 1.4;
+  font-weight: normal;
 }
 
 .spd-cta__sub {
@@ -51,17 +52,17 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #08111e;
-  color: #0dc2ed;
-  border: 2px solid #08111e;
+ background: #426b95;
+    color: #ffffff;
+    border: 1px solid #cdcdcd;
   padding: 15px 30px;
   border-radius: 2px;
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: normal;
   cursor: pointer;
   text-decoration: none;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   white-space: nowrap;
   transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
   width: 100%;
@@ -69,9 +70,9 @@
 }
 
 .spd-cta__btn:hover {
-  background: #0dc2ed;
-  color: #08111e;
-  border-color: #0dc2ed;
+      background: #0f395b;
+    color: #ffffff;
+    border-color: #f7f7f7;
   transform: translateY(-2px);
 }
 

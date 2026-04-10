@@ -35,7 +35,7 @@ const SpeedSolutions = () => {
           </div> */}
           <div className="spd-solutions__heading">
             {/* <p className="spd-solutions__eyebrow">e-con Systems' Approach</p> */}
-            <h2 className="spd-solutions__title">e-con Systems’ Speed Enforcement Camera Solutions</h2>
+            <h2 className="spd-solutions__title"><em>e-con Systems’</em> Speed Enforcement Camera Solutions</h2>
             <p className="spd-solutions__desc">
               e-con Systems’ vision solutions combine high-resolution imaging, global shutter sensors, IR illumination, edge AI processing, and on-camera ISP tuning. This ensures accurate license plate recognition (ANPR/LPR) even:
             </p>

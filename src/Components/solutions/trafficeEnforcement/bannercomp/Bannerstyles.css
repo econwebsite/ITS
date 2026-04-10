@@ -1,5 +1,5 @@
 .its-banner {
-  background: #0e1117;
+  background: #e5e5e5;
   min-height: 520px;
   display: flex;
   align-items: center;
@@ -77,20 +77,21 @@
 
 .its-banner__title {
   font-size: clamp(30px, 4vw, 52px);
-  color: #ffffff;
+  color: #0e1117;
   line-height: 1.1;
   margin: 0 0 20px;
   letter-spacing: -0.02em;
+  font-weight: normal;
 }
 
 .its-banner__title em {
   font-style: normal;
-  color: #0dc2ed;
+  color: #426b95;
 }
 
 .its-banner__desc {
   font-size: clamp(14px, 1.6vw, 16px);
-  color: rgba(255 255 255 / 82%);
+  color: #0e1117;
   line-height: 1.75;
   margin: 0 0 36px;
   max-width: 540px;
@@ -100,13 +101,13 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #0dc2ed;
-  color: #0e1117;
+  background: #3e6994;
+  color: #ffffff;
   border: none;
   padding: 14px 30px;
   border-radius: 3px;
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 15px;
+  font-weight: normal;
   cursor: pointer;
   text-decoration: none;
   letter-spacing: 0.04em;

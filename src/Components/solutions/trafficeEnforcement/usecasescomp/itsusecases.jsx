@@ -66,7 +66,7 @@ const ITSUseCases = () => {
       <div className="its-usecases__inner">
         <div className="its-usecases__header">
           {/* <p className="its-usecases__eyebrow">Enforcement Use Cases</p> */}
-          <h2 className="its-usecases__title">Enforcement Use Cases of Our Vision Solutions</h2>
+          <h2 className="its-usecases__title">Enforcement <em>Use Cases</em> of Our Vision Solutions</h2>
         </div>
 
         <div className="its-usecases__list">

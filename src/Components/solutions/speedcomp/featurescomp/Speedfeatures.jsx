@@ -124,7 +124,7 @@ const SpeedFeatures = () => {
       <div className="spd-features__inner">
         <div className="spd-features__header">
           {/* <p className="spd-features__eyebrow">Key Features</p> */}
-          <h2 className="spd-features__title">Key Features of Our Speed Enforcement Vision Solutions</h2>
+          <h2 className="spd-features__title"><em>Key Features</em> of Our Speed Enforcement Vision Solutions</h2>
         </div>
 
         <div className="spd-features__list">

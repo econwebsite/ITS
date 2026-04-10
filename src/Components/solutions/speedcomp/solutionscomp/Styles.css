@@ -1,5 +1,5 @@
 .spd-solutions {
-  background: #08111e;
+  background: #efefef;
   padding: 80px 40px;
   position: relative;
   overflow: hidden;
@@ -69,16 +69,20 @@
 
 .spd-solutions__title {
   font-size: clamp(24px, 2.8vw, 36px);
-  color: #ffffff;
+  color: #0b0b0e;
   margin: 0 0 25px;
   letter-spacing: -0.01em;
   line-height: 1.2;
   text-align: center;
+  font-weight: normal;
 }
-
+.spd-solutions__title em{
+  font-style: normal;
+  color: #426b95;
+}
 .spd-solutions__desc {
   font-size: 15px;
-  color: rgb(255 255 255 / 95%);
+  color: rgb(30 29 42 / 95%);
   line-height: 1.75;
   margin: 0 0 16px;
 }
@@ -92,7 +96,7 @@
 }
 
 .spd-tech-item {
-  background: #0d1c2e;
+  background: #145177;
   padding: 20px 18px;
   border-top: 2px solid transparent;
   transition: border-color 0.25s, background 0.2s;
@@ -100,8 +104,8 @@
 }
 
 .spd-tech-item:hover {
-  border-top-color: #0dc2ed;
-  background: #111f32;
+  border-top-color: #237eb7;
+    background: #0e3a5d;
 }
 
 .spd-tech-item__icon {
@@ -152,7 +156,7 @@
 
 .spd-solutions__anpr-text {
   font-size: 15px;
- color: rgb(255 255 255 / 95%);
+ color: rgb(36 27 27 / 95%);
   line-height: 1.65;
   margin: 0;
 }

@@ -1,5 +1,5 @@
 .its-overview {
-  background: #f7f5f0;
+  background: #ffffff;
   padding: 80px 40px;
   position: relative;
 }
@@ -28,8 +28,12 @@
   letter-spacing: -0.02em;
   line-height: 1.2;
   text-align: center;
+  font-weight: normal;
 }
-
+.its-overview__title em{
+      font-style: normal;
+    color: #3e6994;
+}
 .its-overview__lead {
   font-size: 16px;
   color: #444;
@@ -46,7 +50,7 @@
 }
 
 .its-overview__pillar {
-  background: #0e1117;
+  background: #efefef;
   padding: 32px 28px;
   position: relative;
   overflow: hidden;
@@ -54,7 +58,7 @@
 }
 
 .its-overview__pillar:hover {
-  background: #161a23;
+  background: #d1d1d1;
 }
 
 .its-overview__pillar::after {
@@ -64,7 +68,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: #2ae1e1;
+  background: #56748d;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -75,10 +79,10 @@
 }
 
 .its-overview__pillar-num {
-  font-family: 'Syne', sans-serif;
+  /* font-family: 'Syne', sans-serif; */
   font-size: 42px;
   font-weight: 800;
-  color: rgb(0 231 255 / 66%);
+  color: rgb(38 77 110 / 76%);
   line-height: 1;
   margin-bottom: 16px;
   letter-spacing: -0.04em;
@@ -106,7 +110,7 @@
   font-family: 'Syne', sans-serif;
   font-size: 17px;
   font-weight: 700;
-  color: #ffffff;
+  color: #3e6994;
   margin-bottom: 10px;
 }
 
