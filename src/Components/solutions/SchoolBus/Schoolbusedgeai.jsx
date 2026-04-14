@@ -1,4 +1,4 @@
-import './SchoolbusedgeAI.css';
+import './Schoolbusedgeai.css';
 
 const edgeFeatures = [
   { num: '01', title: 'Instant violation verification' },
