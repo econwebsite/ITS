@@ -1,4 +1,4 @@
-import './SchoolBusCameras.css';
+import './Schoolbuscameras.css';
 
 const highlights = [
   {

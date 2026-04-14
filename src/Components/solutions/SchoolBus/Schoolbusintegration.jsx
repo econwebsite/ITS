@@ -1,4 +1,4 @@
-import './SchoolBusIntegration.css';
+import './Schoolbusintegration.css';
 
 const privacyItems = [
   {
