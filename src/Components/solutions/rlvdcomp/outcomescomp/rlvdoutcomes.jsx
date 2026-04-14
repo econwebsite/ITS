@@ -1,4 +1,4 @@
-import './Styles.css';
+import './rlvdoutcomes.css';
 
 const outcomes = [
   {

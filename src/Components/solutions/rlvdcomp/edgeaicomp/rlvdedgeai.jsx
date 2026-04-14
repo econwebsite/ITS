@@ -1,4 +1,4 @@
-import './Styles.css';
+import './rlvdedgeai.css';
 
 const RLVDEdgeAI = () => {
   return (

@@ -1,4 +1,4 @@
-import './Styles.css';
+import './rlvdhowitworks.css';
 
 const steps = [
   {
