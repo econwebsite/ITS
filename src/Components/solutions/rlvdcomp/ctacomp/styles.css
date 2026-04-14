@@ -1,5 +1,5 @@
 .rlvd-cta {
-  background: #0f0f14;
+  background: #efefef;
   padding: 88px 40px;
   position: relative;
   overflow: hidden;
@@ -32,7 +32,6 @@
 }
 
 .rlvd-cta__inner {
-  max-width: 740px;
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -68,10 +67,9 @@
 }
 
 .rlvd-cta__title {
-  font-family: 'Exo 2', sans-serif;
-  font-size: clamp(24px, 3.2vw, 40px);
-  font-weight: 800;
-  color: #ffffff;
+  font-size: 18px;
+  font-weight: normal;
+  color: #363b40;
   margin: 0 0 18px;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -86,27 +84,27 @@
 
 .rlvd-cta__btn {
   display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background: #dc2626;
-  color: #ffffff;
-  border: none;
-  padding: 17px 40px;
-  border-radius: 2px;
-  font-size: 15px;
-  font-weight: 800;
-  cursor: pointer;
-  text-decoration: none;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 4px 24px rgba(220,38,38,0.3);
+    align-items: center;
+    gap: 12px;
+    background: #3e6994;
+    color: #ffffff;
+    border: none;
+    padding: 17px 40px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: normal;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgb(193 205 217);
 }
 
 .rlvd-cta__btn:hover {
-  background: #ef4444;
+  background: #0c57a7;
   transform: translateY(-2px);
-  box-shadow: 0 8px 36px rgba(220,38,38,0.4);
+  box-shadow: 0 8px 36px rgb(103 169 239 / 70%);
 }
 
 .rlvd-cta__btn svg {

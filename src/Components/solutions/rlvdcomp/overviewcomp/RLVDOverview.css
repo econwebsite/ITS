@@ -1,0 +1,411 @@
+/* ============================================
+   RLVDOverview.css
+   Theme: White BG · #426b95 Blue · Black Text
+   ============================================ */
+
+:root {
+  --blue: #426b95;
+  --blue-light: #eef3f8;
+  --blue-xlight: #f5f8fb;
+  --blue-border: #c5d6e8;
+  --dark: #0d1f35;
+  --black: #0d0d0d;
+  --gray: #6b7280;
+  --gray-mid: #5a7289;
+  --gray-light: #e8ecf0;
+}
+
+/* ── Wrapper ── */
+.rlvd-overview {
+  background: #fff;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  padding: 64px 24px;
+}
+
+/* ─────────────────────────────────────────────
+   SECTION 1 — Title + Outcomes + Evidentiary
+───────────────────────────────────────────── */
+
+.rlvd-s1 {
+  max-width: 1100px;
+  margin: 0 auto 56px;
+}
+
+/* Title */
+.rlvd-title-block {
+  margin-bottom: 40px;
+}
+
+.rlvd-title-block h2 {
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: normal;
+  color: var(--dark);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.rlvd-title-block h2 em {
+  font-style: normal;
+  color: var(--blue);
+}
+
+/* Two-column grid */
+.rlvd-s1-grid {
+  display: grid;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* Left column */
+.rlvd-s1-left {
+  padding: 10px;
+  background: #fff;
+}
+
+.rlvd-s1-desc {
+  font-size: 15px;
+  color: #1a2634;
+  line-height: 1.85;
+  margin-bottom: 32px;
+}
+
+/* Outcomes */
+.rlvd-outcomes {
+  display: flex;
+  flex-direction: column;
+}
+
+.rlvd-outcome-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--gray-light);
+  position: relative;
+  transition: padding-left 0.22s ease;
+  cursor: default;
+}
+
+.rlvd-outcome-row:first-child {
+  border-top: 1px solid var(--gray-light);
+}
+
+.rlvd-outcome-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--blue);
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform 0.22s ease;
+}
+
+.rlvd-outcome-row:hover {
+  padding-left: 10px;
+}
+
+.rlvd-outcome-row:hover::before {
+  transform: scaleY(1);
+}
+
+.rlvd-outcome-num {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--blue-border);
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+  margin-top: 3px;
+  width: 22px;
+}
+
+.rlvd-outcome-label {
+  font-size: 15px;
+  font-weight: normal;
+  color: var(--dark);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.rlvd-outcome-sub {
+  font-size: 12.5px;
+  color: var(--gray);
+  line-height: 1.55;
+}
+
+/* Right column: dark evidentiary card */
+.rlvd-s1-right {
+  background: var(--dark);
+  padding: 40px 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.rlvd-s1-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), #6a9bc5, var(--blue));
+}
+
+.rlvd-s1-right-bg {
+  position: absolute;
+  bottom: -24px;
+  right: -16px;
+  font-size: 140px;
+  font-weight: 800;
+  color: rgba(66, 107, 149, 0.06);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.04em;
+}
+
+.rlvd-evid-tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(106, 155, 197, 0.7);
+  margin-bottom: 18px;
+}
+
+.rlvd-evid-title {
+  font-size: clamp(17px, 1.8vw, 22px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.rlvd-evid-desc {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.52);
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+.rlvd-evid-rule {
+  height: 1px;
+  background: rgba(66, 107, 149, 0.25);
+  margin-bottom: 24px;
+}
+
+.rlvd-evid-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.rlvd-evid-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.rlvd-evid-dot {
+  width: 5px;
+  height: 5px;
+  background: #6a9bc5;
+  border-radius: 50%;
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+
+.rlvd-evid-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.58);
+  line-height: 1.55;
+}
+
+.rlvd-evid-text strong {
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────
+   SECTION 2 — Camera Hardware + Also Provides
+───────────────────────────────────────────── */
+
+.rlvd-s2 {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Section label */
+.rlvd-s2-label {
+  letter-spacing: 0.16em;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.rlvd-s2-label h2{
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: normal;
+  color: var(--dark);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  text-align: center;
+}
+.rlvd-s2 p{
+   font-size: 15px;
+    color: #1a2634;
+    line-height: 1.85;
+    margin-bottom: 32px;
+}
+   
+/* Camera cards */
+.rlvd-cam-cards {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--blue-border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.rlvd-cam-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  border-bottom: 1px solid var(--blue-border);
+}
+
+.rlvd-cam-card:last-child {
+  border-bottom: none;
+}
+
+.rlvd-cam-card-left {
+  background: var(--blue);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rlvd-cam-badge {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 12px;
+}
+
+.rlvd-cam-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.rlvd-cam-card-right {
+  background: #fff;
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.rlvd-cam-text {
+  font-size: 13.5px;
+  color: var(--gray-mid);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Also provides */
+.rlvd-also-wrap {
+  border: 1px solid var(--blue-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.rlvd-also-header {
+  padding: 16px 28px;
+  background: var(--blue-xlight);
+  border-bottom: 1px solid var(--blue-border);
+}
+
+.rlvd-also-header span {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--blue);
+}
+
+.rlvd-also-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.rlvd-also-item {
+  padding: 24px 28px;
+  border-right: 1px solid var(--blue-border);
+}
+
+.rlvd-also-item:last-child {
+  border-right: none;
+}
+
+.rlvd-also-item h4 {
+  font-size: 15px;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 6px;
+    line-height: 1.35;
+}
+
+.rlvd-also-item p {
+  font-size: 15px;
+    color: var(--gray);
+    line-height: 1.65;
+    margin-bottom: 0px;
+}
+
+/* ─────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────── */
+
+@media (max-width: 860px) {
+  .rlvd-overview { padding: 44px 16px; }
+
+  .rlvd-s1-grid { grid-template-columns: 1fr; }
+  .rlvd-s1-left {
+    border-right: none;
+    padding: 32px 24px;
+  }
+  .rlvd-s1-right { padding: 32px 24px; }
+
+  .rlvd-cam-card { grid-template-columns: 1fr; }
+  .rlvd-cam-card-left { padding: 24px 24px 20px; }
+  .rlvd-cam-card-right { padding: 24px; }
+
+  .rlvd-also-grid { grid-template-columns: 1fr; }
+  .rlvd-also-item {
+    border-right: none;
+    border-bottom: 1px solid var(--blue-border);
+  }
+  .rlvd-also-item:last-child { border-bottom: none; }
+}
+
+@media (max-width: 540px) {
+  .rlvd-title-block h2 { font-size: 22px; }
+  .rlvd-s1-left { padding: 24px 16px; }
+  .rlvd-s1-right { padding: 24px 16px; }
+  .rlvd-cam-card-left { padding: 20px 16px; }
+  .rlvd-cam-card-right { padding: 20px 16px; }
+  .rlvd-also-item { padding: 20px 16px; }
+  .rlvd-also-header { padding: 14px 16px; }
+}

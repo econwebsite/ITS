@@ -1,19 +1,8 @@
 .rlvd-outcomes {
   background: #ffffff;
-  padding: 80px 40px;
+  padding: 50px 40px;
   position: relative;
 }
-
-.rlvd-outcomes::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: linear-gradient(180deg, #dc2626 0%, rgba(220,38,38,0.08) 100%);
-}
-
 .rlvd-outcomes__inner {
   max-width: 1140px;
   margin: 0 auto;
@@ -34,9 +23,8 @@
 }
 
 .rlvd-outcomes__title {
-  font-family: 'Exo 2', sans-serif;
-  font-size: clamp(24px, 3vw, 38px);
-  font-weight: 800;
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: normal;
   color: #0f0f14;
   margin: 0;
   letter-spacing: -0.02em;
@@ -63,8 +51,8 @@
 }
 
 .rlvd-out-card:hover {
-  border-color: rgba(220,38,38,0.25);
-  box-shadow: 0 8px 28px rgba(220,38,38,0.07);
+  border-color: rgb(66 107 149);
+  box-shadow: 0 8px 28px rgb(34 97 175 / 7%);
 }
 
 .rlvd-out-card__icon-wrap {
@@ -95,7 +83,7 @@
 }
 
 .rlvd-out-card__text {
-  font-size: 14px;
+  font-size: 15px;
   color: #5a6a7e;
   line-height: 1.65;
   margin: 0;

@@ -1,0 +1,32 @@
+/* ============================================
+   schoolbus-globals.css
+   Shared CSS variables for all SchoolBus components
+   Import this ONCE in SchoolBusPage.jsx
+   ============================================ */
+
+:root {
+  --blue: #426b95;
+  --blue-light: #eef3f8;
+  --blue-xlight: #f5f8fb;
+  --blue-border: #c5d6e8;
+  --dark: #0d1f35;
+  --black: #0d0d0d;
+  --gray: #6b7280;
+  --gray-mid: #5a7289;
+  --gray-light: #e8ecf0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: #fff;
+  color: var(--dark);
+  -webkit-font-smoothing: antialiased;
+}

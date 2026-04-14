@@ -89,8 +89,6 @@
 }
 
 .its-overview__pillar-icon {
-  width: 44px;
-  height: 44px;
   background: #00e7ff2b;
   border-radius: 4px;
   display: flex;
@@ -107,11 +105,11 @@
 }
 
 .its-overview__pillar-title {
-  font-family: 'Syne', sans-serif;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 500;
   color: #3e6994;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .its-overview__pillar-text {

@@ -1,0 +1,145 @@
+/* ============================================
+   SchoolBusHero.css
+   Theme: White · #426b95 Blue · #0d1f35 Dark
+   ============================================ */
+
+:root {
+  --blue: #426b95;
+  --blue-light: #eef3f8;
+  --blue-xlight: #f5f8fb;
+  --blue-border: #c5d6e8;
+  --dark: #0d1f35;
+  --gray: #6b7280;
+  --gray-mid: #5a7289;
+  --gray-light: #e8ecf0;
+}
+
+.sbhero {
+  background: #fff;
+  padding: 72px 24px 64px;
+  border-bottom: 1px solid var(--blue-border);
+}
+
+.sbhero__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sbhero__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.sbhero__label::before {
+  content: '';
+  width: 32px;
+  height: 2px;
+  background: var(--blue);
+  flex-shrink: 0;
+}
+
+.sbhero__content {
+  display: grid;
+  gap: 56px;
+  align-items: start;
+}
+
+.sbhero__title {
+      font-size: clamp(28px, 3.4vw, 36px);
+    font-weight: normal;
+    color: var(--dark);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.sbhero__title em {
+  font-style: italic;
+  color: var(--blue);
+}
+
+.sbhero__desc {
+  font-size: 15px;
+  color: var(--gray-mid);
+  line-height: 1.85;
+  margin-bottom: 32px;
+}
+
+.sbhero__outcomes {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sbhero__outcome {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--gray-light);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.4;
+}
+
+.sbhero__outcome:first-child {
+  border-top: 1px solid var(--gray-light);
+}
+
+.sbhero__outcome-bar {
+  width: 3px;
+  height: 18px;
+  background: var(--blue);
+  flex-shrink: 0;
+  margin-top: 1px;
+  border-radius: 0;
+}
+
+/* Right card */
+.sbhero__right {
+  padding-top: 8px;
+}
+
+.sbhero__card {
+  border-radius: 2px;
+  padding: 40px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sbhero__card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), #6a9bc5, var(--blue));
+}
+
+.sbhero__card-body {
+  font-size: 14.5px;
+    color: rgb(57 52 84);
+    line-height: 1.85;
+    position: relative;
+    z-index: 1; 
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .sbhero { padding: 52px 16px 48px; }
+  .sbhero__content { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 540px) {
+  .sbhero__title { font-size: 26px; }
+  .sbhero__card { padding: 28px 22px; }
+}

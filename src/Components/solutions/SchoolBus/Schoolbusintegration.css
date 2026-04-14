@@ -1,0 +1,453 @@
+/* ============================================
+   SchoolBusIntegration.css  —  Redesigned
+   Section 1  : Grey bg  · Integration & Privacy
+   Section 2  : White bg · Monitoring + Image
+   Section 3  : Grey bg  · Proven Outcomes
+   CTA        : Blue bg
+   ============================================ */
+
+/* ─────────────────────────────────────────────
+   SHARED LABEL STYLE
+───────────────────────────────────────────── */
+
+.sbint-priv__label,
+.sbint-mon__label,
+.sbint-out__mini-lbl {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.sbint-priv__label,
+.sbint-mon__label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.sbint-priv__label::after,
+.sbint-mon__label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--blue-border);
+}
+
+/* ─────────────────────────────────────────────
+   SECTION 1 — Integration, Privacy & Security
+   Background: #f1f4f7 (grey)
+   Layout: Row 1 = title+desc | Row 2 = 4 cards
+───────────────────────────────────────────── */
+
+.sbint-priv {
+  background: #f1f4f7;
+  padding: 72px 24px;
+  border-bottom: 1px solid var(--blue-border);
+}
+
+.sbint-priv__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Row 1 */
+.sbint-priv__row1 {
+  margin-bottom: 48px;
+}
+
+.sbint-priv__title {
+  font-size: clamp(22px, 2.6vw, 32px);
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+}
+
+.sbint-priv__desc {
+  font-size: 15px;
+  color: var(--gray-mid);
+  line-height: 1.85;
+  max-width: 760px;
+}
+
+/* Row 2 — 4 cards single row */
+.sbint-priv__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--blue-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.sbint-priv__card {
+  background: #fff;
+  border-right: 1px solid var(--blue-border);
+  padding: 28px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s ease;
+}
+
+.sbint-priv__card:last-child {
+  border-right: none;
+}
+
+.sbint-priv__card:hover {
+  background: var(--blue-xlight);
+}
+
+/* Animated top accent on hover */
+.sbint-priv__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.sbint-priv__card:hover::before {
+  transform: scaleX(1);
+}
+
+.sbint-priv__card-num {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--blue-border);
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+
+.sbint-priv__card-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.sbint-priv__card-text {
+  font-size: 12.5px;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────────
+   SECTION 2 — 24/7 Monitoring
+   Background: #fff (white)
+   Layout: dark content panel + image panel
+───────────────────────────────────────────── */
+
+.sbint-mon {
+  background: #fff;
+  padding: 72px 24px;
+  border-bottom: 1px solid var(--blue-border);
+}
+
+.sbint-mon__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sbint-mon__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--blue-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* Left: dark panel */
+.sbint-mon__left {
+  background: var(--dark);
+  padding: 48px 44px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sbint-mon__left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), #6a9bc5, var(--blue));
+}
+
+/* Watermark text */
+.sbint-mon__left-bg {
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  font-size: 120px;
+  font-weight: 800;
+  color: rgba(66, 107, 149, 0.07);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.04em;
+}
+
+.sbint-mon__mini-lbl {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(106, 155, 197, 0.7);
+  margin-bottom: 18px;
+}
+
+.sbint-mon__title {
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.sbint-mon__desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.82;
+  margin-bottom: 20px;
+}
+
+.sbint-mon__note {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.75;
+  font-style: italic;
+  padding-top: 20px;
+  border-top: 1px solid rgba(66, 107, 149, 0.25);
+}
+
+/* Right: image panel */
+.sbint-mon__right {
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.sbint-mon__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sbint-mon__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 31, 53, 0.4);
+}
+
+.sbint-mon__badge {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 2px;
+}
+
+/* ─────────────────────────────────────────────
+   SECTION 3 — Proven Safety Outcomes
+   Background: #f1f4f7 (grey)
+   Layout: header row + 2x2 outcome cards
+───────────────────────────────────────────── */
+
+.sbint-out {
+  background: #f1f4f7;
+  padding: 72px 24px;
+  border-bottom: 1px solid var(--blue-border);
+}
+
+.sbint-out__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sbint-out__mini-lbl {
+  margin-bottom: 14px;
+  display: block;
+}
+
+/* Header: two-column title + intro text */
+.sbint-out__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+.sbint-out__title {
+  font-size: clamp(20px, 2.4vw, 30px);
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.sbint-out__intro {
+  font-size: 14.5px;
+  color: var(--gray-mid);
+  line-height: 1.85;
+  padding-top: 8px;
+}
+
+/* 2x2 outcome cards */
+.sbint-out__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border: 1px solid var(--blue-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.sbint-out__card {
+  background: #fff;
+  border-right: 1px solid var(--blue-border);
+  border-bottom: 1px solid var(--blue-border);
+  padding: 32px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: background 0.2s ease;
+}
+
+.sbint-out__card:nth-child(2n) {
+  border-right: none;
+}
+
+.sbint-out__card:nth-child(3),
+.sbint-out__card:nth-child(4) {
+  border-bottom: none;
+}
+
+.sbint-out__card:hover {
+  background: var(--blue-xlight);
+}
+
+.sbint-out__num {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--blue-border);
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.sbint-out__text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.5;
+  padding-top: 6px;
+}
+
+/* ─────────────────────────────────────────────
+   CTA BAR
+───────────────────────────────────────────── */
+
+.sbint-cta {
+  background: var(--blue);
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.sbint-cta__text {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+.sbint-cta__btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: 2px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.sbint-cta__btn:hover {
+  background: var(--blue-light);
+}
+
+/* ─────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────── */
+
+@media (max-width: 860px) {
+  .sbint-priv,
+  .sbint-mon,
+  .sbint-out { padding: 48px 16px; }
+
+  /* Section 1: 2-col cards on tablet */
+  .sbint-priv__cards { grid-template-columns: 1fr 1fr; }
+  .sbint-priv__card:nth-child(2n) { border-right: none; }
+  .sbint-priv__card:nth-child(-n+2) { border-bottom: 1px solid var(--blue-border); }
+
+  /* Section 2: stack panels */
+  .sbint-mon__split { grid-template-columns: 1fr; }
+  .sbint-mon__left { padding: 36px 28px; }
+  .sbint-mon__right { min-height: 280px; }
+
+  /* Section 3: stack header */
+  .sbint-out__header { grid-template-columns: 1fr; gap: 16px; }
+
+  /* CTA */
+  .sbint-cta { flex-direction: column; align-items: flex-start; padding: 28px 24px; }
+}
+
+@media (max-width: 540px) {
+  /* Section 1: single column */
+  .sbint-priv__cards { grid-template-columns: 1fr; }
+  .sbint-priv__card { border-right: none !important; }
+  .sbint-priv__card:not(:last-child) { border-bottom: 1px solid var(--blue-border); }
+
+  /* Section 2 */
+  .sbint-mon__left { padding: 28px 20px; }
+  .sbint-mon__right { min-height: 220px; }
+
+  /* Section 3: single column */
+  .sbint-out__grid { grid-template-columns: 1fr; }
+  .sbint-out__card { border-right: none !important; }
+  .sbint-out__card:not(:last-child) { border-bottom: 1px solid var(--blue-border) !important; }
+  .sbint-out__card:last-child { border-bottom: none !important; }
+  .sbint-out__card:nth-child(3),
+  .sbint-out__card:nth-child(4) { border-bottom: 1px solid var(--blue-border); }
+}
