@@ -1,4 +1,4 @@
-import './schoolbusglobals.css';
+import './Schoolbusglobals.css';
 import SchoolBusHero from './Schoolbushero';
 import SchoolBusHowItWorks from './SchoolBusHowItWorks';
 import SchoolBusCameras from './Schoolbuscameras';
