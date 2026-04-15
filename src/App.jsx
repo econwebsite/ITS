@@ -41,10 +41,10 @@ const App = () => {
              <Route path="/products/anpr-alpr-bullet-cameras" element={<BulletCamera />} />
              <Route path="/products/ai-vision-box" element={<AiComputeBox/>} />
              <Route path="/products/license-plate-recognition-software" element={<AlprSoftware/>} />
-              <Route path="/solutions/traffic-enforcement" element={<TrafficEnforcement />} />
-              <Route path="/solutions/speed-enforcement" element={<SpeedPage />} />
+              <Route path="/solutions/traffic-enforcement-camera" element={<TrafficEnforcement />} />
+              <Route path="/solutions/speed-enforcement-camera" element={<SpeedPage />} />
               <Route path="/solutions/red-light-violation-detection-camera" element={<RedlightPage />} />
-              <Route path="/solutions/school-bus-stop-arm-cameras" element={<SchoolbusPage />} />
+              <Route path="/solutions/school-bus-stop-arm-camera" element={<SchoolbusPage />} />
             {/* Applications page route */}
            <Route path="/market" element={<Market />} />
            <Route path="/blog" element={<Hubpageblog />} />

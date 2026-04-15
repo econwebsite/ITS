@@ -1,35 +1,42 @@
+import React from "react";
 import './Bannerstyles.css';
-import bannerBg from '../../../../assets/solutionpage/traffic-enforcement-banner.jpg';
+import bannerImg from '../../../../assets/solutionpage/traffic-enforcement-banner.jpg'
+import Modelbutton from "../../../Button comp/Modelbutton";
 
 const ITSBanner = () => {
+  const banner = {
+    image: bannerImg,
+    title: "Vision-Based Traffic Enforcement Cameras",
+    subtitle: "Edge AI traffic enforcement cameras delivering real-time violation detection for speed, red-light, and school bus stop-arm safety programs",
+  };
+
   return (
-    <section
-      className="its-banner"
-      style={{
-        backgroundImage:
-          `linear-gradient(180deg, rgba(14,17,23,0.78), rgba(14,17,23,0.32)), url(${bannerBg})`,
-      }}
-    >
-      <div className="its-banner__inner">
-        <div className="its-banner__left">
-          <h1 className="its-banner__title">
-            Vision‑Based 
-             <em> Traffic Enforcement </em>
-            Cameras
-          </h1>
-          <p className="its-banner__desc">
-            Edge AI traffic enforcement cameras delivering real‑time violation detection
-            for speed, red‑light, and school bus stop‑arm safety programs.
-          </p>
-          <a href="#contact" className="its-banner__cta">
-            Connect With Us
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
+    <div className="its-banner">
+      <div className="banner-slide">
+        <img
+          src={banner.image}
+          alt={banner.title}
+          className="banner-image"
+        />
+        <div className="banner-overlay">
+          <h1>{banner.title}</h1>
+          <p>{banner.subtitle}</p>
+          <Modelbutton 
+            className="its-banner-button gtm-btn" 
+            text="Talk to an ITS Expert &gt;&gt;" 
+            backgroundColor="#1e2f7ac9" 
+            animationColor="#69ba2f" 
+            hoverColor="#00aeef"
+            padding="12px 25px"
+            fontSize="14px"
+            borderRadius="0"
+            border="1px solid #fff"
+            productName="Traffic Enforcement Cameras"
+            title="Traffic Enforcement Camera Solution"
+          />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

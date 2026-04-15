@@ -25,7 +25,10 @@ color:white;
 font-weight: 600;
 width: 95% !important;
 }
-
+.css-1jg2wtw {
+    padding: 8px;
+    width: 330px !important;
+}
 
 @media (min-width: 1024px) {
   .desktop-view {

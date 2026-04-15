@@ -1,17 +1,17 @@
 import React from "react";
-import "./rlvdbanner.css";
-import bannerImg from '../../../../assets/solutionpage/traffic-enforcement-banner.jpg'
-import Modelbutton from "../../../Button comp/Modelbutton";
+import "./SchoolBusbanner.css";
+import bannerImg from '../../../assets/solutionpage/traffic-enforcement-banner.jpg'
+import Modelbutton from "../../Button comp/Modelbutton";
 
-const RLVDBanner = () => {
+const SchoolBusBanner = () => {
   const banner = {
     image: bannerImg,
-    title: "Vision Based Red Light Violation Detection Cameras",
-    subtitle: "AI-powered RLVD cameras for boosting intersection safety by reducing red light violations and improving compliance",
+    title: "School Bus Stop Arm Enforcement",
+    subtitle: "AI-powered stop arm violation detection for safer school zones",
   };
 
   return (
-    <div className="rlvd-banner">
+    <div className="schoolbus-banner">
       <div className="banner-slide">
         <img
           src={banner.image}
@@ -22,7 +22,7 @@ const RLVDBanner = () => {
           <h1>{banner.title}</h1>
           <p>{banner.subtitle}</p>
           <Modelbutton 
-            className="rlvd-banner-button gtm-btn" 
+            className="schoolbus-banner-button gtm-btn" 
             text="Talk to an ITS Expert &gt;&gt;" 
             backgroundColor="#1e2f7ac9" 
             animationColor="#69ba2f" 
@@ -31,8 +31,8 @@ const RLVDBanner = () => {
             fontSize="14px"
             borderRadius="0"
             border="1px solid #fff"
-            productName="RLVD Cameras"
-            title="Red Light Violation Detection Solution"
+            productName="School Bus Stop Arm"
+            title="School Bus Stop Arm Solution"
           />
         </div>
       </div>
@@ -40,4 +40,4 @@ const RLVDBanner = () => {
   );
 };
 
-export default RLVDBanner;
+export default SchoolBusBanner;

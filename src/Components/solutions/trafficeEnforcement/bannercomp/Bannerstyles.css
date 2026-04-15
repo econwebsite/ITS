@@ -1,214 +1,168 @@
+/* ================================
+   Traffic Enforcement Banner Styles
+   ================================ */
+
 .its-banner {
-  background: #e5e5e5;
-  min-height: 400px;
-  display: flex;
-  align-items: center;
   position: relative;
-  overflow: hidden;
-  padding: 90px 40px 80px;
-}
-
-/* Grid pattern background */
-.its-banner::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-size: 48px 48px;
-  pointer-events: none;
-}
-
-/* Amber glow */
-.its-banner::after {
-  content: '';
-  position: absolute;
-  top: -100px;
-  right: -80px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(ellipse, rgba(255, 176, 0, 0.08) 0%, transparent 65%);
-  pointer-events: none;
-}
-
-.its-banner__inner {
-  position: relative;
-  z-index: 1;
-  max-width: 1100px;
-  margin: 0 auto;
   width: 100%;
-  display: grid;
-  gap: 60px;
-  align-items: center;
+  height: 70vh;
+  overflow: hidden;
 }
 
-.its-banner__left {
-  text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.its-banner__tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 176, 0, 0.1);
-  border: 1px solid rgba(255, 176, 0, 0.3);
-  color: #ffb000;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 3px;
-  margin-bottom: 24px;
-}
-
-.its-banner__tag-dot {
-  width: 6px;
-  height: 6px;
-  background: #ffb000;
-  border-radius: 50%;
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.7); }
-}
-
-.its-banner__title {
-  font-size: clamp(30px, 4vw, 52px);
-  color: #f9f9f9;
-  line-height: 1.1;
-  margin: 0 0 20px;
-  letter-spacing: -0.02em;
-  font-weight: normal;
-}
-
-.its-banner__title em {
-  font-style: normal;
-  color: #7cb4ed;
-}
-
-.its-banner__desc {
-  font-size: clamp(14px, 1.6vw, 16px);
-  color: #f9f9f9;
-  line-height: 1.75;
-  margin: 0 0 36px;
-  max-width: 640px;
-}
-
-.its-banner__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #7cb4ed;
-  color: #ffffff;
-  border: none;
-  padding: 14px 30px;
-  border-radius: 3px;
-  font-size: 15px;
-  font-weight: normal;
-  cursor: pointer;
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  transition: background 0.2s, transform 0.15s;
-}
-
-.its-banner__cta:hover {
-  background: #0a9dc2;
-  transform: translateY(-2px);
-}
-
-.its-banner__cta svg {
-  width: 16px;
-  height: 16px;
-}
-
-/* Right side visual */
-.its-banner__right {
+/* Banner image container */
+.banner-slide {
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.its-banner__visual {
-  background: #161a23;
-  border: 1px solid rgba(255, 176, 0, 0.15);
-  border-radius: 6px;
-  aspect-ratio: 4/3;
+/* Banner image styling */
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay with text content */
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.its-banner__visual::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(255, 176, 0, 0.05), transparent);
-}
-
-.its-banner__visual svg {
-  width: 220px;
-  height: 220px;
-  position: relative;
-  z-index: 1;
-}
-
-.its-banner__stat-strip {
-  display: flex;
-  gap: 2px;
-  margin-top: 12px;
-}
-
-.its-banner__stat {
-  flex: 1;
-  background: #161a23;
-  border: 1px solid #222730;
-  border-radius: 4px;
-  padding: 12px 10px;
+  color: white;
   text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.its-banner__stat-val {
-  font-family: 'Syne', sans-serif;
-  font-size: 20px;
-  font-weight: 800;
-  color: #ffb000;
-  line-height: 1;
-  margin-bottom: 4px;
-}
-
-.its-banner__stat-label {
-  font-size: 10.5px;
-  color: rgba(255,255,255,0.4);
+.banner-overlay h1 {
+  font-size: 2.5rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
-@media (max-width: 960px) {
-  .its-banner__inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
+.banner-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* Modelbutton custom styling */
+.its-banner-button {
+  transition: all 0.3s ease;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+
+/* Large Tablets & Small Desktops (max 1024px) */
+@media (max-width: 1024px) {
+  .banner-overlay h1 {
+    font-size: 2rem;
   }
-  .its-banner__right {
-    order: -1;
-    max-width: 420px;
+
+  .banner-overlay p {
+    font-size: 1.1rem;
+    max-width: 700px;
   }
+}
+
+/* Tablets (max 768px) */
+@media (max-width: 768px) {
   .its-banner {
-    padding: 60px 24px 60px;
+    height: 50vh;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.3rem;
+  }
+
+  .banner-overlay p {
+    font-size: 1rem;
+    max-width: 90%;
   }
 }
 
-@media (max-width: 480px) {
-  .its-banner__stat-strip {
-    flex-wrap: wrap;
+/* Small Devices (max 600px) */
+@media (max-width: 600px) {
+  .its-banner {
+    height: 45vh;
   }
-  .its-banner__stat {
-    min-width: calc(50% - 2px);
+
+  .banner-overlay {
+    padding: 15px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .banner-overlay p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+
+  .its-banner-button {
+    padding: 8px 18px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Extra Small Devices (below 560px) - Hide Image, Show Only Overlay */
+@media (max-width: 559px) {
+  .its-banner {
+    height: 320px;
+  }
+
+  .banner-image {
+    display: none;
+  }
+
+  .banner-overlay {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 20px 15px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .banner-overlay p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    max-width: 100%;
+  }
+
+  .its-banner-button {
+    padding: 8px 16px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Mobile Portrait (below 480px) */
+@media (max-width: 479px) {
+  .its-banner {
+    height: 280px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+
+  .banner-overlay p {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
   }
 }

@@ -1,8 +1,8 @@
 /* ================================
-   Speed Enforcement Banner Styles
+   School Bus Banner Styles
    ================================ */
 
-.spd-banner {
+.schoolbus-banner {
   position: relative;
   width: 100%;
   height: 70vh;
@@ -56,7 +56,7 @@
 }
 
 /* Modelbutton custom styling */
-.spd-banner-button {
+.schoolbus-banner-button {
   transition: all 0.3s ease;
 }
 
@@ -78,7 +78,7 @@
 
 /* Tablets (max 768px) */
 @media (max-width: 768px) {
-  .spd-banner {
+  .schoolbus-banner {
     height: 50vh;
   }
 
@@ -94,7 +94,7 @@
 
 /* Small Devices (max 600px) */
 @media (max-width: 600px) {
-  .spd-banner {
+  .schoolbus-banner {
     height: 45vh;
   }
 
@@ -112,7 +112,7 @@
     margin-bottom: 15px;
   }
 
-  .spd-banner-button {
+  .schoolbus-banner-button {
     padding: 8px 18px !important;
     font-size: 0.9rem !important;
   }
@@ -120,7 +120,7 @@
 
 /* Extra Small Devices (below 560px) - Hide Image, Show Only Overlay */
 @media (max-width: 559px) {
-  .spd-banner {
+  .schoolbus-banner {
     height: 320px;
   }
 
@@ -144,7 +144,7 @@
     max-width: 100%;
   }
 
-  .spd-banner-button {
+  .schoolbus-banner-button {
     padding: 8px 16px !important;
     font-size: 0.85rem !important;
   }
@@ -152,7 +152,7 @@
 
 /* Mobile Portrait (below 480px) */
 @media (max-width: 479px) {
-  .spd-banner {
+  .schoolbus-banner {
     height: 280px;
   }
 
@@ -166,5 +166,3 @@
     margin-bottom: 12px;
   }
 }
-
-/* Old styles removed - component now uses responsive banner template */

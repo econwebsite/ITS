@@ -232,7 +232,7 @@ const NavBar = () => {
     <Box sx={{ p: 1, width: 280, ...menuItemStyles }}>
       <MenuItem
         component={Link}
-        to="/solutions/traffic-enforcement"
+        to="/solutions/traffic-enforcement-camera"
         onClick={() => {
           handleSolutionsPopoverClose();
           setMobileOpen(false);
@@ -242,13 +242,33 @@ const NavBar = () => {
       </MenuItem>
       <MenuItem
         component={Link}
-        to="/solutions/speed-enforcement"
+        to="/solutions/speed-enforcement-camera"
         onClick={() => {
           handleSolutionsPopoverClose();
           setMobileOpen(false);
         }}
       >
         Speed Enforcement Camera
+      </MenuItem>
+       <MenuItem
+        component={Link}
+        to="/solutions/red-light-violation-detection-camera"
+        onClick={() => {
+          handleSolutionsPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+       Red Light Violation Detection Camera
+      </MenuItem>
+        <MenuItem
+        component={Link}
+        to="/solutions/school-bus-stop-arm-camera"
+        onClick={() => {
+          handleSolutionsPopoverClose();
+          setMobileOpen(false);
+        }}
+      >
+       School Bus Stop Arm Camera
       </MenuItem>
     </Box>
   );
