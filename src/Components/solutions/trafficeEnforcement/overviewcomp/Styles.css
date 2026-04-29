@@ -1,131 +1,118 @@
 .its-overview {
-  background: #ffffff;
-  padding: 40px 40px;
-  position: relative;
+  background: #f4f6f8;
+  padding: 70px 20px;
 }
+
 .its-overview__inner {
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 1300px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
 }
 
+/* HEADER */
 .its-overview__header {
-  margin-bottom: 52px;
-}
-
-.its-overview__eyebrow {
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #0dc2ed;
-  margin-bottom: 12px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .its-overview__title {
-  font-size: clamp(24px, 3vw, 36px);
-  color: #0e1117;
-  margin: 0 0 16px;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  text-align: center;
-  font-weight: normal;
-}
-.its-overview__title em{
-      font-style: normal;
-    color: #3e6994;
-}
-.its-overview__lead {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.75;
-  margin: 0;
-  padding-left: 20px;
+  font-size: clamp(26px, 3vw, 36px);
+    font-weight: normal;
+    color: #1f51a0;
+    margin-bottom: 14px;
 }
 
+.its-overview__lead {
+  /* max-width: 850px; */
+  margin: 0 auto;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* GRID */
 .its-overview__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2px;
-  margin-top: 48px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 10px 10px 35px 10px;
 }
 
-.its-overview__pillar {
-  background: #efefef;
-  padding: 32px 28px;
+/* CARD */
+.its-card {
   position: relative;
-  overflow: hidden;
-  transition: background 0.25s;
-}
-
-.its-overview__pillar:hover {
-  background: #d1d1d1;
-}
-
-.its-overview__pillar::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #56748d;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.its-overview__pillar:hover::after {
-  transform: scaleX(1);
-}
-
-.its-overview__pillar-num {
-  /* font-family: 'Syne', sans-serif; */
-  font-size: 42px;
-  font-weight: 800;
-  color: rgb(38 77 110 / 76%);
-  line-height: 1;
-  margin-bottom: 16px;
-  letter-spacing: -0.04em;
-}
-
-.its-overview__pillar-icon {
-  background: #00e7ff2b;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
-.its-overview__pillar-icon svg {
-  width: 22px;
-  height: 22px;
-  stroke: #2ae1e1;
-  fill: none;
-}
-
-.its-overview__pillar-title {
-  font-size: 17px;
-  font-weight: 500;
-  color: #3e6994;
-  margin-bottom: 10px;
   text-align: center;
+
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  transition: all 0.6s ease;
 }
 
-.its-overview__pillar-text {
-  font-size: 13.5px;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.65;
-  margin: 0;
+.its-card.animate {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
+/* IMAGE BOX */
+.its-card__image {
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.its-card__image img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  border: 1px solid #565f55;
+    border-radius: 6px;
+}
+
+.its-card:hover img {
+  transform: scale(1.06);
+}
+.its-card__overlay {
+  position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -14px;
+    background: #29aae1;
+    color: white;
+    padding: 5px 22px;
+    font-size: 15px;
+    font-weight: normal;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .its-overview__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .its-overview__inner{
+    padding: 10px;
+  }
+  .its-overview{
+    padding: 70px 10px;
+  }
+  .its-overview__grid {
     grid-template-columns: 1fr;
-    gap: 2px;
   }
 
-  .its-overview {
-    padding: 56px 24px;
+  .its-card__image img {
+    height: 220px;
+  }
+
+  .its-card__overlay {
+    font-size: 13px;
+    padding: 8px 16px;
   }
 }

@@ -2,62 +2,150 @@
    Traffic Enforcement Banner Styles
    ================================ */
 
+/* Animation Keyframes */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .its-banner {
   position: relative;
   width: 100%;
-  height: 70vh;
-  overflow: hidden;
+  background-color: #e8f1f9;
+  padding: 40px 0;
 }
 
-/* Banner image container */
+/* Banner slide container */
 .banner-slide {
   position: relative;
   width: 100%;
-  height: 100%;
+}
+
+/* Main content wrapper with flex layout */
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* Left section with text */
+.banner-text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slideInLeft 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.banner-text-section h1 {
+  font-size: 2.9rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: 3.5px;
+  animation: slideInLeft 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.banner-text-section h1 .title-dark {
+  color: #003d99;
+  font-weight: 900;
+}
+
+.banner-text-section h1 .title-light {
+  color: #00bfff;
+  font-weight: 900;
+}
+
+.banner-text-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 30px;
+  max-width: 500px;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+/* Right section with image */
+.banner-image-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 400px;
+  animation: slideInRight 0.8s ease-out 0.2s forwards;
+  opacity: 0;
 }
 
 /* Banner image styling */
 .banner-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
   display: block;
+  border-radius: 8px;
+  animation: scaleIn 0.8s ease-out forwards;
+  transition: transform 0.3s ease;
 }
 
-/* Overlay with text content */
-.banner-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.45);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.banner-overlay h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.banner-overlay p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  max-width: 800px;
-  line-height: 1.6;
+.banner-image:hover {
+  transform: scale(1.05);
 }
 
 /* Modelbutton custom styling */
 .its-banner-button {
   transition: all 0.3s ease;
+  align-self: flex-start;
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+  opacity: 0;
 }
 
 /* ================================
@@ -66,37 +154,98 @@
 
 /* Large Tablets & Small Desktops (max 1024px) */
 @media (max-width: 1024px) {
-  .banner-overlay h1 {
-    font-size: 2rem;
+  .banner-content {
+    gap: 40px;
+    padding: 0 30px;
   }
 
-  .banner-overlay p {
-    font-size: 1.1rem;
-    max-width: 700px;
+  .banner-text-section h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+  }
+
+  .banner-text-section p {
+    font-size: 1rem;
+    max-width: 450px;
+  }
+
+  .banner-image {
+    max-height: 350px;
   }
 }
 
 /* Tablets (max 768px) */
 @media (max-width: 768px) {
   .its-banner {
-    height: 50vh;
+    padding: 40px 0;
   }
 
-  .banner-overlay h1 {
-    font-size: 1.3rem;
+  .banner-content {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
   }
 
-  .banner-overlay p {
-    font-size: 1rem;
-    max-width: 90%;
+  .banner-text-section h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    animation: slideInLeft 0.8s ease-out 0.2s forwards;
+  }
+
+  .banner-text-section p {
+    font-size: 0.95rem;
+    max-width: 100%;
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  }
+
+  .banner-image {
+    max-height: 300px;
+  }
+
+  .banner-image-section {
+    animation: slideInRight 0.8s ease-out 0.2s forwards;
   }
 }
 
 /* Small Devices (max 600px) */
 @media (max-width: 600px) {
   .its-banner {
-    height: 45vh;
+    padding: 30px 0;
   }
+
+  .banner-content {
+    padding: 0 15px;
+    gap: 20px;
+  }
+
+  .banner-text-section h1 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    animation: slideInLeft 0.8s ease-out 0.2s forwards;
+  }
+
+  .banner-text-section p {
+    font-size: 0.9rem;
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  }
+
+  .banner-image {
+    max-height: 250px;
+  }
+
+  .banner-image-section {
+    animation: slideInRight 0.8s ease-out 0.2s forwards;
+  }
+}
+
+/* Scroll Animation States */
+.banner-text-section.scroll-animate {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.banner-image-section.scroll-animate {
+  animation: slideInRight 0.8s ease-out forwards;
+}
 
   .banner-overlay {
     padding: 15px;
@@ -116,7 +265,6 @@
     padding: 8px 18px !important;
     font-size: 0.9rem !important;
   }
-}
 
 /* Extra Small Devices (below 560px) - Hide Image, Show Only Overlay */
 @media (max-width: 559px) {
@@ -153,7 +301,7 @@
 /* Mobile Portrait (below 480px) */
 @media (max-width: 479px) {
   .its-banner {
-    height: 280px;
+    height: 360px;
   }
 
   .banner-overlay h1 {

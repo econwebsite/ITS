@@ -1,56 +1,84 @@
 import './Styles.css';
-import violation from '../../../../assets/solutionpage/trafficEnforcement/violation.jpg';
-import enforcementAnalytics from '../../../../assets/solutionpage/trafficEnforcement/analytics.jpg'
-import longTermSafety from '../../../../assets/solutionpage/trafficEnforcement/safety.jpg'
+import { useEffect, useRef } from 'react';
 
+import violation from '../../../../assets/solutionpage/trafficEnforcement/violation.jpg';
+import enforcementAnalytics from '../../../../assets/solutionpage/trafficEnforcement/analytics.jpg';
+import longTermSafety from '../../../../assets/solutionpage/trafficEnforcement/safety.jpg';
 
 const pillars = [
   {
-    num: '01',
-    title: 'Violation Issuance',
-    text: 'Automated documentation with timestamped evidence for legal-grade violation records and streamlined citation issuance workflows.',
+    title: 'Violation issuance',
     icon: violation,
   },
   {
-    num: '02',
-    title: 'Enforcement Analytics',
-    text: 'Real-time dashboards and historical trend analysis to help authorities identify high-risk corridors and optimize deployment.',
+    title: 'Enforcement analytics',
     icon: enforcementAnalytics,
   },
   {
-    num: '03',
-    title: 'Long‑Term Safety',
-    text: 'Data-driven programs that reduce repeat violations, lower accident rates, and build measurable long-term road safety outcomes.',
+    title: 'Long-term safety outcomes',
     icon: longTermSafety,
   },
 ];
 
 const ITSOverview = () => {
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = entry.target.dataset.index;
+
+            setTimeout(() => {
+              entry.target.classList.add('animate');
+            }, index * 180); // 👈 stagger delay
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cardsRef.current.forEach((el) => el && observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="its-overview" id="overview">
       <div className="its-overview__inner">
+        
+        {/* HEADER */}
         <div className="its-overview__header">
-          {/* <p className="its-overview__eyebrow">What Is Traffic Enforcement</p> */}
-          <h2 className="its-overview__title">Vision‑Based <em>Traffic Enforcement</em> Solutions</h2>
+          <h2 className="its-overview__title">
+            Vision-Based Traffic Enforcement Solutions
+          </h2>
           <p className="its-overview__lead">
-            Traffic enforcement cameras are automated imaging devices deployed on public roads to detect, identify,
-            and document traffic law violations — including speeding, red‑light running, and illegal school bus
-            stop‑arm violations. These systems combine high‑resolution video capture with license plate recognition
-            (ANPR/LPR) and intelligent processing to support enforcement workflows and long-term safety outcomes.
+            Traffic enforcement cameras are automated imaging devices deployed on public roads to detect, identify, and document traffic law violations. It includes speeding, red‑light running, and illegal school bus stop‑arm violations. These systems combine high‑resolution video capture with license plate recognition (ANPR/LPR) and intelligent processing to support:
           </p>
         </div>
 
+        {/* CARDS */}
         <div className="its-overview__grid">
-          {pillars.map((p) => (
-            <div className="its-overview__pillar" key={p.num}>
-              <div className="its-overview__pillar-num">{p.num}</div>
-              <div className="its-overview__pillar-icon">
+          {pillars.map((p, i) => (
+            <div
+              className="its-card"
+              key={i}
+              data-index={i}
+              ref={(el) => (cardsRef.current[i] = el)}
+            >
+              <div className="its-card__image">
                 <img src={p.icon} alt={p.title} />
               </div>
-              <div className="its-overview__pillar-title">{p.title}</div>
+
+              {/* OVERLAY HALF OUTSIDE */}
+              <div className="its-card__overlay">
+                {p.title}
+              </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

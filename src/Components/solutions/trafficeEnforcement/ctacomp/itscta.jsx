@@ -1,27 +1,50 @@
 import './Styles.css';
+import { useEffect, useRef } from 'react';
 
 const ITSCta = () => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          ref.current.classList.add('animate');
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="its-cta" id="contact">
-      <div className="its-cta__inner">
+      <div className="its-cta__overlay"></div>
+
+      <div className="its-cta__inner" ref={ref}>
         <div className="its-cta__left">
-          <p className="its-cta__label">Get In Touch</p>
+          
+          <p className="its-cta__label">VISION-BASED ENFORCEMENT</p>
+
           <h2 className="its-cta__title">
-           Explore how vision-based enforcement can strengthen your traffic safety programs
+            Explore how vision-based enforcement can strengthen <br />
+            <span>your traffic safety programs</span>
           </h2>
-          {/* <p className="its-cta__sub">
-            Talk to our team about integrating edge AI cameras into your traffic enforcement
-            infrastructure — from speed corridors to school zone protection.
+
+          {/* <p className="its-cta__desc">
+            Leverage AI-powered cameras and real-time analytics to detect violations,
+            reduce incidents, and create safer roads at scale.
           </p> */}
-        </div>
-        <div className="its-cta__right">
-          <a href="mailto:camerasolutions@e-consystems.com" className="its-cta__btn-primary">
-            Connect With Us
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+
+          <a href="mailto:camerasolutions@e-consystems.com" className="its-cta__btn">
+            Connect with us
+            <svg viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </a>
-        
+
         </div>
       </div>
     </section>
