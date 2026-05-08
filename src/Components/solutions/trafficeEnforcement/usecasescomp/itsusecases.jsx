@@ -1,9 +1,9 @@
 import './Styles.css';
 import { useEffect, useRef } from 'react';
 
-import SpeedEnforcement from '../../../../assets/solutionpage/trafficEnforcement/speed-enforcement.jpg';
-import RedLight from '../../../../assets/solutionpage/trafficEnforcement/red-light.jpg';
-import SchoolBus from '../../../../assets/solutionpage/trafficEnforcement/school-bus.jpg';
+import SpeedEnforcement from '../../../../assets/solutionpage/trafficEnforcement/speed-enforcement-img.jpg';
+import RedLight from '../../../../assets/solutionpage/trafficEnforcement/red-light-img.jpg';
+import SchoolBus from '../../../../assets/solutionpage/trafficEnforcement/school-bus-img.jpg';
 
 const usecases = [
   {

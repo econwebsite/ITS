@@ -1,9 +1,9 @@
 import './Styles.css';
 import { useEffect, useRef } from 'react';
 
-import violation from '../../../../assets/solutionpage/trafficEnforcement/violation.jpg';
-import enforcementAnalytics from '../../../../assets/solutionpage/trafficEnforcement/analytics.jpg';
-import longTermSafety from '../../../../assets/solutionpage/trafficEnforcement/safety.jpg';
+import violation from '../../../../assets/solutionpage/trafficEnforcement/violation-issuance.jpg';
+import enforcementAnalytics from '../../../../assets/solutionpage/trafficEnforcement/enforcement-analytics.jpg';
+import longTermSafety from '../../../../assets/solutionpage/trafficEnforcement/safety-outcomes.jpg';
 
 const pillars = [
   {

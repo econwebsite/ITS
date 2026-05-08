@@ -1,39 +1,26 @@
 import './Styles.css';
 import { useEffect, useRef } from 'react';
+import workflowsIcon from '../../../../assets/solutionpage/trafficEnforcement/workflows-icon.png';
+import complianceIcon from '../../../../assets/solutionpage/trafficEnforcement/compliance-icon.png';
+import awarenessIcon from '../../../../assets/solutionpage/trafficEnforcement/awareness-icon.png';
+import safetyIcon from '../../../../assets/solutionpage/trafficEnforcement/safety-icon.png';
 
 const benefits = [
   {
     text: 'Minimize manual workflows',
-    icon: (
-      <svg viewBox="0 0 24 24">
-        <path d="M4 6h16M4 12h10M4 18h7" strokeWidth="2" strokeLinecap="round"/>
-      </svg>
-    ),
+    icon: <img src={workflowsIcon} alt="Minimize manual workflows" />,
   },
   {
     text: 'Authorities improve compliance',
-    icon: (
-      <svg viewBox="0 0 24 24">
-        <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" strokeWidth="2"/>
-      </svg>
-    ),
+    icon: <img src={complianceIcon} alt="Authorities improve compliance" />,
   },
   {
     text: 'Enhance situational awareness',
-    icon: (
-      <svg viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="3" strokeWidth="2"/>
-        <path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6-10-6-10-6z" strokeWidth="2"/>
-      </svg>
-    ),
+    icon: <img src={awarenessIcon} alt="Enhance situational awareness" />,
   },
   {
     text: 'Support data-driven safety programs',
-    icon: (
-      <svg viewBox="0 0 24 24">
-        <path d="M4 20v-6M10 20v-10M16 20v-4M22 20v-14" strokeWidth="2" strokeLinecap="round"/>
-      </svg>
-    ),
+    icon: <img src={safetyIcon} alt="Support data-driven safety programs" />,
   },
 ];
 
