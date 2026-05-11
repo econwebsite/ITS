@@ -1,0 +1,110 @@
+/* Root Section */
+.alpr-applications {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.alpr-title-section {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.alpr-title-primary {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 400 !important;
+  color: #196793 !important;
+}
+
+/* Grid Layout */
+.alpr-applications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Card Styles */
+.alpr-application-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.alpr-application-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.alpr-application-card:hover img {
+  transform: scale(1.05);
+}
+
+.alpr-application-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlay */
+.alpr-application-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px 8px;
+  background: rgba(25, 103, 147, 0.85); /* e-con blue overlay */
+  color: #fff;
+  text-align: center;
+}
+
+.alpr-application-overlay h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .alpr-title-primary {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .alpr-application-card img {
+    height: 180px;
+  }
+
+  .alpr-application-overlay h4 {
+    font-size: 0.9rem;
+  }
+
+  .alpr-applications {
+    padding: 40px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .alpr-applications-grid {
+    gap: 16px;
+  }
+
+  .alpr-application-card img {
+    height: 160px;
+  }
+
+  .alpr-title-primary {
+    font-size: 1.5rem;
+  }
+}

@@ -89,17 +89,43 @@ const BulletVariants = () => {
             </div>
 
            <div className="variant-button-wrapper mb-4">
-              <Modelbutton 
-            className="bullet-cameravariant-button gtm-btn" 
-            text="Contact Us" 
-            backgroundColor="#69ba2f" 
-            animationColor="#00aeef" 
-            hoverColor="#00aeef"
-            padding="2px 10px"
-            fontSize="14px" 
-            productName={`Bullet Camera - ${variant.name}`}
-            title={`Bullet Camera - ${variant.name}`}
-          />
+              {variant.name === "Traffic Monitoring" ? (
+                <a 
+                  href="/products/automatic-license-plate-recognition-camera" 
+                  className="bullet-cameravariant-link gtm-btn"
+                  style={{
+                    display: "inline-block",
+                    padding: "2px 10px",
+                    backgroundColor: "#69ba2f",
+                    color: "#fff",
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    borderRadius: "6px",
+                    textDecoration: "none",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = "#00aeef";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = "#69ba2f";
+                  }}
+                >
+                  To Learn More
+                </a>
+              ) : (
+                <Modelbutton 
+                  className="bullet-cameravariant-button gtm-btn" 
+                  text="Contact Us" 
+                  backgroundColor="#69ba2f" 
+                  animationColor="#00aeef" 
+                  hoverColor="#00aeef"
+                  padding="2px 10px"
+                  fontSize="14px" 
+                  productName={`Bullet Camera - ${variant.name}`}
+                  title={`Bullet Camera - ${variant.name}`}
+                />
+              )}
             </div>
           </div>
         ))}

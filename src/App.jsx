@@ -15,6 +15,7 @@ import IncidentDetectionCamera from "./Components/ProductPages/PTZCamera/PTZCame
 import BulletCamera from "./Components/ProductPages/BulletCamera/BulletCamera";
 import AiComputeBox from './Components/ProductPages/Ai-ComputeBox/Ai-ComputeBox';
 import TrafficEnforcement from './Components/solutions/trafficeEnforcement/Itspage';
+import ALPRCamera from './Components/ProductPages/ALPRCamera/ALPRCamera';
 import SpeedPage from './Components/solutions/speedcomp/Speedpage';
 import RedlightPage from './Components/solutions/rlvdcomp/rlvdpage';
 import SchoolbusPage from './Components/solutions/SchoolBus/Schoolbuspage';
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/:tabSlug?" element={<Industries />} />
             <Route path="/incident-detection-camera" element={<IncidentDetectionCamera />} />
              <Route path="/products/anpr-alpr-bullet-cameras" element={<BulletCamera />} />
+             <Route path="/products/automatic-license-plate-recognition-camera" element={<ALPRCamera />} />
              <Route path="/products/ai-vision-box" element={<AiComputeBox/>} />
              <Route path="/products/license-plate-recognition-software" element={<AlprSoftware/>} />
               <Route path="/solutions/traffic-enforcement-camera" element={<TrafficEnforcement />} />

@@ -1,0 +1,122 @@
+/* ===============================================
+   ALPR CAMERA FEATURES - GRID UI DESIGN
+   =============================================== */
+
+.alpr-features-section {
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alpr-features-section h2 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: unset !important;
+  color: #0f4c75 !important;
+}
+
+/* GRID LAYOUT */
+.alpr-features-grid {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* CARD DESIGN */
+.alpr-feature-card {
+  background: #fff;
+  text-align: left;
+  border-radius: 1px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+
+  /* animation initial */
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+/* When card appears */
+.alpr-feature-card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.alpr-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #0f4c75;
+}
+
+/* HEADING */
+.alpr-feature-card h3 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+/* DESCRIPTION */
+.alpr-feature-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* NUMBER WATERMARK */
+.alpr-feature-number {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.05);
+  user-select: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .alpr-features-grid {
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .alpr-features-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .alpr-feature-card {
+    padding: 25px;
+  }
+
+  .alpr-feature-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .alpr-features-section {
+    padding: 60px 15px;
+  }
+
+  .alpr-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .alpr-features-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .alpr-feature-card {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,140 @@
+/* ================================
+   ALPR Banner Styles
+   ================================ */
+
+.alpr-banner {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+/* Banner image container */
+.banner-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+/* Banner image styling */
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background-color: transparent;
+  vertical-align: top;
+  line-height: 0;
+}
+
+/* Overlay with text content */
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.banner-overlay h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.banner-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* CTA Button (fallback) */
+.banner-button {
+  padding: 12px 25px;
+  border: none;
+  background-color: #1e2f7ac9;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 1px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.banner-button:hover {
+  background-color: #00aeef;
+  transform: scale(1.05);
+}
+
+/* Modelbutton custom styling */
+.alpr-cameravariant-button {
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  .banner-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .banner-overlay p {
+    font-size: 1.1rem;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .alpr-banner {
+    height: 50vh;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.3rem;
+  }
+
+  .banner-overlay p {
+    font-size: 0.95rem;
+  }
+
+  .banner-button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .alpr-banner {
+    height: 40vh;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.1rem;
+  }
+
+  .banner-overlay p {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .banner-button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}

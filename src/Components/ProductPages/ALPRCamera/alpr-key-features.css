@@ -1,0 +1,352 @@
+/* ===============================================
+   ALPR KEY FEATURES SECTION - PROFESSIONAL UI
+   =============================================== */
+
+.alpr-key-features-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 100%);
+  font-family: "Poppins", sans-serif;
+}
+
+.key-features-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.key-features-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.key-features-header h2 {
+  font-size: 2.2rem;
+  color: #196793;
+  font-weight: 600;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.key-features-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #196793 0%, #00aeef 100%);
+  border-radius: 2px;
+}
+
+/* Grid Layout */
+.key-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Feature Card */
+.key-feature-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+  transform: translateY(30px);
+
+  /* Initial animation state */
+  animation: slideUpIn 0.6s ease-out forwards;
+}
+
+@keyframes slideUpIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.key-feature-card:nth-child(1) { animation-delay: 0.1s; }
+.key-feature-card:nth-child(2) { animation-delay: 0.2s; }
+.key-feature-card:nth-child(3) { animation-delay: 0.3s; }
+.key-feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+.key-feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(25, 103, 147, 0.2);
+}
+
+/* Image Wrapper */
+.key-feature-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #196793 0%, #0f4c75 100%);
+}
+
+.key-feature-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: block;
+}
+
+.key-feature-card:hover .key-feature-image {
+  transform: scale(1.08);
+}
+
+/* Overlay */
+.key-feature-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(25, 103, 147, 0.25);
+  transition: background 0.4s ease;
+}
+
+.key-feature-card:hover .key-feature-overlay {
+  background: rgba(25, 103, 147, 0.05);
+}
+
+/* Content */
+.key-feature-content {
+  padding: 32px 26px;
+}
+
+.key-feature-title {
+  font-size: 1.35rem;
+  color: #196793;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Feature List */
+.key-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.key-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.key-feature-list li:last-child {
+  margin-bottom: 0;
+}
+
+.list-icon {
+  color: #00aeef;
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.list-text {
+  color: #444;
+  flex: 1;
+}
+
+/* Responsive - Tablets */
+@media (max-width: 1024px) {
+  .alpr-key-features-section {
+    padding: 60px 15px;
+  }
+
+  .key-features-header h2 {
+    font-size: 2rem;
+  }
+
+  .key-features-grid {
+    gap: 30px;
+  }
+
+  .key-feature-image-wrapper {
+    height: 220px;
+  }
+
+  .key-feature-content {
+    padding: 28px 22px;
+  }
+
+  .key-feature-title {
+    font-size: 1.2rem;
+  }
+
+  .key-feature-list li {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+}
+
+/* Responsive - Small Tablets */
+@media (max-width: 768px) {
+  .alpr-key-features-section {
+    padding: 50px 12px;
+  }
+
+  .key-features-header {
+    margin-bottom: 40px;
+  }
+
+  .key-features-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .key-features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .key-feature-card {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  .key-feature-image-wrapper {
+    height: 200px;
+  }
+
+  .key-feature-content {
+    padding: 24px 20px;
+  }
+
+  .key-feature-title {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+
+  .key-feature-list li {
+    font-size: 0.88rem;
+    margin-bottom: 10px;
+  }
+
+  .list-icon {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 600px) {
+  .alpr-key-features-section {
+    padding: 40px 12px;
+  }
+
+  .key-features-header {
+    margin-bottom: 30px;
+  }
+
+  .key-features-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .key-features-header h2::after {
+    width: 60px;
+    bottom: -10px;
+  }
+
+  .key-features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .key-feature-image-wrapper {
+    height: 180px;
+  }
+
+  .key-feature-content {
+    padding: 20px 16px;
+  }
+
+  .key-feature-title {
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+
+  .key-feature-list li {
+    font-size: 0.85rem;
+    margin-bottom: 9px;
+  }
+
+  .list-icon {
+    font-size: 0.9rem;
+    margin-right: 8px;
+    margin-top: 1px;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .alpr-key-features-section {
+    padding: 30px 10px;
+  }
+
+  .key-features-header h2 {
+    font-size: 1.35rem;
+  }
+
+  .key-feature-image-wrapper {
+    height: 160px;
+  }
+
+  .key-feature-content {
+    padding: 18px 14px;
+  }
+
+  .key-feature-title {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  .key-feature-list li {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  .list-text {
+    word-break: break-word;
+  }
+}
+
+/* Accessibility */
+.key-feature-card:focus-within {
+  outline: 2px solid #196793;
+  outline-offset: 2px;
+}
+
+/* Loading state for images */
+.key-feature-image {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.key-feature-image[src] {
+  animation: none;
+  background: none;
+}
