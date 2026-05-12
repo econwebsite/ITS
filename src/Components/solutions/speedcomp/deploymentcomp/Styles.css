@@ -1,184 +1,176 @@
-.spd-deployment {
-  background: #ffffff;
-  padding: 80px 40px;
+/* ====================================
+   SECTION
+==================================== */
+
+.deployment-section {
+  background: #eef0f3;
+  padding: 40px 20px;
 }
 
-.spd-deployment__inner {
-  max-width: 1140px;
+.deployment-wrapper {
+  max-width: 1240px;
   margin: 0 auto;
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 30px 50px;
+  overflow: hidden;
 }
 
-.spd-deployment__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 48px;
-  gap: 40px;
-  flex-wrap: wrap;
+/* ====================================
+   HEADER
+==================================== */
+
+.deployment-header {
+  text-align: center;
+  margin-bottom: 55px;
 }
 
-.spd-deployment__eyebrow {
-  font-size: clamp(24px, 3vw, 36px);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #5a7da2;
-  margin-bottom: 12px;
-}
-
-.spd-deployment__title {
-  font-size: clamp(24px, 3vw, 36px);
-  color: #08111e;
-  margin: 0;
-  letter-spacing: -0.01em;
+.deployment-title {
+  font-size: clamp(30px, 4vw, 36px);
   line-height: 1.2;
-  font-weight: normal;
+  font-weight: 500;
+  color: #244b93;
+  margin-bottom: 22px;
+  letter-spacing: -0.5px;
 }
 
-.spd-deployment__subtitle {
+.deployment-title span {
+  color: #1db7f2;
+}
+
+.deployment-description {
+  /* max-width: 900px; */
+  margin: 0 auto;
   font-size: 15px;
-  color: #4a5568;
-  line-height: 1.65;
-  max-width: 530px;
-  margin: 0;
+  line-height: 1.8;
+  color: #5d6675;
 }
 
-/* Deployment model cards — large horizontal */
-.spd-deployment__models {
+/* ====================================
+   CARDS
+==================================== */
+
+.deployment-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-bottom: 40px;
+  gap: 22px;
 }
 
-.spd-model-card {
-  background: #f4f9ff;
-  border-radius: 6px;
+.deployment-card {
+  text-align: center;
+}
+
+/* ====================================
+   IMAGE
+==================================== */
+
+.deployment-image-wrap {
   overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 18px;
   position: relative;
-  transition: transform 0.22s;
 }
 
-.spd-model-card:hover { transform: translateY(-4px); }
-
-.spd-model-card__num {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 52px;
-  font-weight: 700;
-  color: rgba(0,210,170,0.06);
-  line-height: 1;
-  pointer-events: none;
+.deployment-image-wrap img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s ease;
 }
 
-.spd-model-card__inner {
-  padding: 32px 26px 28px;
+.deployment-card:hover img {
+  transform: scale(1.06);
 }
 
-.spd-model-card__icon {
-  width: 52px;
-  height: 52px;
-  background: rgba(0,210,170,0.08);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
+/* ====================================
+   CONTENT
+==================================== */
 
-.spd-model-card__icon svg {
-  width: 26px;
-  height: 26px;
-  stroke: #2ae1e1;
-  fill: none;
-}
-
-.spd-model-card__type {
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgb(62 105 148);
-  margin-bottom: 8px;
-}
-
-.spd-model-card__title {
+.deployment-card-title {
   font-size: 18px;
-  color: #426b95;
+  color: #2ab4ef;
+  font-weight: 500;
   margin-bottom: 10px;
   line-height: 1.2;
 }
 
-.spd-model-card__text {
-  font-size: 15px;
-  color: #1b1f26e6;
-  line-height: 1.65;
-  margin: 0;
+.deployment-card-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #5e6775;
+  max-width: 280px;
+  margin: 0 auto;
 }
 
-.spd-model-card__bar {
-  height: 3px;
-  background: linear-gradient(90deg, #00d2aa 0%, transparent 100%);
-  margin-top: 0;
-  transform: scaleX(0.3);
-  transform-origin: left;
-  transition: transform 0.3s ease;
+/* ====================================
+   AOS SMOOTHNESS
+==================================== */
+
+[data-aos] {
+  transition-property: transform, opacity !important;
+  will-change: transform, opacity;
 }
 
-.spd-model-card:hover .spd-model-card__bar {
-  transform: scaleX(1);
-}
+/* ====================================
+   RESPONSIVE
+==================================== */
 
-/* Rugged environments strip */
-.spd-deployment__rugged {
-  background: #08111e;
-  border-radius: 6px;
-  padding: 28px 32px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 28px;
-  align-items: center;
-}
+@media (max-width: 1100px) {
 
-.spd-deployment__rugged-label {
-  font-size: 16px;
-  color: #ffffff;
-  white-space: nowrap;
-}
-
-.spd-deployment__rugged-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.spd-rugged-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(0,210,170,0.06);
-  border: 1px solid rgba(0,210,170,0.18);
-  color: rgba(255,255,255,0.65);
-  font-size: 12.5px;
-  font-weight: 600;
-  padding: 7px 14px;
-  border-radius: 3px;
-}
-
-.spd-rugged-tag svg {
-  width: 13px;
-  height: 13px;
-  stroke: #0dc2ed;
-  fill: none;
-  flex-shrink: 0;
-}
-
-@media (max-width: 900px) {
-  .spd-deployment__models {
-    grid-template-columns: 1fr;
+  .deployment-wrapper {
+    padding: 60px 35px;
   }
-  .spd-deployment__rugged {
+
+  .deployment-cards {
     grid-template-columns: 1fr;
+    gap: 45px;
   }
-  .spd-deployment { padding: 56px 24px; }
+
+  .deployment-image-wrap img {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .deployment-section {
+    padding: 70px 16px;
+  }
+
+  .deployment-wrapper {
+    padding: 45px 20px;
+    border-radius: 18px;
+  }
+
+  .deployment-title {
+    line-height: 1.3;
+  }
+
+  .deployment-image-wrap img {
+    height: 320px;
+  }
+
+  .deployment-card-title {
+    font-size: 24px;
+  }
+
+  .deployment-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .deployment-image-wrap img {
+    height: 260px;
+  }
+
+  .deployment-card-title {
+    font-size: 22px;
+  }
+
+  .deployment-card-text {
+    font-size: 14px;
+  }
 }

@@ -1,43 +1,74 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Styles.css";
-import bannerImg from '../../../../assets/solutionpage/traffic-enforcement-banner.jpg'
+import heroBannerImg from "../../../../assets/solutionpage/speed-enforcement/traffic-enforcement-banner.jpg";
 import Modelbutton from "../../../Button comp/Modelbutton";
 
-const SpeedBanner = () => {
-  const banner = {
-    image: bannerImg,
-    title: "Speed Enforcement Cameras",
-    subtitle: "Edge AI speed enforcement cameras for ensuring that highways, school zones, and intersections can reduce violations and improve safety",
-  };
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+const SpeedHeroBanner = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1400,
+      once: true,
+      easing: "ease-out-cubic",
+    });
+  }, []);
 
   return (
-    <div className="spd-banner">
-      <div className="banner-slide">
+    <section className="speedhero-wrapper">
+
+      {/* BACKGROUND IMAGE */}
+      <div className="speedhero-bg-wrap">
         <img
-          src={banner.image}
-          alt={banner.title}
-          className="banner-image"
+          src={heroBannerImg}
+          alt="Speed Enforcement Cameras"
+          className="speedhero-bg-image"
         />
-        <div className="banner-overlay">
-          <h1>{banner.title}</h1>
-          <p>{banner.subtitle}</p>
-          <Modelbutton 
-            className="spd-banner-button gtm-btn" 
-            text="Talk to an ITS Expert &gt;&gt;" 
-            backgroundColor="#1e2f7ac9" 
-            animationColor="#69ba2f" 
-            hoverColor="#00aeef"
-            padding="12px 25px"
-            fontSize="14px"
-            borderRadius="0"
-            border="1px solid #fff"
-            productName="Speed Enforcement Cameras"
-            title="Speed Enforcement Camera Solution"
-          />
+      </div>
+
+      {/* OVERLAY */}
+      <div className="speedhero-dark-layer"></div>
+
+      {/* CONTENT */}
+      <div className="speedhero-content-wrap">
+
+        <div
+          className="speedhero-content-box"
+          data-aos="zoom-in"
+        >
+
+          <h1 className="speedhero-main-title">
+            Speed Enforcement Cameras
+          </h1>
+
+          <p className="speedhero-main-desc">
+           Edge AI speed enforcement cameras for ensuring that highways, school zones, and intersections can reduce violations, improve safety, and more
+          </p>
+
+          <div className="speedhero-btn-wrap">
+
+            <Modelbutton
+              className="speedhero-cta-btn gtm-btn"
+              text="Talk to an Expert >>"
+              backgroundColor="transparent"
+              animationColor="#00aeef"
+              hoverColor="#00aeef"
+              padding="12px 28px"
+              fontSize="15px"
+              borderRadius="0"
+              border="1px solid #47bfff"
+              productName="Speed Enforcement Cameras"
+              title="Speed Enforcement Camera Solution"
+            />
+
+          </div>
+
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default SpeedBanner;
+export default SpeedHeroBanner;

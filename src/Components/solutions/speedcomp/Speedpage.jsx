@@ -10,7 +10,6 @@ const SpeedPage = () => {
   return (
     <div className="speed-page">
       <SpeedBanner />
-      <SpeedOverview />
       <SpeedSolutions />
       <SpeedDeployment />
       <SpeedFeatures />

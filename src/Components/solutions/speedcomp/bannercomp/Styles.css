@@ -1,170 +1,218 @@
-/* ================================
-   Speed Enforcement Banner Styles
-   ================================ */
+/* =========================================================
+   SPEED HERO BANNER
+========================================================= */
 
-.spd-banner {
+.speedhero-wrapper {
   position: relative;
   width: 100%;
-  height: 70vh;
   overflow: hidden;
+  background: #071a35;
 }
 
-/* Banner image container */
-.banner-slide {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
+/* =========================================================
+   BACKGROUND IMAGE
+========================================================= */
 
-/* Banner image styling */
-.banner-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Overlay with text content */
-.banner-overlay {
+.speedhero-bg-wrap {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.45);
+  max-height: 438px;
+}
+
+.speedhero-bg-image {
+  width: 100%;
+  max-height: 438px;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.02);
+}
+
+/* =========================================================
+   DARK OVERLAY
+========================================================= */
+
+.speedhero-dark-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* =========================================================
+   CONTENT WRAPPER
+========================================================= */
+
+.speedhero-content-wrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 438px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
   text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
+  padding: 40px 20px;
 }
 
-.banner-overlay h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 15px;
+.speedhero-content-box {
+  max-width: 1100px;
 }
 
-.banner-overlay p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  max-width: 800px;
-  line-height: 1.6;
+/* =========================================================
+   TITLE
+========================================================= */
+
+.speedhero-main-title {
+  font-size: clamp(56px, 8vw, 50px);
+  line-height: 0.95;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 30px;
+  /* letter-spacing: -3px; */
+  word-spacing: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Modelbutton custom styling */
-.spd-banner-button {
-  transition: all 0.3s ease;
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.speedhero-main-desc {
+  max-width: 980px;
+  margin: 0 auto 38px;
+  font-size: clamp(17px, 2vw, 18px);
+  line-height: 1.45;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: 'Poppins', sans-serif;
 }
 
-/* ================================
-   RESPONSIVE DESIGN
-   ================================ */
+/* =========================================================
+   BUTTON
+========================================================= */
 
-/* Large Tablets & Small Desktops (max 1024px) */
-@media (max-width: 1024px) {
-  .banner-overlay h1 {
-    font-size: 2rem;
+.speedhero-btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.speedhero-cta-btn {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease !important;
+}
+
+.speedhero-cta-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 174, 239, 0.28);
+}
+
+/* =========================================================
+   AOS SMOOTH
+========================================================= */
+
+[data-aos] {
+  transition-property: transform, opacity !important;
+  will-change: transform, opacity;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .speedhero-wrapper {
+    min-height: 650px;
   }
 
-  .banner-overlay p {
-    font-size: 1.1rem;
-    max-width: 700px;
+  .speedhero-main-desc {
+    max-width: 850px;
   }
 }
 
-/* Tablets (max 768px) */
+@media (max-width: 992px) {
+
+  .speedhero-wrapper {
+    height: 80vh;
+    min-height: 580px;
+  }
+
+  .speedhero-main-title {
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+  }
+
+  .speedhero-main-desc {
+    margin-bottom: 30px;
+  }
+}
+
 @media (max-width: 768px) {
-  .spd-banner {
-    height: 50vh;
+
+  .speedhero-wrapper {
+    height: 72vh;
+    min-height: 520px;
   }
 
-  .banner-overlay h1 {
-    font-size: 1.3rem;
+  .speedhero-content-wrap {
+    padding: 40px 24px;
   }
 
-  .banner-overlay p {
-    font-size: 1rem;
-    max-width: 90%;
-  }
-}
-
-/* Small Devices (max 600px) */
-@media (max-width: 600px) {
-  .spd-banner {
-    height: 45vh;
+  .speedhero-main-title {
+    font-size: clamp(42px, 10vw, 70px);
+    margin-bottom: 20px;
   }
 
-  .banner-overlay {
-    padding: 15px;
-  }
-
-  .banner-overlay h1 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-  }
-
-  .banner-overlay p {
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-  }
-
-  .spd-banner-button {
-    padding: 8px 18px !important;
-    font-size: 0.9rem !important;
+  .speedhero-main-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 28px;
   }
 }
 
-/* Extra Small Devices (below 560px) - Hide Image, Show Only Overlay */
-@media (max-width: 559px) {
-  .spd-banner {
-    height: 320px;
+@media (max-width: 576px) {
+
+  .speedhero-wrapper {
+    height: 620px;
+    min-height: auto;
   }
 
-  .banner-image {
-    display: none;
+  .speedhero-content-wrap {
+    padding: 30px 18px;
   }
 
-  .banner-overlay {
-    background: rgba(0, 0, 0, 0.45);
-    padding: 20px 15px;
+  .speedhero-main-title {
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
   }
 
-  .banner-overlay h1 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
+  .speedhero-main-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 24px;
   }
 
-  .banner-overlay p {
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-    max-width: 100%;
-  }
-
-  .spd-banner-button {
-    padding: 8px 16px !important;
-    font-size: 0.85rem !important;
+  .speedhero-cta-btn {
+    transform: scale(0.96);
   }
 }
 
-/* Mobile Portrait (below 480px) */
-@media (max-width: 479px) {
-  .spd-banner {
-    height: 280px;
+@media (max-width: 420px) {
+
+  .speedhero-wrapper {
+    height: 560px;
   }
 
-  .banner-overlay h1 {
-    font-size: 1.1rem;
-    margin-bottom: 6px;
+  .speedhero-main-title {
+    font-size: 40px;
   }
 
-  .banner-overlay p {
-    font-size: 0.85rem;
-    margin-bottom: 12px;
+  .speedhero-main-desc {
+    font-size: 13px;
   }
 }
-
-/* Old styles removed - component now uses responsive banner template */
