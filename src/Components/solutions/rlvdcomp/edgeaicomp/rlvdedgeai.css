@@ -14,9 +14,8 @@
 .rlvdai-page {
   width: 100%;
   background: var(--bg);
-  padding: 80px 40px;
+  padding: 40px 40px;
   overflow: hidden;
-  font-family: 'Inter', sans-serif;
 }
 
 .rlvd-inner {
@@ -33,7 +32,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 42px;
   align-items: center;
-  margin-bottom: 90px;
+  margin-bottom: 80px;
 }
 
 /* =========================================
@@ -73,9 +72,9 @@
 
 .image-overlay h2 {
   color: #ffffff;
-  font-size: 42px;
+  font-size: 36px;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 500;
   max-width: 420px;
   letter-spacing: -1px;
 }
@@ -91,7 +90,7 @@
 }
 
 .top-right-text {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.9;
   color: var(--text);
   margin-bottom: 28px;
@@ -123,10 +122,10 @@
 }
 
 .feature-box h4 {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.7;
   color: #111827;
-  font-weight: 500;
+  font-weight: normal;
 }
 
 /* =========================================
@@ -144,12 +143,12 @@
 }
 
 .bottom-header h2 {
-  font-size: 42px;
-  line-height: 1.2;
-  font-weight: 600;
-  color: var(--primary);
-  margin-bottom: 16px;
-  letter-spacing: -1px;
+ font-size: 35px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--primary);
+    margin-bottom: 16px;
+    letter-spacing: -1px;
 }
 
 .bottom-header p {

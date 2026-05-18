@@ -12,10 +12,9 @@
 .rlvd-how {
   width: 100%;
   background: var(--navy);
-  padding: 70px 40px 30px;
+  padding: 35px 40px 30px;
   overflow: hidden;
-  font-family: 'Inter', sans-serif;
-}
+  }
 
 .rlvd-how-container {
   max-width: 1400px;
@@ -32,7 +31,7 @@
 }
 
 .rlvd-how-header h2 {
-  font-size: 46px;
+  font-size: 36px;
   color: var(--heading);
   font-weight: 600;
   letter-spacing: -1px;
@@ -93,7 +92,7 @@
 ========================================= */
 
 .rlvd-card-content h3 {
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.35;
   color: #111827;
   font-weight: 700;
@@ -118,7 +117,7 @@
 .rlvd-bottom-note p {
   font-size: 14px;
   line-height: 1.9;
-  color: rgba(255,255,255,0.78);
+  color: rgb(255 255 255);
 }
 
 /* =========================================

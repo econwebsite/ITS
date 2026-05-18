@@ -31,7 +31,7 @@ const RLVDDeployment = () => {
 
         <div className="rlvd-deploy__header">
           <h2 className="rlvd-deploy__title">
-            Flexible <em>Deployment Models</em> of Our Vision Solutions
+            Flexible Deployment Models of Our Vision Solutions
           </h2>
         </div>
 

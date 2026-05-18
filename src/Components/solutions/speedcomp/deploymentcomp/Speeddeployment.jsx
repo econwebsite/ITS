@@ -8,18 +8,18 @@ import pointToPointImg from '../../../../assets/solutionpage/speed-enforcement/p
 
 const models = [
   {
-    title: 'Fixed Cameras',
-    text: 'Permanent roadside installations for continuous monitoring',
+    title: 'Fixed Systems',
+    text: 'Permanent roadside systems for continuous monitoring',
     image: fixedCameraImg,
   },
   {
-    title: 'Mobile Cameras',
-    text: 'Vehicle-mounted units for flexible enforcement coverage',
+    title: 'Mobile Systems',
+    text: 'Flexible systems for vehicle-based and portable deployments',
     image: mobileCameraImg,
   },
   {
-    title: 'Point-to-Point (Average Speed)',
-    text: 'Across defined road segments',
+    title: 'Rapid Deployment Systems',
+    text: 'Portable vision systems for temporary enforcement and quick deployment',
     image: pointToPointImg,
   },
 ];

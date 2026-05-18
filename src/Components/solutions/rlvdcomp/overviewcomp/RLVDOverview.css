@@ -12,10 +12,9 @@
 
 .rlvd-overview {
   width: 100%;
-  background: var(--bg);
-  padding: 70px 60px;
-  font-family: 'Inter', sans-serif;
-  overflow: hidden;
+    background: #ffffff;
+    padding: 40px 60px;
+    overflow: hidden;
 }
 
 /* =========================================

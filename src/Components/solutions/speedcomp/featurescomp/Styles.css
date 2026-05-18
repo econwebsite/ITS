@@ -37,9 +37,9 @@
    GRID
 ==================================== */
 
-.feature-grid {
+.feature-section .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr) !important;
   gap: 18px;
 }
 

@@ -12,7 +12,7 @@
 
 .rlvd-deploy {
   background: #ffffff;
-  padding: 80px 24px;
+  padding: 40px 24px;
   overflow: hidden;
 }
 
@@ -31,17 +31,13 @@
 }
 
 .rlvd-deploy__title {
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 400;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 500;
   line-height: 1.2;
-  color: var(--dark-blue);
+  color: var(--primary);
   letter-spacing: -0.03em;
 }
 
-.rlvd-deploy__title em {
-  font-style: normal;
-  color: var(--blue);
-}
 
 /* =========================
    CARD GRID
@@ -109,16 +105,16 @@
 }
 
 .rlvd-deploy-card__title {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.25;
   color: var(--dark-blue);
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 14px;
 }
 
 .rlvd-deploy-card__text {
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.5;
   color: var(--text);
 }
 
@@ -134,7 +130,7 @@
 .rlvd-deploy__sub {
   max-width: 920px;
   margin: 0 auto;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.9;
   color: var(--text);
 }
