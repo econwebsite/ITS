@@ -1,183 +1,238 @@
+/* =========================================
+   rlvdhowitworks.css
+========================================= */
+
+:root {
+  --navy: #071b4a;
+  --card-bg: #f4f4f4;
+  --text: #4b5565;
+  --heading: #ffffff;
+}
+
 .rlvd-how {
-  background: #efefef;
-  padding: 40px 40px;
-  position: relative;
+  width: 100%;
+  background: var(--navy);
+  padding: 70px 40px 30px;
   overflow: hidden;
+  font-family: 'Inter', sans-serif;
 }
 
-.rlvd-how::before {
-  content: '';
-  position: absolute;
-  bottom: -120px;
-  right: -80px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(ellipse, rgba(220,38,38,0.05) 0%, transparent 65%);
-  pointer-events: none;
-}
-
-.rlvd-how__inner {
-  max-width: 1140px;
+.rlvd-how-container {
+  max-width: 1400px;
   margin: 0 auto;
-  position: relative;
 }
 
-.rlvd-how__header {
+/* =========================================
+   HEADER
+========================================= */
+
+.rlvd-how-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 38px;
 }
 
-.rlvd-how__eyebrow {
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #dc2626;
-  margin-bottom: 14px;
+.rlvd-how-header h2 {
+  font-size: 46px;
+  color: var(--heading);
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.2;
 }
 
-.rlvd-how__title {
-  font-size: clamp(24px, 3vw, 36px);
-  font-weight: 800;
-  color: #030405;
-  margin: 0;
-  letter-spacing: -0.02em;
-  font-weight: normal;
-}
-.rlvd-how__title em {
-  font-style: normal;
-  color: #426b95;
-}
-/* Steps grid */
-.rlvd-how__steps {
+/* =========================================
+   GRID
+========================================= */
+
+.rlvd-how-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 2px;
-  margin-bottom: 36px;
+  gap: 12px;
 }
 
-.rlvd-step {
-  background: #0e3a5c;
-  padding: 28px 20px 24px;
-  position: relative;
-  border-top: 2px solid transparent;
-  transition: border-color 0.25s, background 0.2s;
-  display: flex;
-  flex-direction: column;
+/* =========================================
+   CARD
+========================================= */
+
+.rlvd-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 14px;
+  transition: all 0.45s ease;
+  transform: translateY(40px);
+  opacity: 0;
+  animation: fadeCard 1s ease forwards;
 }
 
-.rlvd-step:hover {
-  border-top-color: #246492;
-  background: #11456a;
+.rlvd-card:hover {
+  transform: translateY(-8px);
 }
 
-.rlvd-step__num {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 36px;
-  font-weight: 800;
-  color: rgba(220,38,38,0.08);
-  line-height: 1;
-  margin-bottom: 14px;
-  letter-spacing: -0.04em;
-}
+/* =========================================
+   IMAGE
+========================================= */
 
-.rlvd-step__icon {
-  width: 42px;
-  height: 42px;
-  background: rgba(220,38,38,0.08);
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.rlvd-card-image {
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
   margin-bottom: 16px;
+  background: #d9dde4;
 }
 
-.rlvd-step__icon svg {
-  width: 22px;
-  height: 22px;
-  stroke: #dc2626;
-  fill: none;
+.rlvd-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.rlvd-step__title {
-  font-size: 16px;
+/* =========================================
+   CONTENT
+========================================= */
+
+.rlvd-card-content h3 {
+  font-size: 20px;
+  line-height: 1.35;
+  color: #111827;
   font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 8px;
-  line-height: 1.3;
-
+  margin-bottom: 12px;
 }
 
-.rlvd-step__text {
+.rlvd-card-content p {
   font-size: 14px;
-  color: #ffffff;
-  line-height: 1.6;
-  margin: 0;
-  flex: 1;
+  line-height: 1.8;
+  color: var(--text);
 }
 
-/* Arrow connectors between steps */
-.rlvd-how__steps-wrap {
-  position: relative;
+/* =========================================
+   BOTTOM NOTE
+========================================= */
+
+.rlvd-bottom-note {
+  text-align: center;
+  margin-top: 26px;
 }
 
-/* Trigger strip */
-.rlvd-how__triggers {
-  background: transparent;
-  border-radius: 6px;
-  padding: 22px 28px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  font-size: 15px;
+.rlvd-bottom-note p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.78);
 }
 
-.rlvd-how__triggers-label {
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-  flex-shrink: 0;
-  white-space: nowrap;
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+.fade-up {
+  animation: fadeUp 1s ease forwards;
 }
 
-.rlvd-how__trigger-tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+.fade-card:nth-child(1) {
+  animation-delay: 0.1s;
 }
 
-.rlvd-trigger-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(220,38,38,0.08);
-  border: 1px solid rgba(220,38,38,0.2);
-  color: #f87171;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 7px 14px;
-  border-radius: 3px;
+.fade-card:nth-child(2) {
+  animation-delay: 0.2s;
 }
 
-.rlvd-trigger-tag svg {
-  width: 13px;
-  height: 13px;
-  stroke: #dc2626;
-  fill: none;
+.fade-card:nth-child(3) {
+  animation-delay: 0.3s;
 }
 
-@media (max-width: 900px) {
-  .rlvd-how__steps {
-    grid-template-columns: 1fr 1fr;
+.fade-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.fade-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeCard {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .rlvd-how-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .rlvd-how-header h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .rlvd-how {
+    padding: 60px 30px 30px;
+  }
+
+  .rlvd-how-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .rlvd-how-header h2 {
+    font-size: 34px;
+  }
+
+  .rlvd-card-content h3 {
+    font-size: 18px;
+  }
+
+  .rlvd-card-content p {
+    font-size: 13px;
   }
 }
 
 @media (max-width: 540px) {
-  .rlvd-how__steps {
+
+  .rlvd-how {
+    padding: 50px 18px 24px;
+  }
+
+  .rlvd-how-grid {
     grid-template-columns: 1fr;
   }
-  .rlvd-how { padding: 56px 24px; }
+
+  .rlvd-how-header h2 {
+    font-size: 28px;
+  }
+
+  .rlvd-card-image {
+    height: 220px;
+  }
+
+  .rlvd-bottom-note p {
+    font-size: 13px;
+  }
 }

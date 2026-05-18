@@ -1,6 +1,7 @@
 import './rlvdpage.css';
 import RLVDBanner from './bannercomp/rlvdbanner';
 import RLVDOverview from './overviewcomp/rlvdoverview';
+import RLVDCameras from './detectioncomp/RLVDCameras';
 import RLVDHowItWorks from './howitworkscomp/rlvdhowitworks';
 import RLVDDeployment from './deploymentcomp/rlvddeployment';
 import RLVDEdgeAI from './edgeaicomp/rlvdedgeai';
@@ -12,6 +13,7 @@ const RLVDPage = () => {
     <div className="rlvd-page">
       <RLVDBanner />
       <RLVDOverview />
+      <RLVDCameras />
       <RLVDHowItWorks />
       <RLVDDeployment />
       <RLVDEdgeAI />
