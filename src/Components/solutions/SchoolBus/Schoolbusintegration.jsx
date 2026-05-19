@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import './Schoolbusintegration.css';
 
 const privacyItems = [
@@ -5,55 +6,25 @@ const privacyItems = [
     num: '01',
     title: 'ONVIF standards',
     text: 'ONVIF standards and open APIs for integration with transportation and enforcement platforms',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="3" width="7" height="7" rx="1"/>
-        <rect x="15" y="3" width="7" height="7" rx="1"/>
-        <rect x="2" y="14" width="7" height="7" rx="1"/>
-        <rect x="15" y="14" width="7" height="7" rx="1"/>
-        <line x1="9" y1="6.5" x2="15" y2="6.5"/>
-        <line x1="9" y1="17.5" x2="15" y2="17.5"/>
-        <line x1="12" y1="6.5" x2="12" y2="17.5"/>
-      </svg>
-    ),
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600&auto=format&fit=crop',
   },
   {
     num: '02',
     title: 'Configurable data retention policies ',
     text: 'Configurable data retention policies aligned with global privacy norms',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="9"/>
-        <polyline points="12 7 12 12 15 15"/>
-        <line x1="3.6" y1="9" x2="20.4" y2="9"/>
-      </svg>
-    ),
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop',
   },
   {
     num: '03',
     title: 'Anonymization of non relevant objects ',
     text: 'Anonymization of non relevant objects (faces, pedestrians) before storage or transmission',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/>
-        <line x1="17" y1="8" x2="23" y2="8"/>
-        <line x1="17" y1="11" x2="23" y2="11"/>
-        <line x1="17" y1="14" x2="23" y2="14"/>
-      </svg>
-    ),
+    image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=600&auto=format&fit=crop',
   },
   {
     num: '04',
     title: 'Secure transmission and storage',
     text: 'Secure transmission and storage with encryption and access controls',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-        <circle cx="12" cy="16" r="1" fill="currentColor"/>
-      </svg>
-    ),
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop',
   },
 ];
 
@@ -61,52 +32,57 @@ const outcomes = [
   {
     num: '01',
     text: 'Increase driver compliance with school bus stop signals',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="20 6 9 17 4 12"/>
-      </svg>
-    ),
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
   },
   {
     num: '02',
     text: 'Reduce illegal overtaking incidents near school buses',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/>
-        <line x1="12" y1="8" x2="12" y2="12"/>
-        <line x1="12" y1="16" x2="12.01" y2="16"/>
-      </svg>
-    ),
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop',
   },
   {
     num: '03',
     text: 'Enhance overall route safety for students boarding and alighting',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-      </svg>
-    ),
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600&auto=format&fit=crop',
   },
   {
     num: '04',
     text: 'Provide actionable analytics for transportation planners',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10"/>
-        <line x1="12" y1="20" x2="12" y2="4"/>
-        <line x1="6" y1="20" x2="6" y2="14"/>
-        <line x1="2" y1="20" x2="22" y2="20"/>
-      </svg>
-    ),
+    image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=600&auto=format&fit=crop',
   },
 ];
 
 const SchoolBusIntegration = () => {
+  const sectionRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('sbi-reveal--show');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.16 }
+    );
+
+    sectionRefs.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const setSectionRef = (index) => (el) => {
+    sectionRefs.current[index] = el;
+  };
+
   return (
     <>
 
       {/* ── SECTION 1: Integration, Privacy & Security — Grey bg ── */}
-      <section className="sbi-priv" id="integration">
+      <section className="sbi-priv sbi-reveal" id="integration" ref={setSectionRef(0)}>
         <div className="sbi-priv__inner">
           {/* Row 1: headline + description */}
           <div className="sbi-priv__intro">
@@ -122,8 +98,14 @@ const SchoolBusIntegration = () => {
           <div className="sbi-priv__cards">
             {privacyItems.map((p) => (
               <div className="sbi-priv__card" key={p.num}>
-                <div className="sbi-priv__card-icon">{p.icon}</div>
-                <div className="sbi-priv__card-num">{p.num}</div>
+                <div className="sbi-priv__card-image-wrap">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="sbi-priv__card-image"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="sbi-priv__card-title">{p.title}</div>
                 <div className="sbi-priv__card-text">{p.text}</div>
               </div>
@@ -134,7 +116,7 @@ const SchoolBusIntegration = () => {
       </section>
 
       {/* ── SECTION 2: 24/7 Monitoring — White bg + images ── */}
-      <section className="sbi-mon" id="monitoring">
+      <section className="sbi-mon sbi-reveal" id="monitoring" ref={setSectionRef(1)}>
         <div className="sbi-mon__inner">
           <div className="sbi-mon__wrap">
 
@@ -182,7 +164,7 @@ const SchoolBusIntegration = () => {
       </section>
 
       {/* ── SECTION 3: Proven Safety Outcomes — Grey bg ── */}
-      <section className="sbi-out" id="outcomes">
+      <section className="sbi-out sbi-reveal" id="outcomes" ref={setSectionRef(2)}>
         <div className="sbi-out__inner">
 
           <div className="sbi-out__header">
@@ -195,13 +177,30 @@ const SchoolBusIntegration = () => {
           </div>
 
           <div className="sbi-out__list">
-            {outcomes.map((o, i) => (
-              <div className="sbi-out__row" key={i}>
-                <div className="sbi-out__row-icon">{o.icon}</div>
-                <span className="sbi-out__row-num"></span>
-                <span className="sbi-out__row-text">{o.text}</span>
-              </div>
-            ))}
+            <div className="sbi-out__list-left">
+              {outcomes.map((o, i) => (
+                <div className="sbi-out__row" key={i}>
+                  <div className="sbi-out__row-image-wrap">
+                    <img
+                      src={o.image}
+                      alt={o.text}
+                      className="sbi-out__row-image"
+                      loading="lazy"
+                    />
+                  </div>
+                  <span className="sbi-out__row-text">{o.text}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="sbi-out__visual">
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+                alt="School bus route monitoring"
+                className="sbi-out__visual-image"
+                loading="lazy"
+              />
+            </div>
           </div>
 
         </div>
