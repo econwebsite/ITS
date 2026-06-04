@@ -18,30 +18,30 @@ const features = [
 
 const deploymentCards = [
   {
-    title: 'Fixed Intersection Sensors',
+    title: 'ONVIF standards ',
     text:
-      'Permanent installations at critical intersections for continuous monitoring and high volume compliance tracking',
+      'ONVIF standards and open APIs for integration with ITS, signal control, and enforcement platforms',
     image:
       'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop',
   },
   {
-    title: 'Fixed Intersection Sensors',
+    title: 'Configurable data retention',
     text:
-      'Permanent installations at critical intersections for continuous monitoring and high volume compliance tracking',
+      'Configurable data retention and regional privacy settings aligned with global data protection practices',
     image:
       'https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=1200&auto=format&fit=crop',
   },
   {
-    title: 'Fixed Intersection Sensors',
+    title: 'Anonymization',
     text:
-      'Permanent installations at critical intersections for continuous monitoring and high volume compliance tracking',
+      'Anonymization of non relevant objects (faces, pedestrians) before storage or transmission',
     image:
       'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1200&auto=format&fit=crop',
   },
   {
-    title: 'Fixed Intersection Sensors',
+    title: 'Encrypted transit and storage',
     text:
-      'Permanent installations at critical intersections for continuous monitoring and high volume compliance tracking',
+      'Encrypted transit and storage with role based access controls for enhanced data security',
     image:
       'https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop',
   },
@@ -72,7 +72,7 @@ const RLVDEdgeAI = () => {
 
               <div className="image-overlay">
                 <h2>
-                  Flexible Deployment Models of Our Vision Solutions
+                 Inbuilt Edge AI Intelligence
                 </h2>
               </div>
 
@@ -85,7 +85,7 @@ const RLVDEdgeAI = () => {
           <div className="top-right fade-right">
 
             <p className="top-right-text">
-              They bring together precise imaging, intelligent triggering, and intelligent analytics, helping agencies to:
+             Our vision solutions’ on device computing delivers:
             </p>
 
             <div className="feature-grid">
@@ -99,7 +99,7 @@ const RLVDEdgeAI = () => {
               ))}
 
             </div>
-
+              <p className="top-right-text" style={{ marginTop: '20px' }}>Their edge centric architecture also ensures responsiveness and resilience in varying operational environments.</p>
           </div>
 
         </div>
@@ -113,28 +113,28 @@ const RLVDEdgeAI = () => {
           <div className="bottom-header fade-up">
 
             <h2>
-              Flexible Deployment Models of Our Vision Solutions
+            Seamless Integration, Privacy and Security
             </h2>
 
-            <p>
-              Our RLVD camera solutions drive responsible data handling without undermining enforcement efficacy. They support:
+            
+            <p> 
+             Our RLVD camera solutions drive responsible data handling without undermining enforcement efficacy. They support:
             </p>
-
           </div>
 
           <div className="deployment-grid">
-
+          
             {deploymentCards.map((item, index) => (
               <div className="deployment-card fade-card" key={index}>
 
-                <div className="deployment-image">
+                {/* <div className="deployment-image">
 
                   <img
                     src={item.image}
                     alt={item.title}
                   />
 
-                </div>
+                </div> */}
 
                 <div className="deployment-content">
 

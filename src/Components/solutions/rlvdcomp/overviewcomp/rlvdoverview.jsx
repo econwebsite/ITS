@@ -1,4 +1,5 @@
 import './RLVDOverview.css';
+import visionCamera from '../../../../assets/solutionpage/rlvd/rlvd-camera-img.jpg';
 
 const outcomes = [
   {
@@ -38,8 +39,9 @@ const RLVDOverview = () => {
           <div className="rlvd-image-box">
             {/* Replace with your actual image */}
             <img
-              src="/images/rlvd-camera.png"
-              alt="RLVD Camera"
+              src={visionCamera}
+              alt="Red Light Violation Detection Camera"
+              className="rlvd-image"
             />
           </div>
         </div>

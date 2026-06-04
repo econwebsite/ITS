@@ -2,6 +2,7 @@ import './Ctastyles.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import Modelbutton from '../../../Button comp/Modelbutton';
 
 const SpeedCta = () => {
 
@@ -28,26 +29,22 @@ const SpeedCta = () => {
           data-aos="fade-right"
         >
           <h2 className="spd-cta__title">
-            Explore how speed enforcement cameras can enhance compliance and protect your community
+            Explore how speed enforcement cameras can enhance compliance and <br /><em>protect your community</em>
           </h2>
 
-          <a
-            href="mailto:camerasolutions@e-consystems.com"
-            className="spd-cta__btn"
-          >
-            Connect With Us
-
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
+          <Modelbutton
+            className="spd-cta__btn gtm-btn"
+            text="Connect With Us >>"
+            backgroundColor="#22b7f1"
+            animationColor="#1d9fd1"
+            hoverColor="#1d9fd1"
+            padding="18px 34px"
+            fontSize="16px"
+            borderRadius="6px"
+            border="none"
+            productName="Speed Enforcement Cameras"
+            title="Speed Enforcement Camera Solution"
+          />
         </div>
 
       </div>

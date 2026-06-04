@@ -1,6 +1,7 @@
 // RLVDCameras.jsx
 
 import './RLVDCameras.css';
+import violationCamera from '../../../../assets/solutionpage/rlvd/violation-camera-img.jpg';
 
 const features = [
   {
@@ -27,7 +28,7 @@ const RLVDCameras = () => {
           </h2>
 
           <p className="rlvd-description">
-            Our high resolution overview cameras capture the full violation scenario, including vehicle position, intersection geometry, stop line, and signal status.
+            Our high resolution overview cameras capture the full violation scenario, including vehicle position, intersection geometry, stop line, and signal status. 
           </p>
 
           <p className="rlvd-description">
@@ -63,8 +64,9 @@ const RLVDCameras = () => {
 
             {/* Replace image path */}
             <img
-              src="/images/rlvd-camera-system.png"
-              alt="RLVD Camera"
+              src={violationCamera}
+              alt="Red Light Violation Detection Camera"
+              className="rlvd-camera-img"
             />
 
           </div>

@@ -147,15 +147,17 @@
     line-height: 1.2;
     font-weight: 500;
     color: var(--primary);
-    margin-bottom: 16px;
+    margin-bottom: 30px;
     letter-spacing: -1px;
+    text-align: center;
 }
 
 .bottom-header p {
-  max-width: 860px;
+  /* max-width: 860px; */
   font-size: 15px;
   line-height: 1.9;
   color: var(--text);
+  margin-bottom: 0px;
 }
 
 /* =========================================
@@ -169,8 +171,8 @@
 }
 
 .deployment-card {
-  border: 1px solid #c8d4e4;
-  border-radius: 10px;
+  /* border: 1px solid #c8d4e4;
+  border-radius: 10px; */
   overflow: hidden;
   background: #ffffff;
   transition: all 0.35s ease;

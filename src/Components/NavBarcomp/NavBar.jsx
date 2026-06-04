@@ -17,11 +17,20 @@ import {
   Box,
   styled
 } from '@mui/material';
-import { ExpandLess, ExpandMore } from '@mui/icons-material';
+import {
+  ExpandLess,
+  ExpandMore,
+  ChevronRight,
+  ShieldOutlined,
+  Speed,
+  Traffic,
+} from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { Link } from 'react-router-dom';
 import dentallogo from "../../assets/homepage/footerlogo-1.svg";
+
+const NAV_FONT_FAMILY = '"Poppins", sans-serif';
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: '#f1f2f2',
@@ -29,12 +38,16 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   position: 'sticky',
   top: 0,
   zIndex: 1000,
+  fontFamily: `${NAV_FONT_FAMILY} !important`,
+  '& *': {
+    fontFamily: `${NAV_FONT_FAMILY} !important`,
+  },
 }));
 
 const NavLink = styled(Link)(({ theme }) => ({
   textDecoration: 'none',
   color: '#003873',
-  fontFamily: '"Montserrat", sans-serif',
+  fontFamily: `${NAV_FONT_FAMILY} !important`,
   fontWeight: 400,
   fontSize: '1em',
   margin: theme.spacing(0, 2),
@@ -55,6 +68,10 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
     borderRadius: '16px 0 0 16px',
     width: '93%',
     color: 'white',
+    fontFamily: `${NAV_FONT_FAMILY} !important`,
+    '& *': {
+      fontFamily: `${NAV_FONT_FAMILY} !important`,
+    },
   },
 }));
 
@@ -146,6 +163,30 @@ const NavBar = () => {
   const open = Boolean(anchorEl);
   const openIndustries = Boolean(anchorElIndustries);
 
+  const trafficEnforcementParent = {
+    label: 'Traffic Enforcement Camera',
+    path: '/solutions/traffic-enforcement-camera',
+  };
+
+  const trafficEnforcementChildren = [
+    {
+      label: 'Speed Enforcement Camera',
+      path: '/solutions/speed-enforcement-camera',
+      icon: Speed,
+    },
+    {
+      label: 'Red Light Violation Detection Camera',
+      path: '/solutions/red-light-violation-detection-camera',
+      icon: Traffic,
+    },
+  ];
+
+  const handleSolutionsItemClick = () => {
+    handleSolutionsPopoverClose();
+    setMobileOpen(false);
+    setMobileSolutionsOpen(false);
+  };
+
   const menuItemStyles = {
     '& .MuiMenuItem-root': {
       color: '#344ea1',
@@ -229,47 +270,116 @@ const NavBar = () => {
 
   // --- NEW: Solutions Menu ---
   const SolutionsMenu = (
-    <Box sx={{ p: 1, width: 280, ...menuItemStyles }}>
-      <MenuItem
+    <Box
+      sx={{
+        width: { xs: 'calc(100vw - 24px)', sm: 400 },
+        maxWidth: 400,
+        border: '1px solid #9ec6ea',
+        borderRadius: '14px',
+        overflow: 'hidden',
+        backgroundColor: '#ffffff',
+        position: 'relative',
+      }}
+    >
+      <Box
         component={Link}
-        to="/solutions/traffic-enforcement-camera"
-        onClick={() => {
-          handleSolutionsPopoverClose();
-          setMobileOpen(false);
+        to={trafficEnforcementParent.path}
+        onClick={handleSolutionsItemClick}
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 1,
+          textDecoration: 'none',
+          px: 1.5,
+          py: 1.35,
+          color: '#003873',
+          backgroundColor: '#ffffff',
+          borderBottom: '1px solid #d4e2f0',
+          '&:hover': {
+            backgroundColor: '#f5fafe',
+          },
         }}
       >
-        Traffic Enforcement Camera
-      </MenuItem>
-      <MenuItem
-        component={Link}
-        to="/solutions/speed-enforcement-camera"
-        onClick={() => {
-          handleSolutionsPopoverClose();
-          setMobileOpen(false);
-        }}
-      >
-        Speed Enforcement Camera
-      </MenuItem>
-       <MenuItem
-        component={Link}
-        to="/solutions/red-light-violation-detection-camera"
-        onClick={() => {
-          handleSolutionsPopoverClose();
-          setMobileOpen(false);
-        }}
-      >
-       Red Light Violation Detection Camera
-      </MenuItem>
-        <MenuItem
-        component={Link}
-        to="/solutions/school-bus-stop-arm-camera"
-        onClick={() => {
-          handleSolutionsPopoverClose();
-          setMobileOpen(false);
-        }}
-      >
-       School Bus Stop Arm Camera
-      </MenuItem>
+        <Box
+          sx={{
+            width: 42,
+            height: 42,
+            borderRadius: '11px',
+            display: 'grid',
+            placeItems: 'center',
+            background: 'linear-gradient(180deg, #0e4a8b, #063778)',
+            color: '#fff',
+            flexShrink: 0,
+          }}
+        >
+          <ShieldOutlined sx={{ fontSize: 24 }} />
+        </Box>
+        <Typography sx={{ fontSize: { xs: '0.94rem', sm: '0.98rem' }, fontWeight: 500, lineHeight: 1.25, color: '#083b78' }}>
+          {trafficEnforcementParent.label}
+        </Typography>
+      </Box>
+
+      <Box sx={{ px: { xs: 1.1, sm: 1.25 }, py: { xs: 1.2, sm: 1.25 }, backgroundColor: '#ffffff' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 0.5, sm: 0.5 } }}>
+          {trafficEnforcementChildren.map((item) => {
+            const ItemIcon = item.icon;
+
+            return (
+              <Box
+                component={Link}
+                to={item.path}
+                key={item.path}
+                onClick={handleSolutionsItemClick}
+                sx={{
+                  textDecoration: 'none',
+                  display: 'grid',
+                  gridTemplateColumns: { xs: '52px 1fr 16px', sm: '62px 1fr 18px' },
+                  alignItems: 'center',
+                  columnGap: { xs: 0.75, sm: 0.75 },
+                  borderRadius: 2,
+                  p: { xs: 0.5, sm: 0.5 },
+                  transition: 'background-color 0.2s ease',
+                  '&:hover': {
+                    backgroundColor: '#f3f9ff',
+                  },
+                }}
+              >
+                <Box
+                  sx={{
+                    width: 40,
+                    height: 40,
+                    borderRadius: '10px',
+                    background: 'linear-gradient(180deg, #f1f5fb, #e8eef7)',
+                    display: 'grid',
+                    placeItems: 'center',
+                    color: '#0a4c96',
+                    border: '1px solid #e2e9f2',
+                    flexShrink: 0,
+                  }}
+                >
+                  <ItemIcon sx={{ fontSize: 24 }} />
+                </Box>
+
+                <Box>
+                  <Typography
+                    sx={{
+                      color: '#083b78',
+                      fontSize: '0.9rem',
+                      fontWeight: 400,
+                      lineHeight: 1.2,
+                      mb: 0.2,
+                    }}
+                  >
+                    {item.label}
+                  </Typography>
+                </Box>
+
+                <ChevronRight sx={{ color: '#0a4f98', fontSize: { xs: 18, sm: 18 } }} />
+              </Box>
+            );
+          })}
+        </Box>
+      </Box>
     </Box>
   );
 
@@ -328,18 +438,106 @@ const NavBar = () => {
           </ListItemButton>
         </ListItem>
         {mobileSolutionsOpen && (
-          <List sx={{ pl: 2 }}>
-            {[
-              { label: 'Traffic Enforcement Camera', path: '/solutions/traffic-enforcement' },
-              { label: 'Speed Enforcement Camera', path: '/solutions/speed-enforcement' },
-            ].map((item, index) => (
-              <ListItem key={index} disablePadding>
-                <ListItemButton component={Link} to={item.path} onClick={handleDrawerToggle} sx={{ '&:hover .MuiListItemText-primary': { color: '#00aeef' }, pl: 2 }}>
-                  <ListItemText primary={item.label} primaryTypographyProps={{ sx: { color: 'white', fontSize: '0.85em', textAlign: 'left' } }} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
+          <Box
+            sx={{
+              ml: 2,
+              mr: 1,
+              mb: 0.8,
+              border: '1px solid #9ec6ea',
+              borderRadius: '12px',
+              overflow: 'hidden',
+              backgroundColor: '#ffffff',
+            }}
+          >
+            <Box
+              component={Link}
+              to={trafficEnforcementParent.path}
+              onClick={handleSolutionsItemClick}
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1,
+                textDecoration: 'none',
+                px: 1.5,
+                py: 1.25,
+                color: '#083b78',
+                backgroundColor: '#ffffff',
+                fontWeight: 700,
+                fontSize: '0.95rem',
+                lineHeight: 1.2,
+                borderBottom: '1px solid #d4e2f0',
+              }}
+            >
+              <Box
+                sx={{
+                  width: 34,
+                  height: 34,
+                  borderRadius: '10px',
+                  display: 'grid',
+                  placeItems: 'center',
+                  background: 'linear-gradient(180deg, #0e4a8b, #063778)',
+                  color: '#fff',
+                  flexShrink: 0,
+                }}
+              >
+                <ShieldOutlined sx={{ fontSize: 20 }} />
+              </Box>
+              {trafficEnforcementParent.label}
+            </Box>
+
+            <Box sx={{ px: 1, py: 1.2 }}>
+              <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 0.65 }}>
+                {trafficEnforcementChildren.map((item) => {
+                  const ItemIcon = item.icon;
+
+                  return (
+                    <Box
+                      component={Link}
+                      to={item.path}
+                      key={`mobile-${item.path}`}
+                      onClick={handleSolutionsItemClick}
+                      sx={{
+                        textDecoration: 'none',
+                        display: 'grid',
+                        gridTemplateColumns: '46px 1fr 16px',
+                        alignItems: 'center',
+                        columnGap: 1,
+                        borderRadius: 2,
+                        p: 0.6,
+                        '&:hover': {
+                          backgroundColor: '#f3f9ff',
+                        },
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          width: 40,
+                          height: 40,
+                          borderRadius: '10px',
+                          background: 'linear-gradient(180deg, #f1f5fb, #e8eef7)',
+                          display: 'grid',
+                          placeItems: 'center',
+                          color: '#0a4c96',
+                          border: '1px solid #e2e9f2',
+                          flexShrink: 0,
+                        }}
+                      >
+                        <ItemIcon sx={{ fontSize: 24 }} />
+                      </Box>
+
+                      <Box>
+                        <Typography sx={{ color: '#083b78', fontSize: '0.9rem', fontWeight: 400, lineHeight: 1.2, mb: 0.2 }}>
+                          {item.label}
+                        </Typography>
+                      </Box>
+
+                      <ChevronRight sx={{ color: '#0a4f98', fontSize: 18 }} />
+                    </Box>
+                  );
+                })}
+              </Box>
+            </Box>
+          </Box>
         )}
 
         {/* Resources */}
@@ -465,7 +663,13 @@ const NavBar = () => {
           anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
           transformOrigin={{ vertical: 'top', horizontal: 'left' }}
           PaperProps={{ 
-            sx: { border: '1px solid #00aeef' },
+            sx: {
+              border: '1px solid #00aeef',
+              fontFamily: `${NAV_FONT_FAMILY} !important`,
+              '& *': {
+                fontFamily: `${NAV_FONT_FAMILY} !important`,
+              },
+            },
             onMouseEnter: handlePopoverEnter,
             onMouseLeave: handlePopoverLeave
           }}
@@ -483,7 +687,16 @@ const NavBar = () => {
           anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
           transformOrigin={{ vertical: 'top', horizontal: 'left' }}
           PaperProps={{
-            sx: { border: '1px solid #00aeef' },
+            sx: {
+              border: '1px solid #9ec6ea !important',
+              borderRadius: '5px',
+              overflow: 'hidden',
+              boxShadow: '0 14px 42px rgba(6, 59, 120, 0.2)',
+              fontFamily: `${NAV_FONT_FAMILY} !important`,
+              '& *': {
+                fontFamily: `${NAV_FONT_FAMILY} !important`,
+              },
+            },
             onMouseEnter: () => clearTimeout(closeTimeoutRef.current),
             onMouseLeave: handlePopoverLeave
           }}
@@ -501,7 +714,13 @@ const NavBar = () => {
           transformOrigin={{ vertical: 'top', horizontal: 'left' }}
           disableRestoreFocus
           PaperProps={{ 
-            sx: { border: '1px solid #00aeef' },
+            sx: {
+              border: '1px solid #00aeef',
+              fontFamily: `${NAV_FONT_FAMILY} !important`,
+              '& *': {
+                fontFamily: `${NAV_FONT_FAMILY} !important`,
+              },
+            },
             onMouseEnter: () => clearTimeout(closeTimeoutRef.current), 
             onMouseLeave: handleResourcesPopoverClose 
           }}

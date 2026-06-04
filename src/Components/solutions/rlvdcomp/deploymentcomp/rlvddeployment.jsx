@@ -1,26 +1,26 @@
 import './rlvddeployment.css';
+import deploymentModel from '../../../../assets/solutionpage/rlvd/deployment-model-img.jpg';
+import mobileUnit from '../../../../assets/solutionpage/rlvd/mobile-unit-img.jpg';
+import corridorSystem from '../../../../assets/solutionpage/rlvd/corridor-system-img.jpg';
 
 const models = [
   {
     type: 'Deployment Model',
     title: 'Fixed Intersection Sensors',
     text: 'Permanent installations at critical intersections for continuous monitoring and high volume compliance tracking',
-    image:
-      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop',
+    image:deploymentModel,
   },
   {
     type: 'Deployment Model',
     title: 'Mobile Enforcement Units',
     text: 'Transportable systems mounted on vehicles, tripods, or temporary poles for targeted campaigns or event based deployments',
-    image:
-      'https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=1200&auto=format&fit=crop',
+    image: mobileUnit,
   },
   {
     type: 'Deployment Model',
     title: 'Corridor & Hybrid Systems',
     text: 'Integrated deployments across multiple intersections or arterial corridors to analyze patterns and optimize compliance strategies',
-    image:
-      'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1200&auto=format&fit=crop',
+    image: corridorSystem,
   },
 ];
 

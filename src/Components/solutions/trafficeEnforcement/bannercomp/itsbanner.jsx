@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import './Bannerstyles.css';
-import bannerImg from '../../../../assets/solutionpage/traffic-enforcement-banner-en.jpg'
+import bannerImg from '../../../../assets/solutionpage/traffic-enforcement-banner-img-en.jpg'
 import Modelbutton from "../../../Button comp/Modelbutton";
 
 const ITSBanner = () => {

@@ -2,9 +2,9 @@ import './Styles.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import edgeAIImg from '../../../../assets/solutionpage/speed-enforcement/edge-ai.jpg';
-import integrationImg from '../../../../assets/solutionpage/speed-enforcement/integration.jpg';
-import safetyImg from '../../../../assets/solutionpage/speed-enforcement/safety-outcomes.jpg';
+import edgeAIImg from '../../../../assets/solutionpage/speed-enforcement/edge-ai-img.jpg';
+import integrationImg from '../../../../assets/solutionpage/speed-enforcement/integration-img.jpg';
+import safetyImg from '../../../../assets/solutionpage/speed-enforcement/safety-outcomes-img.jpg';
 
 const features = [
   {

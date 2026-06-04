@@ -65,9 +65,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
-  gap: 60px;
+  gap: 2px;
   padding: 0 40px;
   box-sizing: border-box;
 }
@@ -114,12 +114,12 @@
 
 /* Right section with image */
 .banner-image-section {
-  flex: 1;
+  flex: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  height: 400px;
+  min-height: 400px;
   animation: slideInRight 0.8s ease-out 0.2s forwards;
   opacity: 0;
 }
@@ -128,7 +128,7 @@
 .banner-image {
   width: 100%;
   height: auto;
-  max-height: 400px;
+  min-height: 400px;
   object-fit: contain;
   display: block;
   border-radius: 8px;

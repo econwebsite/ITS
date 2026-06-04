@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 
 import violation from '../../../../assets/solutionpage/trafficEnforcement/violation-issuance.jpg';
 import enforcementAnalytics from '../../../../assets/solutionpage/trafficEnforcement/enforcement-analytics.jpg';
-import longTermSafety from '../../../../assets/solutionpage/trafficEnforcement/safety-outcomes.jpg';
+import longTermSafety from '../../../../assets/solutionpage/trafficEnforcement/long-term-safety-outcomes.jpg';
 
 const pillars = [
   {

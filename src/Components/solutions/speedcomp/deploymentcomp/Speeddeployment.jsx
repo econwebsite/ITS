@@ -2,9 +2,9 @@ import './Styles.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import fixedCameraImg from '../../../../assets/solutionpage/speed-enforcement/fixed-camera.jpg';
-import mobileCameraImg from '../../../../assets/solutionpage/speed-enforcement/mobile-camera.jpg';
-import pointToPointImg from '../../../../assets/solutionpage/speed-enforcement/point-to-point.jpg';
+import fixedCameraImg from '../../../../assets/solutionpage/speed-enforcement/fixed-camera-img.jpg';
+import mobileCameraImg from '../../../../assets/solutionpage/speed-enforcement/mobile-camera-img.jpg';
+import pointToPointImg from '../../../../assets/solutionpage/speed-enforcement/point-to-point-img.jpg';
 
 const models = [
   {

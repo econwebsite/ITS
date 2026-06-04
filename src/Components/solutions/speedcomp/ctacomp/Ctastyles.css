@@ -6,11 +6,7 @@
   position: relative;
   overflow: hidden;
   padding: 30px 20px;
-  background-image:
-    url('https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=1600&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #0b2e4a;
 }
 
 /* ====================================
@@ -58,12 +54,16 @@
 .spd-cta__title {
   font-size: clamp(34px, 4vw, 38px);
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 500;
   color: #ffffff;
   margin-bottom: 36px;
   max-width: 760px;
 }
-
+.spd-cta__title em {
+  color: #22b7f1;
+  font-style: normal;
+  font-weight: normal;
+}
 /* ====================================
    BUTTON
 ==================================== */
@@ -129,7 +129,6 @@
 
   .spd-cta {
     padding: 80px 18px;
-    background-position: center;
   }
 
   .spd-cta-overlay {

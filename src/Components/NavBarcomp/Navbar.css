@@ -29,6 +29,15 @@ width: 95% !important;
     padding: 8px;
     width: 330px !important;
 }
+.css-31fpae {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+.css-1nrf80y{
+  margin-bottom: 5.8px;
+}
 
 @media (min-width: 1024px) {
   .desktop-view {
@@ -202,4 +211,70 @@ width: 95% !important;
     font-size: 14px;
     text-align: center;
   }
+}
+.css-18hxptu-MuiTypography-root {
+    margin: 0;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    font-size: 0.9rem;
+    line-height: 1.35;
+}
+.css-13ymxrf {
+    display: block;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 11.6px;
+    padding-bottom: 11.6px;
+    color: #003873;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.35;
+    margin: 6px 8px 5px 6px !important;
+    border-bottom: 1px solid #c9d7ea;
+}
+.css-31fpae {
+    border: none !important;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+@media (min-width: 600px) {
+    .css-739vjn-MuiSvgIcon-root {
+        font-size: 35px;
+    }
+}
+@media (min-width: 600px) {
+    .css-1bzkyso {
+        width: 500px;
+    }
+}
+.css-14ckhl7-MuiTypography-root {
+    margin: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    color: #083b78;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.css-uyccne {
+    width: 35px;
+    height: 35px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(180deg, #0e4a8b, #063778);
+    color: #fff;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
 }

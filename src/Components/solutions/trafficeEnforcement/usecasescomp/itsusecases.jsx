@@ -1,7 +1,8 @@
 import './Styles.css';
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
-import SpeedEnforcement from '../../../../assets/solutionpage/trafficEnforcement/speed-enforcement-img.jpg';
+import SpeedEnforcement from '../../../../assets/solutionpage/trafficEnforcement/speed-enforcement-camera-img.jpg';
 import RedLight from '../../../../assets/solutionpage/trafficEnforcement/red-light-img.jpg';
 import SchoolBus from '../../../../assets/solutionpage/trafficEnforcement/school-bus-img.jpg';
 
@@ -18,12 +19,12 @@ const usecases = [
     icon: RedLight,
     link: '/solutions/red-light-violation-detection-camera',
   },
-  {
-    title: 'School Bus Stop Arm',
-    text: 'Our cameras identify and record vehicles passing illegally when school bus stop-arms are deployed.',
-    icon: SchoolBus,
-    link: '/solutions/school-bus-stop-arm-camera',
-  },
+  // {
+  //   title: 'School Bus Stop Arm',
+  //   text: 'Our cameras identify and record vehicles passing illegally when school bus stop-arms are deployed.',
+  //   icon: SchoolBus,
+  //   link: '/solutions/school-bus-stop-arm-camera',
+  // },
 ];
 
 const ITSUseCases = () => {
@@ -60,9 +61,10 @@ const ITSUseCases = () => {
         {/* CARDS */}
         <div className="its-usecases__grid">
           {usecases.map((uc, i) => (
-            <div
+            <Link
               className={`its-uc-card ${i % 2 === 0 ? 'from-top' : 'from-bottom'}`}
               key={i}
+              to={uc.link}
               ref={(el) => (cardsRef.current[i] = el)}
             >
               <h3 className="its-uc-card__title">{uc.title}</h3>
@@ -72,13 +74,13 @@ const ITSUseCases = () => {
                 <img src={uc.icon} alt={uc.title} />
               </div>
 
-              <a href={uc.link} className="its-uc-card__cta">
+              <span className="its-uc-card__cta">
                 <span className="cta-inner">
                   <span className="cta-arrow"></span>
                   <span className="cta-text">Know More</span>
                 </span>
-              </a>
-            </div>
+              </span>
+            </Link>
           ))}
         </div>
 

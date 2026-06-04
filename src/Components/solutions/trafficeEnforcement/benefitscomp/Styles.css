@@ -122,4 +122,7 @@
   .its-benefits__grid {
     grid-template-columns: 1fr;
   }
+  .its-benefits__grid {    
+    padding: 0px;
+  }
 }

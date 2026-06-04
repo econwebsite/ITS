@@ -9,6 +9,11 @@
     padding: 20px;
     background: #fff;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 /* HEADER */
@@ -30,8 +35,9 @@
 
 /* GRID */
 .its-usecases__grid {
+  max-width: 800px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   padding: 20px 30px;
 }
@@ -43,6 +49,10 @@
   border-radius: 18px;
   position: relative;
   transition: all 0.4s ease;
+  text-decoration: none;
+  display: block;
+  width: min(100%, 340px);
+  justify-self: center;
 
   opacity: 0;
 }
@@ -118,7 +128,7 @@
   align-items: center;
 
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none;
+  pointer-events: none;
 }
 
 /* INNER FLEX */
@@ -211,6 +221,7 @@
 @media (max-width: 600px) {
   .its-usecases__grid {
     grid-template-columns: 1fr;
+    padding: 0px;
   }
 
   .its-uc-card__image img {

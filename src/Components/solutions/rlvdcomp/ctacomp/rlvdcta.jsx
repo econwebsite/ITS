@@ -1,4 +1,5 @@
 import './rlvdcta.css';
+import Modelbutton from '../../../Button comp/Modelbutton';
 
 const RLVDCta = () => {
   return (
@@ -13,27 +14,22 @@ const RLVDCta = () => {
         <div className="rlvd-cta__content">
 
           <h2 className="rlvd-cta__title">
-            Explore how Red Light Violation Detection cameras can enhance compliance and support your intersection safety goals
+            Explore how Red Light Violation Detection cameras can enhance compliance and support <br /><em>your intersection safety goals</em>
           </h2>
 
-          <a
-            href="mailto:camerasolutions@e-consystems.com"
-            className="rlvd-cta__btn"
-          >
-            Connect With Us
-
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-
-          </a>
+          <Modelbutton
+            className="rlvd-cta__btn gtm-btn"
+            text="Connect With Us >>"
+            backgroundColor="#74d3f7"
+            animationColor="#2f5780"
+            hoverColor="#2f5780"
+            padding="18px 34px"
+            fontSize="14px"
+            borderRadius="4px"
+            border="none"
+            productName="RLVD Cameras"
+            title="Red Light Violation Detection Solution"
+          />
 
         </div>
 

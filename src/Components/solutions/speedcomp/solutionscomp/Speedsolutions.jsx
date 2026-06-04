@@ -2,9 +2,9 @@ import './Styles.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import highSpeedImg from '../../../../assets/solutionpage/speed-enforcement/high-speed.jpg';
-import lowLightImg from '../../../../assets/solutionpage/speed-enforcement/low-light.jpg';
-import multiLaneImg from '../../../../assets/solutionpage/speed-enforcement/multi-lane.jpg';
+import highSpeedImg from '../../../../assets/solutionpage/speed-enforcement/high-spee-img.jpg';
+import lowLightImg from '../../../../assets/solutionpage/speed-enforcement/low-light-img.jpg';
+import multiLaneImg from '../../../../assets/solutionpage/speed-enforcement/multi-lane-img.jpg';
 
 const imageCards = [
   {

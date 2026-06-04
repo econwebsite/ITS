@@ -1,42 +1,42 @@
 // RLVDHowItWorks.jsx
 
 import './rlvdhowitworks.css';
+import trafficSignal from '../../../../assets/solutionpage/rlvd/traffic-signal-img.png';
+import vehicleTrigger from '../../../../assets/solutionpage/rlvd/vehicle-trigger-img.png';
+import multiFrame from '../../../../assets/solutionpage/rlvd/multi-frame-img.png';
+import edgeAI from '../../../../assets/solutionpage/rlvd/edge-ai-img.png';
+import metadata from '../../../../assets/solutionpage/rlvd/metadata-img.png';
 
 const steps = [
   {
     num: '01',
     title: 'Traffic Signal Integration',
     text: 'The system receives real time signal phase data from the traffic controller, ensuring capture logic aligns with red signal duration.',
-    image:
-      'https://images.unsplash.com/photo-1504215680853-026ed2a45def?q=80&w=1200&auto=format&fit=crop',
+    image: trafficSignal,
   },
   {
     num: '02',
     title: 'Intelligent Triggering',
     text: 'When a vehicle crosses the stop line after the light changes to red, the integrated detection logic (vision + sensor triggers) activates capture.',
-    image:
-      'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=1200&auto=format&fit=crop',
+    image: vehicleTrigger,
   },
   {
     num: '03',
     title: 'Multi-Frame Capture',
     text: 'A sequence of frames is recorded before, during, and after the violation, providing context and supporting legal defensibility.',
-    image:
-      'https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=1200&auto=format&fit=crop',
+    image: multiFrame,
   },
   {
     num: '04',
     title: 'Edge AI Processing',
     text: 'AI processing performs license plate recognition, event validation, and classification directly on the device with minimal latency.',
-    image:
-      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop',
+    image: edgeAI,
   },
   {
     num: '05',
     title: 'Metadata Packaging',
     text: 'Images, timestamps, signal state, lane data, and recognition results are securely packaged for back office integration and enforcement workflows.',
-    image:
-      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop',
+    image: metadata,
   },
 ];
 

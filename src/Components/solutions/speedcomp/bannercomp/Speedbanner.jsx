@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Styles.css";
-import heroBannerImg from "../../../../assets/solutionpage/speed-enforcement/traffic-enforcement-banner.jpg";
+import heroBannerImg from "../../../../assets/solutionpage/speed-enforcement/traffic-enforcement-camera-banner-img.jpg";
 import Modelbutton from "../../../Button comp/Modelbutton";
 
 import AOS from "aos";

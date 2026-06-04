@@ -1,5 +1,6 @@
 import './Styles.css';
 import { useEffect, useRef } from 'react';
+import Modelbutton from '../../../Button comp/Modelbutton';
 
 const ITSCta = () => {
   const ref = useRef(null);
@@ -38,12 +39,19 @@ const ITSCta = () => {
             reduce incidents, and create safer roads at scale.
           </p> */}
 
-          <a href="mailto:camerasolutions@e-consystems.com" className="its-cta__btn">
-            Connect with us
-            <svg viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
+          <Modelbutton
+            className="its-cta__btn gtm-btn"
+            text="Connect with us >>"
+            backgroundColor="#38bdf8"
+            animationColor="#0ea5e9"
+            hoverColor="#0284c7"
+            padding="14px 24px"
+            fontSize="14px"
+            borderRadius="6px"
+            border="none"
+            productName="Traffic Enforcement Cameras"
+            title="Traffic Enforcement Camera Solution"
+          />
 
         </div>
       </div>
