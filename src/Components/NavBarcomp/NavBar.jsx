@@ -275,7 +275,7 @@ const NavBar = () => {
         width: { xs: 'calc(100vw - 24px)', sm: 400 },
         maxWidth: 400,
         border: '1px solid #9ec6ea',
-        borderRadius: '14px',
+        borderRadius: '5px',
         overflow: 'hidden',
         backgroundColor: '#ffffff',
         position: 'relative',
@@ -688,7 +688,7 @@ const NavBar = () => {
           transformOrigin={{ vertical: 'top', horizontal: 'left' }}
           PaperProps={{
             sx: {
-              border: '1px solid #9ec6ea !important',
+              border: 'none',
               borderRadius: '5px',
               overflow: 'hidden',
               boxShadow: '0 14px 42px rgba(6, 59, 120, 0.2)',
