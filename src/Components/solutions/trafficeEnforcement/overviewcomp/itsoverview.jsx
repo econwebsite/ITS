@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 
 import violation from '../../../../assets/solutionpage/trafficEnforcement/violation-issuance.jpg';
 import enforcementAnalytics from '../../../../assets/solutionpage/trafficEnforcement/enforcement-analytics.jpg';
-import longTermSafety from '../../../../assets/solutionpage/trafficEnforcement/long-term-safety-outcomes.jpg';
+import longTermSafety from '../../../../assets/solutionpage/trafficEnforcement/long-term-safety-outcomes-img.jpg';
 
 const pillars = [
   {
@@ -54,7 +54,7 @@ const ITSOverview = () => {
             Vision-Based Traffic Enforcement Solutions
           </h2>
           <p className="its-overview__lead">
-            Traffic enforcement cameras are automated imaging devices deployed on public roads to detect, identify, and document traffic law violations. It includes speeding, red‑light running, and illegal school bus stop‑arm violations. These systems combine high‑resolution video capture with license plate recognition (ANPR/LPR) and intelligent processing to support:
+            Traffic enforcement cameras are automated imaging devices deployed on public roads to detect, identify, and document traffic law violations. It includes speeding, red-light running, stop sign enforcement, wrong-way driving detection, illegal parking enforcement, and law enforcement support. These systems combine high-resolution video capture with license plate recognition (ANPR/LPR) and edge AI processing to support:
           </p>
         </div>
 

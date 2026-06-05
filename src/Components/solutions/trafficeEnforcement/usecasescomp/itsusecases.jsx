@@ -87,8 +87,7 @@ const ITSUseCases = () => {
         {/* FOOTER TEXT */}
         <div className="its-usecases__footer">
           <p>
-            Built on a scalable architecture, our solutions cater to other use cases such as wrong-way detection,
-            bus-lane enforcement, and other ITS safety functions.
+            Built on a scalable architecture, our solutions extend to additional use cases such as wrong-way driving detection, illegal parking enforcement, <br />and other ITS safety applications.
           </p>
         </div>
 

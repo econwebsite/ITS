@@ -1,29 +1,28 @@
 import './rlvdoutcomes.css';
-
+import redlightViolation from '../../../../assets/solutionpage/rlvd/red-light-violation-reduction.png';
+import angleCollisions from '../../../../assets/solutionpage/rlvd/angle-collision-reduction.png';
+import driverCompliance from '../../../../assets/solutionpage/rlvd/driver-compliance.png';
+import dataDriven from '../../../../assets/solutionpage/rlvd/data-driven-safety-programs.png';
 const outcomes = [
   {
-    title: 'Reduction in red light violations and unsafe intersection behavior',
+    title: 'Reduction in Red Light Violations',
     text: 'Reduction in red light violations and unsafe intersection behavior',
-    image:
-      'https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop',
+    image: redlightViolation,
   },
   {
     title: 'Decline in Angle Collisions',
     text: 'Measurable declines in angle collisions and serious injury rates',
-    image:
-      'https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=1200&auto=format&fit=crop',
+    image: angleCollisions,
   },
   {
     title: 'Enhanced Driver Compliance',
     text: 'Enhanced intersection compliance and driver awareness',
-    image:
-      'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1200&auto=format&fit=crop',
+    image: driverCompliance,
   },
   {
     title: 'Data-Driven Safety Programs',
     text: 'Rich analytics for data driven traffic safety programs',
-    image:
-      'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=1200&auto=format&fit=crop',
+    image: dataDriven,
   },
 ];
 
@@ -40,25 +39,26 @@ const RLVDOutcomes = () => {
 
         <div className="rlvd-outcomes__grid">
 
-          {outcomes.map((o) => (
-            <div className="rlvd-out-card" key={o.title}>
+          {outcomes.map((o) => {
+            return (
+              <div className="rlvd-out-card" key={o.title}>
 
-              <div className="rlvd-out-card__image-wrap">
-                <img
-                  src={o.image}
-                  alt={o.title}
-                  className="rlvd-out-card__image"
-                />
+                <div className="rlvd-out-card__image-wrap">
+                  <img
+                    src={o.image}
+                    alt={o.title}
+                    className="rlvd-out-card__image"
+                  />
+                </div>
+
+                <div className="rlvd-out-card__content">
+                  {/* <h3 className="rlvd-out-card__title">{o.title}</h3> */}
+                  <p className="rlvd-out-card__text">{o.text}</p>
+                </div>
+
               </div>
-
-              <div className="rlvd-out-card__content">
-                <p className="rlvd-out-card__text">
-                  {o.text}
-                </p>
-              </div>
-
-            </div>
-          ))}
+            );
+          })}
 
         </div>
 

@@ -300,20 +300,6 @@ const NavBar = () => {
           },
         }}
       >
-        <Box
-          sx={{
-            width: 42,
-            height: 42,
-            borderRadius: '11px',
-            display: 'grid',
-            placeItems: 'center',
-            background: 'linear-gradient(180deg, #0e4a8b, #063778)',
-            color: '#fff',
-            flexShrink: 0,
-          }}
-        >
-          <ShieldOutlined sx={{ fontSize: 24 }} />
-        </Box>
         <Typography sx={{ fontSize: { xs: '0.94rem', sm: '0.98rem' }, fontWeight: 500, lineHeight: 1.25, color: '#083b78' }}>
           {trafficEnforcementParent.label}
         </Typography>
@@ -467,21 +453,7 @@ const NavBar = () => {
                 lineHeight: 1.2,
                 borderBottom: '1px solid #d4e2f0',
               }}
-            >
-              <Box
-                sx={{
-                  width: 34,
-                  height: 34,
-                  borderRadius: '10px',
-                  display: 'grid',
-                  placeItems: 'center',
-                  background: 'linear-gradient(180deg, #0e4a8b, #063778)',
-                  color: '#fff',
-                  flexShrink: 0,
-                }}
               >
-                <ShieldOutlined sx={{ fontSize: 20 }} />
-              </Box>
               {trafficEnforcementParent.label}
             </Box>
 

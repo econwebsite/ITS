@@ -44,7 +44,7 @@ const SpeedHeroBanner = () => {
           </h1>
 
           <p className="speedhero-main-desc">
-           Edge AI speed enforcement cameras for ensuring that highways, school zones, and intersections can reduce violations, improve safety, and more
+           Edge AI Speed Enforcement — Fewer Violations. Safer Roads.
           </p>
 
           <div className="speedhero-btn-wrap">

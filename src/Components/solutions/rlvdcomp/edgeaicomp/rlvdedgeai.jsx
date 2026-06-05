@@ -1,5 +1,5 @@
 import './rlvdedgeai.css';
-
+import inbuiltAi from '../../../../assets/solutionpage/rlvd/inbuilt-ai-img.png';
 const features = [
   {
     title: 'Real time event classification and violation verification',
@@ -66,15 +66,10 @@ const RLVDEdgeAI = () => {
             <div className="image-card">
 
               <img
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
-                alt="Deployment"
+                src={inbuiltAi}
+                alt="Inbuilt Edge AI Intelligence"
+                className="edge-ai-image"
               />
-
-              <div className="image-overlay">
-                <h2>
-                 Inbuilt Edge AI Intelligence
-                </h2>
-              </div>
 
             </div>
 
@@ -83,7 +78,9 @@ const RLVDEdgeAI = () => {
           {/* RIGHT CONTENT */}
 
           <div className="top-right fade-right">
-
+          <h2>
+                 Inbuilt Edge AI Intelligence
+                </h2>
             <p className="top-right-text">
              Our vision solutions’ on device computing delivers:
             </p>

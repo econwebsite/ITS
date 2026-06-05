@@ -8,17 +8,17 @@ import multiLaneImg from '../../../../assets/solutionpage/speed-enforcement/mult
 
 const imageCards = [
   {
-    title: 'At high speeds',
+    title: 'Accurate reads at highway speeds',
     image: highSpeedImg,
     className: 'large-card',
   },
   {
-    title: 'In low-light conditions',
+    title: 'Clear captures in low-light conditions',
     image: lowLightImg,
     className: 'small-card top-card',
   },
   {
-    title: 'Across multiple lanes',
+    title: 'Full lane coverage, plate-level accuracy',
     image: multiLaneImg,
     className: 'small-card bottom-card',
   },
@@ -74,6 +74,11 @@ const SpeedSolutions = () => {
             <p className="vision-side-desc">
              e-con Systems’ vision solutions combine high-resolution imaging, global shutter sensors, IR illumination, edge AI processing, and on-camera ISP tuning. This ensures accurate license plate recognition (ANPR/LPR) even:
             </p>
+            <ul>
+              <li>At high speeds</li>
+              <li>In low-light conditions</li>
+              <li>Across multiple lanes</li>
+            </ul>
             <p className="vision-side-desc">Our vision solutions meet evidentiary standards for violation documentation and prosecution, delivering imaging and metadata for legal workflows. We also provide integrated radar modules for precise speed detection and measurement, along with external triggers from induction loops, radar, or sensors to synchronize accurate image capture.</p>
           </div>
 

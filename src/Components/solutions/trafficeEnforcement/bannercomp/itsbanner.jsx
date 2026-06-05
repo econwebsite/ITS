@@ -38,7 +38,7 @@ const ITSBanner = () => {
   const banner = {
     image: bannerImg,
     title: "Vision Based Traffic Enforcement Cameras",
-    subtitle: "Edge AI traffic enforcement cameras delivering real-time violation detection for speed, red-light, and school bus stop-arm safety programs",
+    subtitle: "Safer Roads Start with Smarter Enforcement",
   };
 
   return (
@@ -66,6 +66,7 @@ const ITSBanner = () => {
               fontSize="14px"
               borderRadius="0"
               border="1px solid #fff"
+              marginBottom="20px"
               productName="Traffic Enforcement Cameras"
               title="Traffic Enforcement Camera Solution"
             />
