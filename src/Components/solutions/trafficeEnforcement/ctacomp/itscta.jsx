@@ -30,7 +30,7 @@ const ITSCta = () => {
           <p className="its-cta__label">VISION-BASED ENFORCEMENT</p>
 
           <h2 className="its-cta__title">
-            Explore how vision-based enforcement can strengthen <br />
+            Explore how vision-based enforcement can strengthen{' '}
             <span>your traffic safety programs</span>
           </h2>
 

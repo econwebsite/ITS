@@ -36,7 +36,9 @@
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 /* ====================================
@@ -44,7 +46,10 @@
 ==================================== */
 
 .spd-cta__content {
-  width: 60%;
+  /* width: 60%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ====================================
@@ -57,7 +62,8 @@
   font-weight: 500;
   color: #ffffff;
   margin-bottom: 36px;
-  max-width: 760px;
+  /* max-width: 760px; */
+  text-align: center;
 }
 .spd-cta__title em {
   color: #22b7f1;

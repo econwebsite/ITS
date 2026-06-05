@@ -29,7 +29,7 @@ const SpeedCta = () => {
           data-aos="fade-right"
         >
           <h2 className="spd-cta__title">
-            Explore how speed enforcement cameras can enhance compliance and <br /><em>protect your community</em>
+            Explore how speed enforcement cameras can enhance compliance and{' '}<em>protect your community</em>
           </h2>
 
           <Modelbutton

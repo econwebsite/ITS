@@ -14,7 +14,7 @@ const RLVDCta = () => {
         <div className="rlvd-cta__content">
 
           <h2 className="rlvd-cta__title">
-            Explore how Red Light Violation Detection cameras can enhance compliance and support <br /><em>your intersection safety goals</em>
+            Explore how Red Light Violation Detection cameras can enhance compliance and support{' '}<em>your intersection safety goals</em>
           </h2>
 
           <Modelbutton
