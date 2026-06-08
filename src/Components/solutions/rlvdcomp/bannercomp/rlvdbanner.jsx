@@ -7,7 +7,7 @@ const RLVDBanner = () => {
   const banner = {
     image: bannerImg,
     title: "Vision-Based Red Light Violation Detection Cameras",
-    subtitle: "Every Red Light. Every Time",
+    subtitle: "Every Red Light. Every Time.",
   };
 
   return (
