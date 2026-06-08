@@ -6,20 +6,20 @@ import corridorSystem from '../../../../assets/solutionpage/rlvd/corridor-system
 const models = [
   {
     type: 'Deployment Model',
-    title: 'Fixed Intersection Sensors',
+    title: 'Fixed Intersection Systems',
     text: 'Permanent installations at critical intersections for continuous monitoring and high volume compliance tracking',
     image:deploymentModel,
   },
   {
     type: 'Deployment Model',
     title: 'Mobile Enforcement Units',
-    text: 'Transportable systems mounted on vehicles, tripods, or temporary poles for targeted campaigns or event based deployments',
+    text: 'Transportable systems mounted on vehicles, tripods, or temporary poles for targeted enforcement campaigns or event-based deployments.',
     image: mobileUnit,
   },
   {
     type: 'Deployment Model',
     title: 'Corridor & Hybrid Systems',
-    text: 'Integrated deployments across multiple intersections or arterial corridors to analyze patterns and optimize compliance strategies',
+    text: 'Integrated deployments across multiple intersections or arterial corridors to analyze violation patterns and optimize compliance strategies.',
     image: corridorSystem,
   },
 ];

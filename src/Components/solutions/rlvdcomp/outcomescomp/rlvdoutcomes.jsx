@@ -11,7 +11,7 @@ const outcomes = [
   },
   {
     title: 'Decline in Angle Collisions',
-    text: 'Measurable declines in angle collisions and serious injury rates',
+    text: 'Measurable decline in angle collisions and serious injury rates',
     image: angleCollisions,
   },
   {

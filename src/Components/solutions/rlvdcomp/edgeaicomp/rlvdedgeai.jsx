@@ -18,30 +18,30 @@ const features = [
 
 const deploymentCards = [
   {
-    title: 'ONVIF standards ',
+    title: 'ONVIF Standards & Open APIs',
     text:
-      'ONVIF standards and open APIs for integration with ITS, signal control, and enforcement platforms',
+      'Integration with ITS platforms, signal control systems, and enforcement back-office workflows.',
     image:
       'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop',
   },
   {
-    title: 'Configurable data retention',
+    title: 'Configurable Data Retention',
     text:
-      'Configurable data retention and regional privacy settings aligned with global data protection practices',
+      'Regional privacy settings aligned with evolving data protection regulations and agency policy requirements.',
     image:
       'https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=1200&auto=format&fit=crop',
   },
   {
-    title: 'Anonymization',
+    title: 'On-Device Anonymization',
     text:
-      'Anonymization of non relevant objects (faces, pedestrians) before storage or transmission',
+      'Faces, pedestrians, and non-relevant objects anonymized at the edge before storage or transmission.',
     image:
       'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1200&auto=format&fit=crop',
   },
   {
-    title: 'Encrypted transit and storage',
+    title: 'Encrypted Transit & Storage',
     text:
-      'Encrypted transit and storage with role based access controls for enhanced data security',
+      'Role-based access controls and end-to-end encryption for secure data handling across the full evidence workflow.',
     image:
       'https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop',
   },
@@ -115,7 +115,7 @@ const RLVDEdgeAI = () => {
 
             
             <p> 
-             Our RLVD camera solutions drive responsible data handling without undermining enforcement efficacy. They support:
+            Our RLVD camera solutions support responsible data handling without compromising enforcement effectiveness. They support:
             </p>
           </div>
 

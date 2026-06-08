@@ -1,13 +1,13 @@
 import React from "react";
 import "./rlvdbanner.css";
-import bannerImg from '../../../../assets/solutionpage/traffic-enforcement-banner.jpg'
+import bannerImg from '../../../../assets/solutionpage/red-light-violation-banner-img.jpg'
 import Modelbutton from "../../../Button comp/Modelbutton";
 
 const RLVDBanner = () => {
   const banner = {
     image: bannerImg,
-    title: "Vision Based Red Light Violation Detection Cameras",
-    subtitle: "AI-powered RLVD cameras for boosting intersection safety by reducing red light violations and improving compliance",
+    title: "Vision-Based Red Light Violation Detection Cameras",
+    subtitle: "Every Red Light. Every Time",
   };
 
   return (

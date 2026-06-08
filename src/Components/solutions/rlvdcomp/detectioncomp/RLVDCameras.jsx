@@ -5,12 +5,12 @@ import violationCamera from '../../../../assets/solutionpage/rlvd/violation-came
 
 const features = [
   {
-    title: 'AI and OCR vision engines',
-    text: 'AI and OCR vision engines for automated plate extraction, classification, and event verification',
+    title: 'Edge AI and OCR Vision Engines',
+    text: 'On-device processing for automated plate extraction, vehicle classification, and event verification — without cloud dependency.',
   },
   {
-    title: 'Advanced on camera ISP tuning',
-    text: 'Advanced on camera ISP tuning to optimize exposure, contrast, and detail under varied lighting and weather',
+    title: 'Advanced On-Camera ISP Tuning',
+    text: 'Optimized exposure, contrast, and detail retention under varied lighting and weather conditions — from direct sunlight to low-light night operation.',
   },
 ];
 

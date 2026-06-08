@@ -29,7 +29,7 @@ const steps = [
   {
     num: '04',
     title: 'Edge AI Processing',
-    text: 'AI processing performs license plate recognition, event validation, and classification directly on the device with minimal latency.',
+    text: 'On-device AI performs license plate recognition, event validation, and vehicle classification directly at the camera — with minimal latency and no cloud dependency.',
     image: edgeAI,
   },
   {
