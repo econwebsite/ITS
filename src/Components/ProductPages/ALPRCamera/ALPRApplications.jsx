@@ -8,15 +8,15 @@ const ALPRApplications = () => {
   const applications = [
     {
       img: parkingImg,
-      title: "Parking Management",
+      title: "Smart Intersection Monitoring",
     },
     {
       img: accessControlImg,
-      title: "Urban Access Control",
+      title: "Crosswalk Safety",
     },
     {
       img: trafficMonitoringImg,
-      title: "Low-Speed Traffic Monitoring",
+      title: "Parking Management",
     }
   ];
 

@@ -7,7 +7,7 @@ const ALPRBanner = () => {
   const banner = {
     image: bannerImg,
     title: "AI-Enabled 8MP ALPR Camera",
-    subtitle: "Advanced Vehicle Identification for Traffic Analytics & Parking Monitoring",
+    subtitle: "Edge AI for Traffic Monitoring and Parking",
   };
 
   return (

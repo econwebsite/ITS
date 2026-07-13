@@ -25,11 +25,15 @@ const ALPRFeaturesAlternating = () => {
       title: "High-Resolution Imaging",
       items: [
         "8MP CMOS sensor",
-        "Supports up to 3-lane coverage",
+        "Supports monitoring of up to 3 traffic lanes",
         "Auto/Manual exposure mode for changing lighting conditions",
         "120 dB True WDR for high-contrast environments",
         "Excellent low-light performance with Sony® STARVIS™ technology",
-        "IR range up to 20m for night time monitoring"
+        "IR range up to 20m for night time monitoring",
+        "Rolling shutter sensor",
+        "M12 S-Mount lens, 25mm focal length",
+        "Frame rate up to 25/30 fps",
+        "H.265 / H.264 / MJPEG video compression"
       ],
       icon: (
         <svg viewBox="0 0 200 200" className="feature-svg">
@@ -44,11 +48,25 @@ const ALPRFeaturesAlternating = () => {
     },
     {
       title: "AI-Powered Edge Analytics",
-      items: [
-        "Vehicle detection and classification (cars, buses, trucks, motorcycles, bicycles)",
-        "Pedestrian detection and helmet detection",
-        "Vehicle color recognition",
-        "Lane violation and wrong-way detection for parking lots or low-speed roads"
+      subtitle: "Powered by 4 TOPS onboard AI compute",
+      groupedItems: [
+        {
+          heading: "Detection",
+          items: ["Vehicle detection", "Pedestrian detection"]
+        },
+        {
+          heading: "Classification",
+          items: ["Vehicle classification", "Vehicle color recognition"]
+        },
+        {
+          heading: "Enforcement",
+          items: [
+            "Lane violation detection",
+            "Wrong-way driver detection",
+            "Red light runner detection",
+            "Helmet detection"
+          ]
+        }
       ],
       icon: (
         <svg viewBox="0 0 200 200" className="feature-svg">
@@ -66,8 +84,8 @@ const ALPRFeaturesAlternating = () => {
     {
       title: "Flexible Deployment Options",
       items: [
-        "Ideal for parking management, urban access control, and low-speed traffic monitoring",
-        "Supports mobile and fixed deployments",
+        "Designed for smart intersection monitoring, crosswalk safety, and parking management",
+        "Supports fixed and solar-powered deployments",
         "Low-power options, including PoE or 12V DC, suitable for solar-powered roadside or rooftop installations",
         "Integrated with the CloVis Central™ platform for remote device management and monitoring"
       ],
@@ -92,8 +110,9 @@ const ALPRFeaturesAlternating = () => {
         "Rugged IP67 housing for outdoor use",
         "Operating range: -30°C to +65°C, humidity ≤95%",
         "Secure boot for device integrity and cybersecurity",
-        "ONVIF-compliant with support for secure network protocols",
-        "Gigabit Ethernet connectivity"
+        "ONVIF Profile S/G/T compliant with support for secure network protocols",
+        "Gigabit Ethernet connectivity",
+        "Certified: BIS, CE, STQC, REACH, RoHS"
       ],
       icon: (
         <svg viewBox="0 0 200 200" className="feature-svg">
@@ -122,18 +141,37 @@ const ALPRFeaturesAlternating = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`feature-item ${index % 2 === 0 ? "left-content" : "right-content"}`}
+              className={`feature-item ${index % 2 === 0 ? "left-content" : "right-content"} ${feature.groupedItems ? "feature-item-grouped" : ""}`}
             >
               <div className="feature-content">
                 <h3>{feature.title}</h3>
-                <ul className="feature-items-list">
-                  {feature.items.map((item, itemIndex) => (
-                    <li key={itemIndex}>
-                      <span className="bullet-icon">•</span>
-                      <span className="item-text">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                {feature.groupedItems ? (
+                  <>
+                    <p className="feature-subtitle">{feature.subtitle}</p>
+                    {feature.groupedItems.map((group, groupIndex) => (
+                      <div key={groupIndex} className="feature-group">
+                        <h4 className="feature-group-title">{group.heading}</h4>
+                        <ul className="feature-items-list">
+                          {group.items.map((item, itemIndex) => (
+                            <li key={itemIndex}>
+                              <span className="bullet-icon">✓</span>
+                              <span className="item-text">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </>
+                ) : (
+                  <ul className="feature-items-list">
+                    {feature.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>
+                        <span className="bullet-icon">✓</span>
+                        <span className="item-text">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
               <div className="feature-visual">
                 {feature.icon}

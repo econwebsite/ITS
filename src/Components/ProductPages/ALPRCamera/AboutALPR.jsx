@@ -35,11 +35,11 @@ const AboutALPR = () => {
               </h2>
 
               <p className="paragraphtext">
-                e-con Systems’ AI-enabled 8MP ALPR camera is built with high-resolution imaging, advanced ISP tuning, and edge-based AI analytics. It performs reliable vehicle identification and delivers traffic insights in low- to medium-speed environments such as parking lots, gated areas, and city streets.
+                e-con Systems' AI-enabled 8MP ALPR camera is built with high-resolution imaging, advanced ISP tuning, and edge-based AI analytics. It performs reliable license plate recognition, vehicle classification, and AI-powered traffic analytics, delivering actionable traffic insights in low- to medium-speed environments such as Smart Intersection Monitoring, Crosswalk Safety, and Parking Management.
               </p>
 
               <p className="paragraphtext">
-                This IP-rated ALPR camera features a low-power design with PoE support to enable flexible deployment in power-constrained and remote locations. It ensures reliable operation across fixed, mobile, and solar-powered installations.
+                Designed for continuous outdoor operation, this IP67-rated ALPR camera features a low-power design with PoE support to enable flexible deployment in power-constrained and remote locations. It ensures reliable operation across fixed and solar-powered installations.
               </p>
             </div>
             <div className="col-lg-4 px-0 d-flex flex-column align-items-center justify-content-center">

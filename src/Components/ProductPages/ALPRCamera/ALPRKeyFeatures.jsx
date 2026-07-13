@@ -18,11 +18,25 @@ const ALPRKeyFeatures = () => {
     {
       title: "AI-Powered Edge Analytics",
       image: "https://images.unsplash.com/photo-1679921021728-00b78f957865?w=600&q=80",
-      items: [
-        "Vehicle detection and classification (cars, buses, trucks, motorcycles, bicycles)",
-        "Pedestrian detection and helmet detection",
-        "Vehicle color recognition",
-        "Lane violation and wrong-way detection for parking lots or low-speed roads"
+      subtitle: "Powered by 4 TOPS onboard AI compute",
+      groupedItems: [
+        {
+          heading: "Detection",
+          items: ["Vehicle detection", "Pedestrian detection"]
+        },
+        {
+          heading: "Classification",
+          items: ["Vehicle classification", "Vehicle color recognition"]
+        },
+        {
+          heading: "Enforcement",
+          items: [
+            "Lane violation detection",
+            "Wrong-way driver detection",
+            "Red light runner detection",
+            "Helmet detection"
+          ]
+        }
       ]
     },
     {
@@ -93,14 +107,33 @@ const ALPRKeyFeatures = () => {
               <div className="key-feature-content">
                 <h3 className="key-feature-title">{feature.title}</h3>
 
-                <ul className="key-feature-list">
-                  {feature.items.map((item, itemIndex) => (
-                    <li key={itemIndex}>
-                      <span className="list-icon">•</span>
-                      <span className="list-text">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                {feature.groupedItems ? (
+                  <>
+                    <p className="key-feature-subtitle">{feature.subtitle}</p>
+                    {feature.groupedItems.map((group, groupIndex) => (
+                      <div key={groupIndex} className="key-feature-group">
+                        <h4 className="key-feature-group-title">{group.heading}</h4>
+                        <ul className="key-feature-list">
+                          {group.items.map((item, itemIndex) => (
+                            <li key={itemIndex}>
+                              <span className="list-icon">•</span>
+                              <span className="list-text">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </>
+                ) : (
+                  <ul className="key-feature-list">
+                    {feature.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>
+                        <span className="list-icon">•</span>
+                        <span className="list-text">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
           ))}
