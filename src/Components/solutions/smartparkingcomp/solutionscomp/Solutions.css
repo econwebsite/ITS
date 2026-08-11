@@ -1,0 +1,685 @@
+/* =========================================================
+   SMART PARKING SOLUTIONS
+========================================================= */
+
+.parking-solutions {
+  width: 100%;
+  padding: 70px 0 80px;
+  background: #f4f9ff;
+  overflow: hidden;
+}
+
+.parking-solutions-container {
+  width: min(1450px, 92%);
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.parking-solutions-header {
+  text-align: center;
+  margin: 0 auto 55px;
+}
+
+.parking-solutions-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  border-radius: 30px;
+  background: #e3f3ff;
+  color: #0789dc;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.parking-solutions-header h2 {
+  max-width: 950px;
+  margin: 18px auto 0;
+  color: #0a2547;
+  font-size: clamp(38px, 4vw, 52px);
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.parking-solutions-header h2 span {
+  display: block;
+  margin-top: 4px;
+  color: #0798e5;
+}
+
+.parking-solutions-subtitle {
+  max-width: 680px;
+  margin: 20px auto 0;
+  color: #45556d;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   CARDS GRID
+========================================================= */
+
+.parking-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 10px;
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.parking-solution-card {
+  position: relative;
+  min-height: 485px;
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 2px solid transparent;
+  border-radius: 26px;
+
+  box-shadow:
+    0 15px 35px rgba(14, 50, 87, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.parking-solution-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 22px 45px rgba(14, 50, 87, 0.14);
+
+  border-color: #0798e5;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.parking-solution-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.parking-solution-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: right bottom;
+
+  opacity: 1;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease,
+    object-position 0.6s ease;
+}
+
+
+/* =========================================================
+   IMAGE HOVER EFFECT
+   Normal = image at bottom
+   Hover = image becomes more visible
+========================================================= */
+
+.parking-solution-card:not(.parking-solution-dark):hover
+.parking-solution-image img {
+  transform: scale(1.08);
+  object-position: center bottom;
+  opacity: 0.76;
+}
+
+
+/* Soft white layer keeps text readable */
+
+.parking-solution-card:not(.parking-solution-dark)::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.82) 42%,
+      rgba(255, 255, 255, 0.48) 70%,
+      rgba(255, 255, 255, 0.15) 100%
+    );
+
+  pointer-events: none;
+
+  transition: opacity 0.5s ease;
+}
+
+.parking-solution-card:not(.parking-solution-dark):hover::after {
+  opacity: 0.75;
+}
+
+
+/* =========================================================
+   TEXT CONTENT
+========================================================= */
+
+.parking-solution-info {
+  position: relative;
+
+  z-index: 5;
+
+  width: 58%;
+  min-height: 485px;
+
+  padding: 42px 0 38px 34px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   NUMBER + TITLE
+========================================================= */
+
+.parking-solution-heading {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+}
+
+.parking-solution-number {
+  flex-shrink: 0;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #0aaaf2,
+    #087ed0
+  );
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  box-shadow:
+    0 7px 18px rgba(0, 157, 235, 0.25);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.parking-solution-card:hover .parking-solution-number {
+  transform: scale(1.06);
+
+  box-shadow:
+    0 10px 25px rgba(0, 157, 235, 0.35);
+}
+
+.parking-solution-info h3 {
+  max-width: 215px;
+
+  margin: 4px 0 0;
+
+  color: #0a2850;
+
+  font-size: 27px;
+  line-height: 1.18;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   BLUE LINE
+========================================================= */
+
+.parking-solution-line {
+  width: 38px;
+  height: 3px;
+
+  margin: 22px 0 20px;
+
+  border-radius: 5px;
+
+  background: #079bea;
+
+  transition: width 0.35s ease;
+}
+
+.parking-solution-card:hover .parking-solution-line {
+  width: 55px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.parking-solution-info p {
+  max-width: 245px;
+
+  margin: 0;
+
+  color: #263b55;
+
+  font-size: 15.5px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   KNOW MORE
+========================================================= */
+
+.parking-solution-link {
+  position: relative;
+
+  z-index: 10;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  width: fit-content;
+
+  margin-top: auto;
+
+  color: #008fe0;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.parking-solution-link span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.parking-solution-link:hover {
+  color: #006db0;
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   CENTER CARD - OCCUPANCY DETECTION
+========================================================= */
+
+.parking-solution-dark {
+  background:
+    linear-gradient(
+      145deg,
+      #032d59 0%,
+      #06264c 55%,
+      #071d3c 100%
+    );
+
+  box-shadow:
+    0 18px 40px rgba(2, 38, 76, 0.22);
+}
+
+
+/* Center image */
+
+.parking-solution-dark
+.parking-solution-image {
+  width: 100%;
+  height: 100%;
+  opacity: 0.72;
+}
+
+.parking-solution-dark
+.parking-solution-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
+}
+
+
+/* Center image hover */
+
+.parking-solution-dark:hover
+.parking-solution-image img {
+  transform: scale(1.05);
+  opacity: 0.82;
+}
+
+
+/* Dark gradient over center image */
+
+.parking-solution-dark
+.parking-solution-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    #032d59 0%,
+    rgba(3, 45, 89, 0.9) 27%,
+    rgba(3, 45, 89, 0.5) 55%,
+    rgba(3, 45, 89, 0.05) 100%
+  );
+}
+
+
+/* Center card text */
+
+.parking-solution-dark
+.parking-solution-info h3 {
+  color: #ffffff;
+}
+
+.parking-solution-dark
+.parking-solution-info p {
+  color: #eef6ff;
+}
+
+.parking-solution-dark
+.parking-solution-link {
+  color: #08aaf3;
+}
+
+
+/* =========================================================
+   ADDITIONAL USE CASES
+========================================================= */
+
+.parking-usecases {
+  max-width: 1100px;
+
+  margin: 60px auto 0;
+
+  padding: 45px 30px;
+
+  text-align: center;
+
+  background: #09264a;
+
+  border-radius: 24px;
+}
+
+.parking-usecases h3 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: 30px;
+}
+
+.parking-usecases p {
+  max-width: 800px;
+
+  margin: 0 auto 25px;
+
+  color: #d7e4f2;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+  .parking-solutions {
+    padding: 60px 0;
+  }
+
+  .parking-solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .parking-solution-card:last-child {
+    grid-column: 1 / -1;
+
+    width: calc(50% - 15px);
+
+    margin: 0 auto;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .parking-solutions {
+    padding: 50px 0 60px;
+  }
+
+  .parking-solutions-container {
+    width: 92%;
+  }
+
+  .parking-solutions-header {
+    margin-bottom: 38px;
+  }
+
+  .parking-solutions-badge {
+    padding: 7px 15px;
+    font-size: 12px;
+  }
+
+  .parking-solutions-header h2 {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .parking-solutions-subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+
+  /* Cards */
+
+  .parking-solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .parking-solution-card {
+    min-height: 500px;
+  }
+
+  .parking-solution-card:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+
+
+  /* Text */
+
+  .parking-solution-info {
+    width: 65%;
+
+    min-height: 500px;
+
+    padding: 32px 0 32px 28px;
+  }
+
+  .parking-solution-info h3 {
+    font-size: 24px;
+  }
+
+  .parking-solution-info p {
+    max-width: 220px;
+
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+
+  /* Images */
+
+  .parking-solution-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .parking-solution-image img {
+    object-fit: contain;
+    object-position: right bottom;
+  }
+
+
+  /* Mobile hover */
+
+  .parking-solution-card:not(.parking-solution-dark):hover
+  .parking-solution-image img {
+    object-position: center bottom;
+    transform: scale(1.04);
+    opacity: 0.42;
+  }
+
+
+  /* Text readability */
+
+  .parking-solution-card:not(.parking-solution-dark)::after {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.97) 0%,
+      rgba(255, 255, 255, 0.90) 55%,
+      rgba(255, 255, 255, 0.45) 100%
+    );
+  }
+
+
+  /* Use cases */
+
+  .parking-usecases {
+    margin-top: 40px;
+    padding: 35px 20px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .parking-solutions-header h2 {
+    font-size: 29px;
+  }
+
+  .parking-solutions-subtitle {
+    font-size: 15px;
+  }
+
+
+  .parking-solution-card {
+    min-height: 470px;
+    border-radius: 22px;
+  }
+
+  .parking-solution-info {
+    width: 70%;
+
+    min-height: 470px;
+
+    padding: 28px 0 28px 23px;
+  }
+
+  .parking-solution-heading {
+    gap: 10px;
+  }
+
+  .parking-solution-number {
+    width: 44px;
+    height: 44px;
+
+    font-size: 16px;
+  }
+
+  .parking-solution-info h3 {
+    font-size: 21px;
+  }
+
+  .parking-solution-line {
+    margin: 18px 0;
+  }
+
+  .parking-solution-info p {
+    max-width: 190px;
+
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+
+  /* Use cases */
+
+  .parking-usecases h3 {
+    font-size: 24px;
+  }
+
+  .parking-usecases p {
+    font-size: 14px;
+  }
+}

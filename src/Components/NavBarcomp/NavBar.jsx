@@ -15,7 +15,9 @@ import {
   Popover,
   MenuItem,
   Box,
-  styled
+  styled,
+  
+
 } from '@mui/material';
 import {
   ExpandLess,
@@ -24,6 +26,7 @@ import {
   ShieldOutlined,
   Speed,
   Traffic,
+    LocalParkingOutlined
 } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -178,6 +181,11 @@ const NavBar = () => {
       label: 'Red Light Violation Detection Camera',
       path: '/solutions/red-light-violation-detection-camera',
       icon: Traffic,
+    },
+     {
+      label: 'Smart Parking Management',
+      path: '/solutions/smart-parking-management',
+      icon: LocalParkingOutlined,
     },
   ];
 

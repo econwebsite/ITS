@@ -23,6 +23,7 @@ import Market from "./Components/Marketscomp/Market";
 import Hubpageblog from './Components/HubpageComp/Bloghubpages/Hubpageblog';
 import Casehubpage from './Components/HubpageComp/Casestudyhubpage/Casehubpage';
 import AlprSoftware from './Components/ProductPages/alpr-software/AlprSoftware';
+import SmartParkingPage from './Components/solutions/smartparkingcomp/SmartParkingPage';
 const App = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -47,6 +48,8 @@ const App = () => {
               <Route path="/solutions/speed-enforcement-camera" element={<SpeedPage />} />
               <Route path="/solutions/red-light-violation-detection-camera" element={<RedlightPage />} />
               <Route path="/solutions/school-bus-stop-arm-camera" element={<SchoolbusPage />} />
+                                          <Route path="/solutions/smart-parking-management" element={<SmartParkingPage />} />
+
             {/* Applications page route */}
            <Route path="/market" element={<Market />} />
            <Route path="/blog" element={<Hubpageblog />} />

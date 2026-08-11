@@ -7,6 +7,7 @@ import Computeapplication from "./compute-application";
 import Computevision from "./ComputeVision";
 import SmartIntersection from "./Smartintersection";
 import { Helmet } from 'react-helmet-async';
+import FAQ from "./FAQ";
 
 const AiComputeBox = () => {
   return (
@@ -24,6 +25,7 @@ const AiComputeBox = () => {
       <Computevision />
       <SmartIntersection />
       <Computeapplication />
+        <FAQ/>
     </div>
   );
 };

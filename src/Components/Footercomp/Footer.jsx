@@ -89,6 +89,7 @@ const Footer = () => {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/case-study">Case Studies</Link></li>
                 <li><Link to="/blog">Blog</Link></li>
+                <li><Link to="/videos">Videos</Link></li>
                 <li><Link to="/company/contact-us">Contact</Link></li>
               </ul>
             </div>
@@ -100,26 +101,39 @@ const Footer = () => {
                 <li><Link to="/products/license-plate-recognition-software">ALPR SDK</Link></li>
               </ul>
             </div>
-                    <div className="footer-col center">
-            <h3>Contact Us</h3>
-            <p className="footer-address">
-              e-con Systems&reg;<br />
-              3340 Walnut Avenue, Suite #280,<br />
-              Fremont, CA 94538
-            </p>
+            <div className="footer-col left">
+              <h3>Solutions</h3>
+              <ul className="footer-links">
+                <li><Link to="/solutions/traffic-enforcement-camera">Traffic Enforcement</Link></li>
+                <li><Link to="/solutions/speed-enforcement-camera">Speed Enforcement Camera</Link></li>
+                <li><Link to="/products/license-plate-recognition-software">Red Light Violation Detection Camera</Link></li>
+<li>
+  <Link to="/solutions/smart-parking-management">
+    Smart Parking Management
+  </Link>
+</li>
+              </ul>
+            </div>
+                    {/* <div className="footer-col center">
+                  <h3>Contact Us</h3>
+                  <p className="footer-address">
+                    e-con Systems&reg;<br />
+                    3340 Walnut Avenue, Suite #280,<br />
+                    Fremont, CA 94538
+                  </p>
 
-            <p>
-              <a href="tel:+14087667503" style={{ color: "inherit", textDecoration: "none" }}>
-                <i className="ri-phone-fill" style={{ color: "#00aeef" }}></i> +1 408 766 7503
-              </a>
-            </p>
+                  <p>
+                    <a href="tel:+14087667503" style={{ color: "inherit", textDecoration: "none" }}>
+                      <i className="ri-phone-fill" style={{ color: "#00aeef" }}></i> +1 408 766 7503
+                    </a>
+                  </p>
 
-            <p>
-              <a href="mailto:camerasolutions@e-consystems.com" style={{ color: "inherit", textDecoration: "none" }}>
-                <i className="ri-mail-fill" style={{ color: "#00aeef" }}></i> camerasolutions@e-consystems.com
-              </a>
-            </p>
-          </div>
+                  <p>
+                    <a href="mailto:camerasolutions@e-consystems.com" style={{ color: "inherit", textDecoration: "none" }}>
+                      <i className="ri-mail-fill" style={{ color: "#00aeef" }}></i> camerasolutions@e-consystems.com
+                    </a>
+                  </p>
+          </div> */}
 
             <div className="footer-col right">
               <h3>Stay Updated</h3>
@@ -151,10 +165,30 @@ const Footer = () => {
               {!isValid && <p className="Footer-errorMessage">Please enter a valid email address</p>}
               {isComplete && <p className="Footer-successMessage">Thank you for subscribing!</p>}
               </form>
-               <div className="footer-logo-row">
+               <h3>Contact Us</h3>
+            <p className="footer-address">
+              e-con Systems&reg;<br />
+              3340 Walnut Avenue, Suite #280,<br />
+              Fremont, CA 94538
+            </p>
+
+            <p>
+              <a href="tel:+14087667503" style={{ color: "inherit", textDecoration: "none" }}>
+                <i className="ri-phone-fill" style={{ color: "#00aeef" }}></i> +1 408 766 7503
+              </a>
+            </p>
+            <p>
+              <a href="mailto:camerasolutions@e-consystems.com" style={{ color: "inherit", textDecoration: "none" }}>
+                <i className="ri-mail-fill" style={{ color: "#00aeef" }}></i> camerasolutions@e-consystems.com
+              </a>
+            </p>
+               {/* <div className="footer-logo-row">
             <img src={logo} alt="Logo" className="footer-logo" />
-          </div>
+          </div> */}
             </div>
+          </div>
+          <div className="footer-logo-row">
+            <img src={logo} alt="Logo" className="footer-logo" />
           </div>
           <p style={{ textAlign: 'center', margin: '0', color: 'rgb(216 219 227)' }}>Copyright&copy; {year} e-con Systems&reg;</p>
         </div>

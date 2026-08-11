@@ -5,6 +5,7 @@ import Banner from './alpr-banner';
 import bullet from "../../../assets/homepage/alpr-camera.png"
 import remotemgt from "../../../assets/alpr-sdk/remote-device-management.png"
 import { Helmet } from 'react-helmet-async';
+import FAQ from './FAQ';
 const AlprSoftware = () => {
   const [animateOnScroll, setAnimateOnScroll] = useState(false);
 
@@ -268,6 +269,10 @@ const AlprSoftware = () => {
           </div>
         </div>
       </section>
+
+      {/*  FAQ */}
+
+        <FAQ/>
 
       {/* Hardware Section */}
       <section className="hardware" id="products">
