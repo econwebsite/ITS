@@ -10,15 +10,14 @@ const solutions = [
     number: "01",
     title: "Parking Access Control",
     description:
-      "ANPR cameras recognize license plates at entry and exit points to automate access, validate payment, and enable ticketless parking.",
-    image: ParkingAccessControl,
+"Our ANPR cameras recognize license plates at entry and exit points to automate access, validate payment, and enable ticketless parking.",    image: ParkingAccessControl,
     link: "/solutions/parking-access-control-camera",
   },
   {
     number: "02",
     title: "Occupancy Detection",
     description:
-      "AI vision cameras monitor parking-space availability in real time so drivers can find spots faster and operators can manage capacity efficiently.",
+      "Our AI vision cameras monitor space-level availability in real time, empowering drivers to find spots faster and operators to manage capacity efficiently.",
     image: OccupancyDetection,
     link: "/solutions/parking-occupancy-detection-camera",
   },
@@ -26,7 +25,7 @@ const solutions = [
     number: "03",
     title: "Parking Enforcement",
     description:
-      "ANPR cameras detect overstay, no-permit, and restricted-zone parking violations for automated enforcement.",
+      "Our ANPR cameras detect violations such as overstay, no-permit, and restricted-zone parking to support automated enforcement.",
     image: ParkingEnforcement,
     link: "/solutions/parking-enforcement-camera",
   },
