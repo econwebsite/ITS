@@ -41,10 +41,11 @@ function SmartParkingPage() {
     <div className="smart-parking-page">
 
 <Helmet>
-  <title>Smart Parking Camera Solutions | ANPR & Edge AI | e-con Systems </title>
-  <meta name='description' content=' Complete vision solutions for parking management — ANPR access 
-control, ticketless entry, occupancy detection, and enforcement — powered by edge AI 
-cameras.' />
+  
+  <title>Smart Parking Camera Solutions | ANPR & Edge AI | e-con Systems  </title>
+  <meta name='description' content='Complete AI vision solutions for parking management — ANPR 
+access control, ticketless entry, occupancy detection, and enforcement — powered by 
+edge AI cameras.' />
  <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}
         </script>

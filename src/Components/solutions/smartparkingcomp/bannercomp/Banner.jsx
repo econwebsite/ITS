@@ -1,5 +1,5 @@
 import "./Banner.css";
-import heroBannerImg from "../assets/parking-banner.png";
+import heroBannerImg from "../../../../assets/solutionpage/smart-parking-management/parking-banner.jpg";
 import Modelbutton from "../../../Button comp/Modelbutton";
 
 const Banner = () => {
@@ -18,7 +18,7 @@ const Banner = () => {
       {/* Content */}
       <div className="parking-banner-content">
         <h1>
-          Complete Vision Solutions for
+           AI Vision Solutions for
           <span> Smart Parking Management</span>
         </h1>
 

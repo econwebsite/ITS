@@ -198,6 +198,34 @@ const ContactUs = () => {
     }
   };
   
+const fieldValidator = (fieldName) => ({
+  validator: (_, value) => {
+    if (!value) {
+      return Promise.resolve();
+    }
+
+    // Only spaces
+    if (!value.trim()) {
+      return Promise.reject(
+        new Error(`${fieldName} cannot be empty`)
+      );
+    }
+
+    // Only for Name
+    if (
+      fieldName === "name" &&
+      /\d/.test(value.trim())
+    ) {
+      return Promise.reject(
+        new Error("Name cannot contain numbers")
+      );
+    }
+
+    return Promise.resolve();
+  },
+});
+
+
   const emailValidator = (_, value) => {
     if (value) {
       const domain = value.split('@')[1]?.toLowerCase();
@@ -321,7 +349,7 @@ const ContactUs = () => {
                   <Col span={12}>
                     <Form.Item
                       name="name"
-                      rules={[{ required: true, message: 'Please enter your name' }]}
+                      rules={[{ required: true, message: 'Please enter your name' },fieldValidator("name")]}
                     >
                       <Input placeholder="Name*" />
                     </Form.Item>
@@ -329,7 +357,7 @@ const ContactUs = () => {
                   <Col span={12}>
                     <Form.Item
                       name="companyName"
-                      rules={[{ required: true, message: 'Please enter your company name' }]}
+                      rules={[{ required: true, message: 'Please enter your company ', },fieldValidator("company")]}
                     >
                       <Input placeholder="Company Name*" />
                     </Form.Item>
