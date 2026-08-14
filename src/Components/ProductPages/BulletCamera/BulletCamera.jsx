@@ -5,6 +5,7 @@ import WhysmartBullet from "./WhySmartBullet";
 import Bulletvariants from "./BulletVariants";
 import Applicationbullet from "./BulletApplications";
 import { Helmet } from 'react-helmet-async';
+import FAQ from "./FAQ";
 const PTZCamera = () => {
   return (
     <div className="ptz-page">
@@ -16,7 +17,9 @@ const PTZCamera = () => {
         <AboutBullet/>
         <WhysmartBullet/>
         <Bulletvariants/>
+       
         <Applicationbullet/>
+         <FAQ/>
     </div>
   );
 };

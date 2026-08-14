@@ -1,0 +1,4 @@
+#00aeef — Main bright blue
+#0b1f3a — Dark navy blue
+#f8fbff — Very light blue background
+#eaf7fd — Light blue icon background
