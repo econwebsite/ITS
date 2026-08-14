@@ -1,7 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./alpr-features-alternating.css";
 
 const ALPRFeaturesAlternating = () => {
+  const [expandedSection, setExpandedSection] = useState(null);
+
+  const toggleSection = (sectionKey) => {
+    setExpandedSection((prev) => (prev === sectionKey ? null : sectionKey));
+  };
+
   useEffect(() => {
     const items = document.querySelectorAll(".feature-item");
 
@@ -27,12 +33,11 @@ const ALPRFeaturesAlternating = () => {
         "8MP CMOS sensor",
         "Supports monitoring of up to 3 traffic lanes",
         "Auto/Manual exposure mode for changing lighting conditions",
-        "120 dB True WDR for high-contrast environments",
-        "Excellent low-light performance with Sony® STARVIS™ technology",
+        "120 dB True WDR for high contrast scenes",
+        "Sony® STARVIS™ technology for excellent low-light imaging ",
         "IR range up to 20m for night time monitoring",
-        "Rolling shutter sensor",
         "M12 S-Mount lens, 25mm focal length",
-        "Frame rate up to 25/30 fps",
+        "Frame rate up to 30 fps",
         "H.265 / H.264 / MJPEG video compression"
       ],
       icon: (
@@ -65,6 +70,26 @@ const ALPRFeaturesAlternating = () => {
             "Wrong-way driver detection",
             "Red light runner detection",
             "Helmet detection"
+          ]
+        },
+        {
+          heading: "Flexible Deployment Options",
+          items: [
+            "Designed for smart intersection monitoring, crosswalk safety, and parking management",
+            "Supports fixed and solar-powered deployments",
+            "Low-power options, including PoE or 12V DC input",
+            "Integrated with the CloVis Central™ platform for remote device management "
+          ]
+        },
+        {
+          heading: "Durable & Connected",
+          items: [
+            "IP67-rated housing for outdoor use",
+            "Operating range: -30°C to +65°C, humidity ≤95%",
+            "Secure boot for device integrity and cybersecurity",
+            "ONVIF Profile S/G/T compliant with support for secure network protocols",
+            "Gigabit Ethernet connectivity",
+            "Certified: BIS, CE, STQC, REACH, RoHS"
           ]
         }
       ],
@@ -138,31 +163,74 @@ const ALPRFeaturesAlternating = () => {
         </div>
 
         <div className="features-alternating-container">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className={`feature-item ${index % 2 === 0 ? "left-content" : "right-content"} ${feature.groupedItems ? "feature-item-grouped" : ""}`}
-            >
-              <div className="feature-content">
-                <h3>{feature.title}</h3>
-                {feature.groupedItems ? (
-                  <>
-                    <p className="feature-subtitle">{feature.subtitle}</p>
-                    {feature.groupedItems.map((group, groupIndex) => (
-                      <div key={groupIndex} className="feature-group">
-                        <h4 className="feature-group-title">{group.heading}</h4>
-                        <ul className="feature-items-list">
-                          {group.items.map((item, itemIndex) => (
-                            <li key={itemIndex}>
-                              <span className="bullet-icon">✓</span>
-                              <span className="item-text">{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </>
-                ) : (
+          {features.map((feature, index) => {
+            // Special layout for AI-Powered Edge Analytics
+            if (feature.title === "AI-Powered Edge Analytics") {
+              return (
+                <div key={index} className="feature-item ai-analytics-special">
+                  <div className="feature-visual ai-visual">
+                    {feature.icon}
+                  </div>
+                  <div className="feature-content ai-analytics-content">
+                    <div className="ai-header">
+                      <h3>{feature.title}</h3>
+                    </div>
+
+                    <div className="ai-sections-container">
+                      {feature.groupedItems.map((group, groupIndex) => {
+                        const sectionKey = `ai-section-${groupIndex}`;
+                        const isExpanded = expandedSection === sectionKey;
+
+                        return (
+                          <div key={groupIndex} className="ai-section-accordion">
+                            <button
+                              className={`ai-section-toggle ${isExpanded ? "expanded" : ""}`}
+                              onClick={() => toggleSection(sectionKey)}
+                            >
+                              <span className="ai-toggle-icon">
+                                {isExpanded ? (
+                                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                  </svg>
+                                ) : (
+                                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                  </svg>
+                                )}
+                              </span>
+                              <h4 className="ai-section-title">{group.heading}</h4>
+                            </button>
+
+                            <div
+                              className={`ai-section-content ${isExpanded ? "visible" : ""}`}
+                            >
+                              <ul className="ai-items-list">
+                                {group.items.map((item, itemIndex) => (
+                                  <li key={itemIndex}>
+                                    <span className="ai-checkmark">✓</span>
+                                    <span className="ai-item-text">{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+
+            // Default layout for other features
+            return (
+              <div
+                key={index}
+                className={`feature-item ${index % 2 === 0 ? "left-content" : "right-content"}`}
+              >
+                <div className="feature-content">
+                  <h3>{feature.title}</h3>
                   <ul className="feature-items-list">
                     {feature.items.map((item, itemIndex) => (
                       <li key={itemIndex}>
@@ -171,13 +239,13 @@ const ALPRFeaturesAlternating = () => {
                       </li>
                     ))}
                   </ul>
-                )}
+                </div>
+                <div className="feature-visual">
+                  {feature.icon}
+                </div>
               </div>
-              <div className="feature-visual">
-                {feature.icon}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
