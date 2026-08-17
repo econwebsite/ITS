@@ -24,6 +24,9 @@ import Hubpageblog from './Components/HubpageComp/Bloghubpages/Hubpageblog';
 import Casehubpage from './Components/HubpageComp/Casestudyhubpage/Casehubpage';
 import AlprSoftware from './Components/ProductPages/alpr-software/AlprSoftware';
 import SmartParkingPage from './Components/solutions/smartparkingcomp/SmartParkingPage';
+import ParkingEnforcementPage from './Components/solutions/smartparkingcomp/parkingSolutions/ParkingEnforcement/ParkingEnforcementPage';
+import ParkingAccessControlPage from './Components/solutions/smartparkingcomp/parkingSolutions/ParkingAccessControl/ParkingAccessControlPage';
+import OccupancyDetectionPage from './Components/solutions/smartparkingcomp/parkingSolutions/OccupancyDetection/OccupancyDetectionPage';
 const App = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -49,6 +52,14 @@ const App = () => {
               <Route path="/solutions/red-light-violation-detection-camera" element={<RedlightPage />} />
               <Route path="/solutions/school-bus-stop-arm-camera" element={<SchoolbusPage />} />
                                           <Route path="/solutions/smart-parking-management" element={<SmartParkingPage />} />
+
+                                          <Route path="/solutions/parking-enforcement-camera" element={<ParkingEnforcementPage />} />
+
+                                          <Route path="/solutions/parking-access-control-camera" element={<ParkingAccessControlPage />} />
+                                          <Route path="/solutions/parking-occupancy-detection-camera" element={<OccupancyDetectionPage />} />
+
+
+                                          
 
             {/* Applications page route */}
            <Route path="/market" element={<Market />} />

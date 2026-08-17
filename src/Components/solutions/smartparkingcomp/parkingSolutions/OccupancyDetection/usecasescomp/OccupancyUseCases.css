@@ -1,0 +1,205 @@
+.occupancy-use-cases {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.occupancy-use-cases-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+
+.occupancy-use-cases-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.occupancy-use-cases-header span {
+  color: #00aeef;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.occupancy-use-cases-header h2 {
+  max-width: 850px;
+  margin: 16px auto 0;
+
+  color: #0b1f3a;
+
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Grid */
+
+.occupancy-use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* Use Case */
+
+.occupancy-use-case {
+  position: relative;
+
+  min-height: 205px;
+  padding: 30px;
+
+  background: #f8fbff;
+  border: 1px solid #e3edf4;
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.occupancy-use-case:hover {
+  transform: translateY(-7px);
+
+  border-color: #8bd9f5;
+
+  box-shadow: 0 18px 35px rgba(0, 174, 239, 0.1);
+}
+
+/* Icon */
+
+.occupancy-use-case-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 14px;
+
+  background: #e8f7fd;
+  color: #00aeef;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.occupancy-use-case-icon svg {
+  font-size: 30px;
+}
+
+.occupancy-use-case:hover .occupancy-use-case-icon {
+  background: #00aeef;
+  color: #ffffff;
+  transform: rotate(-4deg);
+}
+
+/* Number */
+
+.occupancy-use-case-number {
+  position: absolute;
+
+  top: 22px;
+  right: 24px;
+
+  color: #d7e7ef;
+
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Content */
+
+.occupancy-use-case-content {
+  position: relative;
+  z-index: 1;
+}
+
+.occupancy-use-case-content h3 {
+  margin: 0 0 10px;
+
+  color: #0b1f3a;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.occupancy-use-case-content p {
+  margin: 0;
+
+  color: #596b7e;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .occupancy-use-cases {
+    padding: 70px 0;
+  }
+
+  .occupancy-use-cases-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .occupancy-use-cases {
+    padding: 60px 0;
+  }
+
+  .occupancy-use-cases-container {
+    padding: 0 20px;
+  }
+
+  .occupancy-use-cases-header {
+    margin-bottom: 40px;
+  }
+
+  .occupancy-use-cases-header h2 {
+    font-size: 30px;
+  }
+
+  .occupancy-use-cases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .occupancy-use-case {
+    min-height: auto;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+  .occupancy-use-cases-header h2 {
+    font-size: 26px;
+  }
+
+  .occupancy-use-case {
+    padding: 25px;
+  }
+
+  .occupancy-use-case-content h3 {
+    font-size: 17px;
+  }
+
+  .occupancy-use-case-content p {
+    font-size: 13px;
+  }
+}

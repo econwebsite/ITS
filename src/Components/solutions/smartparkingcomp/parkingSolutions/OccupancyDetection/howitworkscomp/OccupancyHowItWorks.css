@@ -1,0 +1,212 @@
+.occupancy-how-it-works {
+  padding: 90px 0;
+  background: #f8fbff;
+  overflow: hidden;
+}
+
+.occupancy-how-it-works-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+
+.occupancy-how-it-works-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.occupancy-how-it-works-header span {
+  color: #00aeef;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.occupancy-how-it-works-header h2 {
+  margin: 16px auto 0;
+
+  color: #0b1f3a;
+
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Process */
+
+.occupancy-process {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Step */
+
+.occupancy-process-step {
+  flex: 1;
+  text-align: center;
+}
+
+.occupancy-process-number {
+  width: 76px;
+  height: 76px;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  border: 3px solid #00aeef;
+
+  color: #00aeef;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  box-shadow:
+    0 0 0 8px #e7f7fd,
+    0 10px 25px rgba(0, 174, 239, 0.1);
+
+  transition: all 0.3s ease;
+}
+
+.occupancy-process-step:hover .occupancy-process-number {
+  background: #00aeef;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+/* Content */
+
+.occupancy-process-content {
+  padding: 0 18px;
+}
+
+.occupancy-process-content h3 {
+  margin: 0 0 12px;
+
+  color: #0b1f3a;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.occupancy-process-content p {
+  margin: 0;
+
+  color: #596b7e;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Connector */
+
+.occupancy-process-connector {
+  flex: 0 0 65px;
+
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+}
+
+.occupancy-process-connector span {
+  width: 100%;
+  height: 2px;
+
+  position: relative;
+
+  background: #a9dff3;
+}
+
+.occupancy-process-connector span::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+
+  width: 8px;
+  height: 8px;
+
+  border-top: 2px solid #00aeef;
+  border-right: 2px solid #00aeef;
+
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .occupancy-process {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 55px 30px;
+  }
+
+  .occupancy-process-connector {
+    display: none;
+  }
+
+  .occupancy-process-content {
+    padding: 0 10px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .occupancy-how-it-works {
+    padding: 60px 0;
+  }
+
+  .occupancy-how-it-works-container {
+    padding: 0 20px;
+  }
+
+  .occupancy-how-it-works-header {
+    margin-bottom: 45px;
+  }
+
+  .occupancy-how-it-works-header h2 {
+    font-size: 30px;
+  }
+
+  .occupancy-process {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .occupancy-process-content p {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+  .occupancy-how-it-works-header h2 {
+    font-size: 26px;
+  }
+
+  .occupancy-process-number {
+    width: 65px;
+    height: 65px;
+  }
+
+  .occupancy-process-content h3 {
+    font-size: 20px;
+  }
+
+  .occupancy-process-content p {
+    font-size: 13px;
+  }
+}

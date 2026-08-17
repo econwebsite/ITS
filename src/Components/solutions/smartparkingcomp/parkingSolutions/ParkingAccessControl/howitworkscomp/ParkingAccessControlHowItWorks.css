@@ -1,0 +1,199 @@
+.parking-access-control-how-it-works {
+  padding: 90px 0;
+  background: #f8fbff;
+  overflow: hidden;
+}
+
+.parking-access-control-how-it-works-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+
+.parking-access-control-how-it-works-header {
+  margin-bottom: 65px;
+  text-align: center;
+}
+
+.parking-access-control-how-it-works-header span {
+  color: #00aeef;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.parking-access-control-how-it-works-header h2 {
+  margin: 16px auto 0;
+
+  color: #0b1f3a;
+
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Process */
+
+.parking-access-control-process {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Step */
+
+.parking-access-control-process-step {
+  flex: 1;
+  max-width: 280px;
+  text-align: center;
+}
+
+/* Number */
+
+.parking-access-control-process-number {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  border: 3px solid #00aeef;
+
+  color: #00aeef;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  box-shadow:
+    0 0 0 7px #e8f7fd,
+    0 8px 20px rgba(0, 174, 239, 0.12);
+
+  transition: 0.3s ease;
+}
+
+.parking-access-control-process-step:hover
+.parking-access-control-process-number {
+  background: #00aeef;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+/* Content */
+
+.parking-access-control-process-content h3 {
+  margin: 0 0 14px;
+
+  color: #0b1f3a;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.parking-access-control-process-content p {
+  margin: 0;
+
+  color: #596b7e;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Connector */
+
+.parking-access-control-process-line {
+  flex: 0 0 75px;
+
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+}
+
+.parking-access-control-process-line::before {
+  content: "";
+
+  width: 100%;
+  height: 2px;
+
+  background: #a9dff3;
+}
+
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .parking-access-control-process {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 30px;
+  }
+
+  .parking-access-control-process-step {
+    max-width: none;
+  }
+
+  .parking-access-control-process-line {
+    display: none;
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .parking-access-control-how-it-works {
+    padding: 60px 0;
+  }
+
+  .parking-access-control-how-it-works-container {
+    padding: 0 20px;
+  }
+
+  .parking-access-control-how-it-works-header {
+    margin-bottom: 45px;
+  }
+
+  .parking-access-control-how-it-works-header h2 {
+    font-size: 30px;
+  }
+
+  .parking-access-control-process {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .parking-access-control-process-content p {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+  .parking-access-control-how-it-works-header h2 {
+    font-size: 26px;
+  }
+
+  .parking-access-control-process-number {
+    width: 62px;
+    height: 62px;
+  }
+
+  .parking-access-control-process-content h3 {
+    font-size: 20px;
+  }
+
+  .parking-access-control-process-content p {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,239 @@
+.occupancy-challenges {
+  padding: 90px 0;
+  background: #f8fbff;
+}
+
+.occupancy-challenges-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+
+.occupancy-challenges-header {
+  margin-bottom: 65px;
+  text-align: center;
+}
+
+.occupancy-challenges-header span {
+  color: #00aeef;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.occupancy-challenges-header h2 {
+  max-width: 850px;
+  margin: 16px auto 0;
+
+  color: #0b1f3a;
+
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* List */
+
+.occupancy-challenges-list {
+  position: relative;
+}
+
+/* Vertical line */
+
+.occupancy-challenges-list::before {
+  content: "";
+
+  position: absolute;
+
+  top: 25px;
+  bottom: 25px;
+  left: 35px;
+
+  width: 2px;
+
+  background: #bce8f7;
+}
+
+/* Item */
+
+.occupancy-challenge-item {
+  position: relative;
+
+  display: flex;
+  gap: 35px;
+
+  padding-bottom: 45px;
+}
+
+.occupancy-challenge-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Number */
+
+.occupancy-challenge-number {
+  position: relative;
+  z-index: 2;
+
+  flex: 0 0 70px;
+
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  border: 3px solid #00aeef;
+
+  color: #00aeef;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  box-shadow:
+    0 0 0 7px #f8fbff;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.occupancy-challenge-item:hover .occupancy-challenge-number {
+  background: #00aeef;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+/* Content */
+
+.occupancy-challenge-content {
+  flex: 1;
+
+  padding: 5px 30px 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2edf5;
+  border-radius: 16px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.occupancy-challenge-item:hover .occupancy-challenge-content {
+  transform: translateX(6px);
+
+  border-color: #8bd9f5;
+
+  box-shadow:
+    0 12px 30px rgba(0, 174, 239, 0.08);
+}
+
+.occupancy-challenge-content h3 {
+  margin: 0 0 12px;
+
+  color: #0b1f3a;
+
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.occupancy-challenge-content p {
+  margin: 0;
+
+  color: #596b7e;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .occupancy-challenges {
+    padding: 70px 0;
+  }
+
+  .occupancy-challenges-header {
+    margin-bottom: 45px;
+  }
+
+  .occupancy-challenges-header h2 {
+    font-size: 32px;
+  }
+
+  .occupancy-challenge-item {
+    gap: 20px;
+  }
+
+  .occupancy-challenge-number {
+    flex: 0 0 60px;
+
+    width: 60px;
+    height: 60px;
+  }
+
+  .occupancy-challenges-list::before {
+    left: 30px;
+  }
+
+  .occupancy-challenge-content {
+    padding: 22px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .occupancy-challenges {
+    padding: 60px 0;
+  }
+
+  .occupancy-challenges-container {
+    padding: 0 20px;
+  }
+
+  .occupancy-challenges-header h2 {
+    font-size: 28px;
+  }
+
+  .occupancy-challenges-list::before {
+    display: none;
+  }
+
+  .occupancy-challenge-item {
+    display: block;
+    padding-bottom: 30px;
+  }
+
+  .occupancy-challenge-number {
+    margin-bottom: -12px;
+    margin-left: 20px;
+  }
+
+  .occupancy-challenge-content {
+    padding: 35px 22px 22px;
+  }
+
+  .occupancy-challenge-item:hover .occupancy-challenge-content {
+    transform: none;
+  }
+
+  .occupancy-challenge-content h3 {
+    font-size: 19px;
+  }
+
+  .occupancy-challenge-content p {
+    font-size: 14px;
+  }
+}

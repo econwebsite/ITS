@@ -1,0 +1,149 @@
+.occupancy-detection-overview {
+  padding: 85px 0;
+  background: #ffffff;
+}
+
+.occupancy-detection-overview-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+
+/* Image */
+
+.occupancy-detection-overview-image {
+  flex: 0 0 48%;
+}
+
+.occupancy-detection-overview-image img {
+  display: block;
+  width: 100%;
+  height: 420px;
+
+  object-fit: cover;
+  border-radius: 20px;
+
+  box-shadow: 0 12px 30px rgba(11, 31, 58, 0.1);
+}
+
+/* Content */
+
+.occupancy-detection-overview-content {
+  flex: 1;
+}
+
+.occupancy-detection-overview-tag {
+  color: #00aeef;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.occupancy-detection-overview-content h2 {
+  margin: 16px 0 25px;
+
+  color: #0b1f3a;
+
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.occupancy-detection-overview-content p {
+  margin: 0 0 20px;
+
+  color: #555555;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.occupancy-detection-overview-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .occupancy-detection-overview {
+    padding: 70px 0;
+  }
+
+  .occupancy-detection-overview-container {
+    gap: 40px;
+  }
+
+  .occupancy-detection-overview-image {
+    flex: 0 0 45%;
+  }
+
+  .occupancy-detection-overview-image img {
+    height: 380px;
+  }
+
+  .occupancy-detection-overview-content h2 {
+    font-size: 34px;
+  }
+
+  .occupancy-detection-overview-content p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .occupancy-detection-overview {
+    padding: 60px 0;
+  }
+
+  .occupancy-detection-overview-container {
+    padding: 0 20px;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 35px;
+  }
+
+  .occupancy-detection-overview-image {
+    width: 100%;
+    flex: none;
+  }
+
+  .occupancy-detection-overview-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+
+  .occupancy-detection-overview-content {
+    width: 100%;
+  }
+
+  .occupancy-detection-overview-content h2 {
+    font-size: 30px;
+  }
+
+  .occupancy-detection-overview-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+  .occupancy-detection-overview-content h2 {
+    font-size: 27px;
+  }
+
+  .occupancy-detection-overview-content p {
+    font-size: 14px;
+  }
+}
