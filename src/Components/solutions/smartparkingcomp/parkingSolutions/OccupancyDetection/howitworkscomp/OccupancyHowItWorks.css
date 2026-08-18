@@ -210,3 +210,49 @@
     font-size: 13px;
   }
 }
+
+
+/* Plate-linked dwell time */
+
+.occupancy-integration-note {
+  position: relative;
+  margin-top: 75px;
+  padding: 35px 45px;
+  background: #ffffff;
+  border: 1px solid #dcecf5;
+  border-left: 5px solid #00aeef;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(11, 31, 58, 0.06);
+}
+
+.occupancy-integration-note h3 {
+  margin: 0 0 14px;
+  color: #0b1f3a;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.occupancy-integration-note p {
+  max-width: 1050px;
+  margin: 0;
+  color: #596b7e;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 650px) {
+  .occupancy-integration-note {
+    margin-top: 55px;
+    padding: 28px 22px;
+  }
+
+  .occupancy-integration-note h3 {
+    font-size: 20px;
+  }
+
+  .occupancy-integration-note p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}

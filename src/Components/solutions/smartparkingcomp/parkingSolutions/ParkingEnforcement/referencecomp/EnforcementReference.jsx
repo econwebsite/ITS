@@ -4,12 +4,12 @@ import Modelbutton from "../../../../../Button comp/Modelbutton";
 
 const referenceItems = [
   {
-    pillar: "Multi-Wavelength IR",
+    pillar: " Multi-Wavelength IR",
     benefit: "Plates readable in direct sun, headlights, fog, and rain",
   },
   {
     pillar: "On-Device Processing",
-    benefit: "Only metadata leaves the camera — lean, fast, private",
+    benefit: "Only metadata leaves the camera — lean, fast, private ",
   },
   {
     pillar: "PoE + LTE Flexibility",
@@ -18,7 +18,7 @@ const referenceItems = [
   },
   {
     pillar: "Open Integration",
-    benefit: "Full SDK, REST API, ONVIF — no per-plate fees, no lock-in",
+    benefit: " Full SDK, REST API, ONVIF — no per-plate fees, no lock-in",
   },
 ];
 
@@ -28,8 +28,8 @@ const EnforcementReference = () => {
       <div className="enforcement-reference-container">
 
         <div className="enforcement-reference-header">
-          <span>AT A GLANCE</span>
-          <h2>Why Our ANPR Cameras Stand Out</h2>
+     
+          <h3>Why Our ANPR Cameras Stand Out</h3>
         </div>
 
         <div className="enforcement-reference-table">
@@ -55,14 +55,12 @@ const EnforcementReference = () => {
         </div>
 
         <div className="enforcement-reference-cta">
-          <h2>
-            Maximize Vision Performance of Your Enforcement Platform
-          </h2>
+          <h3>
+          Maximize Vision Performance of Your Enforcement Platform
+          </h3>
 
           <p>
-            If you're building a new curb enforcement system or expanding an
-            existing platform, our ITS team can walk you through integration
-            options, camera configurations, and deployment requirements.
+         If you're building a new curb enforcement system or expanding an existing platform, our ITS team can walk you through integration options, camera configurations, and deployment requirements.
           </p>
 
           <Modelbutton

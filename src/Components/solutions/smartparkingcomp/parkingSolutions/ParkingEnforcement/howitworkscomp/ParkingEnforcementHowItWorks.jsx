@@ -4,10 +4,9 @@ import "./ParkingEnforcementHowItWorks.css";
 const processSteps = [
   {
     number: "01",
-    title: "Detect",
+    title: " Detect",
     description:
-      "Our ANPR camera captures a motion-blur-free plate image the moment a vehicle enters the enforcement zone. Multi-IR illumination (850nm or 940nm) fires automatically depending on ambient light conditions.",
-  },
+"Our ANPR camera captures a motion-blur-free plate image the moment a vehicle enters the enforcement zone. Multi-IR illumination"  },
   {
     number: "02",
     title: "Process",
@@ -36,7 +35,7 @@ const ParkingEnforcementHowItWorks = () => {
         <div className="parking-enforcement-process-header">
           <span>HOW IT WORKS</span>
 
-          <h2>How Our Parking Enforcement Solution Works</h2>
+          <h3>How Our Parking Enforcement Solution Works</h3>
         </div>
 
         <div className="parking-enforcement-process-grid">

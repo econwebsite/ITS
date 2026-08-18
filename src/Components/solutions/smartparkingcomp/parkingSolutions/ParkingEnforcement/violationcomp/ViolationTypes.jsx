@@ -4,42 +4,42 @@ import "./ViolationTypes.css";
 const violationTypes = [
   {
     title: "Double Parking",
-    description: "Standing violation in the travel lane",
+    description: "standing violation in the travel lane",
     number: "01",
   },
   {
     title: "Bus Stop Blocking",
-    description: "Vehicle occupying a transit stop zone",
+    description: " vehicle occupying a transit stop zone",
     number: "02",
   },
   {
-    title: "Transit-Only Lane (TOL) Violation",
-    description: "Non-transit vehicle in a bus-only lane",
+    title: "Transit-Only Lane (TOL) Violatio",
+    description: " non-transit vehicle in a bus-only lane",
     number: "03",
   },
   {
     title: "Bike Lane Incursion",
-    description: "Vehicle blocking a protected cycle track",
+    description: "vehicle blocking a protected cycle track",
     number: "04",
   },
   {
     title: "Loading Zone Overstay",
-    description: "Dwell time exceeds authorized limit",
+    description: " dwell time exceeds authorized limit",
     number: "05",
   },
   {
-    title: "Electronic Chalking",
-    description: "Two-pass ANPR for time-limit zone overstay",
+    title: "Electronic Chalkin",
+    description: " two-pass ANPR for time-limit zone overstay",
     number: "06",
   },
   {
     title: "No-Standing Zone Violation",
-    description: "Any stop in a posted no-standing zone",
+    description: "any stop in a posted no-standing zone",
     number: "07",
   },
   {
     title: "EV Charging Misuse (ICEing)",
-    description: "Non-EV occupying an EV charging bay",
+    description: " non-EV occupying an EV charging bay",
     number: "08",
   },
 ];
@@ -54,10 +54,10 @@ const ViolationTypes = () => {
             ANPR CAPABILITIES
           </span>
 
-          <h2>
-            Violation Types Detected by Our{" "}
+          <h3>
+            Violation Types Detected by Our {" "}
             <span>ANPR Cameras</span>
-          </h2>
+          </h3>
         </div>
 
         <div className="violation-types-grid">

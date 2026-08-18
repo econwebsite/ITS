@@ -19,22 +19,19 @@ const advantages = [
     icon: <MemoryIcon />,
     title: "On-Device Processing",
     description:
-      "All ANPR processing runs on-device. The camera outputs plate metadata and a JPEG snapshot per event instead of a full video stream, so only the data needed to issue a NOV leaves the device — keeping the evidence package lean and the integration simple.",
-  },
+"All ANPR processing runs on-device. The camera outputs plate metadata and a JPEG snapshot per event instead of a full video stream, so only the data needed to issue a NOV leaves the device — keeping the evidence package lean and the integration simple."  },
   {
     number: "03",
     icon: <CellTowerIcon />,
     title: "PoE + LTE Flexibility",
     description:
-      "PoE and LTE connectivity ship in a single unit, combined with 940nm covert IR illumination, so enforcement cameras can be deployed at bike lane junctions, temporary loading zones, and overnight curb locations where wired infrastructure doesn't exist.",
-  },
+"PoE and LTE connectivity ship in a single unit, combined with 940nm covert IR illumination, so enforcement cameras can be deployed at bike lane junctions, temporary loading zones, and overnight curb locations where wired infrastructure doesn't exist."  },
   {
     number: "04",
     icon: <IntegrationInstructionsIcon />,
     title: "Open Integration",
     description:
-      "Our cameras also ship with a full Linux and Android SDK, REST API, and ONVIF compliance. Your engineering team can integrate once and own the platform end-to-end — no per-plate licensing, no proprietary lock-ins, no recurring fees tied to citation volume.",
-  },
+"Our cameras also ship with a full Linux and Android SDK, REST API, and ONVIF compliance. Your engineering team can integrate once and own the platform end-to-end — no perplate licensing, no proprietary lock-ins, no recurring fees tied to citation volume."  },
 ];
 
 const WhyChooseEnforcement = () => {
@@ -45,7 +42,7 @@ const WhyChooseEnforcement = () => {
         <div className="why-choose-enforcement-header">
           <span>WHY E-CON SYSTEMS</span>
 
-          <h2>Why Choose e-con Systems' ANPR Cameras?</h2>
+          <h3>Why Choose e-con Systems' ANPR Cameras?</h3>
 
           <div className="why-choose-line"></div>
         </div>

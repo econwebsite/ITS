@@ -28,7 +28,7 @@
 .violation-types-header h2 {
   margin: 16px 0 0;
   color: #0b1f3a;
-  font-size: 40px;
+  font-size: 32;
   font-weight: 700;
   line-height: 1.25;
 }
@@ -194,7 +194,7 @@
   }
 
   .violation-types-header h2 {
-    font-size: 36px;
+    font-size: 28px;
   }
 }
 
@@ -215,7 +215,7 @@
   }
 
   .violation-types-header h2 {
-    font-size: 30px;
+    font-size: 22px;
   }
 
   .violation-types-grid {
@@ -233,7 +233,7 @@
 
 @media (max-width: 480px) {
   .violation-types-header h2 {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   .violation-card {

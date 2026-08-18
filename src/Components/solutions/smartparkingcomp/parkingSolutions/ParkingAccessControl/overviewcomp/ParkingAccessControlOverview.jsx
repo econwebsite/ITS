@@ -17,23 +17,19 @@ const ParkingAccessControlOverview = () => {
             PARKING ACCESS CONTROL
           </span>
 
-          <h2>
-            Smarter Access. Seamless Parking.
-          </h2>
+         
 
           <p>
-            Every paper ticket issued is a potential dispute, a queue, or a
-            revenue leak. Tailgating at barriers, lost-ticket claims, and
-            manual permit management cost parking operators more than most
-            realize — operators who audit pre- and post-LPR deployments
-            consistently find 8–18% revenue recovery from leakage alone.
+            Every paper ticket issued is a potential dispute, a queue, or a revenue leak. Tailgating at
+barriers, lost-ticket claims, and manual permit management cost parking operators more
+than most realize — operators who audit pre- and post-LPR deployments consistently find
+8–18% revenue recovery from leakage alone.
           </p>
 
           <p>
-            e-con Systems' ANPR cameras are the imaging core behind these
-            access control platforms. From underground garages to open surface
-            lots, they deliver fast, accurate plate reads at entry and exit
-            points.
+           e-con Systems' ANPR cameras are the imaging core behind these access control platforms.
+From underground garages to open surface lots, they deliver fast, accurate plate reads at
+entry and exit points.
           </p>
 
         </div>

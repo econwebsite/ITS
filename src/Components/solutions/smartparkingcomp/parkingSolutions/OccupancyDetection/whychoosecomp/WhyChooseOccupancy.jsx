@@ -10,7 +10,8 @@ const WhyChooseOccupancy = () => {
         <div className="why-choose-occupancy-header">
           <span>WHY CHOOSE E-CON SYSTEMS</span>
 
-          <h2>Why Choose e-con Systems’ AI Vision Cameras?</h2>
+          <h3>Why Choose e-con Systems’ AI Vision Cameras?
+</h3>
         </div>
 
         <div className="why-choose-occupancy-content">
@@ -23,12 +24,10 @@ const WhyChooseOccupancy = () => {
 
           <div className="why-choose-occupancy-text">
             <p>
-              e-con Systems’ AI vision cameras can cover 4 to 6 bays from a
-              single mounting point, without road cutting, per-space sensors,
-              failed loops, or phantom vacancies. They deliver reliable reads
-              in low light, direct sun, and mixed artificial lighting, with
-              global shutter technology ensuring every frame is
-              detection-ready.
+            e-con Systems’ AI vision cameras can cover 4 to 6 bays from a single mounting point,
+without road cutting, per-space sensors, failed loops, or phantom vacancies. They deliver
+reliable reads in low light, direct sun, and mixed artificial lighting, with global shutter
+technology ensuring every frame is detection-ready.
             </p>
           </div>
 
@@ -37,7 +36,8 @@ const WhyChooseOccupancy = () => {
         <div className="why-choose-occupancy-features">
 
           <div className="why-choose-occupancy-feature">
-            <h3>IP66/IP67-rated for 24/7 outdoor performance</h3>
+            <h3>IP66/IP67-rated for 24/7 outdoor performance
+</h3>
           </div>
 
           <div className="why-choose-occupancy-feature">
@@ -49,11 +49,13 @@ const WhyChooseOccupancy = () => {
           </div>
 
           <div className="why-choose-occupancy-feature">
-            <h3>Single REST API to your PGS or operator dashboard</h3>
+            <h3>Single REST API to your PGS or operator dashboard
+</h3>
           </div>
 
           <div className="why-choose-occupancy-feature">
-            <h3>850nm + 940nm multi-IR for low-light and night detection</h3>
+            <h3>850nm + 940nm multi-IR for low-light and night detection
+</h3>
           </div>
 
           <div className="why-choose-occupancy-feature">
@@ -66,8 +68,8 @@ const WhyChooseOccupancy = () => {
 
           <div className="why-choose-occupancy-feature">
             <h3>
-              No per-space licensing, per-transaction fees, or proprietary
-              lock-ins
+              No per-space licensing, per-transaction fees, or proprietary lock-ins
+
             </h3>
           </div>
 
@@ -76,14 +78,13 @@ const WhyChooseOccupancy = () => {
         {/* CTA */}
 
         <div className="why-choose-occupancy-cta">
-          <h2>
-            Build Real-Time Occupancy Platforms with Reliable Vision
-          </h2>
+          <h3>
+           Build Real-Time Occupancy Platforms with Reliable Vision
+          </h3>
 
           <p>
-            Retrofitting an existing lot or designing a new parking guidance
-            system? Our ITS team can walk you through camera coverage,
-            detection configuration, and API integration options.
+         Retrofitting an existing lot or designing a new parking guidance system? Our ITS team can
+walk you through camera coverage, detection configuration, and API integration options.
           </p>
 
           <Modelbutton

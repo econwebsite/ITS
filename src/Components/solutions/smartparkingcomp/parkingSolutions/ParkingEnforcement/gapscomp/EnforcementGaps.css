@@ -27,7 +27,7 @@
   max-width: 850px;
   margin: 16px auto 0;
   color: #0b1f3a;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.25;
 }
@@ -205,7 +205,7 @@
   }
 
   .enforcement-gaps-header h2 {
-    font-size: 30px;
+    font-size: 22px;
   }
 
   .enforcement-gaps-grid {
@@ -239,7 +239,7 @@
 
 @media (max-width: 480px) {
   .enforcement-gaps-header h2 {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   .enforcement-gap-card {

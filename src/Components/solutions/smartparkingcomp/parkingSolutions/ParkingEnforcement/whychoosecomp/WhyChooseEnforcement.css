@@ -28,7 +28,7 @@
   max-width: 850px;
   margin: 16px auto 0;
   color: #0b1f3a;
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -187,7 +187,7 @@
   }
 
   .why-choose-enforcement-header h2 {
-    font-size: 32px;
+    font-size: 22px;
   }
 
   .why-choose-enforcement-list {
@@ -204,7 +204,7 @@
 
 @media (max-width: 480px) {
   .why-choose-enforcement-header h2 {
-    font-size: 27px;
+    font-size: 20px;
   }
 
   .why-choose-icon {

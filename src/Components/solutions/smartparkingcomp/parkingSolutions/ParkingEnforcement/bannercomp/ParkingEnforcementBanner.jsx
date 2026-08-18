@@ -1,10 +1,12 @@
-import "./ParkingAccessControlBanner.css";
+import "./ParkingEnforcementBanner.css";
 import heroBannerImg from "../../../assets/parking-banner.png";
 import Modelbutton from "../../../../../Button comp/Modelbutton";
 
-const ParkingAccessControlBanner = () => {
+import React from 'react'
+
+function ParkingEnforcementBanner() {
   return (
-    <section className="parking-access-control-banner">
+   <section className="parking-access-control-banner">
 
       {/* Banner Image */}
       <img
@@ -20,14 +22,11 @@ const ParkingAccessControlBanner = () => {
       <div className="parking-access-control-banner-content">
 
         <h1>
-         Frictionless Entry & Secure Access
-          <span> — With Zero Tickets</span>
+          Automated Curb and 
+          <span>Parking Enforcement</span>
         </h1>
 
-        <p className="parking-access-control-banner-caption">
-           Vision solutions for reading every plate, logging every entry, and collecting
-every dollar
-        </p>
+     
 
         <Modelbutton
           className=""
@@ -46,7 +45,7 @@ every dollar
       </div>
 
     </section>
-  );
-};
+  )
+}
 
-export default ParkingAccessControlBanner;
+export default ParkingEnforcementBanner

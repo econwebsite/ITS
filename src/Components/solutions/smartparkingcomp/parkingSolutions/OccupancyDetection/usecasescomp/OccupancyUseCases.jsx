@@ -19,7 +19,7 @@ const useCases = [
   },
   {
     icon: <ApartmentIcon />,
-    title: "Structured Parking (Multi-Level)",
+    title: "Structured Parking (Multi-Level) ",
     description: "floor-by-floor and zone-level availability",
   },
   {
@@ -29,13 +29,13 @@ const useCases = [
   },
   {
     icon: <LoadingIcon />,
-    title: "Loading Zone Availability",
+    title: "Loading Zone Availability ",
     description: "real-time dwell time and availability per loading bay",
   },
   {
     icon: <EventIcon />,
     title: "Event Surge Monitoring",
-    description: "live count during peak arrival and departure windows",
+    description: " live count during peak arrival and departure windows",
   },
   {
     icon: <SignpostIcon />,
@@ -44,14 +44,14 @@ const useCases = [
   },
   {
     icon: <PriceChangeIcon />,
-    title: "Dynamic Pricing Trigger",
+    title: "Dynamic Pricing Trigger ",
     description:
       "rate changes triggered in real time based on occupancy threshold",
   },
   {
     icon: <AnalyticsIcon />,
     title: "Utilization Analytics",
-    description: "dwell time, peak periods, and turnover rate per space",
+    description: " dwell time, peak periods, and turnover rate per space",
   },
   {
     icon: <BookmarkBorderIcon />,
@@ -69,7 +69,8 @@ const OccupancyUseCases = () => {
         <div className="occupancy-use-cases-header">
           <span>DETECTION USE CASES</span>
 
-          <h2>Detection Use Cases of Our AI Vision Cameras</h2>
+          <h3>Detection Use Cases of Our AI Vision Cameras
+</h3>
         </div>
 
         <div className="occupancy-use-cases-grid">

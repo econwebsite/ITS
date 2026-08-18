@@ -16,13 +16,12 @@ const OccupancyDetectionBanner = () => {
 
       <div className="occupancy-detection-banner-content">
         <h1>
-          Occupancy Detection:
+          Occupancy Detection: 
           <span>Know Every Space in Real Time</span>
         </h1>
 
         <p className="occupancy-detection-banner-caption">
-          Get live space-level occupancy data, instead of delayed sensor
-          readings
+         Get live space-level occupancy data, instead of delayed sensor readings
         </p>
 
         <Modelbutton
