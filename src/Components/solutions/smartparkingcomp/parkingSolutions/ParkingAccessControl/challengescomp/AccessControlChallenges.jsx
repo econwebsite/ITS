@@ -1,52 +1,57 @@
 import React from "react";
 import "./AccessControlChallenges.css";
 
-import accessControlLarge from "../../../assets/access-control-large.png";
-import accessControlSmall from "../../../assets/acess-control-small.png";
+
+import revenue_img from "../../../../../../assets/solutionpage/smart-parking-management/Parking-access-control/challenges-img1.png";
+import ticket_img from "../../../../../../assets/solutionpage/smart-parking-management/Parking-access-control/challenges-img2.png";
+import permit_img from "../../../../../../assets/solutionpage/smart-parking-management/Parking-access-control/challenges-img3.png";
+import ecosystem_img from "../../../../../../assets/solutionpage/smart-parking-management/Parking-access-control/challenges-img4.png";
+import queue_img from "../../../../../../assets/solutionpage/smart-parking-management/Parking-access-control/challenges-img5.png";
+import lowLight_img from "../../../../../../assets/solutionpage/smart-parking-management/Parking-access-control/challenges-img6.png";
 
 const challenges = [
   {
     number: "01",
     title: "Tailgating Drains Revenue",
     description:
-"Vehicles that slip through behind an authorized entry never pay. Without ANPR at the barrier, there's no record of who entered and no way to recover the revenue or identify the vehicle.",    image: accessControlLarge,
-    imageType: "large",
+"Vehicles that slip through behind an authorized entry never pay. Without ANPR at the barrier, there's no record of who entered and no way to recover the revenue or identify the vehicle.",    
+    image: revenue_img,
   },
   {
     number: "02",
     title: "Lost Tickets, Disputed Exits",
     description:
-"Paper tickets create predictable operational problems — lost tickets, swapped tickets, exit disputes that need manual resolution. A dispute causes a queue, and a queue loses customers.",    image: accessControlSmall,
-    imageType: "small",
+"Paper tickets create predictable operational problems — lost tickets, swapped tickets, exit disputes that need manual resolution. A dispute causes a queue, and a queue loses customers.",    
+     image: ticket_img,
   },
   {
     number: "03",
     title: "Manual Permit Management at Scale",
     description:
-"Monthly parkers, visitor access, and event credentials managed through spreadsheets or manual lists create daily errors. A plate not on the list means a blocked entry; a removed plate still on the list means unauthorized access.",    image: accessControlSmall,
-    imageType: "small",
+"Monthly parkers, visitor access, and event credentials managed through spreadsheets or manual lists create daily errors. A plate not on the list means a blocked entry; a removed plate still on the list means unauthorized access.",    
+     image: permit_img,
   },
   {
     number: "04",
     title: "Closed PARCS Ecosystems",
     description:
       "Proprietary Parking Access and Revenue Control Systems (PARCS) make third-party integration difficult. Camera data, payment platforms, and operator dashboards sit in separate systems with no real-time data flow between them.",
-    image: accessControlLarge,
-    imageType: "large",
+    image: ecosystem_img,
+   
   },
   {
     number: "05",
     title: "Entry Queue at Peak Hours",
     description:
-"Ticket dispensers and manual gates create bottlenecks when volume spikes. A two-second plate read and automatic barrier lift eliminates the queue entirely — no ticket to collect, no credential to validate manually.",    image: accessControlSmall,
-    imageType: "small",
+"Ticket dispensers and manual gates create bottlenecks when volume spikes. A two-second plate read and automatic barrier lift eliminates the queue entirely — no ticket to collect, no credential to validate manually.",    
+     image: queue_img,
   },
   {
     number: "06",
     title: "Poor Read Quality in Low Light",
     description:
-"Underground garages, covered car parks, and earlymorning entry points have no natural light. Standard cameras fail here. An ANPR camera without the right IR illumination produces unreadable plates exactly where access control matters most.",    image: accessControlSmall,
-    imageType: "small",
+"Underground garages, covered car parks, and earlymorning entry points have no natural light. Standard cameras fail here. An ANPR camera without the right IR illumination produces unreadable plates exactly where access control matters most.",    
+     image: lowLight_img,
   },
 ];
 
@@ -69,9 +74,7 @@ const AccessControlChallenges = () => {
               className={`access-control-challenge-card challenge-${challenge.number}`}
               key={challenge.number}
             >
-              <div className="access-control-challenge-number">
-                {challenge.number}
-              </div>
+             
 
               <div className="access-control-challenge-content">
                 <h3>{challenge.title}</h3>
@@ -79,7 +82,7 @@ const AccessControlChallenges = () => {
               </div>
 
               <div
-                className={`access-control-challenge-image ${challenge.imageType}`}
+                className={`access-control-challenge-image `}
               >
                 <img src={challenge.image} alt="" aria-hidden="true" />
               </div>

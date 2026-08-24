@@ -1,25 +1,29 @@
 import React from "react";
 import "./ParkingEnforcementHowItWorks.css";
-
+import CameraAltIcon from "@mui/icons-material/CameraAlt";
+import MemoryIcon from "@mui/icons-material/Memory";
+import Inventory2Icon from "@mui/icons-material/Inventory2";
+import IntegrationInstructionsIcon from "@mui/icons-material/IntegrationInstructions";
 const processSteps = [
-  {
+  { icon: <CameraAltIcon />,
     number: "01",
     title: " Detect",
     description:
 "Our ANPR camera captures a motion-blur-free plate image the moment a vehicle enters the enforcement zone. Multi-IR illumination"  },
-  {
+  { icon: <MemoryIcon />,
     number: "02",
     title: "Process",
     description:
       "Edge AI runs ANPR on-device. Plate string and confidence score output in under 200ms. No raw video is transmitted — only metadata leaves the camera.",
   },
-  {
+  {  icon: <Inventory2Icon />,
     number: "03",
     title: "Package",
     description:
       "Detection events produce a complete NOV-ready evidence package, including plate string, GPS coordinates, UTC timestamp, and JPEG snapshots, ready for adjudication.",
   },
-  {
+  {    icon: <IntegrationInstructionsIcon />,
+
     number: "04",
     title: "Integrate",
     description:
@@ -38,24 +42,25 @@ const ParkingEnforcementHowItWorks = () => {
           <h3>How Our Parking Enforcement Solution Works</h3>
         </div>
 
-        <div className="parking-enforcement-process-grid">
-          {processSteps.map((step) => (
-            <div className="parking-process-item" key={step.number}>
+     <div className="parking-enforcement-process-grid">
+  {processSteps.map((step, index) => (
+    <article className="parking-process-item" key={step.title}>
 
-              <div className="parking-process-circle">
-                <div className="parking-process-inner">
-                  <strong>{step.number}</strong>
-                  <small>STEP</small>
-                </div>
-              </div>
+      <div className="parking-process-icon">
+        {step.icon}
+      </div>
 
-              <h3>{step.title}</h3>
+      <h3>{step.title}</h3>
 
-              <p>{step.description}</p>
+      <p>{step.description}</p>
 
-            </div>
-          ))}
-        </div>
+      {index < processSteps.length - 1 && (
+        <div className="parking-process-line"></div>
+      )}
+
+    </article>
+  ))}
+</div>
 
       </div>
     </section>

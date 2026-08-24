@@ -1,60 +1,59 @@
 import React from "react";
 import "./OccupancyUseCases.css";
 
-import LocalParkingIcon from "@mui/icons-material/LocalParking";
-import ApartmentIcon from "@mui/icons-material/Apartment";
-import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
-import LoadingIcon from "@mui/icons-material/LocalShipping";
-import EventIcon from "@mui/icons-material/Event";
-import SignpostIcon from "@mui/icons-material/Signpost";
-import PriceChangeIcon from "@mui/icons-material/PriceChange";
-import AnalyticsIcon from "@mui/icons-material/Analytics";
-import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
-
+import icon03 from "../../../../../../assets/solutionpage/smart-parking-management/occupancy-detection-camera/icons-03.svg";
+import icon04 from "../../../../../../assets/solutionpage/smart-parking-management/occupancy-detection-camera/icons-04.svg";
+import icon05 from "../../../../../../assets/solutionpage/smart-parking-management/occupancy-detection-camera/icons-05.svg";
+import icon06 from "../../../../../../assets/solutionpage/smart-parking-management/occupancy-detection-camera/icons-06.svg";
+import icon07 from "../../../../../../assets/solutionpage/smart-parking-management/occupancy-detection-camera/icons-07.svg";
+import icon08 from "../../../../../../assets/solutionpage/smart-parking-management/occupancy-detection-camera/icons-08.svg";
+import icon09 from "../../../../../../assets/solutionpage/smart-parking-management/occupancy-detection-camera/icons-09.svg";
+import icon10 from "../../../../../../assets/solutionpage/smart-parking-management/occupancy-detection-camera/icons-10.svg";
+import icon11 from "../../../../../../assets/solutionpage/smart-parking-management/occupancy-detection-camera/icons-11.svg";
 const useCases = [
   {
-    icon: <LocalParkingIcon />,
+    icon: icon03,
     title: "Surface Lot Monitoring",
     description: "space-level occupied/vacant status identified per bay",
   },
   {
-    icon: <ApartmentIcon />,
+    icon: icon04,
     title: "Structured Parking (Multi-Level) ",
     description: "floor-by-floor and zone-level availability",
   },
   {
-    icon: <DirectionsCarIcon />,
+    icon: icon05,
     title: "On-Street Bay Monitoring",
     description: "individual bay occupancy along curbside corridors",
   },
   {
-    icon: <LoadingIcon />,
+    icon: icon06,
     title: "Loading Zone Availability ",
     description: "real-time dwell time and availability per loading bay",
   },
   {
-    icon: <EventIcon />,
+    icon: icon07,
     title: "Event Surge Monitoring",
     description: " live count during peak arrival and departure windows",
   },
   {
-    icon: <SignpostIcon />,
+    icon: icon08,
     title: "Parking Guidance System (PGS) Data Feed",
     description: "real-time availability feed for guidance signage",
   },
   {
-    icon: <PriceChangeIcon />,
+    icon: icon09,
     title: "Dynamic Pricing Trigger ",
     description:
       "rate changes triggered in real time based on occupancy threshold",
   },
   {
-    icon: <AnalyticsIcon />,
+    icon: icon10,
     title: "Utilization Analytics",
     description: " dwell time, peak periods, and turnover rate per space",
   },
   {
-    icon: <BookmarkBorderIcon />,
+    icon: icon11,
     title: "Reserved Space Monitoring",
     description:
       "alerts on unauthorized use of reserved or permit bays",
@@ -77,7 +76,7 @@ const OccupancyUseCases = () => {
           {useCases.map((item, index) => (
             <article className="occupancy-use-case" key={item.title}>
               <div className="occupancy-use-case-icon">
-                {item.icon}
+                <img src={item.icon} alt="icons" />
               </div>
 
               <div className="occupancy-use-case-number">

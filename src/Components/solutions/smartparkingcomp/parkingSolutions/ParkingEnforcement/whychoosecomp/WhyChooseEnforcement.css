@@ -51,7 +51,7 @@
 
 .why-choose-enforcement-item {
   position: relative;
-  padding: 28px 24px 35px;
+  padding: 24px 22px 28px;
   text-align: center;
   background: #ffffff;
   border: 1px solid #e2edf5;
@@ -73,8 +73,8 @@
 /* Icon */
 
 .why-choose-icon {
-  width: 105px;
-  height: 105px;
+  width: 64px;
+  height: 64px;
   margin: 0 auto 18px;
 
   display: flex;
@@ -82,15 +82,13 @@
   justify-content: center;
 
   border-radius: 50%;
-
   background: #eef9fe;
   border: 2px solid #c9edfa;
-
   color: #0798e5;
 
   box-shadow:
-    0 0 0 7px #ffffff,
-    0 0 0 9px #e0f4fc;
+    0 0 0 6px #ffffff,
+    0 0 0 8px #e0f4fc;
 
   transition:
     transform 0.3s ease,
@@ -98,15 +96,15 @@
 }
 
 .why-choose-icon svg {
-  font-size: 48px;
+  font-size: 34px;
 }
 
 .why-choose-enforcement-item:hover .why-choose-icon {
   transform: scale(1.06);
 
   box-shadow:
-    0 0 0 7px #ffffff,
-    0 0 0 9px #b9e8f9,
+    0 0 0 6px #ffffff,
+    0 0 0 8px #b9e8f9,
     0 12px 25px rgba(0, 174, 239, 0.15);
 }
 
@@ -122,7 +120,6 @@
   justify-content: center;
 
   border-radius: 50%;
-
   background: #0798e5;
   color: #ffffff;
 
@@ -136,9 +133,7 @@
 
 .why-choose-enforcement-content h3 {
   margin: 0;
-
   color: #0b1f3a;
-
   font-size: 20px;
   font-weight: 700;
   line-height: 1.35;
@@ -155,9 +150,7 @@
 
 .why-choose-enforcement-content p {
   margin: 0;
-
   color: #596b7e;
-
   font-size: 14px;
   line-height: 1.8;
 }
@@ -198,6 +191,15 @@
     max-width: 500px;
     margin: 0 auto;
   }
+
+  .why-choose-icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .why-choose-icon svg {
+    font-size: 32px;
+  }
 }
 
 /* Small Mobile */
@@ -208,11 +210,11 @@
   }
 
   .why-choose-icon {
-    width: 90px;
-    height: 90px;
+    width: 68px;
+    height: 68px;
   }
 
   .why-choose-icon svg {
-    font-size: 42px;
+    font-size: 30px;
   }
 }

@@ -21,7 +21,7 @@
 
 .occupancy-detection-overview-image img {
   display: block;
-  width: 100%;
+  width: 600px;
   height: 420px;
 
   object-fit: cover;

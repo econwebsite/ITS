@@ -1,7 +1,7 @@
 import React from "react";
 import "./OccupancyDetectionBanner.css";
 
-import heroBannerImg from "../../../assets/parking-banner.png";
+import heroBannerImg from "../../../../../../assets/solutionpage/smart-parking-management/occupancy-detection-camera/banner.jpg";
 import Modelbutton from "../../../../../Button comp/Modelbutton";
 const OccupancyDetectionBanner = () => {
   return (

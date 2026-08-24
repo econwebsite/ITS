@@ -1,11 +1,14 @@
 import React from "react";
 import "./WhyChooseAccessControl.css";
-import WbTwilightIcon from "@mui/icons-material/WbTwilight";
-import MemoryIcon from "@mui/icons-material/Memory";
-import LanIcon from "@mui/icons-material/Lan";
-import ShutterSpeedIcon from "@mui/icons-material/ShutterSpeed";
-import Modelbutton from "../../../../../Button comp/Modelbutton";
 
+import Modelbutton from "../../../../../Button comp/Modelbutton";
+// import whyANPRIcon1 from "../../../../../../assets/solutionpage/smart-parking-management/Parking-access-control/why-ANPR-icon1.svg";
+// import whyANPRIcon2 from "../../../../../../assets/solutionpage/smart-parking-management/Parking-access-control/why-ANPR-icon2.svg";
+// import whyANPRIcon3 from "../../../../../../assets/solutionpage/smart-parking-management/Parking-access-control/why-ANPR-icon3.svg";
+import whyANPRIcon1 from "../../../../../../assets/solutionpage/smart-parking-management/parking-enforcement/why-econ-1.svg"
+import whyANPRIcon2 from "../../../../../../assets/solutionpage/smart-parking-management/parking-enforcement/why-econ-2.svg"
+import whyANPRIcon3 from "../../../../../../assets/solutionpage/smart-parking-management/parking-enforcement/why-econ-3.svg"
+import IntegrationInstructionsIcon from "../../../../../../assets/solutionpage/smart-parking-management/parking-enforcement/why-econ-4.svg"
 const WhyChooseAccessControl = () => {
   return (
     <section className="why-choose-access-control">
@@ -14,7 +17,7 @@ const WhyChooseAccessControl = () => {
         <div className="why-choose-access-control-header">
           <span>WHY E-CON SYSTEMS</span>
 
-          <h3>Why Choose e-con Systems' ANPR Cameras?</h3>
+          <h2>Why Choose e-con Systems' ANPR Cameras?</h2>
 
           <div className="why-choose-access-control-line"></div>
         </div>
@@ -23,7 +26,7 @@ const WhyChooseAccessControl = () => {
 
           <article className="why-choose-access-control-card">
             <div className="why-choose-access-control-icon">
-              <WbTwilightIcon />
+              <img src={whyANPRIcon1} alt="" />
             </div>
 
             <div className="why-choose-access-control-content">
@@ -39,7 +42,7 @@ shutter eliminates motion blur even at vehicle entry speeds, keeping plate reads
 
           <article className="why-choose-access-control-card">
             <div className="why-choose-access-control-icon">
-              <MemoryIcon />
+   <img src={whyANPRIcon2} alt="" />
             </div>
 
             <div className="why-choose-access-control-content">
@@ -54,7 +57,7 @@ PARCS or payment platform needs is delivered the moment the vehicle arrives.
 
           <article className="why-choose-access-control-card">
             <div className="why-choose-access-control-icon">
-              <LanIcon />
+           <img src={whyANPRIcon3} alt="" />
             </div>
 
             <div className="why-choose-access-control-content">

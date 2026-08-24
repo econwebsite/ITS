@@ -90,7 +90,7 @@
   align-items: center;
   justify-content: center;
 
-  border-radius: 50%;
+  border-radius: 10px;
 
   background: #e8f7fd;
   border: 2px solid #c8ebf9;
@@ -103,16 +103,14 @@
     color 0.3s ease;
 }
 
-.why-choose-access-control-icon svg {
-  font-size: 38px;
-}
+
 
 .why-choose-access-control-card:hover
-.why-choose-access-control-icon {
+.why-choose-access-control-icon  {
   transform: scale(1.08);
 
-  background: #00aeef;
-  color: #ffffff;
+
+ 
 }
 
 /* Paragraph */

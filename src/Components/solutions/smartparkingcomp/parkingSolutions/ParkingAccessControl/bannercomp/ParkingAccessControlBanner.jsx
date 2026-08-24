@@ -1,5 +1,5 @@
 import "./ParkingAccessControlBanner.css";
-import heroBannerImg from "../../../assets/parking-banner.png";
+import heroBannerImg from "../../../../../../assets/solutionpage/smart-parking-management/Parking-access-control/banner.jpg";
 import Modelbutton from "../../../../../Button comp/Modelbutton";
 
 const ParkingAccessControlBanner = () => {

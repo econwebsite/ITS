@@ -1,24 +1,31 @@
 import React from "react";
 import "./OccupancyHowItWorks.css";
-
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import PsychologyIcon from "@mui/icons-material/Psychology";
+import UpdateIcon from "@mui/icons-material/Update";
+import ApiIcon from "@mui/icons-material/Api";
 const steps = [
   {
     number: "01",
+    icon: <VisibilityIcon />,
     title: "Monitor",
     description:
 "Our AI Vision camera covers multiple bays from a single mounting point, capturing the complete detection zone across daylight, low-light, and artificial lighting conditions."  },
   {
     number: "02",
+    icon: <PsychologyIcon />,
     title: "Detect",
     description:
 "Edge AI classifies each space as occupied or vacant, frame by frame, directly on-device — no plate read required to know whether a bay is free."  },
   {
     number: "03",
+     icon: <UpdateIcon />,
     title: "Update",
     description:
 "Occupancy status updates per event, not on a polling cycle. Both arrivals and departures trigger immediate count updates, with no lag between a vehicle arriving and the system reflecting it."  },
   {
     number: "04",
+     icon: <ApiIcon />,
     title: "Deliver",
     description:
 "Live occupancy feed pushes via REST API to parking guidance systems, operator dashboards, mobile apps, or dynamic pricing engines, with ONVIF compliance for VMS integration."  },
@@ -41,7 +48,7 @@ const OccupancyHowItWorks = () => {
               <article className="occupancy-process-step">
 
                 <div className="occupancy-process-number">
-                  {step.number}
+                  {step.icon}
                 </div>
 
                 <div className="occupancy-process-content">

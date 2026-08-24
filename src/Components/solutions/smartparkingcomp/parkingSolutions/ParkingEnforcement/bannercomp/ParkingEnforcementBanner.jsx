@@ -1,6 +1,6 @@
 import "./ParkingEnforcementBanner.css";
-import heroBannerImg from "../../../assets/parking-banner.png";
 import Modelbutton from "../../../../../Button comp/Modelbutton";
+import heroBannerImg from "../../../../../../assets/solutionpage/smart-parking-management/parking-enforcement/banner.jpg"
 
 import React from 'react'
 

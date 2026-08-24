@@ -1,6 +1,8 @@
 import React from "react";
 import "./ParkingAccessControlHowItWorks.css";
 
+
+
 const steps = [
   {
     number: "01",
@@ -41,9 +43,7 @@ const ParkingAccessControlHowItWorks = () => {
             <React.Fragment key={step.number}>
               <article className="parking-access-control-process-step">
 
-                <div className="parking-access-control-process-number">
-                  {step.number}
-                </div>
+               
 
                 <div className="parking-access-control-process-content">
                   <h3>{step.title}</h3>

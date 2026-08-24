@@ -1,54 +1,62 @@
 import React from "react";
 import "./AccessControlUseCases.css";
-
+import LocalParkingIcon from "@mui/icons-material/LocalParking";
+import PaymentIcon from "@mui/icons-material/Payment";
+import BadgeIcon from "@mui/icons-material/Badge";
+import PersonAddIcon from "@mui/icons-material/PersonAdd";
+import EventIcon from "@mui/icons-material/Event";
+import EvStationIcon from "@mui/icons-material/EvStation";
+import LocationCityIcon from "@mui/icons-material/LocationCity";
+import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
+import BlockIcon from "@mui/icons-material/Block";
 const useCases = [
   {
-    number: "01",
+    icon: <LocalParkingIcon />,
     title: "Gated Entry/Exit ",
     description: "barrier lift automated on plate match",
   },
   {
-    number: "02",
+    icon: <PaymentIcon />,
     title: "Ticketless Payment Validation",
     description: " plate tied to payment, no ticket issued or collected",
   },
   {
-    number: "03",
+     icon: <BadgeIcon />,
     title: "Monthly/Virtual Permit ",
     description: "allow-list management by plate, no physical pass",
   },
   {
-    number: "04",
+    icon: <PersonAddIcon />,
     title: "Visitor and Guest Access",
     description:
       " pre-registered plates cleared for single or time-limited entry",
   },
   {
-    number: "05",
+     icon: <EventIcon />,
     title: "Event Parking Management",
     description:
       " bulk permit activation and deactivation by plate list",
   },
   {
-    number: "06",
+    icon: <EvStationIcon />,
     title: "EV Bay Authorized Access",
     description:
       " EV charging bays restricted to registered EVs only",
   },
   {
-    number: "07",
+    icon: <LocationCityIcon />,
     title: "Multi-Site/Campus Access",
     description:
       "a single plate database across multiple entry points",
   },
   {
-    number: "08",
+    icon: <DirectionsCarIcon />,
     title: "Tailgating Detection ",
     description:
       " alerts triggered by a second plate read within the barrier cycle",
   },
   {
-    number: "09",
+   icon: <BlockIcon />,
     title: "Deny-List Enforcement",
     description:
       " flagged plates automatically blocked at any entry point",
@@ -67,13 +75,13 @@ const AccessControlUseCases = () => {
         </div>
 
         <div className="access-control-usecases-grid">
-          {useCases.map((useCase) => (
+          {useCases.map((useCase,index) => (
             <article
               className="access-control-usecase-card"
-              key={useCase.number}
+              key={index}
             >
               <div className="access-control-usecase-number">
-                {useCase.number}
+         {useCase.icon}
               </div>
 
               <div className="access-control-usecase-content">

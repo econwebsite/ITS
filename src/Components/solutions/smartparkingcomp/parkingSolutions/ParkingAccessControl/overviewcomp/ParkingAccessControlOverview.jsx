@@ -1,7 +1,7 @@
 import React from "react";
 import "./ParkingAccessControlOverview.css";
 
-import heroBannerImg from "../../../assets/smart-parking.png";
+import sideImage from "../../../../../../assets/solutionpage/smart-parking-management/Parking-access-control/side-image.jpg";
 
 const ParkingAccessControlOverview = () => {
   return (
@@ -13,9 +13,9 @@ const ParkingAccessControlOverview = () => {
         {/* Content */}
         <div className="parking-access-control-overview-content">
 
-          <span className="parking-access-control-overview-tag">
-            PARKING ACCESS CONTROL
-          </span>
+          <h2  >
+            Parking Access Control
+          </h2>
 
          
 
@@ -38,7 +38,7 @@ entry and exit points.
     {/* Image */}
         <div className="parking-access-control-overview-image">
           <img
-            src={heroBannerImg}
+            src={sideImage}
             alt="Parking Access Control"
           />
         </div>

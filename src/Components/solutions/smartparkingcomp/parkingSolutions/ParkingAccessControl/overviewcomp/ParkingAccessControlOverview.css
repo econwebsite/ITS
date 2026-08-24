@@ -22,10 +22,9 @@
 .parking-access-control-overview-image img {
   display: block;
 
-  width: 100%;
+  width: 600px;
   height: 420px;
 
-  object-fit: cover;
 
   border-radius: 20px;
 
@@ -38,25 +37,12 @@
   flex: 1;
 }
 
-.parking-access-control-overview-tag {
+.parking-access-control-overview-content h2 {
   color: #00aeef;
 
-  font-size: 13px;
-  font-weight: 700;
-
-  letter-spacing: 2px;
 }
 
-.parking-access-control-overview-content h2 {
-  margin: 16px 0 25px;
 
-  color: #0b1f3a;
-
-  font-size: 40px;
-  font-weight: 700;
-
-  line-height: 1.25;
-}
 
 .parking-access-control-overview-content p {
   margin: 0 0 20px;

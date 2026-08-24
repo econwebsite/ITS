@@ -82,7 +82,8 @@
   position: relative;
   min-height: 485px;
   overflow: hidden;
-
+ text-decoration: none;
+  color: inherit;
   background: #ffffff;
 
   border: 2px solid transparent;

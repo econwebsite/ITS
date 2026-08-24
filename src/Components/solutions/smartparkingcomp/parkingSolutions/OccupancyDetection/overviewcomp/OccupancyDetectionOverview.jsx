@@ -1,19 +1,14 @@
 import React from "react";
 import "./OccupancyDetectionOverview.css";
 
-import occupancyImage from "../../../assets/smart-parking.png";
+import occupancyImage from "../../../../../../assets/solutionpage/smart-parking-management/occupancy-detection-camera/sideimage.jpg";
 
 const OccupancyDetectionOverview = () => {
   return (
     <section className="occupancy-detection-overview">
       <div className="occupancy-detection-overview-container">
 
-        <div className="occupancy-detection-overview-image">
-          <img
-            src={occupancyImage}
-            alt="Occupancy Detection"
-          />
-        </div>
+       
 
         <div className="occupancy-detection-overview-content">
           <span className="occupancy-detection-overview-tag">
@@ -38,7 +33,12 @@ occupancy continuously and push API-ready data with low latency.
 
           </p>
         </div>
-
+ <div className="occupancy-detection-overview-image">
+          <img
+            src={occupancyImage}
+            alt="Occupancy Detection"
+          />
+        </div>
       </div>
     </section>
   );

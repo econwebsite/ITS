@@ -4,7 +4,7 @@
 }
 
 .occupancy-challenges-container {
-  max-width: 1100px;
+  max-width: 1250px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -12,7 +12,7 @@
 /* Header */
 
 .occupancy-challenges-header {
-  margin-bottom: 65px;
+  margin-bottom: 55px;
   text-align: center;
 }
 
@@ -23,105 +23,37 @@
   letter-spacing: 2px;
 }
 
-.occupancy-challenges-header h2 {
+.occupancy-challenges-header h3 {
   max-width: 850px;
   margin: 16px auto 0;
-
   color: #0b1f3a;
-
   font-size: 40px;
   font-weight: 700;
   line-height: 1.25;
 }
 
-/* List */
+/* Grid */
 
 .occupancy-challenges-list {
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
 
-/* Vertical line */
-
-.occupancy-challenges-list::before {
-  content: "";
-
-  position: absolute;
-
-  top: 25px;
-  bottom: 25px;
-  left: 35px;
-
-  width: 2px;
-
-  background: #bce8f7;
-}
-
-/* Item */
+/* Card */
 
 .occupancy-challenge-item {
   position: relative;
-
-  display: flex;
-  gap: 35px;
-
-  padding-bottom: 45px;
-}
-
-.occupancy-challenge-item:last-child {
-  padding-bottom: 0;
-}
-
-/* Number */
-
-.occupancy-challenge-number {
-  position: relative;
-  z-index: 2;
-
-  flex: 0 0 70px;
-
-  width: 70px;
-  height: 70px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
+  
+  padding: 30px;
 
   background: #ffffff;
-  border: 3px solid #00aeef;
+  border: 1px solid #e1edf6;
+  border-radius: 18px;
 
-  color: #00aeef;
+  overflow: hidden;
 
-  font-size: 15px;
-  font-weight: 700;
-
-  box-shadow:
-    0 0 0 7px #f8fbff;
-
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.occupancy-challenge-item:hover .occupancy-challenge-number {
-  background: #00aeef;
-  color: #ffffff;
-  transform: scale(1.08);
-}
-
-/* Content */
-
-.occupancy-challenge-content {
-  flex: 1;
-
-  padding: 5px 30px 25px;
-
-  background: #ffffff;
-
-  border: 1px solid #e2edf5;
-  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(11, 31, 58, 0.05);
 
   transition:
     transform 0.3s ease,
@@ -129,72 +61,76 @@
     border-color 0.3s ease;
 }
 
-.occupancy-challenge-item:hover .occupancy-challenge-content {
-  transform: translateX(6px);
-
+.occupancy-challenge-item:hover {
+  transform: translateY(-7px);
   border-color: #8bd9f5;
+  box-shadow: 0 18px 40px rgba(0, 174, 239, 0.1);
+}
 
-  box-shadow:
-    0 12px 30px rgba(0, 174, 239, 0.08);
+/* Blue accent */
+
+.occupancy-challenge-item::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 4px;
+
+  background: #00aeef;
+
+  transition: width 0.35s ease;
+}
+
+.occupancy-challenge-item:hover::after {
+  width: 100%;
+}
+
+/* Content */
+
+.occupancy-challenge-content {
+  position: relative;
+  z-index: 2;
 }
 
 .occupancy-challenge-content h3 {
-  margin: 0 0 12px;
+  margin: 0 0 14px;
 
   color: #0b1f3a;
-
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .occupancy-challenge-content p {
   margin: 0;
 
   color: #596b7e;
-
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 1.75;
 }
 
 /* Tablet */
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .occupancy-challenges {
     padding: 70px 0;
   }
 
-  .occupancy-challenges-header {
-    margin-bottom: 45px;
-  }
-
-  .occupancy-challenges-header h2 {
-    font-size: 32px;
+  .occupancy-challenges-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .occupancy-challenge-item {
-    gap: 20px;
-  }
-
-  .occupancy-challenge-number {
-    flex: 0 0 60px;
-
-    width: 60px;
-    height: 60px;
-  }
-
-  .occupancy-challenges-list::before {
-    left: 30px;
-  }
-
-  .occupancy-challenge-content {
-    padding: 22px;
+    height: 250px;
   }
 }
 
 /* Mobile */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .occupancy-challenges {
     padding: 60px 0;
   }
@@ -203,30 +139,30 @@
     padding: 0 20px;
   }
 
-  .occupancy-challenges-header h2 {
-    font-size: 28px;
+  .occupancy-challenges-header {
+    margin-bottom: 40px;
   }
 
-  .occupancy-challenges-list::before {
-    display: none;
+  .occupancy-challenges-header h3 {
+    font-size: 30px;
+  }
+
+  .occupancy-challenges-list {
+    grid-template-columns: 1fr;
   }
 
   .occupancy-challenge-item {
-    display: block;
-    padding-bottom: 30px;
+    height: auto;
+    min-height: 240px;
+    padding: 26px;
   }
+}
 
-  .occupancy-challenge-number {
-    margin-bottom: -12px;
-    margin-left: 20px;
-  }
+/* Small Mobile */
 
-  .occupancy-challenge-content {
-    padding: 35px 22px 22px;
-  }
-
-  .occupancy-challenge-item:hover .occupancy-challenge-content {
-    transform: none;
+@media (max-width: 480px) {
+  .occupancy-challenges-header h3 {
+    font-size: 26px;
   }
 
   .occupancy-challenge-content h3 {
@@ -234,6 +170,6 @@
   }
 
   .occupancy-challenge-content p {
-    font-size: 14px;
+    font-size: 13px;
   }
 }

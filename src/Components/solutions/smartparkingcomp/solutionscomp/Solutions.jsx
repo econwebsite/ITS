@@ -1,6 +1,6 @@
 import Modelbutton from "../../../Button comp/Modelbutton";
 import "./Solutions.css";
-
+import { Link } from "react-router-dom";
 import ParkingAccessControl from "../assets/Parking-Access-Control.png";
 import OccupancyDetection from "../assets/Occupancy-Detection.png";
 import ParkingEnforcement from "../assets/Parking-Enforcement.png";
@@ -51,7 +51,8 @@ const Solutions = () => {
       {/* Solution Cards */}
       <div className="parking-solutions-grid">
         {solutions.map((solution) => (
-          <div
+          <Link
+          to={solution.link}
             key={solution.number}
             className={`parking-solution-card ${
               solution.number === "02" ? "parking-solution-dark" : ""
@@ -71,12 +72,12 @@ const Solutions = () => {
 
               <p>{solution.description}</p>
 
-              <a
-                href={solution.link}
+              <div
+              
                 className="parking-solution-link"
               >
                 Know More <span>→</span>
-              </a>
+              </div>
             </div>
 
             {/* Card Image */}
@@ -88,7 +89,7 @@ const Solutions = () => {
             </div>
 
           
-          </div>
+          </Link>
         ))}
       </div>
 

@@ -1,7 +1,7 @@
 import React from "react";
 import "./ParkingEnforcementOverview.css";
 
-import heroBannerImg from "../../../assets/smart-parking.png";
+import heroBannerImg from "../../../../../../assets/solutionpage/smart-parking-management/parking-enforcement/side-image.jpg"
 
 const ParkingEnforcementOverview = () => {
   return (

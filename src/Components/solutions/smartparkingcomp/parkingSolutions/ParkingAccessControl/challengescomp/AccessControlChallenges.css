@@ -1,6 +1,6 @@
 .access-control-challenges {
   padding: 90px 0;
-  background: #f8fbff;
+  background: #f7fbff;
 }
 
 .access-control-challenges-container {
@@ -27,19 +27,11 @@
 }
 
 .access-control-challenges-header h2 {
-  margin: 15px 0 14px;
+  margin: 14px 0 0;
   color: #0b1f3a;
   font-size: 40px;
   font-weight: 700;
   line-height: 1.25;
-}
-
-.access-control-challenges-header p {
-  max-width: 700px;
-  margin: 0 auto;
-  color: #596b7e;
-  font-size: 15px;
-  line-height: 1.7;
 }
 
 /* =========================
@@ -48,8 +40,8 @@
 
 .access-control-challenges-grid {
   display: grid;
-  grid-template-columns: 1.5fr 0.85fr 0.85fr;
-  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 /* =========================
@@ -58,83 +50,56 @@
 
 .access-control-challenge-card {
   position: relative;
-  min-height: 340px;
-  padding: 30px;
+  height: 330px;
+  padding: 32px;
   overflow: hidden;
 
   background: #ffffff;
-  border: 1px solid #e1edf6;
-  border-radius: 18px;
+  border: 1px solid #dceaf3;
+  border-radius: 20px;
 
-  box-shadow: 0 12px 35px rgba(11, 31, 58, 0.05);
+  box-shadow: 0 10px 30px rgba(11, 31, 58, 0.045);
 
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease,
-    border-color 0.35s ease;
+    border-color 0.35s ease,
+    background 0.35s ease;
 }
 
 .access-control-challenge-card:hover {
-  transform: translateY(-7px);
-  border-color: rgba(0, 174, 239, 0.35);
-  box-shadow: 0 20px 45px rgba(0, 174, 239, 0.12);
+  transform: translateY(-8px);
+
+  border-color: #00aeef;
+
+  box-shadow:
+    0 20px 45px rgba(0, 174, 239, 0.14);
 }
 
 /* =========================
-   DECORATIVE CIRCLE
+   BLUE ACCENT LINE
 ========================= */
 
-.access-control-challenge-card::after {
+.access-control-challenge-card::before {
   content: "";
+
   position: absolute;
+  top: 32px;
+  left: 32px;
 
-  right: -70px;
-  bottom: -80px;
+  width: 42px;
+  height: 4px;
 
-  width: 190px;
-  height: 190px;
-
-  border-radius: 50%;
-  background: rgba(0, 174, 239, 0.045);
-
-  transition: transform 0.4s ease;
-}
-
-.access-control-challenge-card:hover::after {
-  transform: scale(1.2);
-}
-
-/* =========================
-   NUMBER
-========================= */
-
-.access-control-challenge-number {
-  position: relative;
-  z-index: 3;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 40px;
-  height: 40px;
-
-  border-radius: 50%;
-
-  background: #eaf8ff;
-  color: #00aeef;
-
-  font-size: 12px;
-  font-weight: 700;
-
-  transition: all 0.3s ease;
-}
-
-.access-control-challenge-card:hover
-.access-control-challenge-number {
+  border-radius: 10px;
   background: #00aeef;
-  color: #ffffff;
-  transform: scale(1.08);
+
+  transition:
+    width 0.35s ease,
+    background 0.35s ease;
+}
+
+.access-control-challenge-card:hover::before {
+  width: 70px;
 }
 
 /* =========================
@@ -143,101 +108,117 @@
 
 .access-control-challenge-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+
   margin-top: 28px;
+
+  max-width: 78%;
 }
 
 .access-control-challenge-content h3 {
-  max-width: 100%;
   margin: 0 0 14px;
 
   color: #0b1f3a;
-  font-size: 20px;
+
+  font-size: 21px;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.35;
+
+  transition: color 0.3s ease;
+}
+
+.access-control-challenge-card:hover
+.access-control-challenge-content h3 {
+  color: #007db5;
 }
 
 .access-control-challenge-content p {
-  max-width: 100%;
   margin: 0;
 
   color: #596b7e;
+
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 /* =========================
-   LARGE CARDS
-   01 & 04
+   IMAGE
 ========================= */
 
-.challenge-01,
-.challenge-04 {
-  min-height: 360px;
-}
-
-.challenge-01 .access-control-challenge-content,
-.challenge-04 .access-control-challenge-content {
-  position: relative;
-  z-index: 2;
-  max-width: 65%;
-}
-
-/* =========================
-   LARGE IMAGE
-   01 & 04
-========================= */
-
-.access-control-challenge-image.large {
+.access-control-challenge-image {
   position: absolute;
 
-  right: -30px;
-  bottom: -20px;
+  right: 18px;
+  top: 16px;
 
-  width: 430px;
-  height: 240px;
+ 
 
   z-index: 1;
+
   pointer-events: none;
+
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
 }
 
-.access-control-challenge-image.large img {
+.access-control-challenge-image img {
   display: block;
 
-  width: 100%;
-  height: 100%;
+
 
   object-fit: contain;
   object-position: right bottom;
 }
 
-/* =========================
-   SMALL IMAGE
-   02, 03, 05 & 06
-========================= */
+.access-control-challenge-card:hover
+.access-control-challenge-image {
+  opacity: 0.8;
+  transform: translateY(-5px) scale(1.05);
+}
 
+/* Make all image types identical */
+
+.access-control-challenge-image.large,
 .access-control-challenge-image.small {
   position: absolute;
 
-  top: 20px;
-  right: 30px;
-  
+  top: auto;
+  right: 18px;
+  bottom: 12px;
 
-  width: 90px;
-  height: 80px;
-
-  z-index: 2;
-  pointer-events: none;
+  width: 145px;
+  height: 110px;
 }
 
-.access-control-challenge-image.small img {
-  display: block;
+/* =========================
+   IMAGE FADE
+========================= */
 
-  width: 100%;
-  height: 100%;
+.access-control-challenge-card::after {
+  content: "";
 
-  object-fit: contain;
-  object-position: center;
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 220px;
+  height: 180px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 174, 239, 0.035)
+    );
+
+  border-radius: 100% 0 0 0;
+
+  z-index: 0;
+
+  pointer-events: none;
 }
 
 /* =========================
@@ -253,22 +234,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .challenge-01 .access-control-challenge-content,
-  .challenge-04 .access-control-challenge-content {
-    max-width: 70%;
-  }
-
-  .access-control-challenge-image.large {
-    width: 350px;
-    height: 200px;
-  }
-
-  .access-control-challenge-image.small {
-    top: 20px;
-    right: 20px;
-
-    width: 90px;
-    height: 80px;
+  .access-control-challenge-card {
+    height: 330px;
   }
 }
 
@@ -298,28 +265,22 @@
   }
 
   .access-control-challenge-card {
-    min-height: 350px;
+    height: 340px;
+    padding: 30px;
   }
 
-  .challenge-01 .access-control-challenge-content,
-  .challenge-04 .access-control-challenge-content {
-    max-width: 100%;
+  .access-control-challenge-content {
+    max-width: 82%;
   }
 
-  .access-control-challenge-image.large {
-    width: 300px;
-    height: 180px;
-
-    right: -20px;
-    bottom: -10px;
-  }
-
+  .access-control-challenge-image,
+  .access-control-challenge-image.large,
   .access-control-challenge-image.small {
-    top: 18px;
-    right: 18px;
+    width: 145px;
+    height: 110px;
 
-    width: 90px;
-    height: 80px;
+    right: 15px;
+    bottom: 12px;
   }
 }
 
@@ -333,7 +294,18 @@
   }
 
   .access-control-challenge-card {
-    padding: 25px 22px;
+    height: 350px;
+    padding: 25px;
+  }
+
+  .access-control-challenge-card::before {
+    left: 25px;
+    top: 27px;
+  }
+
+  .access-control-challenge-content {
+    margin-top: 28px;
+    max-width: 100%;
   }
 
   .access-control-challenge-content h3 {
@@ -344,19 +316,13 @@
     font-size: 14px;
   }
 
-  .access-control-challenge-image.large {
-    width: 260px;
-    height: 155px;
-
-    right: -15px;
-    bottom: -5px;
-  }
-
+  .access-control-challenge-image,
+  .access-control-challenge-image.large,
   .access-control-challenge-image.small {
-    top: 18px;
-    right: 18px;
+    width: 130px;
+    height: 100px;
 
-    width: 85px;
-    height: 75px;
+    right: 10px;
+    bottom: 10px;
   }
 }

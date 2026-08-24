@@ -54,9 +54,7 @@ const OccupancyChallenges = () => {
               className="occupancy-challenge-item"
               key={challenge.number}
             >
-              <div className="occupancy-challenge-number">
-                {challenge.number}
-              </div>
+            
 
               <div className="occupancy-challenge-content">
                 <h3>{challenge.title}</h3>
