@@ -97,7 +97,7 @@
 
 /* Mobile */
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .occupancy-detection-overview {
     padding: 60px 0;
   }
@@ -119,7 +119,8 @@
   .occupancy-detection-overview-image img {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    object-fit: fill;
+    max-height: 420px;
   }
 
   .occupancy-detection-overview-content {

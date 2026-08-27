@@ -133,7 +133,7 @@
   object-fit: contain;
   object-position: right bottom;
 
-  opacity: 1;
+  opacity: 0.95;
 
   transition:
     transform 0.6s ease,

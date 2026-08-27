@@ -2,8 +2,8 @@ import Modelbutton from "../../../Button comp/Modelbutton";
 import "./Solutions.css";
 import { Link } from "react-router-dom";
 import ParkingAccessControl from "../assets/Parking-Access-Control.png";
-import OccupancyDetection from "../assets/Occupancy-Detection.png";
-import ParkingEnforcement from "../assets/Parking-Enforcement.png";
+import OccupancyDetection from "../assets/Occupancy-Detection1.png";
+import ParkingEnforcement from "../assets/Parking-Enforcement4.png";
 
 const solutions = [
   {

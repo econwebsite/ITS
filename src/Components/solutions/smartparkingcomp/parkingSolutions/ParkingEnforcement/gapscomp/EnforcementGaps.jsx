@@ -1,7 +1,7 @@
 import React from "react";
 import "./EnforcementGaps.css";
 
-import bgImage from "../../../assets/bg-parking-image.jpg";
+import bgImage from "../../../assets/800x600.png";
 
 const enforcementGaps = [
   {
@@ -45,29 +45,27 @@ const EnforcementGaps = () => {
           </h3>
         </div>
 
-        <div className="enforcement-gaps-grid">
-          {enforcementGaps.map((gap, index) => (
-            <article
-              className="enforcement-gap-card"
-              key={gap.title}
-              style={{
-                backgroundImage: `url(${bgImage})`,
-              }}
-            >
-              <div className="enforcement-gap-number">
-                {String(index + 1).padStart(2, "0")}
-              </div>
+    <div className="enforcement-gaps-grid">
+  {enforcementGaps.map((gap, index) => (
+    <article className="enforcement-gap-card" key={gap.title}>
 
-              <div className="enforcement-gap-overlay"></div>
+      <div
+        className="enforcement-gap-image"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+        }}
+      />
 
-              <div className="enforcement-gap-content">
-                <h3>{gap.title}</h3>
+      <div className="enforcement-gap-content">
+       
 
-                <p>{gap.description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
+        <h3>{gap.title}</h3>
+        <p>{gap.description}</p>
+      </div>
+
+    </article>
+  ))}
+</div>
 
       </div>
     </section>
