@@ -28,14 +28,7 @@
   letter-spacing: 1.5px;
 }
 
-.parking-enforcement-process-header h3 {
-  max-width: 850px;
-  margin: 18px auto 0;
-  color: #0b1f3a;
-  font-size: 34px;
-  font-weight: 700;
-  line-height: 1.25;
-}
+
 
 /* Grid */
 
@@ -83,7 +76,7 @@
 }
 
 .parking-process-item:hover .parking-process-icon {
-  background: #00aeef;
+
   color: #ffffff;
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0, 174, 239, 0.2);
@@ -101,13 +94,17 @@
 
 /* Description */
 
+/* Description */
+/* Description */
 .parking-process-item p {
-  max-width: 270px;
+  width: 100%;
+  max-width: 290px;
+  min-height: 210px;
   margin: 0 auto;
-
   color: #687789;
-  font-size: 14px;
-  line-height: 1.75;
+  font-size: 15px;
+  line-height: 1.9;
+  text-align: left;
 }
 
 /* Connecting line */

@@ -44,7 +44,6 @@ const OccupancyChallenges = () => {
 
           <h3>
           How Occupancy Data Often Fails Operators and Drivers
-
           </h3>
         </div>
 

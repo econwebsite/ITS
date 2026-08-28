@@ -5,10 +5,7 @@
 }
 
 
-.occupancy-process-number svg {
-  width: 38px ;
-  height: 38px;
-}
+
 .occupancy-how-it-works-container {
   max-width: 1250px;
   margin: 0 auto;
@@ -29,15 +26,7 @@
   letter-spacing: 2px;
 }
 
-.occupancy-how-it-works-header h2 {
-  margin: 16px auto 0;
 
-  color: #0b1f3a;
-
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 1.25;
-}
 
 /* Process */
 
@@ -56,7 +45,7 @@
 .occupancy-process-number {
   width: 76px;
   height: 76px;
-
+padding: 7px;
   margin: 0 auto 25px;
 
   display: flex;
@@ -81,7 +70,7 @@
 }
 
 .occupancy-process-step:hover .occupancy-process-number {
-  background: #00aeef;
+
   color: #ffffff;
   transform: scale(1.08);
 }

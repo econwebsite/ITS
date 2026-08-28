@@ -1,28 +1,30 @@
 import React from "react";
 import "./ParkingEnforcementHowItWorks.css";
-import CameraAltIcon from "@mui/icons-material/CameraAlt";
-import MemoryIcon from "@mui/icons-material/Memory";
-import Inventory2Icon from "@mui/icons-material/Inventory2";
-import IntegrationInstructionsIcon from "@mui/icons-material/IntegrationInstructions";
+
+import CameraAltIcon from "../../../../../../assets/solutionpage/smart-parking-management/parking-enforcement/works-1.svg"
+import MemoryIcon from "../../../../../../assets/solutionpage/smart-parking-management/parking-enforcement/works-2.svg"
+import Inventory2Icon from "../../../../../../assets/solutionpage/smart-parking-management/parking-enforcement/works-3.svg"
+import IntegrationInstructionsIcon from "../../../../../../assets/solutionpage/smart-parking-management/parking-enforcement/works-4.svg"
+
 const processSteps = [
-  { icon: <CameraAltIcon />,
+  { icon: CameraAltIcon,
     number: "01",
     title: " Detect",
     description:
-"Our ANPR camera captures a motion-blur-free plate image the moment a vehicle enters the enforcement zone. Multi-IR illumination"  },
-  { icon: <MemoryIcon />,
+"Our ANPR camera captures a motion-blur-free plate image the moment a vehicle enters the enforcement zone. Multi-IR illumination (850nm or 940nm) fires automatically depending on ambient light conditions."  },
+  { icon: MemoryIcon,
     number: "02",
     title: "Process",
     description:
       "Edge AI runs ANPR on-device. Plate string and confidence score output in under 200ms. No raw video is transmitted — only metadata leaves the camera.",
   },
-  {  icon: <Inventory2Icon />,
+  {  icon: Inventory2Icon,
     number: "03",
     title: "Package",
     description:
       "Detection events produce a complete NOV-ready evidence package, including plate string, GPS coordinates, UTC timestamp, and JPEG snapshots, ready for adjudication.",
   },
-  {    icon: <IntegrationInstructionsIcon />,
+  {    icon: IntegrationInstructionsIcon,
 
     number: "04",
     title: "Integrate",
@@ -47,7 +49,7 @@ const ParkingEnforcementHowItWorks = () => {
     <article className="parking-process-item" key={step.title}>
 
       <div className="parking-process-icon">
-        {step.icon}
+       <img src= {step.icon} alt="" />
       </div>
 
       <h3>{step.title}</h3>

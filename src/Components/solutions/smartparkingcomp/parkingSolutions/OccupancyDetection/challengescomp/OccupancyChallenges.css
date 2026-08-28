@@ -23,14 +23,7 @@
   letter-spacing: 2px;
 }
 
-.occupancy-challenges-header h3 {
-  max-width: 850px;
-  margin: 16px auto 0;
-  color: #0b1f3a;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 1.25;
-}
+
 
 /* Grid */
 
@@ -143,9 +136,6 @@
     margin-bottom: 40px;
   }
 
-  .occupancy-challenges-header h3 {
-    font-size: 30px;
-  }
 
   .occupancy-challenges-list {
     grid-template-columns: 1fr;
@@ -161,9 +151,7 @@
 /* Small Mobile */
 
 @media (max-width: 480px) {
-  .occupancy-challenges-header h3 {
-    font-size: 26px;
-  }
+  
 
   .occupancy-challenge-content h3 {
     font-size: 19px;

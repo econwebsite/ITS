@@ -15,9 +15,9 @@ const OccupancyDetectionOverview = () => {
             OCCUPANCY DETECTION
           </span>
 
-          <h3>
+          <h1>
             Real-Time Visibility for Every Parking Space
-          </h3>
+          </h1>
 
           <p>
            Only 5% of off-street parking locations generate real-time space availability data, and

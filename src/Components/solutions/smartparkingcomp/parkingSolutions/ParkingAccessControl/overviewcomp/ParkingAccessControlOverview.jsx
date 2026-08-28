@@ -13,11 +13,11 @@ const ParkingAccessControlOverview = () => {
         {/* Content */}
         <div className="parking-access-control-overview-content">
 
-          <h2  >
+          <span className="occupancy-detection-overview-tag"  >
             Parking Access Control
-          </h2>
+          </span>
 
-         
+         <h1>Frictionless Entry & Secure Access — With Zero Tickets</h1>
 
           <p>
             Every paper ticket issued is a potential dispute, a queue, or a revenue leak. Tailgating at

@@ -17,7 +17,7 @@ const WhyChooseAccessControl = () => {
         <div className="why-choose-access-control-header">
           <span>WHY E-CON SYSTEMS</span>
 
-          <h2>Why Choose e-con Systems' ANPR Cameras?</h2>
+          <h3>Why Choose e-con Systems' ANPR Cameras?</h3>
 
           <div className="why-choose-access-control-line"></div>
         </div>

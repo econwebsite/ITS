@@ -32,15 +32,16 @@
 }
 
 /* Content */
+.parking-access-control-overview-content h1{
+ font-weight: bolder;
+  padding: 5px 0px;
 
+}
 .parking-access-control-overview-content {
   flex: 1;
 }
 
-.parking-access-control-overview-content h2 {
-  color: #00aeef;
-
-}
+.occupancy-detection-overview-tag { color: #00aeef; font-size: 13px; font-weight: 700; letter-spacing: 2px; }
 
 
 

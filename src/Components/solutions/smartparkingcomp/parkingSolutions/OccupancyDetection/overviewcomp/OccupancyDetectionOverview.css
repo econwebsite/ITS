@@ -2,7 +2,10 @@
   padding: 85px 0;
   background: #ffffff;
 }
-
+.occupancy-detection-overview-content h1 {
+    font-weight: bolder;
+    padding: 5px 0px;
+  }
 .occupancy-detection-overview-container {
   max-width: 1250px;
   margin: 0 auto;
@@ -128,7 +131,7 @@
   }
 
   .occupancy-detection-overview-content h2 {
-    font-size: 30px;
+    
   }
 
   .occupancy-detection-overview-content p {
