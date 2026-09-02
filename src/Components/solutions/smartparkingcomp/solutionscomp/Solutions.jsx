@@ -38,7 +38,7 @@ const Solutions = () => {
       {/* Header */}
       <div className="parking-solutions-header">
         <h3 className="parking-solutions-badge">
-          Our Three Solutions
+        Our Smart Parking Solutions
         </h3>
 
         {/* <h2>

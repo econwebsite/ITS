@@ -20,8 +20,8 @@ const ParkingAccessControlBanner = () => {
       <div className="parking-access-control-banner-content">
 
         <h1>
-         Frictionless Entry & Secure Access
-          <span> — With Zero Tickets</span>
+         Seamless Parking 
+          <span> with  License Plate Recognition</span>
         </h1>
 
         <p className="parking-access-control-banner-caption">

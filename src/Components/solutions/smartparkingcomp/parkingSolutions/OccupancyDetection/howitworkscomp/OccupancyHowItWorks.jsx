@@ -70,7 +70,7 @@ const OccupancyHowItWorks = () => {
           ))}
         </div>
 
-  <div className="occupancy-integration-note">
+  {/* <div className="occupancy-integration-note">
           <h3>
             Need plate-linked dwell time as well as occupancy status?
           </h3>
@@ -82,7 +82,7 @@ be integrated over the same REST API, giving you space-level vacancy and plate-l
 entry/exit records, without asking one wide-FoV camera to do both jobs at once.
 
           </p>
-        </div>
+        </div> */}
 
       </div>
     </section>

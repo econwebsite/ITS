@@ -4,7 +4,6 @@ import EnforcementGaps from './gapscomp/EnforcementGaps'
 import ViolationTypes from './violationcomp/ViolationTypes'
 import ParkingEnforcementHowItWorks from './howitworkscomp/ParkingEnforcementHowItWorks'
 import WhyChooseEnforcement from './whychoosecomp/WhyChooseEnforcement'
-import EnforcementReference from './referencecomp/EnforcementReference'
 import ParkingAccessControlBanner from './bannercomp/ParkingEnforcementBanner'
 
 function ParkingEnforcementPage() {
@@ -23,7 +22,7 @@ function ParkingEnforcementPage() {
 
     <WhyChooseEnforcement/>
 
-    <EnforcementReference/>
+   
    </div>
 
   )
