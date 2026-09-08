@@ -22,15 +22,10 @@ function SmartParkingPage() {
         name: "Home",
         item: `${siteUrl}/`,
       },
+     
       {
         "@type": "ListItem",
         position: 2,
-        name: "Solutions",
-        item: `${siteUrl}/solutions`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
         name: "Smart Parking Management",
         item: `${siteUrl}/solutions/smart-parking-management`,
       },
@@ -52,6 +47,23 @@ edge AI cameras.' />
 </Helmet>
       
       <Banner />
+
+      <div className="occupancy-breadcrumb">
+  <a
+    href="https://www.e-consystems.com/"
+    title="Go to Home Page"
+  >
+    Home
+  </a>
+
+
+
+  <span>&gt;</span>
+
+  <span className="breadcrumb-current">
+    Smart Parking Management
+  </span>
+</div>
       <div>
         <Overview />
         <Features />

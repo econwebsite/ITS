@@ -1,5 +1,5 @@
 .parking-enforcement-overview {
-  padding: 85px 0;
+  padding: 15px 0;
   background: #ffffff;
 }
 
@@ -73,7 +73,7 @@
 
 @media (max-width: 992px) {
   .parking-enforcement-overview {
-    padding: 70px 0;
+    padding: 15px 0;
   }
 
   .parking-enforcement-overview-container {
@@ -101,7 +101,7 @@
 
 @media (max-width: 768px) {
   .parking-enforcement-overview {
-    padding: 60px 0;
+    padding: 15px 0;
   }
 
   .parking-enforcement-overview-container {

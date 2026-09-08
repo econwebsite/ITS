@@ -24,11 +24,11 @@ const ParkingAccessControlBanner = () => {
           <span> with  License Plate Recognition</span>
         </h1>
 
-        <p className="parking-access-control-banner-caption">
+        {/* <p className="parking-access-control-banner-caption">
            Vision solutions for reading every plate, logging every entry, and collecting
 every dollar
-        </p>
-
+        </p> */}
+<p></p>
         <Modelbutton
           className=""
           text="Talk to an ITS Expert"

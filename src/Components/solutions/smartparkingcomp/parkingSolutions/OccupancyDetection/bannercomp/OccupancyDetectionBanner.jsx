@@ -17,7 +17,7 @@ const OccupancyDetectionBanner = () => {
       <div className="occupancy-detection-banner-content">
         <h1>
           Occupancy Detection 
-          <span>- Know Every Space in Real Time</span>
+          <span>Know Every Space in Real Time</span>
         </h1>
 
         {/* <p className="occupancy-detection-banner-caption">

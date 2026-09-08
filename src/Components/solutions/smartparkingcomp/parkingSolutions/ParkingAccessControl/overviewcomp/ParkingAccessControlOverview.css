@@ -1,5 +1,5 @@
 .parking-access-control-overview {
-  padding: 85px 0;
+  padding: 15px 0;
   background: #ffffff;
 }
 
@@ -63,7 +63,7 @@
 
 @media (max-width: 992px) {
   .parking-access-control-overview {
-    padding: 70px 0;
+    padding: 15px 0;
   }
 
   .parking-access-control-overview-container {
@@ -92,7 +92,7 @@
 
 @media (max-width: 768px) {
   .parking-access-control-overview {
-    padding: 60px 0;
+    padding: 15px 0;
   }
 
   .parking-access-control-overview-container {

@@ -27,7 +27,7 @@ const EnforcementReference = () => {
     <section className="enforcement-reference">
       <div className="enforcement-reference-container">
 
-        <div className="enforcement-reference-header">
+        {/* <div className="enforcement-reference-header">
      
           <h3>Why Our ANPR Cameras Stand Out</h3>
         </div>
@@ -52,7 +52,7 @@ const EnforcementReference = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className="enforcement-reference-cta">
           <h3>

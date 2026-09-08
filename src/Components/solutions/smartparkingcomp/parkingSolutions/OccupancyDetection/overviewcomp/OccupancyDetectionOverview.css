@@ -1,5 +1,5 @@
 .occupancy-detection-overview {
-  padding: 85px 0;
+  padding: 15px 0;
   background: #ffffff;
 }
 .occupancy-detection-overview-content h1 {
@@ -74,7 +74,7 @@
 
 @media (max-width: 992px) {
   .occupancy-detection-overview {
-    padding: 70px 0;
+    padding: 15px 0;
   }
 
   .occupancy-detection-overview-container {
@@ -102,7 +102,7 @@
 
 @media (max-width: 868px) {
   .occupancy-detection-overview {
-    padding: 60px 0;
+    padding: 15px 0;
   }
 
   .occupancy-detection-overview-container {

@@ -1,6 +1,5 @@
 .overview {
   background: #fff;
-  padding: 80px 0;
 }
 
 .overview-container {
@@ -38,7 +37,7 @@
 }
 
 .overview-image {
-  flex: 0 0 520px;
+  flex: 0 0 500px;
 }
 
 .overview-image img {
@@ -63,8 +62,6 @@
 
   .overview-image {
     flex: none;
-    width: 100%;
-    max-width: 700px;
   }
 
   .overview-title {
@@ -74,7 +71,7 @@
 
 @media (max-width: 768px) {
   .overview {
-    padding: 60px 0;
+    padding: 15px 0;
   }
 
   .overview-container {
