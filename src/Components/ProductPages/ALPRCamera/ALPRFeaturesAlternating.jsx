@@ -30,15 +30,17 @@ const ALPRFeaturesAlternating = () => {
     {
       title: "High-Resolution Imaging",
       items: [
-        "8MP CMOS sensor",
-        "Supports monitoring of up to 3 traffic lanes",
-        "Auto/Manual exposure mode for changing lighting conditions",
-        "120 dB True WDR for high contrast scenes",
-        "Sony® STARVIS™ technology for excellent low-light imaging ",
-        "IR range up to 20m for night time monitoring",
-        "M12 S-Mount lens, 25mm focal length",
-        "Frame rate up to 30 fps",
-        "H.265 / H.264 / MJPEG video compression"
+        "5MP CMOS image sensor",
+        "Supports monitoring of up to two lanes",
+        "Auto and manual exposure modes for changing lighting conditions",
+        "Frame rate of up to 60 fps",
+        "IR illumination range of up to 50 m for nighttime monitoring ",
+        "License plate detection range of up to 50 m",
+        "M12 S-mount lens",
+        "Supports external radar integration",
+        "IP67-rated enclosure",
+        "PoE support",
+        "Supports CE, FCC, RoHS, BIS, NDAA, and STQC compliance"
       ],
       icon: (
         <svg viewBox="0 0 200 200" className="feature-svg">

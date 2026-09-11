@@ -6,7 +6,7 @@ import Modelbutton from "../../Button comp/Modelbutton";
 const ALPRBanner = () => {
   const banner = {
     image: bannerImg,
-    title: "AI 4K ALPR Camera",
+    title: "AI ALPR Camera for Tolling and Enforcement",
     subtitle: "Reliable License Plate Recognition for Smarter Traffic Infrastructure",
   };
 

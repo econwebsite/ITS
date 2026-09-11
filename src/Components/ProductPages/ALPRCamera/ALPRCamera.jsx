@@ -11,8 +11,8 @@ const ALPRCamera = () => {
   return (
     <div className="alpr-page">
       <Helmet>
-        <title>AI-Enabled 8MP ALPR Camera for Traffic Analytics & Parking</title>
-        <meta name='description' content='e-con Systems AI-enabled 8MP ALPR camera with edge AI analytics for vehicle identification, parking monitoring, and traffic insights in low- to medium-speed environments.' />
+        <title>Reliable license plate recognition for low-light and high-speed traffic</title>
+        <meta name='description' content='TrafficSenz is a rugged, AI-enabled ANPR camera designed for ITS, multi-lane free-flow tolling, Advanced Traffic Management Systems (ATMS), and law enforcement applications. ' />
       </Helmet>
       <ALPRBanner />
       <AboutALPR />

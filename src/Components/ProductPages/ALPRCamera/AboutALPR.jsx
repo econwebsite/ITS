@@ -31,16 +31,17 @@ const AboutALPR = () => {
             {/* Left: Text Section */}
             <div className="col-lg-8 mt-3 aboutParaMain text-left text-lg-start ps-0">
               <h2 className="titlePrimary">
-                AI-enabled 4K ALPR Camera for Smart Intersection & Parking Monitoring
+                Reliable license plate recognition for low-light and high-speed traffic
               </h2>
 
               <p className="paragraphtext">
-                e-con Systems' AI-enabled 4K ALPR camera is built with high-resolution imaging, advanced ISP tuning, and edge AI to perform reliable license plate recognition, vehicle classification, and traffic analytics directly on the camera.  It is ideal for low- to medium-speed traffic applications, including smart intersection monitoring, crosswalk safety, and parking management.
+                TrafficSenz is a rugged, AI-enabled ANPR camera designed for ITS, multi-lane free-flow tolling, Advanced Traffic Management Systems (ATMS), and law enforcement applications. It combines high-quality imaging with a global shutter sensor to reliably capture license plates across varying traffic and environmental conditions.
               </p>
 
               <p className="paragraphtext">
-                Built for continuous outdoor operation, this IP67-rated ALPR camera features a low-power design with PoE support, making it suitable for fixed, roadside, and solar-powered deployments. 
+                From an ITS and tolling perspective, the camera is positioned as an edge-based solution that can support vehicle detection, license plate recognition, wrong-way detection, and traffic violation monitoring, reducing reliance on centralized processing.
               </p>
+              <p className="paragraphtext">Its rugged IP67/IK10 enclosure, PoE connectivity, multi-lane coverage, and optional radar/external lighting integration make it suitable for integration into existing tolling infrastructure, traffic management systems, and enforcement applications.</p>
             </div>
             <div className="col-lg-4 px-0 d-flex flex-column align-items-center justify-content-center">
               <div className="col-12 mx-auto">
