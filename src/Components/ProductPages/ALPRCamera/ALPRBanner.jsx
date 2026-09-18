@@ -1,6 +1,6 @@
 import React from "react";
 import "./ALPRBanner.css";
-import bannerImg from '../../../assets/bullet-camera/anpr-camera-banner.jpg'
+import bannerImg from '../../../assets/alpr-camera/alpr-camera-banner.jpg'
 import Modelbutton from "../../Button comp/Modelbutton";
 
 const ALPRBanner = () => {
@@ -12,13 +12,13 @@ const ALPRBanner = () => {
 
   return (
     <div className="alpr-banner">
-      <div className="banner-slide">
+      <div className="alpr-banner-slide">
         <img
           src={banner.image}
           alt={banner.title}
-          className="banner-image"
+          className="alpr-banner-image"
         />
-        <div className="banner-overlay">
+        <div className="alpr-banner-overlay">
           <h1>{banner.title}</h1>
           <p>{banner.subtitle}</p>
           <Modelbutton 

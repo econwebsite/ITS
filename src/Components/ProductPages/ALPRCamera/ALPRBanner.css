@@ -1,11 +1,16 @@
 /* ================================
    ALPR Banner Styles
+   (all selectors scoped under .alpr-banner to avoid
+   colliding with the shared .banner-* classes reused
+   by other product/solution banner components)
    ================================ */
 
 .alpr-banner {
   position: relative;
   width: 100%;
   height: 70vh;
+  min-height: 420px;
+  max-height: 720px;
   overflow: hidden;
   background-color: transparent;
   margin: 0;
@@ -14,7 +19,7 @@
 }
 
 /* Banner image container */
-.banner-slide {
+.alpr-banner .alpr-banner-slide {
   position: relative;
   width: 100%;
   height: 100%;
@@ -24,10 +29,11 @@
 }
 
 /* Banner image styling */
-.banner-image {
+.alpr-banner .alpr-banner-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
   background-color: transparent;
   vertical-align: top;
@@ -35,38 +41,43 @@
 }
 
 /* Overlay with text content */
-.banner-overlay {
+.alpr-banner .alpr-banner-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45);
+  background: linear-gradient(100deg, rgb(4 16 33 / 59%) 0%, rgb(4 16 33 / 23%) 45%, rgba(4, 16, 33, 0.25) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
   text-align: center;
-  padding: 20px;
+  padding: 20px clamp(20px, 6vw, 80px);
   box-sizing: border-box;
 }
 
-.banner-overlay h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
+.alpr-banner .alpr-banner-overlay h1 {
+  font-size: clamp(1.6rem, 3.2vw, 2rem);
+  font-weight: 700;
   margin-bottom: 15px;
+  max-width: 760px;
+  line-height: 1.3;
+  color: #f5f4f2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 
-.banner-overlay p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  max-width: 800px;
+.alpr-banner .alpr-banner-overlay p {
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+  margin-bottom: 24px;
+  max-width: 640px;
   line-height: 1.6;
+  color: #f1f4f8;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 
 /* CTA Button (fallback) */
-.banner-button {
+.alpr-banner .alpr-banner-button {
   padding: 12px 25px;
   border: none;
   background-color: #1e2f7ac9;
@@ -77,43 +88,47 @@
   transition: all 0.3s ease;
 }
 
-.banner-button:hover {
+.alpr-banner .alpr-banner-button:hover {
   background-color: #00aeef;
   transform: scale(1.05);
 }
 
 /* Modelbutton custom styling */
-.alpr-cameravariant-button {
+.alpr-banner .alpr-cameravariant-button {
   transition: all 0.3s ease;
 }
 
 /* Responsive Design */
 
 @media (max-width: 1024px) {
-  .banner-overlay h1 {
-    font-size: 2rem;
-  }
-
-  .banner-overlay p {
-    font-size: 1.1rem;
-    max-width: 700px;
+  .alpr-banner {
+    height: 60vh;
+    min-height: 380px;
   }
 }
 
 @media (max-width: 768px) {
   .alpr-banner {
-    height: 50vh;
+    height: 55vh;
+    min-height: 360px;
   }
 
-  .banner-overlay h1 {
-    font-size: 1.3rem;
+  .alpr-banner .alpr-banner-overlay {
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(
+      180deg,
+      rgba(4, 16, 33, 0.78) 0%,
+      rgba(4, 16, 33, 0.6) 100%
+    );
   }
 
-  .banner-overlay p {
-    font-size: 0.95rem;
+  .alpr-banner .alpr-banner-overlay h1,
+  .alpr-banner .alpr-banner-overlay p {
+    max-width: 100%;
   }
 
-  .banner-button {
+  .alpr-banner .alpr-banner-button {
     padding: 10px 15px;
     font-size: 0.9rem;
   }
@@ -121,20 +136,33 @@
 
 @media (max-width: 480px) {
   .alpr-banner {
-    height: 40vh;
+    height: 50vh;
+    min-height: 320px;
   }
 
-  .banner-overlay h1 {
-    font-size: 1.1rem;
+  .alpr-banner .alpr-banner-overlay {
+    padding: 16px 18px;
   }
 
-  .banner-overlay p {
-    font-size: 0.85rem;
-    max-width: 100%;
-  }
-
-  .banner-button {
+  .alpr-banner .alpr-banner-button {
     padding: 8px 12px;
     font-size: 0.8rem;
+  }
+}
+
+/* Short / landscape viewports (e.g. mobile in landscape) */
+@media (max-height: 480px) and (orientation: landscape) {
+  .alpr-banner {
+    height: 100vh;
+    min-height: 280px;
+    max-height: 420px;
+  }
+
+  .alpr-banner .alpr-banner-overlay h1 {
+    margin-bottom: 8px;
+  }
+
+  .alpr-banner .alpr-banner-overlay p {
+    margin-bottom: 14px;
   }
 }

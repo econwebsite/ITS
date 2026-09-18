@@ -154,7 +154,7 @@ const ALPRHighlights = () => {
           {/* Detail panel */}
           <div className="alpr-highlight-panel" style={{ "--accent": active.accent }}>
             <div className="alpr-highlight-panel-icon">{active.icon}</div>
-            <span className="alpr-highlight-panel-tag">{active.tag}</span>
+            {/* <span className="alpr-highlight-panel-tag">{active.tag}</span> */}
             <h3 key={`title-${activeIndex}`} className="alpr-highlight-panel-title">
               {active.title}
             </h3>

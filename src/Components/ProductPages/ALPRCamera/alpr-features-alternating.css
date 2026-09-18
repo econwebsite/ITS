@@ -38,7 +38,7 @@
 .features-alternating-container {
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 10px;
 }
 
 /* Feature Item Base */
@@ -897,7 +897,7 @@
   }
 
   .features-alternating-container {
-    gap: 60px;
+    gap: 10px;
   }
 
   .feature-item {

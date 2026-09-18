@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Modelbutton from "../../Button comp/Modelbutton";
 // Temporary images (replace later if needed)
-import alprCameraImg from "../../../assets/bullet-camera/automatic-number-plate-recognition-camera-thumb.png";
+import alprCameraImg from "../../../assets/alpr-camera/ai-anpr-camera-thumb.png";
 
 const AboutALPR = () => {
   useEffect(() => {

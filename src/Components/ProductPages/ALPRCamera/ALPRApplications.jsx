@@ -1,6 +1,6 @@
 import React from "react";
 import "./alpr-applications.css";
-import parkingImg from '../../../assets/bullet-camera/parking-management.jpg'
+import parkingImg from '../../../assets/bullet-camera/tolling-highway-infrastructure.jpg'
 import accessControlImg from '../../../assets/bullet-camera/parking-management.jpg'
 import trafficMonitoringImg from '../../../assets/bullet-camera/traffic-enforcement.jpg'
 
@@ -11,7 +11,7 @@ const ALPRApplications = () => {
       title: "Automated Tolling",
     },
     {
-      img: accessControlImg,
+      img: parkingImg,
       title: "MLFF systems",
     },
   ];
