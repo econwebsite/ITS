@@ -1,11 +1,11 @@
 import React from "react";
 import "./ALPRBanner.css";
-import bannerImg from '../../../assets/alpr-camera/alpr-camera-banner.jpg';
+import bannerImage from '../../../assets/alpr-camera/alpr-camera-banner.jpg';
 import Modelbutton from "../../Button comp/Modelbutton";
 
 const ALPRBanner = () => {
   const banner = {
-    image: bannerImg,
+    image: bannerImage,
     title: "Edge AI ANPR & Traffic Intelligence Camera",
     subtitle: "Reliable License Plate Recognition for Smarter Traffic Infrastructure",
   };
