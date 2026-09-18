@@ -666,6 +666,223 @@
 }
 
 /* ============================================
+   KEY FEATURES - CORPORATE TWO-COLUMN SPEC TABLE
+   ============================================ */
+
+.feature-item.keyfeat-item {
+  display: block;
+  grid-template-columns: unset;
+}
+
+.keyfeat-table-card {
+  /* background: #ffffff;
+  border: 1px solid var(--alpr-border-soft);
+  border-radius: 16px; */
+  padding: 0px 32px 8px;
+  /* box-shadow: 0 12px 32px rgba(25, 103, 147, 0.08); */
+}
+
+/* .keyfeat-table-heading {
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--alpr-primary);
+} */
+
+.keyfeat-table-heading h3 {
+  font-size: 1.5rem;
+  color: var(--alpr-primary);
+  font-weight: 600;
+  margin: 0;
+  text-align: left;
+}
+
+/* Table shell */
+.keyfeat-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.keyfeat-spec-table thead th {
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--alpr-primary);
+  padding: 14px 22px;
+}
+
+.keyfeat-spec-table thead th:first-child {
+  width: 30%;
+  border-radius: 8px 0 0 0;
+}
+
+.keyfeat-spec-table thead th:last-child {
+  border-radius: 0 8px 0 0;
+}
+
+.keyfeat-spec-table tbody tr {
+  border-bottom: 1px solid rgba(25, 103, 147, 0.12);
+  transition: background 0.25s ease;
+}
+
+.keyfeat-spec-table tbody tr:nth-child(even) {
+  background: #f6fafd;
+}
+
+.keyfeat-spec-table tbody tr:hover {
+  background: var(--alpr-surface-soft);
+}
+
+.keyfeat-spec-table tbody tr:last-child {
+  border-bottom: 2px solid var(--alpr-primary);
+}
+
+/* Left column - category */
+.keyfeat-spec-table th[scope="row"] {
+  padding: 18px 22px;
+  vertical-align: top;
+  border-right: 1px solid rgba(25, 103, 147, 0.12);
+  background: rgba(25, 103, 147, 0.04);
+}
+
+.keyfeat-row-label {
+  display: flex;
+  align-items: center;
+}
+
+.keyfeat-table-category-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1c2a3d;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1.35;
+}
+
+/* Right column - specifications */
+.keyfeat-spec-table td {
+  padding: 18px 22px;
+  vertical-align: top;
+}
+
+.keyfeat-spec-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.keyfeat-spec-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.92rem;
+  color: #445164;
+  line-height: 1.55;
+}
+
+.keyfeat-spec-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--alpr-accent);
+}
+
+/* Responsive - Key Features spec table */
+@media (max-width: 1024px) {
+  .keyfeat-table-card {
+    padding: 26px 24px 6px;
+  }
+
+  .keyfeat-spec-table thead th,
+  .keyfeat-spec-table th[scope="row"],
+  .keyfeat-spec-table td {
+    padding: 16px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .keyfeat-table-card {
+    padding: 20px 16px 4px;
+    border-radius: 14px;
+  }
+
+  .keyfeat-table-heading h3 {
+    font-size: 1.25rem;
+  }
+
+  /* Stack table into label/value cards on small screens */
+  .keyfeat-spec-table,
+  .keyfeat-spec-table tbody,
+  .keyfeat-spec-table tr,
+  .keyfeat-spec-table th,
+  .keyfeat-spec-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .keyfeat-spec-table thead {
+    display: none;
+  }
+
+  .keyfeat-spec-table tbody tr {
+    margin-bottom: 14px;
+    border: 1px solid rgba(25, 103, 147, 0.14);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .keyfeat-spec-table tbody tr:last-child {
+    border-bottom: 1px solid rgba(25, 103, 147, 0.14);
+  }
+
+  .keyfeat-spec-table th[scope="row"] {
+    border-right: none;
+    border-bottom: 1px solid rgba(25, 103, 147, 0.12);
+    padding: 12px 16px;
+  }
+
+  .keyfeat-spec-table td {
+    padding: 14px 16px;
+  }
+
+  .keyfeat-table-category-text {
+    font-size: 0.9rem;
+  }
+
+  .keyfeat-spec-list li {
+    font-size: 0.86rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .keyfeat-table-card {
+    padding: 16px 12px 4px;
+  }
+
+  .keyfeat-table-heading h3 {
+    font-size: 1.1rem;
+  }
+
+  .keyfeat-table-category-text {
+    font-size: 0.85rem;
+  }
+
+  .keyfeat-spec-list li {
+    font-size: 0.8rem;
+    padding-left: 16px;
+  }
+}
+
+/* ============================================
    RESPONSIVE DESIGN
    ============================================ */
 

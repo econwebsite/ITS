@@ -28,30 +28,56 @@ const ALPRFeaturesAlternating = () => {
 
   const features = [
     {
-      title: "High-Resolution Imaging",
-      items: [
-        "5MP CMOS image sensor",
-        "Supports monitoring of up to two lanes",
-        "Auto and manual exposure modes for changing lighting conditions",
-        "Frame rate of up to 60 fps",
-        "IR illumination range of up to 50 m for nighttime monitoring ",
-        "License plate detection range of up to 50 m",
-        "M12 S-mount lens",
-        "Supports external radar integration",
-        "IP67-rated enclosure",
-        "PoE support",
-        "Supports CE, FCC, RoHS, BIS, NDAA, and STQC compliance"
-      ],
-      icon: (
-        <svg viewBox="0 0 200 200" className="feature-svg">
-          <rect x="40" y="50" width="120" height="90" fill="#196793" opacity="0.1" stroke="#196793" strokeWidth="2" rx="8"/>
-          <circle cx="100" cy="90" r="20" fill="#196793" opacity="0.3"/>
-          <circle cx="100" cy="90" r="14" fill="none" stroke="#00aeef" strokeWidth="2"/>
-          <path d="M 70 130 Q 100 150 130 130" fill="none" stroke="#196793" strokeWidth="2" opacity="0.5"/>
-          <line x1="60" y1="60" x2="70" y2="50" stroke="#00aeef" strokeWidth="2" opacity="0.7"/>
-          <line x1="140" y1="60" x2="130" y2="50" stroke="#00aeef" strokeWidth="2" opacity="0.7"/>
-        </svg>
-      )
+      specTable: true,
+      tableGroups: [
+        {
+          heading: "Imaging & Capture",
+          items: [
+            "5 MP Sony Pregius S Global Shutter",
+            "Pixel-Based Vehicle Triggering",
+            "Auto Exposure Bracketing (AEB)",
+            "Supports capture at speeds up to 300 km/h",
+            "Frame rate up to 60 fps"
+          ]
+        },
+        {
+          heading: "Illumination & Night Vision",
+          items: [
+            "Synchronized 850 nm pulsed IR illumination",
+            "Night-time plate capture up to 50 m"
+          ]
+        },
+        {
+          heading: "On-Camera AI & Detection",
+          items: [
+            "On-camera ANPR, vehicle classification & MMR",
+            "Wrong-way detection & traffic violation monitoring",
+            "Supports monitoring of up to two lanes"
+          ]
+        },
+        {
+          heading: "Security & Storage",
+          items: [
+            "Secure Boot",
+            "ONVIF Profile T / G / M",
+            "Up to 1 TB local storage"
+          ]
+        },
+        {
+          heading: "Build & Connectivity",
+          items: [
+            "IP67 / IK10 enclosure",
+            "PoE connectivity",
+            "Operating temperature −30°C to +70°C",
+            "Supports external radar integration",
+            "Optional external lighting integration"
+          ]
+        },
+        {
+          heading: "Compliance",
+          items: ["CE", "FCC", "RoHS", "BIS", "NDAA", "STQC"]
+        }
+      ]
     },
     {
       title: "AI-Powered Edge Analytics",
@@ -74,26 +100,26 @@ const ALPRFeaturesAlternating = () => {
             "Helmet detection"
           ]
         },
-        {
-          heading: "Flexible Deployment Options",
-          items: [
-            "Designed for smart intersection monitoring, crosswalk safety, and parking management",
-            "Supports fixed and solar-powered deployments",
-            "Low-power options, including PoE or 12V DC input",
-            "Integrated with the CloVis Central™ platform for remote device management "
-          ]
-        },
-        {
-          heading: "Durable & Connected",
-          items: [
-            "IP67-rated housing for outdoor use",
-            "Operating range: -30°C to +65°C, humidity ≤95%",
-            "Secure boot for device integrity and cybersecurity",
-            "ONVIF Profile S/G/T compliant with support for secure network protocols",
-            "Gigabit Ethernet connectivity",
-            "Certified: BIS, CE, STQC, REACH, RoHS"
-          ]
-        }
+        // {
+        //   heading: "Flexible Deployment Options",
+        //   items: [
+        //     "Designed for smart intersection monitoring, crosswalk safety, and parking management",
+        //     "Supports fixed and solar-powered deployments",
+        //     "Low-power options, including PoE or 12V DC input",
+        //     "Integrated with the CloVis Central™ platform for remote device management "
+        //   ]
+        // },
+        // {
+        //   heading: "Durable & Connected",
+        //   items: [
+        //     "IP67-rated housing for outdoor use",
+        //     "Operating range: -30°C to +65°C, humidity ≤95%",
+        //     "Secure boot for device integrity and cybersecurity",
+        //     "ONVIF Profile S/G/T compliant with support for secure network protocols",
+        //     "Gigabit Ethernet connectivity",
+        //     "Certified: BIS, CE, STQC, REACH, RoHS"
+        //   ]
+        // }
       ],
       icon: (
         <svg viewBox="0 0 200 200" className="feature-svg">
@@ -220,6 +246,48 @@ const ALPRFeaturesAlternating = () => {
                         );
                       })}
                     </div>
+                  </div>
+                </div>
+              );
+            }
+
+            // Two-column corporate spec-table layout for Key Features
+            if (feature.specTable) {
+              return (
+                <div key={index} className="feature-item keyfeat-item">
+                  <div className="keyfeat-table-card">
+                    <div className="keyfeat-table-heading">
+                      <h3>{feature.title}</h3>
+                    </div>
+
+                    <table className="keyfeat-spec-table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Category</th>
+                          <th scope="col">Specifications</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {feature.tableGroups.map((group, groupIndex) => (
+                          <tr key={groupIndex}>
+                            <th scope="row">
+                              <span className="keyfeat-row-label">
+                                <span className="keyfeat-table-category-text">
+                                  {group.heading}
+                                </span>
+                              </span>
+                            </th>
+                            <td>
+                              <ul className="keyfeat-spec-list">
+                                {group.items.map((item, itemIndex) => (
+                                  <li key={itemIndex}>{item}</li>
+                                ))}
+                              </ul>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               );

@@ -1,6 +1,7 @@
 import React from "react";
 import ALPRBanner from "./ALPRBanner";
 import AboutALPR from "./AboutALPR";
+import ALPRHighlights from "./ALPRHighlights";
 import ALPRKeyFeatures from "./ALPRKeyFeatures";
 import ALPRFeaturesAlternating from "./ALPRFeaturesAlternating";
 import ALPRApplications from "./ALPRApplications";
@@ -16,6 +17,7 @@ const ALPRCamera = () => {
       </Helmet>
       <ALPRBanner />
       <AboutALPR />
+      <ALPRHighlights />
       <ALPRFeaturesAlternating />
       <ALPRApplications />
       <ALPRFaq />

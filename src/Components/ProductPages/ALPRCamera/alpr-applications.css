@@ -22,8 +22,9 @@
 
 /* Grid Layout */
 .alpr-applications-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
   width: 100%;
   max-width: 1200px;
@@ -37,6 +38,9 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   background-color: #fff;
   transition: all 0.3s ease;
+  width: 300px;
+  max-width: 100%;
+  flex: 0 1 300px;
 }
 
 .alpr-application-card img {

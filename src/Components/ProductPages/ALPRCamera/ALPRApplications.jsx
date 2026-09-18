@@ -8,16 +8,12 @@ const ALPRApplications = () => {
   const applications = [
     {
       img: parkingImg,
-      title: "Smart Intersection Monitoring",
+      title: "Automated Tolling",
     },
     {
       img: accessControlImg,
-      title: "Crosswalk Safety",
+      title: "MLFF systems",
     },
-    {
-      img: trafficMonitoringImg,
-      title: "Parking Management",
-    }
   ];
 
   return (

@@ -31,17 +31,17 @@ const AboutALPR = () => {
             {/* Left: Text Section */}
             <div className="col-lg-8 mt-3 aboutParaMain text-left text-lg-start ps-0">
               <h2 className="titlePrimary">
-                Reliable license plate recognition for low-light and high-speed traffic
+                Built to read plates at highway speed 
               </h2>
 
               <p className="paragraphtext">
-                TrafficSenz is a rugged, AI-enabled ANPR camera designed for ITS, multi-lane free-flow tolling, Advanced Traffic Management Systems (ATMS), and law enforcement applications. It combines high-quality imaging with a global shutter sensor to reliably capture license plates across varying traffic and environmental conditions.
+               TrafficSenz is a rugged, AI-enabled ANPR camera designed for ITS, multi-lane free-flow tolling, and Advanced Traffic Management Systems (ATMS) applications. It combines a 5 MP Sony Pregius S global shutter sensor with synchronized 850 nm pulsed IR illumination and on-camera edge AI processing to reliably capture license plates across varying traffic and environmental conditions.
               </p>
 
-              <p className="paragraphtext">
+              {/* <p className="paragraphtext">
                 From an ITS and tolling perspective, the camera is positioned as an edge-based solution that can support vehicle detection, license plate recognition, wrong-way detection, and traffic violation monitoring, reducing reliance on centralized processing.
               </p>
-              <p className="paragraphtext">Its rugged IP67/IK10 enclosure, PoE connectivity, multi-lane coverage, and optional radar/external lighting integration make it suitable for integration into existing tolling infrastructure, traffic management systems, and enforcement applications.</p>
+              <p className="paragraphtext">Its rugged IP67/IK10 enclosure, PoE connectivity, multi-lane coverage, and optional radar/external lighting integration make it suitable for integration into existing tolling infrastructure, traffic management systems, and enforcement applications.</p> */}
             </div>
             <div className="col-lg-4 px-0 d-flex flex-column align-items-center justify-content-center">
               <div className="col-12 mx-auto">

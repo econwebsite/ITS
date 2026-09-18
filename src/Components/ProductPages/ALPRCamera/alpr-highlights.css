@@ -1,0 +1,427 @@
+/* ===============================================
+   ALPR HIGHLIGHTS SECTION - INTERACTIVE LIGHT UI
+   =============================================== */
+
+.alpr-highlights-section {
+  position: relative;
+  padding: 15px 20px;
+  background: #f2f6fb;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.alpr-highlights-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ambient glow that follows the active accent color */
+.alpr-highlights-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /* background: radial-gradient(
+    600px circle at 80% 10%,
+    color-mix(in srgb, var(--accent, #00aeef) 14%, transparent) 0%,
+    transparent 60%
+  ); */
+  transition: background 0.6s ease;
+  z-index: 0;
+}
+
+.alpr-highlights-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Header */
+.alpr-highlights-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 56px;
+}
+
+.alpr-highlights-eyebrow {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(0, 174, 239, 0.1);
+  border: 1px solid rgba(0, 174, 239, 0.3);
+  color: #0d7fac;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.alpr-highlights-header h2 {
+  font-size: 2.1rem;
+  color: #003873;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.alpr-highlights-header p {
+  color: #5a6b80;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Interactive layout */
+.alpr-highlights-interactive {
+  display: grid;
+  grid-template-columns: minmax(280px, 380px) 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* Tabs */
+.alpr-highlights-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.alpr-highlight-tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  background: #ffffff;
+  border: 1px solid #e3e9f2;
+  border-radius: 14px;
+  padding: 16px 18px;
+  cursor: pointer;
+  color: #4a5468;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(15, 58, 99, 0.05);
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.alpr-highlight-tab:hover {
+  background: #f8fbff;
+  transform: translateX(4px);
+  box-shadow: 0 8px 20px rgba(15, 58, 99, 0.09);
+}
+
+.alpr-highlight-tab.active {
+  background: linear-gradient(
+    100deg,
+    color-mix(in srgb, var(--accent) 12%, #ffffff) 0%,
+    #ffffff 100%
+  );
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.alpr-highlight-tab-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.alpr-highlight-tab-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8a97ab;
+}
+
+.alpr-highlight-tab-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #1c2a3d;
+}
+
+.alpr-highlight-tab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #eef2f8;
+  color: #7c8aa0;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.alpr-highlight-tab.active .alpr-highlight-tab-icon {
+  background: var(--accent);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.alpr-highlight-tab-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--accent);
+  transform-origin: left;
+  animation-name: highlight-progress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  border-radius: 0 0 14px 14px;
+  opacity: 0.85;
+}
+
+@keyframes highlight-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Detail panel */
+.alpr-highlight-panel {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e3e9f2;
+  border-radius: 20px;
+  padding: 44px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 12px 32px rgba(15, 58, 99, 0.08);
+  overflow: hidden;
+}
+
+.alpr-highlight-panel::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  filter: blur(70px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.alpr-highlight-panel-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 1.7rem;
+  margin-bottom: 24px;
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--accent) 35%, transparent);
+  position: relative;
+  z-index: 1;
+}
+
+.alpr-highlight-panel-tag {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: fit-content;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.alpr-highlight-panel-title {
+  position: relative;
+  z-index: 1;
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: #003873;
+  margin: 0 0 18px;
+  animation: highlight-fade-in 0.5s ease;
+}
+
+.alpr-highlight-panel-desc {
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #556277;
+  margin: 0 0 30px;
+  animation: highlight-fade-in 0.6s ease;
+}
+
+@keyframes highlight-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alpr-highlight-panel-next {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  background: transparent;
+  border: 1px solid #c7d3e3;
+  color: #003873;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease, gap 0.3s ease,
+    color 0.3s ease;
+}
+
+.alpr-highlight-panel-next:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  gap: 14px;
+  transform: translateX(2px);
+}
+
+/* Responsive - Tablets */
+@media (max-width: 1024px) {
+  .alpr-highlights-section {
+    padding: 64px 16px;
+  }
+
+  .alpr-highlights-interactive {
+    grid-template-columns: 1fr;
+  }
+
+  .alpr-highlight-panel {
+    padding: 36px 30px;
+    order: -1;
+  }
+}
+
+/* Responsive - Small Tablets / Mobile */
+@media (max-width: 768px) {
+  .alpr-highlights-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .alpr-highlights-header p {
+    font-size: 0.92rem;
+  }
+
+  .alpr-highlight-tab {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .alpr-highlight-tab-title {
+    font-size: 0.9rem;
+  }
+
+  .alpr-highlight-tab-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .alpr-highlight-panel {
+    padding: 30px 24px;
+    border-radius: 16px;
+  }
+
+  .alpr-highlight-panel-icon {
+    width: 54px;
+    height: 54px;
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+
+  .alpr-highlight-panel-title {
+    font-size: 1.35rem;
+  }
+
+  .alpr-highlight-panel-desc {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .alpr-highlights-section {
+    padding: 48px 12px;
+  }
+
+  .alpr-highlights-eyebrow {
+    font-size: 0.7rem;
+    padding: 5px 12px;
+  }
+
+  .alpr-highlights-header h2 {
+    font-size: 1.35rem;
+  }
+
+  .alpr-highlight-tab-body {
+    gap: 2px;
+  }
+
+  .alpr-highlight-tab-tag {
+    font-size: 0.62rem;
+  }
+
+  .alpr-highlight-tab-title {
+    font-size: 0.85rem;
+  }
+
+  .alpr-highlight-panel {
+    padding: 24px 18px;
+  }
+
+  .alpr-highlight-panel-next {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Accessibility */
+.alpr-highlight-tab:focus-visible,
+.alpr-highlight-panel-next:focus-visible {
+  outline: 2px solid #0d7fac;
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .alpr-highlights-section,
+  .alpr-highlight-panel-title,
+  .alpr-highlight-panel-desc,
+  .alpr-highlight-tab,
+  .alpr-highlight-panel-next {
+    transition: none;
+    animation: none;
+  }
+
+  .alpr-highlight-tab-progress {
+    animation: none;
+    transform: scaleX(1);
+  }
+}
