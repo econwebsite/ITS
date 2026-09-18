@@ -1,6 +1,6 @@
 import React from "react";
 import "./ALPRBanner.css";
-import bannerImg from '../../../assets/alpr-camera/alpr-camera-banner.jpg'
+import bannerImg from '../../../assets/alpr-camera/alpr-camera-banner.jpg';
 import Modelbutton from "../../Button comp/Modelbutton";
 
 const ALPRBanner = () => {
