@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Modelbutton from "../../Button comp/Modelbutton";
 // Temporary images (replace later if needed)
-import alprCameraImg from "../../../assets/alpr-camera/ai-anpr-camera-thumb.png";
+import alprCameraImage from "../../../assets/alpr-camera/ai-anpr-camera-thumb.png";
 
 const AboutALPR = () => {
   useEffect(() => {
@@ -46,12 +46,12 @@ const AboutALPR = () => {
             <div className="col-lg-4 px-0 d-flex flex-column align-items-center justify-content-center">
               <div className="col-12 mx-auto">
                 <a
-                  href={alprCameraImg}
+                  href={alprCameraImage}
                   data-fancybox="gallery"
                   data-caption="ALPR Camera"
                 >
                   <img
-                    src={alprCameraImg}
+                    src={alprCameraImage}
                     className="carousel-image d-block mx-auto img-fluid"
                     alt="ALPR Camera"
                   />
