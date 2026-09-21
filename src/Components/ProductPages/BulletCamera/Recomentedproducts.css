@@ -1,0 +1,276 @@
+.recomented-products .hardware {
+  background-color: #f9fafb;
+  padding: 2em 0;
+  margin-top: 1em;
+}
+
+.recomented-products .hardware-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 15px;
+}
+
+.hardware-item a {
+  text-decoration: none;
+}
+
+/* Tablet and smaller desktop */
+@media (max-width: 1024px) {
+  .recomented-products .hardware-grid {
+    gap: 40px;
+  }
+
+  .recomented-products .hardware-item {
+    padding: 25px;
+  }
+
+  .recomented-products .hardware-icon-img {
+    width: 180px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .recomented-products .hardware-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .recomented-products .hardware-title {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+
+  .recomented-products .hardware-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 25px 20px;
+  }
+
+  .recomented-products .hardware-icon-img {
+    width: 160px;
+  }
+}
+
+/* Small tablet and large mobile */
+@media (max-width: 768px) {
+  .recomented-products .hardware {
+    padding: 1.5em 0;
+  }
+
+  .recomented-products .hardware-grid {
+    gap: 30px;
+  }
+
+  .recomented-products .hardware-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 4px solid #1d4e9d;
+  }
+
+  .recomented-products .hardware-item {
+    padding: 20px 15px;
+  }
+
+  .recomented-products .hardware-icon-img {
+    width: 140px;
+  }
+
+  .recomented-products .hardware-item-title {
+    font-size: 15px;
+  }
+
+  .recomented-products .explore-link {
+    font-size: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .recomented-products .hardware-grid {
+    gap: 25px;
+  }
+
+  .recomented-products .hardware-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 3px solid #1d4e9d;
+  }
+
+  .recomented-products .hardware-item {
+    padding: 15px 10px;
+    gap: 15px;
+  }
+
+  .recomented-products .hardware-icon-img {
+    width: 120px;
+  }
+
+  .recomented-products .hardware-item-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .recomented-products .explore-link {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .recomented-products .hardware {
+    padding: 1em 0;
+  }
+
+  .recomented-products .hardware-grid {
+    gap: 20px;
+  }
+
+  .recomented-products .hardware-title {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .recomented-products .hardware-item {
+    padding: 12px 8px;
+    gap: 12px;
+  }
+
+  .recomented-products .hardware-icon-img {
+    width: 100px;
+  }
+
+  .recomented-products .hardware-item-title {
+    font-size: 13px;
+    line-height: 1.4em;
+  }
+
+  .recomented-products .explore-link {
+    font-size: 13px;
+    margin-top: 6px;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 360px) {
+  .recomented-products .hardware-grid {
+    gap: 15px;
+  }
+
+  .recomented-products .hardware-item {
+    padding: 10px 6px;
+    gap: 10px;
+  }
+
+  .recomented-products .hardware-icon-img {
+    width: 80px;
+  }
+
+  .recomented-products .hardware-item-title {
+    font-size: 12px;
+  }
+
+  .recomented-products .explore-link {
+    font-size: 12px;
+  }
+}
+
+.recomented-products .hardware-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1373a1;
+  margin-bottom: 35px;
+  padding-left: 20px;
+  border-left: 5px solid #1d4e9d;
+}
+
+.recomented-products .hardware-items {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.recomented-products .hardware-item {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  background: white;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.recomented-products .hardware-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.recomented-products .hardware-icon {
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.recomented-products .hardware-icon-img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.recomented-products .hardware-item-title {
+  font-weight: 600;
+  color: #111827;
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 1.5em;
+}
+
+.recomented-products .hardware-details {
+  flex-grow: 1;
+}
+
+.recomented-products .explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #7896b1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-top: 10px;
+}
+
+.recomented-products .explore-link .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.recomented-products .hardware-item:hover .explore-link {
+  color: #105170;
+}
+
+.recomented-products .hardware-item:hover .explore-link .arrow {
+  transform: translateX(6px);
+}
+
+.recomented-products .explore-link::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #1d4e9d;
+  display: block;
+  margin-top: 3px;
+  transition: width 0.3s ease;
+}
+
+.recomented-products .hardware-item:hover .explore-link::after {
+  width: 100%;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./bullet-applications.css";
 import laneDetectionImg from '../../../assets/bullet-camera/traffic-enforcement.jpg'
 import parkinglotManagementImg from '../../../assets/bullet-camera/parking-management.jpg'
@@ -14,6 +15,7 @@ const BulletApplications = () => {
     {
       img: redLightViolationImg,
       title: "Traffic enforcement",
+      link: "/solutions/traffic-enforcement-camera"
     },
     {
       img: parkinglotManagementImg,
@@ -39,14 +41,18 @@ const BulletApplications = () => {
             </div>
           );
 
-          return app.link ? (
-            <a key={index} href={app.link}>
+          if (!app.link) {
+            return <div key={index}>{CardContent}</div>;
+          }
+
+          return app.link.startsWith('http') ? (
+            <a key={index} href={app.link} target="_blank" rel="noopener noreferrer">
               {CardContent}
             </a>
           ) : (
-            <div key={index}>
+            <Link key={index} to={app.link}>
               {CardContent}
-            </div>
+            </Link>
           );
         })}
       </div>

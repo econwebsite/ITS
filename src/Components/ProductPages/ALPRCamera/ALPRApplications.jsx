@@ -8,11 +8,7 @@ const ALPRApplications = () => {
   const applications = [
     {
       img: parkingImg,
-      title: "Automated Tolling",
-    },
-    {
-      img: parkingImg,
-      title: "MLFF systems",
+      title: "Automated Tolling and MLFF systems",
     },
   ];
 
