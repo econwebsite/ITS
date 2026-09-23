@@ -20,7 +20,7 @@ const ALPRCamera = () => {
       <ALPRHighlights />
       <ALPRFeaturesAlternating />
       <ALPRApplications />
-      <ALPRFaq />
+      {/* <ALPRFaq /> */}
     </div>
   );
 };

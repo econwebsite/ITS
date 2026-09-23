@@ -31,7 +31,7 @@ const ALPRBanner = () => {
             fontSize="14px"
             borderRadius="0"
             border="1px solid #fff"
-            productName="4K ALPR Camera"
+            productName="Edge AI ANPR"
             title="ALPR Camera Series"
           />
         </div>
