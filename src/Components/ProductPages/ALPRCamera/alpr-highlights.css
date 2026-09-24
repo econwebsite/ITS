@@ -4,7 +4,7 @@
 
 .alpr-highlights-section {
   position: relative;
-  padding: 15px 20px;
+  padding: 20px 20px;
   background: #f2f6fb;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
@@ -61,10 +61,10 @@
 }
 
 .alpr-highlights-header h2 {
-  font-size: 2.1rem;
-  color: #003873;
-  font-weight: 600;
-  margin: 0 0 16px;
+ margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 400 !important;
+    color: #196793 !important;
 }
 
 .alpr-highlights-header p {
@@ -248,7 +248,7 @@
 .alpr-highlight-panel-title {
   position: relative;
   z-index: 1;
-  font-size: 1.65rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #003873;
   margin: 0 0 18px;

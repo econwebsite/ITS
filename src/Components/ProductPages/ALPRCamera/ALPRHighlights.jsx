@@ -19,7 +19,7 @@ const ALPRHighlights = () => {
       accent: "#116686",
       title: "High-Speed Capture",
       description:
-        "Global shutter imaging reduces motion distortion for clear vehicle and plate capture at speeds up to 300 km/h. Pixel-based vehicle triggering uses image-based detection to trigger capture at the optimal moment, reducing the need for road sensors, inductive loops, and road-cutting infrastructure.",
+        "Global-shutter imaging captures the entire image simultaneously, enabling clear and distortion-free capture of fast-moving vehicles and license plates at speed of up to 300 km/h. Zero-latency self-triggering detects vehicles directly from the image and triggers capture at the optimal moment, without requiring road sensors, inductive loops, or road-cutting infrastructure.",
     },
     {
       icon: <FiSun />,
@@ -35,7 +35,7 @@ const ALPRHighlights = () => {
       accent: "#3b8506",
       title: "On-Camera Edge AI",
       description:
-        "Edge AI processing supports ANPR, vehicle classification, wrong-way detection, traffic violation monitoring, and Make & Model Recognition (MMR) — reducing reliance on centralized processing.",
+        "Edge AI processing supports ANPR, vehicle classification, wrong-way detection, traffic violation monitoring, and Make & Model Recognition (MMR) — reducing reliance on centralized processing. ",
     },
     {
       icon: <FiShield />,
@@ -43,7 +43,7 @@ const ALPRHighlights = () => {
       accent: "#5f0d24",
       title: "Deployment-Ready Design",
       description:
-        "Secure Boot, ONVIF Profile T/G/M, up to 1 TB local storage, IP67/IK10 enclosure, PoE connectivity, and operation from −30°C to +70°C. Supports monitoring of up to two lanes and integrates with optional radar and external lighting for multi-sensor deployments.",
+        "Secure Boot, ONVIF Profile T/G/M, up to 1 TB local storage, IP67/IK10 enclosure, PoE connectivity, and operation from -30°C to +70°C. Supports monitoring of up to two lanes and integrates with optional radar and external lighting for multi-sensor deployments. ",
     },
     {
       icon: <FiLink />,
@@ -107,8 +107,8 @@ const ALPRHighlights = () => {
       <div className="alpr-highlights-wrapper">
         <div className="alpr-highlights-header">
           {/* <span className="alpr-highlights-eyebrow">Why TrafficSenz</span> */}
-          {/* <h2>Engineered for Real-World Performance</h2>
-          <p>
+          <h2>Indigenously Built. Vision for Safer Roads </h2>
+          {/* <p>
             Purpose-built capabilities that keep TrafficSenz accurate,
             reliable, and ready for deployment across highway, tolling, and
             enforcement environments.

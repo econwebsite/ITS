@@ -12,8 +12,8 @@ const ALPRCamera = () => {
   return (
     <div className="alpr-page">
       <Helmet>
-        <title>Reliable license plate recognition for low-light and high-speed traffic</title>
-        <meta name='description' content='TrafficSenz is a rugged, AI-enabled ANPR camera designed for ITS, multi-lane free-flow tolling, Advanced Traffic Management Systems (ATMS), and law enforcement applications. ' />
+        <title>Edge AI ALPR Camera for MLFF Tolling & ITS | TrafficSenz</title>
+        <meta name='description' content='TrafficSenz&trade; is an Edge AI ANPR camera for ITS & MLFF tolling. Captures plates at 300 km/h with global shutter, 850 nm IR, and on-camera ANPR, MMR & classification. ' />
       </Helmet>
       <ALPRBanner />
       <AboutALPR />

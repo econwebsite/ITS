@@ -14,7 +14,7 @@ const products = [
       "Inbuilt AI for real-time ANPR recognition without the need for additional compute",
     ],
     cta: "knowMore",
-    link: "/products/automatic-license-plate-recognition-camera",
+    link: "/products/trafficsenz/edge-ai-alpr-camera",
   },
   {
     name: "Dual Vision ANPR Camera",

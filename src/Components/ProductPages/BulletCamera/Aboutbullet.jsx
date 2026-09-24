@@ -7,7 +7,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Modelbutton from "../../Button comp/Modelbutton";
 // Temporary images (replace later if needed)
 import bulletCameraImg from "../../../assets/bullet-camera/automatic-number-plate-recognition-camera-thumb.png";
-
+import singleVisionImg from "../../../assets/alpr-camera/single-vision-camera.jpg";
 const AboutBullet = () => {
   useEffect(() => {
     Fancybox.bind("[data-fancybox='gallery']", {
@@ -29,7 +29,7 @@ const AboutBullet = () => {
         <div className="col-lg-11">
           <div className="row">
             {/* Left: Text Section */}
-            <div className="col-lg-8 mt-3 aboutParaMain text-left text-lg-start ps-0">
+            <div className="col-lg-12 mt-3 aboutParaMain text-left text-lg-start ps-0">
               <h2 className="titlePrimary">
                 Automatic Number Plate Recognition Cameras
               </h2>
@@ -46,22 +46,22 @@ const AboutBullet = () => {
               <p className="paragraphtext">Depending on deployment needs, the cameras can perform real-time edge analytics or stream data to centralized cloud-based ALPR engines. This flexibility helps reduce false positives and delivers actionable insights for Traffic Control Center (TCC) operations.</p>
               <p className="paragraphtext">Rugged and IP-rated for harsh roadside environments, e-con Systems' ANPR (ALPR) cameras integrate seamlessly into modern Intelligent Transportation Systems (ITS).</p>
             </div>
-            <div className="col-lg-4 px-0 d-flex flex-column align-items-center justify-content-center">
+            {/* <div className="col-lg-4 px-0 d-flex flex-column align-items-center justify-content-center">
               <div className="col-12 mx-auto">
 
                 <a
-                  href={bulletCameraImg}
+                  href={singleVisionImg}
                   data-fancybox="gallery"
                   data-caption="Bullet Camera Front View"
                 >
                   <img
-                    src={bulletCameraImg}
+                    src={singleVisionImg}
                     className="carousel-image d-block mx-auto img-fluid"
                     alt="Bullet Camera Front View"
                   />
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="col-lg-11">

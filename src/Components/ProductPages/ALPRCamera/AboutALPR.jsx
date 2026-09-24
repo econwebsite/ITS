@@ -35,7 +35,7 @@ const AboutALPR = () => {
               </h2>
 
               <p className="paragraphtext">
-               TrafficSenz is a rugged, AI-enabled ANPR camera designed for ITS, multi-lane free-flow tolling, and Advanced Traffic Management Systems (ATMS) applications. It combines a 5 MP Sony Pregius S global shutter sensor with synchronized 850 nm pulsed IR illumination and on-camera edge AI processing to reliably capture license plates across varying traffic and environmental conditions.
+               TrafficSenz&trade; is a rugged, AI-enabled ALPR camera designed for ITS, multi-lane free-flow tolling, Video Incident Detection and Enforcement System (VIDES) and Advanced Traffic Management Systems (ATMS) applications. It combines a 5 MP Sony Pregius S global shutter sensor with synchronized 850 nm pulsed IR illumination and on-camera edge AI processing to reliably capture license plates across varying traffic and environmental conditions. The camera supports ONVIF and NDAA compliance and can be managed through CloVis Central™, e-con Systems' cloud-based platform for remote device and evidence management. 
               </p>
 
               {/* <p className="paragraphtext">
@@ -64,7 +64,7 @@ const AboutALPR = () => {
           <div className="row aboutParaMain">
             <div className="d-flex flex-wrap gap-3 mt-3 justify-content-center justify-content-lg-start text-center text-lg-start">
               {/* Download Datasheet */}
-              <div className="cardKnowMore p-3">
+              {/* <div className="cardKnowMore p-3">
                 <p className="mb-2 fw-semibold section-label">Datasheet:</p>
                 <Modelbutton
                   className="alpr-cameravariant-button gtm-btn"
@@ -79,7 +79,7 @@ const AboutALPR = () => {
                   docName="e-con-its-camera-brochure.pdf"
                   type='download'
                 />
-              </div>
+              </div> */}
 
               {/* Contact Us */}
               <div className="cardKnowMore p-3">

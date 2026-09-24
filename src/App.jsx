@@ -44,7 +44,7 @@ const App = () => {
           <Route path="/:tabSlug?" element={<Industries />} />
             <Route path="/incident-detection-camera" element={<IncidentDetectionCamera />} />
              <Route path="/products/anpr-alpr-bullet-cameras" element={<BulletCamera />} />
-             <Route path="/products/automatic-license-plate-recognition-camera" element={<ALPRCamera />} />
+             <Route path="/products/trafficsenz/edge-ai-alpr-camera" element={<ALPRCamera />} />
              <Route path="/products/ai-vision-box" element={<AiComputeBox/>} />
              <Route path="/products/license-plate-recognition-software" element={<AlprSoftware/>} />
               <Route path="/solutions/traffic-enforcement-camera" element={<TrafficEnforcement />} />
