@@ -10,11 +10,23 @@
   --bg: #f7f7f7;
 }
 
+/* =========================================
+   WRAPPER
+========================================= */
+
+.rlvd-overview-wrapper {
+  width: 100%;
+  background: #ffffff;
+}
+
 .rlvd-overview {
   width: 100%;
-    background: #ffffff;
-    padding: 40px 60px;
-    overflow: hidden;
+  max-width: 1350px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px 60px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* =========================================
@@ -54,6 +66,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 70px;
+  width: 100%;
 }
 
 /* =========================================
@@ -66,7 +79,7 @@
 
 .rlvd-image-box {
   width: 100%;
-  height: 420px;
+  aspect-ratio: 16 / 9;
   background: var(--dark-box);
   border-radius: 18px;
   overflow: hidden;
@@ -85,12 +98,160 @@
   display: block;
 }
 
+/* Video Box */
+.rlvd-video-box {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--dark-box);
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.rlvd-video-box:hover {
+  transform: translateY(-6px);
+}
+
+.rlvd-video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.rlvd-video-box:hover .rlvd-video-thumbnail {
+  opacity: 0.8;
+}
+
+/* Play Icon Overlay */
+.rlvd-play-icon {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 45px;
+    background: rgb(209 50 33 / 87%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(46, 167, 255, 0.3);
+}
+
+.rlvd-video-box:hover .rlvd-play-icon {
+    background: rgb(255 46 46);
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 12px 48px rgba(46, 167, 255, 0.5);
+}
+
+/* =========================================
+   VIDEO MODAL STYLES
+========================================= */
+
+/* Video Modal Overlay */
+.rlvd-video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeInOverlay 0.3s ease;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Video Modal Content */
+.rlvd-video-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: slideUpModal 0.3s ease;
+}
+
+@keyframes slideUpModal {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Video Player Wrapper */
+.rlvd-video-player-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.rlvd-video-player-wrapper iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Modal Close Button */
+.rlvd-modal-close-btn {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 1001;
+  padding: 0;
+}
+
+.rlvd-modal-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.rlvd-modal-close-btn:focus {
+  outline: none;
+}
+
 /* =========================================
    RIGHT SIDE
 ========================================= */
 
 .rlvd-right {
-  width: 420px;
+  flex: 1;
+  min-width: 0;
 }
 
 .rlvd-right-text {
@@ -204,10 +365,6 @@
   .rlvd-row {
     gap: 50px;
   }
-
-  .rlvd-right {
-    width: 360px;
-  }
 }
 
 @media (max-width: 992px) {
@@ -226,12 +383,8 @@
     width: 100%;
   }
 
-  .rlvd-right {
-    max-width: 100%;
-  }
-
-  .rlvd-image-box {
-    height: 380px;
+  .rlvd-video-modal-content {
+    max-width: calc(100vw - 40px);
   }
 }
 
@@ -266,8 +419,20 @@
     font-size: 16px;
   }
 
-  .rlvd-image-box {
-    height: 300px;
+  .rlvd-play-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+  }
+
+  .rlvd-modal-close-btn {
+    top: -40px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .rlvd-video-modal-content {
+    max-width: calc(100vw - 48px);
   }
 }
 
@@ -301,8 +466,29 @@
     font-size: 15px;
   }
 
-  .rlvd-image-box {
-    height: 240px;
+  .rlvd-image-box,
+  .rlvd-video-box {
     border-radius: 14px;
+  }
+
+  .rlvd-play-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .rlvd-modal-close-btn {
+    top: -35px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .rlvd-video-modal-overlay {
+    padding: 15px;
+  }
+
+  .rlvd-video-modal-content {
+    max-width: calc(100vw - 30px);
   }
 }

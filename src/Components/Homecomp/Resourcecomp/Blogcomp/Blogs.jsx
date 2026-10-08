@@ -5,6 +5,8 @@ import highResolution from "../../../../assets/Hubpages/how-high-resolution-came
 import howToChoose from "../../../../assets/Hubpages/how-to-choose-the-right-image-sensor-450x300.jpg";
 import redLight from "../../../../assets/Hubpages/red-light-cameras-vs-traffic-sensors-450x300.jpg";
 import stopSign from "../../../../assets/Hubpages/what-is-a-stop-sign-violation-450x300.jpg";
+import ort from "../../../../assets/Hubpages/why-camera-design-matters-in-open-road-tolling-450x300.jpg";
+import lowEmission from "../../../../assets/Hubpages/what-are-low-emission-zones-450x300.jpg";
 const BlogData = [
   {
     title: "How High-Resolution Cameras Are Transforming Traffic Enforcement and Monitoring",
@@ -30,6 +32,16 @@ const BlogData = [
     title: "What is a Stop Sign Violation, and How Do Cameras Help Prevent It?",
     link: "https://www.e-consystems.com/blog/camera/applications/what-is-a-stop-sign-violation-and-how-do-cameras-help-prevent-it/",
     image: stopSign,
+  },
+  {
+    title: "Why Camera Design Matters in Open Road Tolling (ORT) and Multi-Lane Free Flow (MLFF)",
+    link: "https://www.e-consystems.com/blog/camera/applications/why-camera-design-matters-in-open-road-tolling-ort-and-multi-lane-free-flow-mlff/",
+    image: ort,
+  },
+  {
+    title: "What are Low Emission Zones, and How AI Cameras help enforce Them",
+    link: "https://www.e-consystems.com/blog/camera/applications/what-are-low-emission-zones-and-how-ai-cameras-help-enforce-them/",
+    image: lowEmission,
   }
 ];
 const Blogs = () => {

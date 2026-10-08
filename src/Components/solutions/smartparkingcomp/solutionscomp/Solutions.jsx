@@ -1,9 +1,9 @@
 import Modelbutton from "../../../Button comp/Modelbutton";
 import "./Solutions.css";
 import { Link } from "react-router-dom";
-import ParkingAccessControl from "../assets/Parking-Access-Control.png";
-import OccupancyDetection from "../assets/Occupancy-Detection1.png";
-import ParkingEnforcement from "../assets/Parking-Enforcement4.png";
+import ParkingAccessControl from "../../../../assets/solutionpage/smart-parking-management/parking-access-control.png";
+import OccupancyDetection from "../../../../assets/solutionpage/smart-parking-management/occupancy-detection.png";
+import ParkingEnforcement from "../../../../assets/solutionpage/smart-parking-management/parking-enforcement.png";
 
 const solutions = [
   {
@@ -107,7 +107,8 @@ monitoring and EV charging bay detection.
         <Modelbutton
           className="rlvd-cta__btn gtm-btn"
           text="Connect With Us >>"
-          backgroundColor="#74d3f7"
+            backgroundColor="#00aeef"
+          
           animationColor="#2f5780"
           hoverColor="#2f5780"
           padding="18px 34px"

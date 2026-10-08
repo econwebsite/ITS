@@ -19,7 +19,7 @@ const ALPRHighlights = () => {
       accent: "#116686",
       title: "High-Speed Capture",
       description:
-        "Global-shutter imaging captures the entire image simultaneously, enabling clear and distortion-free capture of fast-moving vehicles and license plates at speed of up to 300 km/h. Zero-latency self-triggering detects vehicles directly from the image and triggers capture at the optimal moment, without requiring road sensors, inductive loops, or road-cutting infrastructure.",
+        "Global-shutter imaging captures the entire image simultaneously, enabling clear and distortion-free capture of fast-moving vehicles and license plates at speed of up to 300 km/h. Low-latency self-triggering detects vehicles directly from the image and triggers capture at the optimal moment, without requiring road sensors, inductive loops, or road-cutting infrastructure.",
     },
     {
       icon: <FiSun />,

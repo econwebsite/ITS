@@ -6,6 +6,8 @@ import AutomatedToll from '../../../../assets/homepage/automated-toll-systems-al
 import AnprDemo from '../../../../assets/homepage/anpr-alpr-demo-using-full-hd-global-shutter-usb-camera.jpg'
 import EdgeaiDemo from '../../../../assets/homepage/edge-ai-powered-alpr-demo.jpg'
 import DarsiPro from '../../../../assets/homepage/darsi-pro-action.jpg'
+import redlight from '../../../../assets/homepage/ai-alpr-camera-for-red-light-violation.jpg'
+import stopsign from '../../../../assets/homepage/ai-alpr-camera-for-stop-sign-violation.jpg'
 
 const videoData = [
   {
@@ -37,6 +39,18 @@ const videoData = [
     hashtags: ["smartparking", "anpr", "alpr"],
     link: "https://www.youtube.com/embed/yFZZH-1OxW8",
     image: DarsiPro,
+  },
+  {
+    title: "AI ALPR Camera for Red Light Violation",
+    hashtags: ["RedLightViolation", "anpr", "alpr"],
+    link: "https://www.youtube.com/embed/ISIaD0HaLBI",
+    image: redlight,
+  },
+  {
+    title: "AI ALPR Camera for Stop Sign Violation",
+    hashtags: ["StopSignViolation", "anpr", "alpr"],
+    link: "https://www.youtube.com/embed/91TcMA3Lt3Q",
+    image: stopsign,
   },
 ];
 

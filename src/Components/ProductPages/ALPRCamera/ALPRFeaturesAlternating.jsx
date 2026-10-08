@@ -34,7 +34,7 @@ const ALPRFeaturesAlternating = () => {
           heading: "Imaging & Capture",
           items: [
             "5 MP Sony Pregius S Global Shutter",
-            "Pixel-Based Vehicle Triggering",
+            "Low-latency Self Triggering",
             "Auto Exposure Bracketing (AEB)",
             "Supports capture at speeds up to 300 km/h",
             "Frame rate up to 60 fps"

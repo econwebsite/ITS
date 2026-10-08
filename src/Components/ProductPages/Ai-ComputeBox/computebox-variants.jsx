@@ -5,20 +5,20 @@ import Modelbutton from '../../Button comp/Modelbutton';
 const VARIANTS = [
   {
     model: 'A-Series',
-    platform: 'Ambarella',
+    platform: 'Ambarella CV72s',
     aiPerformance: '15 TOPS',
     useCases: 'Optimized for low-power and solar-based deployments',
   },
   {
     model: 'Q-Series',
-    platform: 'Qualcomm',
+    platform: 'Qualcomm QCS8550',
     aiPerformance: '48 TOPS',
     useCases: 'Mid-power, multi-camera capable platform',
   },
   {
     model: 'N-Series',
     platform: 'NVIDIA Orin NX',
-    aiPerformance: 'Up to 157 TOPS',
+    aiPerformance: 'Up to 100 TOPS',
     useCases: 'High-performance platform with extensive multi-camera support',
   },
 ];
@@ -29,7 +29,7 @@ function ComputeBoxVariants() {
       <h2>AI Vision Box Variants</h2>
       <div className="variant-table">
         <div className="variant-header">
-          <span>Platform</span>
+          <span>Edge Processor</span>
           <span>AI Performance</span>
           <span>Power & Scalability Profile</span>
         </div>

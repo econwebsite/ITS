@@ -1,6 +1,6 @@
 import React from "react";
 import "./rlvdbanner.css";
-import bannerImg from '../../../../assets/solutionpage/red-light-violation-banner-img.jpg'
+import bannerImg from '../../../../assets/solutionpage/red-light-violation-detection-camera-banner-img.jpg'
 import Modelbutton from "../../../Button comp/Modelbutton";
 
 const RLVDBanner = () => {

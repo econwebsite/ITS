@@ -88,8 +88,9 @@ const Footer = () => {
               <ul className="footer-links">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/case-study">Case Studies</Link></li>
-                <li><Link to="/blog">Blog</Link></li>
+                <li><Link to="/blog">Blogs</Link></li>
                 <li><Link to="/videos">Videos</Link></li>
+                <li><Link to="/events">Events</Link></li>
                 <li><Link to="/company/contact-us">Contact</Link></li>
               </ul>
             </div>
@@ -104,14 +105,11 @@ const Footer = () => {
             <div className="footer-col left">
               <h3>Solutions</h3>
               <ul className="footer-links">
-                <li><Link to="/solutions/traffic-enforcement-camera">Traffic Enforcement</Link></li>
-                <li><Link to="/solutions/speed-enforcement-camera">Speed Enforcement Camera</Link></li>
-                <li><Link to="/products/license-plate-recognition-software">Red Light Violation Detection Camera</Link></li>
-<li>
-  <Link to="/solutions/smart-parking-management">
-    Smart Parking Management
-  </Link>
-</li>
+                <li><Link to="/solutions/traffic-enforcement-camera">Traffic Enforcement Cameras</Link></li>
+                <li><Link to="/solutions/speed-enforcement-camera">Speed Enforcement Cameras</Link></li>
+                <li><Link to="/products/license-plate-recognition-software">Red Light Violation Detection Cameras</Link></li>
+                <li><Link to="/solutions/smart-parking-management">Smart Parking Management Cameras</Link></li>
+
               </ul>
             </div>
                     {/* <div className="footer-col center">

@@ -5,8 +5,41 @@
 .computeBox-banner {
   position: relative;
   width: 100%;
-  height: 70vh;
   overflow: hidden;
+}
+
+.ai-compute-box-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  /* background: #f7fbff; */
+  color: #003873;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.ai-compute-box-breadcrumb-link {
+  color: #003873;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ai-compute-box-breadcrumb-link:hover {
+  color: #00aeef;
+  text-decoration: underline;
+}
+
+.ai-compute-box-breadcrumb-separator {
+  color: #7b8aa0;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.ai-compute-box-breadcrumb-current {
+  color: #9aa9be;
+  font-weight: 400;
 }
 
 /* Banner image container */
@@ -30,7 +63,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45);
+  background: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;

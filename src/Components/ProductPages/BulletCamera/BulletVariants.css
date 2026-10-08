@@ -60,6 +60,10 @@
     background: #ffff;
 }
 
+.product-card-media a {
+  display: flex;
+}
+
 .product-card-media img {
   width: 100%;
   max-width: 180px;
@@ -84,11 +88,34 @@
 }
 
 .product-card-title {
+  margin: 0 0 16px;
+  line-height: 1.35;
+}
+
+.product-card-title-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+.product-card-title-link:hover {
+  opacity: 0.82;
+}
+
+.product-card-brand {
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #00aeef;
+  /* text-transform: uppercase; */
+  margin-bottom: 3px;
+}
+
+.product-card-variant {
   font-size: 1.1rem;
   font-weight: 600;
   color: #003873;
-  margin: 0 0 16px;
-  line-height: 1.4;
 }
 
 /* Feature points */
@@ -201,5 +228,19 @@
 
   .product-card-points li {
     font-size: 0.82rem;
+  }
+}
+
+.product-card-brand-logo {
+  display: block;
+  height: 43px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .product-card-brand-logo {
+    height: 26px;
   }
 }

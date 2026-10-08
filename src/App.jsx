@@ -10,23 +10,26 @@ import ScrollToTop from "./ScrollToTop";
 import Footer from "./Components/Footercomp/Footer"
 import "./App.css";
 import ContactUs from './Components/Homecomp/Contactuscomp/Contactus';
-import Industries from './Components/Industriescomp/Industries';
 import IncidentDetectionCamera from "./Components/ProductPages/PTZCamera/PTZCamera";
 import BulletCamera from "./Components/ProductPages/BulletCamera/BulletCamera";
-import AiComputeBox from './Components/ProductPages/Ai-ComputeBox/Ai-ComputeBox';
-import TrafficEnforcement from './Components/solutions/trafficeEnforcement/Itspage';
 import ALPRCamera from './Components/ProductPages/ALPRCamera/ALPRCamera';
+import AiComputeBox from './Components/ProductPages/Ai-ComputeBox/Ai-ComputeBox';
+import Market from "./Components/Marketscomp/Market";
+import Hubpageblog from './Components/Hubpage Comp/Bloghubpages/Hubpageblog';
+import Casehubpage from './Components/Hubpage Comp/Casestudyhubpage/casehubpage';
+import AlprSoftware from './Components/ProductPages/alpr-software/AlprSoftware';
+import TrafficEnforcement from './Components/solutions/trafficeEnforcement/Itspage';
 import SpeedPage from './Components/solutions/speedcomp/Speedpage';
 import RedlightPage from './Components/solutions/rlvdcomp/rlvdpage';
-import SchoolbusPage from './Components/solutions/SchoolBus/Schoolbuspage';
-import Market from "./Components/Marketscomp/Market";
-import Hubpageblog from './Components/HubpageComp/Bloghubpages/Hubpageblog';
-import Casehubpage from './Components/HubpageComp/Casestudyhubpage/Casehubpage';
-import AlprSoftware from './Components/ProductPages/alpr-software/AlprSoftware';
+import NotFound from './Components/NotFound/NotFound';
+import SearchResults from './Components/SearchResults/SearchResults';
+import Videohubpage from './Components/Hubpage Comp/Videohubpages/Videohubpage';
+import Eventshubpage from './Components/Hubpage Comp/Eventshubpage/Eventshubpage';
 import SmartParkingPage from './Components/solutions/smartparkingcomp/SmartParkingPage';
-import ParkingEnforcementPage from './Components/solutions/smartparkingcomp/parkingSolutions/ParkingEnforcement/ParkingEnforcementPage';
-import ParkingAccessControlPage from './Components/solutions/smartparkingcomp/parkingSolutions/ParkingAccessControl/ParkingAccessControlPage';
 import OccupancyDetectionPage from './Components/solutions/smartparkingcomp/parkingSolutions/OccupancyDetection/OccupancyDetectionPage';
+import ParkingAccessControlPage from './Components/solutions/smartparkingcomp/parkingSolutions/ParkingAccessControl/ParkingAccessControlPage';
+import ParkingEnforcementPage from './Components/solutions/smartparkingcomp/parkingSolutions/ParkingEnforcement/ParkingEnforcementPage';
+import CameraPlacementPage from './Components/tools/CameraPlacement/CameraPlacementPage';
 const App = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -35,13 +38,12 @@ const App = () => {
   return (
     <BrowserRouter>
       <HelmetProvider>
-        <ScrollToTop /> 
+        <ScrollToTop />
         <div className='fixed-container'>
           <NavBar />
           <Routes>
             <Route path="/" element={<TotalHome />} />
            <Route path="/company/contact-us" element={<ContactUs />} />
-          <Route path="/:tabSlug?" element={<Industries />} />
             <Route path="/incident-detection-camera" element={<IncidentDetectionCamera />} />
              <Route path="/products/anpr-alpr-bullet-cameras" element={<BulletCamera />} />
              <Route path="/products/trafficsenz/edge-ai-alpr-camera" element={<ALPRCamera />} />
@@ -50,21 +52,21 @@ const App = () => {
               <Route path="/solutions/traffic-enforcement-camera" element={<TrafficEnforcement />} />
               <Route path="/solutions/speed-enforcement-camera" element={<SpeedPage />} />
               <Route path="/solutions/red-light-violation-detection-camera" element={<RedlightPage />} />
-              <Route path="/solutions/school-bus-stop-arm-camera" element={<SchoolbusPage />} />
-                                          <Route path="/solutions/smart-parking-management" element={<SmartParkingPage />} />
-
-                                          <Route path="/solutions/parking-enforcement-camera" element={<ParkingEnforcementPage />} />
-
-                                          <Route path="/solutions/parking-access-control-camera" element={<ParkingAccessControlPage />} />
-                                          <Route path="/solutions/parking-occupancy-detection-camera" element={<OccupancyDetectionPage />} />
-
-
-                                          
+              <Route path="/solutions/red-light-violation-detection-camera" element={<RedlightPage />} />
+  <Route path="/solutions/smart-parking-management" element={<SmartParkingPage />} />
+  <Route path="/solutions/parking-enforcement-camera" element={<ParkingEnforcementPage />} />
+  <Route path="/solutions/parking-access-control-camera" element={<ParkingAccessControlPage />} />
+  <Route path="/solutions/parking-occupancy-detection-camera" element={<OccupancyDetectionPage />} />
 
             {/* Applications page route */}
+           <Route path="/tools/camera-placement" element={<CameraPlacementPage />} />
            <Route path="/market" element={<Market />} />
            <Route path="/blog" element={<Hubpageblog />} />
+           <Route path="/videos" element={<Videohubpage />} />
             <Route path="/case-study" element={<Casehubpage />} />
+            <Route path="/events" element={<Eventshubpage />} />
+            <Route path="/search" element={<SearchResults />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer/>
         </div>

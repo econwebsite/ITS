@@ -7,6 +7,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Modelbutton from "../../Button comp/Modelbutton";
 // Temporary images (replace later if needed)
 import alprCameraImage from "../../../assets/alpr-camera/ai-anpr-camera-thumb.png";
+// Placeholder logo (replace with the final TrafficSenz logo)
+import trafficsenzLogo from "../../../assets/alpr-camera/trafficsenz-logo-placeholder.png";
 
 const AboutALPR = () => {
   useEffect(() => {
@@ -31,7 +33,7 @@ const AboutALPR = () => {
             {/* Left: Text Section */}
             <div className="col-lg-8 mt-3 aboutParaMain text-left text-lg-start ps-0">
               <h2 className="titlePrimary">
-                Built to read plates at highway speed 
+                TrafficSenz&trade; - Built to read plates at highway speed
               </h2>
 
               <p className="paragraphtext">
@@ -44,6 +46,13 @@ const AboutALPR = () => {
               <p className="paragraphtext">Its rugged IP67/IK10 enclosure, PoE connectivity, multi-lane coverage, and optional radar/external lighting integration make it suitable for integration into existing tolling infrastructure, traffic management systems, and enforcement applications.</p> */}
             </div>
             <div className="col-lg-4 px-0 d-flex flex-column align-items-center justify-content-center">
+              <div className="trafficsenz-logo-wrap">
+                <img
+                  src={trafficsenzLogo}
+                  className="trafficsenz-logo img-fluid"
+                  alt="TrafficSenz logo"
+                />
+              </div>
               <div className="col-12 mx-auto">
                 <a
                   href={alprCameraImage}
@@ -64,7 +73,7 @@ const AboutALPR = () => {
           <div className="row aboutParaMain">
             <div className="d-flex flex-wrap gap-3 mt-3 justify-content-center justify-content-lg-start text-center text-lg-start">
               {/* Download Datasheet */}
-              {/* <div className="cardKnowMore p-3">
+              <div className="cardKnowMore p-3">
                 <p className="mb-2 fw-semibold section-label">Datasheet:</p>
                 <Modelbutton
                   className="alpr-cameravariant-button gtm-btn"
@@ -75,11 +84,11 @@ const AboutALPR = () => {
                   padding="10px 30px"
                   fontSize="14px"
                   productName={`ProductDocument`}
-                  title={`ALPR Camera`}
-                  docName="e-con-its-camera-brochure.pdf"
+                  title={`TrafficSenz`}
+                  docName="e-con-trafficsenz-technical-document.pdf"
                   type='download'
                 />
-              </div> */}
+              </div>
 
               {/* Contact Us */}
               <div className="cardKnowMore p-3">
@@ -94,7 +103,7 @@ const AboutALPR = () => {
                   hoverColor="#00aeef"
                   padding="10px 30px"
                   fontSize="14px"
-                  productName={`ALPR Camera`}
+                  productName={`TrafficSenz`}
                   type='contact'
                 />
               </div>

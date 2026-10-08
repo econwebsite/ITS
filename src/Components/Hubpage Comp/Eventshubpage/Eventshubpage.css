@@ -1,0 +1,574 @@
+/* ============================================================
+   Events Hub Page — Stylesheet
+   Color theme: #003873 | #344ea1 | #00aeef | #69ba2f
+   ============================================================ */
+
+/* ── Base ────────────────────────────────────────────────── */
+.eventshub-page {
+  background: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.eventshub-container {
+  max-width: 1400px;
+  padding: 56px 20px 60px;
+}
+
+/* ── Hero Banner ──────────────────────────────────────────── */
+.eventshub-hero {
+  position: relative;
+  background: linear-gradient(135deg, #003873 0%, #344ea1 50%, #00aeef 100%);
+  padding: 80px 20px 100px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.eventshub-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.eventshub-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.eventshub-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,64L100,74.7C200,85,400,107,600,112C800,117,1000,107,1100,101.3L1200,96L1200,120L1100,120C1000,120,800,120,600,120C400,120,200,120,100,120L0,120Z" fill="rgba(255,255,255,0.05)"></path></svg>');
+  background-repeat: repeat-x;
+  opacity: 0.5;
+}
+
+.eventshub-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.eventshub-hero h1 {
+  color: #ffffff;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin: 0 0 16px;
+  letter-spacing: -0.5px;
+}
+
+.eventshub-hero p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ── Simple Banner ───────────────────────────────────────── */
+.eventshub-banner {
+  /* background: linear-gradient(135deg, #003873 0%, #344ea1 50%, #00aeef 100%); */ 
+    padding: 25px 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.eventshub-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.eventshub-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.eventshub-banner h1 {
+  position: relative;
+    z-index: 2;
+    color: #00aeef;
+    font-size: clamp(2rem, 5vw, 2rem);
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+/* ── Section wrapper ─────────────────────────────────────── */
+.eventshub-section {
+  margin-bottom: 64px;
+}
+
+.eventshub-section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.eventshub-section-label h2 {
+  font-size: clamp(1.5rem, 2.5vw, 1rem);
+    font-weight: 500;
+    color: #003873;
+    margin: 0;
+    letter-spacing: -0.3px;
+}
+
+.eventshub-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #69ba2f;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px rgba(105, 186, 47, 0.2);
+  animation: pulse-green 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(105, 186, 47, 0.2); }
+  50%       { box-shadow: 0 0 0 8px rgba(105, 186, 47, 0.1); }
+}
+
+.concluded-dot {
+  background: #00aeef;
+  box-shadow: 0 0 0 4px rgba(0, 174, 239, 0.15);
+  animation: pulse-cyan 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-cyan {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(0, 174, 239, 0.15); }
+  50%       { box-shadow: 0 0 0 8px rgba(0, 174, 239, 0.08); }
+}
+
+/* ── Upcoming Events Grid ────────────────────────────────── */
+.eventshub-upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* ── Upcoming Card ───────────────────────────────────────── */
+.eventshub-upcoming-card {
+  position: relative;
+  border: 1px solid #e0e7f1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 56, 115, 0.06);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  align-items: stretch;
+  min-height: 160px;
+  background: #ffffff;
+}
+
+.eventshub-upcoming-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 56, 115, 0.12);
+  border-color: #00aeef;
+}
+
+/* Background Image */
+.eventshub-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+/* Card Content Wrapper */
+.eventshub-card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  gap: 0;
+}
+
+/* Date Box */
+.eventshub-date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: #f5f5f5;
+  border-right: 1px solid #e8ecf5;
+  min-width: 130px;
+}
+
+.eventshub-date-box.featured-date {
+  background: linear-gradient(135deg, #4668d4 0%, #5a75dd 100%);
+  color: #ffffff;
+}
+
+.eventshub-date-day {
+  font-size: 38px;
+    font-weight: 800;
+    line-height: 1;
+    color: inherit;
+}
+
+.eventshub-date-month {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  color: inherit;
+}
+
+.eventshub-date-box.featured-date .eventshub-date-day {
+  color: #ffffff;
+}
+
+.eventshub-date-box.featured-date .eventshub-date-month {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Event Info */
+.eventshub-event-info {
+  flex: 1;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.eventshub-compact-title {
+  font-size: 1.5em;
+    font-weight: 600;
+    color: #4155e1;
+    margin: 0;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.eventshub-compact-time {
+  font-size: 1rem;
+  color: #5a6b7d;
+  font-weight: 600;
+}
+
+.eventshub-compact-location {
+  font-size: 0.85rem;
+    color: #686d7c;
+    font-weight: 500;
+}
+
+/* ── Concluded Events Grid ───────────────────────────────── */
+.eventshub-concluded-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── Concluded Card ──────────────────────────────────────── */
+.eventshub-concluded-card {
+  background: #ffffff;
+    border: 1px solid #b8babb;
+    border-radius: 12px;
+    overflow: hidden;
+    /* box-shadow: 0 4px 16px rgba(0, 56, 115, 0.08); */
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.eventshub-concluded-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 56, 115, 0.14);
+  border-color: #00aeef;
+  transform: translateY(-4px);
+}
+
+/* Banner image section */
+.eventshub-concluded-banner {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f0f2f5 0%, #e8ecf5 100%);
+}
+
+.eventshub-concluded-banner img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.eventshub-concluded-body {
+  flex: 1;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.eventshub-concluded-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.eventshub-concluded-title {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 800;
+  color: #003873;
+  margin: 0;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+}
+.concluded-meta{
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.concluded-meta li {
+  color: #5e6f8a;
+  font-size: 0.9rem;
+  list-style: none;
+}
+.eventshub-meta-icon{
+  padding-right: 6px;
+}
+.eventshub-concluded-desc {
+  font-size: 0.9rem;
+  color: #5a6b7d;
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.eventshub-concluded-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .eventshub-upcoming-grid {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .eventshub-hero {
+    padding: 60px 16px 80px;
+  }
+
+  .eventshub-container {
+    padding: 40px 16px 50px;
+  }
+
+  .eventshub-upcoming-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .eventshub-upcoming-banner {
+    height: 200px;
+  }
+
+  .eventshub-card-body {
+    padding: 20px 18px;
+  }
+
+  .eventshub-card-title {
+    font-size: 1.15rem;
+  }
+
+  .eventshub-event-description {
+    font-size: 0.85rem;
+  }
+
+  .eventshub-time-section {
+    padding: 12px 0;
+  }
+
+  .eventshub-concluded-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .eventshub-concluded-banner {
+    height: 200px;
+  }
+
+  .eventshub-concluded-body {
+    padding: 20px 18px;
+  }
+
+  .eventshub-section-label {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .eventshub-container {
+    padding: 40px 16px 50px;
+  }
+
+  .eventshub-upcoming-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .eventshub-upcoming-card {
+    min-height: 150px;
+  }
+
+  .eventshub-date-box {
+    min-width: 90px;
+    padding: 12px;
+  }
+
+  .eventshub-date-day {
+    font-size: 28px;
+  }
+
+  .eventshub-event-info {
+    padding: 12px 16px;
+    gap: 4px;
+  }
+
+  .eventshub-compact-title {
+    font-size: 0.9rem;
+  }
+
+  .eventshub-compact-time {
+    font-size: 0.75rem;
+  }
+
+  .eventshub-compact-location {
+    font-size: 0.7rem;
+  }
+
+  .eventshub-concluded-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .eventshub-section-label h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .eventshub-hero {
+    padding: 50px 12px 70px;
+  }
+
+  .eventshub-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .eventshub-hero p {
+    font-size: 0.95rem;
+  }
+
+  .eventshub-container {
+    padding: 32px 12px 40px;
+  }
+
+  .eventshub-upcoming-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .eventshub-upcoming-card {
+    min-height: 140px;
+  }
+
+  .eventshub-date-box {
+    min-width: 85px;
+    padding: 12px;
+  }
+
+  .eventshub-date-day {
+    font-size: 26px;
+  }
+
+  .eventshub-date-month {
+    font-size: 10px;
+  }
+
+  .eventshub-event-info {
+    padding: 12px 14px;
+    gap: 3px;
+  }
+
+  .eventshub-compact-title {
+    font-size: 0.85rem;
+  }
+
+  .eventshub-compact-time {
+    font-size: 0.7rem;
+  }
+
+  .eventshub-compact-location {
+    font-size: 0.65rem;
+  }
+
+  .eventshub-concluded-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .eventshub-concluded-banner {
+    height: 160px;
+  }
+
+  .eventshub-concluded-body {
+    padding: 16px 14px;
+  }
+
+  .eventshub-section-label h2 {
+    font-size: 1.3rem;
+  }
+}

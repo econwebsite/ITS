@@ -29,7 +29,7 @@ const WhyComputeBox = () => {
     },
     {
       title: "High-Performance Edge AI",
-      desc: "Delivers up to 157 TOPS with NVIDIA® Orin NX (super mode), 48 TOPS with Qualcomm®, and 15 TOPS with Ambarella® — tailored for diverse ITS workloads.",
+      desc: "Delivers up to 100 TOPS with NVIDIA® Orin NX (super mode), 48 TOPS with Qualcomm®, and 15 TOPS with Ambarella® — tailored for diverse ITS workloads.",
       number: "02",
     },
     {

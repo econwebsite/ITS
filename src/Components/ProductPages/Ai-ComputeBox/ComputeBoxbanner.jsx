@@ -1,6 +1,6 @@
 import React from "react";
 import "./ComputeBoxbanner.css";
-import bannerImg from '../../../assets/ai-compute-box/ai-vision-compute-box-banner.jpg'
+import bannerImg from '../../../assets/ai-compute-box/ai-vision-compute-box-banner-img-en.jpg'
 import Modelbutton from "../../Button comp/Modelbutton";
 const ComputeBoxBanner = () => {
   const banner = {

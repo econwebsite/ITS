@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import './Certificate.css';
-import iso9001Img from '../../../assets/certifications/iso-9001-certificate.jpg';
+import iso9001Img from '../../../assets/certifications/iso-9001-certificate-img.jpg';
 
 const Certificate = () => {
   useEffect(() => {

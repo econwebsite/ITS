@@ -165,3 +165,34 @@
     max-width: 150px;
   }
 }
+
+/* TrafficSenz logo above product image */
+.trafficsenz-logo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.trafficsenz-logo {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 991px) {
+  .trafficsenz-logo-wrap {
+    margin-top: 16px;
+  }
+  .trafficsenz-logo {
+    width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trafficsenz-logo {
+    width: 140px;
+  }
+}

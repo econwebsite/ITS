@@ -1,10 +1,16 @@
+ 
 .containerparagraph {
     width: 100%;
     background-color:white ;
     margin: 0 auto;
     overflow-x: hidden;
+    margin-top: 30px;
   }
-  
+   .containerparagraph .mainContainer{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   .paragraphtext {
     text-align: justify;
     padding:0.5em 1.5em;
@@ -20,6 +26,7 @@
     .containerparagraph {
       width: 100%;
       padding: 10px;
+       margin-top: 10px;
     }
   
     .paragraphtext {
@@ -29,4 +36,10 @@
       hyphens: auto;
     }
   }
-  
+    @media (max-width: 738px) {
+       .containerparagraph {
+      width: 100%;
+      padding: 10px;
+       margin-top: 10px;
+    }
+    }

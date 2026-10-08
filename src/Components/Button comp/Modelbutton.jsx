@@ -16,19 +16,37 @@ const Modelbutton =({
   padding = '10px 20px',
   fontSize = '1em',
   borderRadius = '5px',
-  border='none'
+  border='none',
+  isOpen,
+  onOpen,
+  onClose,
 
   }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const isControlled = typeof isOpen === 'boolean';
 
   const modalType = formType || (text.toLocaleLowerCase().includes('Download') ? 'download' : 'contact');
   const showModal = () => {
-    setIsModalVisible(true);
+    if (onOpen) {
+      onOpen();
+    }
+
+    if (!isControlled) {
+      setIsModalVisible(true);
+    }
   };
 
   const handleCancel = () => {
-    setIsModalVisible(false);
+    if (onClose) {
+      onClose();
+    }
+
+    if (!isControlled) {
+      setIsModalVisible(false);
+    }
   };
+
+  const modalVisible = isControlled ? isOpen : isModalVisible;
 
   return (
     <div>
@@ -50,7 +68,7 @@ const Modelbutton =({
       </button>
 
       <Modelform
-        visible={isModalVisible}
+        visible={modalVisible}
         onClose={handleCancel}
         type = {modalType}
         productName={productName || null}

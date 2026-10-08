@@ -38,8 +38,8 @@ function ParkingEnforcementBanner() {
           fontSize="14px"
           borderRadius="0"
           border="1px solid #fff"
-          productName="Parking Access Control"
-          title="Frictionless Entry & Secure Access — With Zero Tickets"
+          productName="Parking Enforcement"
+          title="Automated Curb and Parking Enforcement"
         />
 
       </div>

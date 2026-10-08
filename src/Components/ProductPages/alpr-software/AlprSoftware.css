@@ -68,7 +68,7 @@
 
 .alpr-software .section-header {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 35px;
 }
 
 .alpr-software .section-title {
@@ -134,18 +134,16 @@
     border: 1px solid rgb(25 103 150);
 }
 
-.alpr-software .step-number {
-        /* width: 60px; */
-    /* height: 60px; */
-    color: #d2d2d2;
-    /* border: 1px solid rgba(100, 100, 179, 0.98); */
-    /* border-radius: 50%; */
+.alpr-software .step-icon {
+    color: #065d8f;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 2rem;
-    text-align: center;
+    margin-bottom: 15px;
+}
+
+.alpr-software .step-icon svg {
+    display: block;
 }
 
 .alpr-software .step-title {
@@ -181,10 +179,8 @@
         font-size: 1rem;
     }
 
-    .alpr-software .step-number {
-        width: 50px;
-        height: 50px;
-        font-size: 1rem;
+    .alpr-software .step-icon {
+        margin-bottom: 12px;
     }
 }
 
@@ -369,7 +365,7 @@
 
 /* Hardware Section */
 .alpr-software .hardware {
-    background-color: #f9fafb;
+    background-color: #ffffff;
     padding: 2em 0;
 }
 
@@ -489,6 +485,254 @@
 
 .alpr-software .hardware-item:hover .explore-link::after {
     width: 100%;
+}
+
+/* Video Showcase Section */
+.alpr-software .video-showcase {
+    padding: 30px 0;
+    background: #ffffff;
+}
+
+.alpr-software .video-showcase .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alpr-software .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.alpr-software .section-header {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.alpr-software .section-title {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 400 !important;
+    color: #196793 !important;
+}
+
+/* Video Container */
+.alpr-software .video-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.alpr-software .video-wrapper {
+    position: relative;
+    width: 350px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    cursor: pointer;
+}
+
+.alpr-software .video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.alpr-software .play-btn-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+    border-radius: 12px;
+    z-index: 10;
+}
+
+.alpr-software .video-wrapper:hover .play-btn-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.alpr-software .play-btn {
+    width: 73px;
+    height: 47px;
+    background: #FF0000;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+}
+
+.alpr-software .video-wrapper:hover .play-btn {
+    transform: scale(1.1);
+    background: #CC0000;
+}
+
+/* Video Content */
+.alpr-software .video-content {
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+}
+
+.alpr-software .video-title {
+    font-size: 17px;
+    color: #5c5858;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.4;
+    min-height: 80px;
+}
+
+.alpr-software .video-hashtags {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.alpr-software .hashtag {
+    background: #e3f2fd;
+    color: #065d8f;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.alpr-software .hashtag:hover {
+    background: #bbdefb;
+}
+
+/* Tablet Landscape (1024px and below) */
+@media (max-width: 1024px) {
+    .alpr-software .video-showcase {
+        padding: 60px 0;
+    }
+
+    .alpr-software .video-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .alpr-software .video-container {
+        max-width: 400px;
+    }
+
+    .alpr-software .video-wrapper {
+        width: 400px;
+        height: 250px;
+    }
+
+    .alpr-software .section-title {
+        font-size: 32px;
+    }
+
+    .alpr-software .video-title {
+        font-size: 22px;
+    }
+}
+
+/* Tablet Portrait (768px and below) */
+@media (max-width: 768px) {
+    .alpr-software .video-showcase {
+        padding: 50px 0;
+        margin: 20px 0;
+    }
+
+    .alpr-software .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .alpr-software .video-container {
+        max-width: 400px;
+    }
+
+    .alpr-software .video-wrapper {
+        width: 400px;
+        height: 250px;
+    }
+
+    .alpr-software .section-title {
+        font-size: 28px;
+    }
+
+    .alpr-software .section-title::after {
+        width: 50px;
+    }
+
+    .alpr-software .video-title {
+        font-size: 20px;
+    }
+
+    .alpr-software .play-btn {
+        width: 65px;
+        height: 42px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .alpr-software .video-showcase {
+        padding: 40px 0;
+    }
+
+    .alpr-software .video-container {
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .alpr-software .video-wrapper {
+        height: 220px;
+    }
+
+    .alpr-software .play-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .alpr-software .play-btn svg {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .alpr-software .video-title {
+        font-size: 1.2rem;
+    }
+
+    .alpr-software .video-hashtags {
+        gap: 10px;
+    }
+
+    .alpr-software .hashtag {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
 }
 
 /* Contact CTA Section */

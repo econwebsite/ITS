@@ -9,7 +9,7 @@
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
 
 .footer-logo-row {
   width: 100%;
-  margin: 2em 0;
+  text-align: center;
 }
 
 .footer-logo {
@@ -42,7 +42,7 @@
 }
 
 .footer-col.left {
-  flex: 1 1 200px;
+  flex: 1 1 180px;
 }
 
 .footer-col.center {
@@ -50,7 +50,7 @@
 }
 
 .footer-col.right {
-  flex: 2 1 400px;
+  flex: 2 1 300px;
 }
 
 .footer-col h3 {
@@ -58,6 +58,7 @@
   font-weight: 300;
   color: #f1f2f2;
   margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .footer-links {

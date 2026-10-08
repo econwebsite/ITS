@@ -1,0 +1,133 @@
+.videohub-page {
+  background: #f1f2f2;
+  min-height: 70vh;
+  padding: 18px 20px 36px;
+}
+
+.videohub-container {
+  max-width: 1500px;
+}
+
+.videohub-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.videohub-header h1 {
+  color: #003873;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.videohub-header p {
+  color: #344ea1;
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+.videohub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.videohub-card {
+  background-color: #ffffff;
+  border: 1px solid #ccd8ea;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 56, 115, 0.08);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.videohub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(0, 56, 115, 0.14);
+}
+
+.videohub-card:focus-visible {
+  outline: 2px solid #00aeef;
+  outline-offset: 2px;
+}
+
+.videohub-thumb {
+  position: relative;
+}
+
+.videohub-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #d7dce6;
+}
+
+.videohub-youtube-badge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.35));
+}
+
+.videohub-content {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  height: 100%;
+}
+
+.videohub-content h3 {
+  color: #003873;
+  font-size: 1.01rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.videohub-content p {
+  color: #35558d;
+  font-size: 0.92rem;
+  margin: 0;
+  line-height: 1.45;
+  flex-grow: 1;
+}
+
+.videohub-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.videohub-tags span {
+  font-size: 0.72rem;
+  color: #0d5ca8;
+  background: #edf5ff;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .videohub-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .videohub-page {
+    padding: 14px 8px 26px;
+  }
+
+  .videohub-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}

@@ -4,7 +4,7 @@ import AOS from 'aos';
 import alpr from "../../../assets/alpr/alpr-software-suite-thumb.jpg"
 import bullet from "../../../assets/homepage/alpr-camera.png"
 // import cameramodules from "../../../assets/clovis-central/clovis-evms-thumbnail.png"
-import aivision from "../../../assets/ai-compute-box/ai-compute-box-thumb.png";
+import aivision from "../../../assets/ai-compute-box/ai-compute-box-thumb-image.png";
 import "./Productcards.css"
 
 const productData = [

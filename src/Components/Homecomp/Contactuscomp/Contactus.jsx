@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { Form, Input, Select, Row, Col, message, Spin } from 'antd';
 import axios from 'axios';
 import './Contactus.css';
-import contactus from "../../../assets/homepage/contact-us-its.png";
+import contactus from "../../../assets/homepage/contact-us-its-img.jpg";
 import countryList from 'react-select-country-list';
 import { Helmet } from 'react-helmet-async';
 
@@ -197,8 +197,7 @@ const ContactUs = () => {
       form.setFieldsValue({ state: undefined });
     }
   };
-  
-const fieldValidator = (fieldName) => ({
+  const fieldValidator = (fieldName) => ({
   validator: (_, value) => {
     if (!value) {
       return Promise.resolve();
@@ -212,19 +211,18 @@ const fieldValidator = (fieldName) => ({
     }
 
     // Only for Name
-    if (
-      fieldName === "name" &&
-      /\d/.test(value.trim())
+     if (
+      fieldName === "Name" &&
+      !/^[A-Za-z\s]+$/.test(value.trim())
     ) {
       return Promise.reject(
-        new Error("Name cannot contain numbers")
+        new Error("Name should contain only letters")
       );
     }
 
     return Promise.resolve();
   },
 });
-
 
   const emailValidator = (_, value) => {
     if (value) {
@@ -349,7 +347,7 @@ const fieldValidator = (fieldName) => ({
                   <Col span={12}>
                     <Form.Item
                       name="name"
-                      rules={[{ required: true, message: 'Please enter your name' },fieldValidator("name")]}
+                      rules={[{ required: true, message: 'Please enter your name' },fieldValidator("Name")]}
                     >
                       <Input placeholder="Name*" />
                     </Form.Item>
@@ -357,7 +355,7 @@ const fieldValidator = (fieldName) => ({
                   <Col span={12}>
                     <Form.Item
                       name="companyName"
-                      rules={[{ required: true, message: 'Please enter your company ', },fieldValidator("company")]}
+                      rules={[{ required: true, message: 'Please enter your company ' },fieldValidator("Company")]}
                     >
                       <Input placeholder="Company Name*" />
                     </Form.Item>
@@ -388,9 +386,9 @@ const fieldValidator = (fieldName) => ({
                   <Col span={12}>
                     <Form.Item
                       name="contactNumber"
-                      rules={[{ message: 'Please enter your phone number' }]}
+                      rules={[{ message: 'Please enter your phone number',pattern: /^[0-9]+$/ }]}
                     >
-                      <Input placeholder="Contact Number" />
+                      <Input  placeholder="Contact Number" />
                     </Form.Item>
                   </Col>
                 </Row>

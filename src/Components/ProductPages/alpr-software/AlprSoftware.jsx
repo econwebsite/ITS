@@ -4,10 +4,20 @@ import Modelbutton from "../../Button comp/Modelbutton";
 import Banner from './alpr-banner';
 import bullet from "../../../assets/homepage/alpr-camera.png"
 import remotemgt from "../../../assets/alpr-sdk/remote-device-management.png"
+import DarsiPro from "../../../assets/homepage/darsi-pro-action.jpg"
+import FsLightbox from "fslightbox-react";
 import { Helmet } from 'react-helmet-async';
-import FAQ from './FAQ';
+import Vehicaldetection from "../../../assets/alpr-sdk/vehicle-detection.png";
+import Licenseplatedetection from "../../../assets/alpr-sdk/license-plate-detection.png";
+import Licenseplaterecognition from "../../../assets/alpr-sdk/license-plate-recognition.png";
+import Licenseplateclassification from "../../../assets/alpr-sdk/license-plate-classification.png";
+import Vehiclemakemodel from "../../../assets/alpr-sdk/vehicle-make-model.png";
+import Vehiclecolor from "../../../assets/alpr-sdk/vehicle-color.png";
+import AlprSdkFaq from './AlprSdkFaq';
 const AlprSoftware = () => {
   const [animateOnScroll, setAnimateOnScroll] = useState(false);
+  const [toggler, setToggler] = useState(false);
+  const [selectedVideoIndex, setSelectedVideoIndex] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,32 +50,32 @@ const AlprSoftware = () => {
 
   const workflowSteps = [
     {
-      number: '01',
+      icon: Vehicaldetection,
       title: 'Vehicle Detection',
       description: 'Accurately identify vehicles and license plates directly from live video feeds'
     },
     {
-      number: '02',
+      icon: Licenseplatedetection,
       title: 'License Plate Detection',
       description: 'Support jurisdiction-level plate formats used in traffic systems - with inbuilt recognition logic'
     },
     {
-      number: '03',
+      icon: Licenseplaterecognition,
       title: 'License Plate Recognition',
       description: 'Classify based on plate format and usage for enforcement and access workflows'
     },
     {
-      number: '04',
+      icon: Licenseplateclassification,
       title: 'License Plate Classification',
       description: 'Preserve vehicle/plate identity to reduce duplicate reads and stabilize traffic analytics'
     },
     {
-      number: '05',
+      icon: Vehiclemakemodel,
       title: 'Vehicle Make & Model',
       description: 'Extract visual attributes like vehicle make, model and color detection from moving vehicles'
     },
     {
-      number: '06',
+      icon: Vehiclecolor,
       title: 'Vehicle Color',
       description: 'Estimate vehicle direction and average speed to quantify movement and generate precise metadata.'
     }
@@ -100,7 +110,8 @@ const AlprSoftware = () => {
       title: 'Remote Device Management Platform',
       description: "Remotely configure, monitor, and maintain ANPR and intelligent vision devices with CloVis Central&trade;. Ensure reliable large-scale deployments with centralized device and AI model management.",
       image: remotemgt,
-      reverse: false
+      reverse: false,
+      link: 'https://www.e-consystems.com/vision-solution/smart-fcaps-device-remote-management.asp'
     }
   ];
 
@@ -140,7 +151,8 @@ const AlprSoftware = () => {
   const applications = [
     {
       title: 'Traffic enforcement',
-      image: 'https://www.e-consystems.com/images/ptz-camera/red-light-violation.jpg'
+      image: 'https://www.e-consystems.com/images/ptz-camera/red-light-violation.jpg',
+      link: '/solutions/traffic-enforcement-camera'
     },
     {
       title: 'Automated Tolling and MLFF systems',
@@ -148,17 +160,71 @@ const AlprSoftware = () => {
     },
     {
       title: 'Parking lot management',
-      image: 'https://www.e-consystems.com/images/markets/its/parking-management.jpg'
+      image: 'https://www.e-consystems.com/images/markets/its/parking-management.jpg',
+      link: 'https://www.e-consystems.com/markets/smart-cities-cameras/parking-lot-management.asp'
     }
   ];
+
+  const videoData = [
+    {
+      title: "Darsi Pro in Action | Edge AI Vision Box Demo",
+      hashtags: ["smartparking", "anpr", "alpr"],
+      link: "https://www.youtube.com/embed/yFZZH-1OxW8",
+      image: "https://img.youtube.com/vi/yFZZH-1OxW8/hqdefault.jpg",
+    },
+    {
+      title: "Real-Time License Plate Recognition demo using ALPR SDK",
+      hashtags: ["alpr", "license plate recognition", "sdk"],
+      link: "https://www.youtube.com/embed/XMwK9oYzB4g",
+      image: "https://img.youtube.com/vi/XMwK9oYzB4g/hqdefault.jpg",
+    },
+    {
+      title: "ALPR Camera Demo | Automated License Plate Recognition",
+      hashtags: ["alpr", "camera", "recognition"],
+      link: "https://www.youtube.com/embed/91TcMA3Lt3Q",
+      image: "https://img.youtube.com/vi/91TcMA3Lt3Q/hqdefault.jpg",
+    }
+  ];
+
+  const siteUrl = typeof window !== 'undefined'
+    ? window.location.origin.replace(/\/$/, '')
+    : 'https://its.e-consystems.com';
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: `${siteUrl}/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Products',
+        item: `${siteUrl}/products/license-plate-recognition-software`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'ALPR Software',
+        item: `${siteUrl}/products/license-plate-recognition-software`,
+      },
+    ],
+  };
 
   return (
     <div className="alpr-software">
       {/* Hero Banner */}
       <Banner />
       <Helmet>
-        <title>High Accuracy Automatic License Plate Recognition Software</title>
-        <meta name='description' content='Deep-learning ALPR software for vehicle and plate detection, recognition, tracking, and metadata generation, optimized for edge and cloud ITS deployments.' />
+        <title>AI-Powered ALPR SDK for Edge & Cloud Deployment</title>
+        <meta name='description' content='Unlock ~99.1% accuracy with e-con Systems ALPR SDK. Featuring deep-learning models, hardware-agnostic support, and REST APIs for seamless integration into traffic, tolling, and parking systems.' />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
       {/* Paragraph Section */}
       <section className="alpr-para">
@@ -185,7 +251,9 @@ const AlprSoftware = () => {
           <div className="workflow-steps">
             {workflowSteps.slice(0, 4).map((step, index) => (
               <div className="workflow-step" key={index}>
-                <div className="step-number">{step.number}</div>
+                <div className="step-icon">
+                  <img src={step.icon} alt={step.title} />
+                </div>
                 <h4 className="step-title">{step.title}</h4>
               </div>
             ))}
@@ -194,7 +262,9 @@ const AlprSoftware = () => {
           <div className="workflow-steps">
             {workflowSteps.slice(4).map((step, index) => (
               <div className="workflow-step" key={index + 4}>
-                <div className="step-number">{step.number}</div>
+                <div className="step-icon">
+                  <img src={step.icon} alt={step.title} />
+                </div>
                 <h4 className="step-title">{step.title}</h4>
               </div>
             ))}
@@ -218,17 +288,30 @@ const AlprSoftware = () => {
             <h2>Key ALPR SDK Features</h2>
           </div>
 
-          {features.map((feature, index) => (
-            <div key={index} className={`zigzag-row ${feature.reverse ? 'reverse' : ''}`}>
-              <div className="zigzag-image">
-                <img src={feature.image} alt={feature.title} />
+          {features.map((feature, index) => {
+            const content = (
+              <>
+                <div className="zigzag-image">
+                  <img src={feature.image} alt={feature.title} />
+                </div>
+                <div className="zigzag-content">
+                  <h3>{feature.title}</h3>
+                  <p>{feature.description}</p>
+                </div>
+              </>
+            );
+            return (
+              <div key={index} className={`zigzag-row ${feature.reverse ? 'reverse' : ''}`}>
+                {feature.link ? (
+                  <a href={feature.link} style={{ display: 'contents' }}>
+                    {content}
+                  </a>
+                ) : (
+                  content
+                )}
               </div>
-              <div className="zigzag-content">
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -259,21 +342,73 @@ const AlprSoftware = () => {
 
           <div className="applications-grid">
             {applications.map((app, index) => (
-              <div className="application-card" key={index}>
-                <img src={app.image} className="application-image" alt={app.title} />
-                <div className="application-overlay">
-                  <h4 className="application-title">{app.title}</h4>
+              <a href={app.link} key={index} style={{ textDecoration: 'none' }}>
+                <div className="application-card">
+                  <img src={app.image} className="application-image" alt={app.title} />
+                  <div className="application-overlay">
+                    <h4 className="application-title">{app.title}</h4>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="video-showcase">
+        <FsLightbox
+          toggler={toggler}
+          sources={videoData.map((video) => video.link)}
+          sourceIndex={selectedVideoIndex}
+          slideshow={{
+            isEnabled: false,
+          }}
+          prevKeyTitle="Prev"
+          nextKeyTitle="Next"
+          showThumbsOnMount={false}
+          disableLocalStorage={true}
+        />
+        
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">Related Videos</h2>
+          </div>
+
+          <div className="video-grid">
+            {videoData.map((video, index) => (
+              <div className="video-container" key={video.link}>
+                <div
+                  className="video-wrapper"
+                  onClick={() => {
+                    setSelectedVideoIndex(index);
+                    setToggler((prev) => !prev);
+                  }}
+                >
+                  <img
+                    src={video.image}
+                    alt={video.title}
+                    className="video-thumbnail"
+                  />
+                  <div className="play-btn-overlay">
+                    <div className="play-btn">
+                      <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+                        <polygon points="8,5 20,12 8,19" fill="white"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="video-content">
+                  <h3 className="video-title">{video.title}</h3>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/*  FAQ */}
-
-        <FAQ/>
-
+      {/* ALPR FAQ section */}
+      <AlprSdkFaq />
       {/* Hardware Section */}
       <section className="hardware" id="products">
         <div className="container">

@@ -33,6 +33,7 @@
 /* Card Styles */
 .alpr-application-card {
   position: relative;
+  display: block;
   overflow: hidden;
   border-radius: 2px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
@@ -41,6 +42,13 @@
   width: 300px;
   max-width: 100%;
   flex: 0 1 300px;
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+}
+
+a.alpr-application-card {
+  cursor: pointer;
 }
 
 .alpr-application-card img {

@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Modelbutton from "../../Button comp/Modelbutton";
 // Temporary images (same as provided)
-import visionBox from "../../../assets/ai-compute-box/ai-compute-box-thumb.png";
+import visionBox from "../../../assets/ai-compute-box/ai-compute-box-thumb-image.png";
 
 const AboutAIComputeBox = () => {
   useEffect(() => {
@@ -48,14 +48,14 @@ const AboutAIComputeBox = () => {
               <div className="d-flex flex-wrap gap-3 mt-3 justify-content-center justify-content-lg-start text-center text-lg-start">
                 {/* Documents */}
                 <div className="cardKnowMore p-3">
-                  <p className="mb-2 fw-semibold section-label">Documents:</p>
+                  <p className="mb-2 fw-semibold section-label">Datasheet:</p>
                   <Modelbutton 
             className="computebox-download-button gtm-btn" 
             text="Download" 
             backgroundColor="#1e2f7ac9" 
             animationColor="#69ba2f" 
             hoverColor="#00aeef"
-            padding="5px 15px"
+            padding="10px 30px"
             fontSize="14px" 
             productName={`ProductDocument`}
             title={`AI Vision Box`}
@@ -75,7 +75,7 @@ const AboutAIComputeBox = () => {
             backgroundColor="#69ba2f" 
             animationColor="#00aeef" 
             hoverColor="#00aeef"
-            padding="5px 15px"
+            padding="10px 30px"
             fontSize="14px" 
             productName={`AI Compute Box`}
             type= 'contact'

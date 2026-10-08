@@ -113,7 +113,13 @@
   line-height: 1.9;
   color: #ffff !important;
 }
-
+.feature-content p{
+  font-size: 1rem ;
+    color: #555;
+    line-height: 1.8 !important;
+    margin: 0;
+    text-align: justify !important;
+}
 /* ====================================
    SMOOTH AOS
 ==================================== */

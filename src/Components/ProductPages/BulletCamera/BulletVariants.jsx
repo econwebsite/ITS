@@ -3,6 +3,7 @@ import "./BulletVariants.css";
 import Modelbutton from "../../Button comp/Modelbutton";
 import singleVisionImg from "../../../assets/alpr-camera/single-vision-camera.jpg";
 import dualVisionImg from "../../../assets/alpr-camera/dual-vision-camera.png";
+import trafficsenzLogo from "../../../assets/alpr-camera/trafficsenz-logo-placeholder.png";
 
 const products = [
   {
@@ -38,11 +39,33 @@ const BulletVariants = () => {
         {products.map((product, index) => (
           <div key={index} className="product-card">
             <div className="product-card-media">
-              <img src={product.image} alt={product.name} loading="lazy" />
+              {product.link ? (
+                <a href={product.link}>
+                  <img src={product.image} alt={product.name} loading="lazy" />
+                </a>
+              ) : (
+                <img src={product.image} alt={product.name} loading="lazy" />
+              )}
             </div>
 
             <div className="product-card-body">
-              <h3 className="product-card-title">{product.name}</h3>
+              <h3 className="product-card-title">
+                {product.link ? (
+                  <a href={product.link} className="product-card-title-link">
+                    <p className="product-card-brand">
+                      <img src={trafficsenzLogo} alt="TrafficSenz" className="product-card-brand-logo" />
+                    </p>
+                    <p className="product-card-variant">{product.name}</p>
+                  </a>
+                ) : (
+                  <>
+                    <p className="product-card-brand">
+                      <img src={trafficsenzLogo} alt="TrafficSenz" className="product-card-brand-logo" />
+                    </p>
+                    <p className="product-card-variant">{product.name}</p>
+                  </>
+                )}
+              </h3>
 
               <ul className="product-card-points">
                 {product.points.map((point, pointIndex) => (

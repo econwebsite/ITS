@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./compute-application.css";
 import laneDetectionImg from '../../../assets/ai-compute-box/lane-violation-detection.jpg'
 import anprImg from '../../../assets/ai-compute-box/anpr.jpg'
@@ -19,6 +20,7 @@ const ComputeApplication = () => {
     {
       img: redLightViolationImg,
       title: "Red-Light & Speed Violation Detection ",
+      link: "/solutions/red-light-violation-detection-camera"
     },
     {
       img: laneDetectionImg,
@@ -41,16 +43,33 @@ const ComputeApplication = () => {
       </div>
 
       <div className="compute-applications-grid">
-        {applications.map((app, index) => (
-          <div key={index} className="compute-application-card">
-            <img src={app.img} alt={app.title} />
-            <div className="compute-application-overlay">
-              <h4>{app.title}</h4>
+        {applications.map((app, index) => {
+          const cardContent = (
+            <div className="compute-application-card">
+              <img src={app.img} alt={app.title} />
+              <div className="compute-application-overlay">
+                <h4>{app.title}</h4>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+
+          if (!app.link) {
+            return <div key={index}>{cardContent}</div>;
+          }
+
+          return app.link.startsWith('http') ? (
+            <a key={index} href={app.link} target="_blank" rel="noopener noreferrer">
+              {cardContent}
+            </a>
+          ) : (
+            <Link key={index} to={app.link}>
+              {cardContent}
+            </Link>
+          );
+        })}
       </div>
     </section>
+    
   );
 };
 

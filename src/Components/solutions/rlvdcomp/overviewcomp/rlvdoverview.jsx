@@ -1,4 +1,5 @@
 import './RLVDOverview.css';
+import { useState } from 'react';
 import visionCamera from '../../../../assets/solutionpage/rlvd/rlvd-camera-img.jpg';
 
 const outcomes = [
@@ -17,11 +18,55 @@ const outcomes = [
 ];
 
 const RLVDOverview = () => {
-  return (
-    <section className="rlvd-overview">
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
-      {/* Heading */}
-      <div className="rlvd-header fade-up">
+  const videoData = {
+    title: "Red Light Violation Detection Demo",
+    hashtags: ["rlvd", "traffic-enforcement", "violation-detection"],
+    link: "https://www.youtube.com/embed/ISIaD0HaLBI",
+    image: "https://img.youtube.com/vi/ISIaD0HaLBI/hqdefault.jpg",
+  };
+
+  const getThumbnailUrl = (link) => {
+    try {
+      const videoId = link.match(/(?:youtube\.com\/watch\?v=|youtube\.com\/embed\/|youtu\.be\/)([^&?/]+)/)?.[1];
+      return videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : videoData.image;
+    } catch (error) {
+      console.error('Error extracting YouTube video ID:', error);
+      return videoData.image;
+    }
+  };
+
+  const getVideoId = (link) => {
+    try {
+      return link.match(/(?:youtube\.com\/watch\?v=|youtube\.com\/embed\/|youtu\.be\/)([^&?/]+)/)?.[1];
+    } catch (error) {
+      console.error('Error extracting YouTube video ID:', error);
+      return null;
+    }
+  };
+
+  const handleVideoClick = () => {
+    const videoId = getVideoId(videoData.link);
+    setSelectedVideo(videoId);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedVideo(null);
+  };
+
+  const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      handleCloseModal();
+    }
+  };
+
+  return (
+    <div className="rlvd-overview-wrapper">
+      <section className="rlvd-overview">
+
+        {/* Heading */}
+        <div className="rlvd-header fade-up">
         <h2>
           Vision-Based <span>Red Light Violation</span> Detection (RLVD) Cameras
         </h2>
@@ -34,15 +79,16 @@ const RLVDOverview = () => {
       {/* Main Row */}
       <div className="rlvd-row">
 
-        {/* Left Side Image */}
+        {/* Left Side Video */}
         <div className="rlvd-left fade-left">
-          <div className="rlvd-image-box">
-            {/* Replace with your actual image */}
+          <div className="rlvd-video-box" onClick={handleVideoClick}>
             <img
-              src={visionCamera}
-              alt="Red Light Violation Detection Camera"
-              className="rlvd-image"
+              src={getThumbnailUrl(videoData.link)}
+              alt={videoData.title}
+              className="rlvd-video-thumbnail"
             />
+            {/* Play Icon Overlay */}
+            <span className="rlvd-play-icon">▶</span>
           </div>
         </div>
 
@@ -72,7 +118,30 @@ const RLVDOverview = () => {
         </div>
       </div>
 
-    </section>
+      {/* Video Modal */}
+      {selectedVideo && (
+        <div className="rlvd-video-modal-overlay" onClick={handleBackdropClick}>
+          <div className="rlvd-video-modal-content">
+            <button className="rlvd-modal-close-btn" onClick={handleCloseModal}>
+              ✕
+            </button>
+            <div className="rlvd-video-player-wrapper">
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
+                title={videoData.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
+
+      </section>
+    </div>
   );
 };
 

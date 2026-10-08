@@ -1,7 +1,6 @@
 import React from "react";
 import "./EnforcementGaps.css";
 
-import bgImage from "../../../assets/800x600.png";
 import img1 from "../../../../../../assets/solutionpage/smart-parking-management/parking-enforcement/enforcement-1.png"
 import img2 from "../../../../../../assets/solutionpage/smart-parking-management/parking-enforcement/enforcement-2.png"
 import img3 from "../../../../../../assets/solutionpage/smart-parking-management/parking-enforcement/enforcement-3.png"

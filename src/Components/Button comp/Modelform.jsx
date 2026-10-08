@@ -227,7 +227,7 @@ useEffect(() => {
     }
   };
 
-const fieldValidator = (fieldName) => ({
+  const fieldValidator = (fieldName) => ({
   validator: (_, value) => {
     if (!value) {
       return Promise.resolve();
@@ -242,11 +242,11 @@ const fieldValidator = (fieldName) => ({
 
     // Only for Name
     if (
-      fieldName === "name" &&
-      /\d/.test(value.trim())
-    ) {
+      fieldName === "Name" &&
+      !/^[A-Za-z\s]+$/.test(value.trim())
+    ){
       return Promise.reject(
-        new Error("Name cannot contain numbers")
+        new Error("Name should contain only letters")
       );
     }
 
@@ -265,6 +265,8 @@ const fieldValidator = (fieldName) => ({
     }
     return Promise.resolve();
   };
+
+  
 
   const handleEmailValidate = async (e) => {
     const email = e.target.value;
@@ -363,7 +365,7 @@ const fieldValidator = (fieldName) => ({
               <Col span={12}>
                 <Form.Item
                   name="name"
-                  rules={[{ required: true, message: 'Please enter your name' },fieldValidator("name")]}
+                  rules={[{ required: true, message: 'Please enter your name' },fieldValidator("Name")]}
                 >
                   <Input placeholder="Name *" />
                 </Form.Item>
@@ -371,7 +373,7 @@ const fieldValidator = (fieldName) => ({
               <Col span={12}>
                 <Form.Item
                   name="companyName"
-                  rules={[{ required: true, message: 'Please enter your company ' },fieldValidator("company")]}
+                  rules={[{ required: true, message: 'Please enter your company ' },fieldValidator("Company")]}
                 >
                   <Input placeholder="Company Name*" />
                 </Form.Item>
@@ -397,10 +399,12 @@ const fieldValidator = (fieldName) => ({
               <Col span={12}>
                 <Form.Item
                   name="contactNumber"
-                  rules={[{ message: 'Please enter your phone number' }]}
+                  rules={[{ message: 'Please enter your phone number' , pattern: /^[0-9]+$/
+}]}
                 >
                   <Input
                     placeholder="Contact Number"
+                   
                   // addonBefore={selectedCountry ? countries.find(c => c.value === selectedCountry)?.code : ''}
                   />
                 </Form.Item>
