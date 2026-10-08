@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LPR Camera Placement Tool — Operating Manual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10192b;
+  --ink-soft:#40506a;
+  --ink-faint:#6d7c93;
+  --paper:#f2f5f7;
+  --card:#ffffff;
+  --rule:#ccd6e0;
+  --blue:#2c5fa8;
+  --blue-wash:#e6edf7;
+  --amber:#a8620c;
+  --amber-wash:#fbf0e0;
+  --green:#1f6b4a;
+  --green-wash:#e4f1ea;
+  --maxw:860px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- masthead ---------- */
+.masthead{
+  background:var(--ink);color:#dfe7f2;padding:44px 24px 38px;
+  background-image:linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),
+                   linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:34px 34px;
+}
+.masthead .wrap{max-width:var(--maxw);margin:0 auto}
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:#7fa6dd;margin:0 0 14px;
+}
+.masthead h1{
+  font-family:"Chivo",sans-serif;font-weight:800;font-size:clamp(30px,5.4vw,50px);
+  line-height:1.04;letter-spacing:-.02em;margin:0 0 14px;color:#fff;
+}
+.masthead p{margin:0;max-width:60ch;color:#b8c8de;font-size:17px}
+.spec-strip{
+  display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:26px;padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.16);
+  font-family:"IBM Plex Mono",monospace;font-size:12px;color:#8fb0d8;
+}
+.spec-strip b{color:#fff;font-weight:500}
+
+/* ---------- layout ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+main{padding:8px 0 90px}
+section{padding:44px 0 8px;scroll-margin-top:20px}
+section+section{border-top:1px solid var(--rule)}
+
+h2{
+  font-family:"Chivo",sans-serif;font-weight:800;font-size:26px;letter-spacing:-.01em;
+  margin:0 0 6px;line-height:1.2;
+}
+h2 .num{
+  font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:500;
+  color:var(--blue);margin-right:10px;vertical-align:2px;
+}
+.lede{color:var(--ink-soft);margin:0 0 26px;font-size:16.5px}
+h3{
+  font-family:"Chivo",sans-serif;font-weight:600;font-size:18px;
+  margin:30px 0 8px;letter-spacing:-.005em;
+}
+h4{font-family:"Chivo",sans-serif;font-weight:600;font-size:15px;margin:20px 0 6px}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 16px;padding-left:22px}
+li{margin-bottom:7px}
+a{color:var(--blue)}
+code{
+  font-family:"IBM Plex Mono",monospace;font-size:.87em;
+  background:var(--blue-wash);color:#1d417a;padding:1px 5px;border-radius:3px;
+}
+strong{font-weight:600}
+
+/* ---------- nav ---------- */
+nav.toc{
+  background:var(--card);border:1px solid var(--rule);border-radius:8px;
+  padding:18px 20px;margin:30px 0 8px;
+}
+nav.toc h2{font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  font-family:"IBM Plex Mono",monospace;font-weight:500;color:var(--ink-faint);margin-bottom:12px}
+nav.toc ol{list-style:none;padding:0;margin:0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:2px 20px}
+nav.toc li{margin:0}
+nav.toc a{
+  display:block;padding:5px 0;text-decoration:none;color:var(--ink);
+  font-family:"Chivo",sans-serif;font-size:14.5px;border-bottom:1px solid transparent;
+}
+nav.toc a:hover{color:var(--blue);border-bottom-color:var(--rule)}
+nav.toc a .n{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--blue);margin-right:8px}
+
+/* ---------- parameter cards ---------- */
+.params{display:grid;gap:12px;margin:18px 0 8px}
+.param{
+  background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--blue);
+  border-radius:5px;padding:14px 16px;
+}
+.param-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:5px}
+.param-name{font-family:"Chivo",sans-serif;font-weight:600;font-size:16px}
+.param-range{
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-faint);
+  background:var(--paper);border:1px solid var(--rule);border-radius:20px;padding:2px 9px;
+}
+.param p{margin:0;font-size:15.5px;color:var(--ink-soft);line-height:1.55}
+.param p+p{margin-top:8px}
+
+/* ---------- callouts ---------- */
+.note{
+  border-radius:5px;padding:14px 16px;margin:18px 0;font-size:15.5px;line-height:1.55;
+  border:1px solid;
+}
+.note p{margin:0}
+.note p+p{margin-top:9px}
+.note .tag{
+  display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;margin-bottom:6px;font-weight:600;
+}
+.note.watch{background:var(--amber-wash);border-color:#e2c69a;color:#5c3a08}
+.note.watch .tag{color:var(--amber)}
+.note.key{background:var(--blue-wash);border-color:#b6c9e4;color:#1d3560}
+.note.key .tag{color:var(--blue)}
+.note.good{background:var(--green-wash);border-color:#a9cebb;color:#14452e}
+.note.good .tag{color:var(--green)}
+
+/* ---------- formula ---------- */
+.formula{
+  background:var(--ink);color:#e3ecf8;border-radius:6px;padding:16px 18px;margin:16px 0;
+  font-family:"IBM Plex Mono",monospace;font-size:14px;line-height:1.75;overflow-x:auto;
+}
+.formula .lbl{
+  display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:#7fa6dd;margin-bottom:8px;
+}
+.formula em{color:#ffc978;font-style:normal}
+
+/* ---------- steps ---------- */
+ol.steps{list-style:none;padding:0;counter-reset:s;margin:20px 0}
+ol.steps>li{
+  counter-increment:s;position:relative;padding-left:44px;margin-bottom:18px;
+}
+ol.steps>li::before{
+  content:counter(s,decimal-leading-zero);position:absolute;left:0;top:1px;
+  font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;color:var(--blue);
+  border:1px solid var(--rule);background:var(--card);border-radius:4px;
+  width:29px;height:24px;display:flex;align-items:center;justify-content:center;
+}
+ol.steps>li b{font-family:"Chivo",sans-serif;font-size:16px;display:block;margin-bottom:2px}
+
+/* ---------- table ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px;
+  background:var(--card);border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+.tbl th{
+  background:var(--ink);color:#dfe7f2;text-align:left;padding:10px 13px;
+  font-family:"Chivo",sans-serif;font-size:13px;font-weight:600;letter-spacing:.01em;
+}
+.tbl td{padding:10px 13px;border-top:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
+.tbl td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+.tbl code{font-size:.85em}
+
+/* ---------- footer ---------- */
+footer{
+  background:var(--ink);color:#8fa5c2;padding:30px 24px;font-size:14px;
+}
+footer .wrap{max-width:var(--maxw);margin:0 auto;display:flex;flex-wrap:wrap;gap:12px;
+  justify-content:space-between;align-items:center}
+footer b{color:#dfe7f2;font-weight:500}
+footer .mono{font-family:"IBM Plex Mono",monospace;font-size:12px}
+
+a:focus-visible,nav.toc a:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px}
+
+@media(max-width:600px){
+  body{font-size:16px}
+  .masthead{padding:34px 20px 30px}
+  .wrap{padding:0 20px}
+  section{padding:34px 0 6px}
+}
+
+/* ===================== documentation theme (sidebar + reader) ===================== */
+:root{
+  --ink:#0f1b3d; --ink-soft:#44546f; --ink-faint:#7384a0;
+  --paper:#ffffff; --card:#ffffff; --rule:#e3e9f2;
+  --blue:#1e2f7a; --blue-wash:#eaf4fd; --cyan:#00aeef; --green:#69ba2f;
+  --side:#0f1b4d; --side-w:290px; --maxw:860px;
+}
+html{scroll-padding-top:24px}
+body{font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.75;background:var(--paper);color:var(--ink-soft);padding-left:var(--side-w)}
+h1,h2,h3,h4,.param-name,.note .tag,.tbl th,ol.steps>li b,.eyebrow{font-family:"Inter",system-ui,sans-serif}
+
+/* reading progress */
+.progress{position:fixed;top:0;left:var(--side-w);right:0;height:3px;z-index:60;background:transparent}
+.progress::after{content:"";display:block;height:100%;width:var(--w,0%);background:var(--cyan);transition:width .1s}
+
+/* sidebar */
+.page{display:block;max-width:none;margin:0;padding:0}
+nav.toc{position:fixed;top:0;left:0;bottom:0;width:var(--side-w);margin:0;padding:32px 18px;overflow-y:auto;background:var(--side);border:none;border-radius:0;box-shadow:none;z-index:50}
+nav.toc h2{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#7f93c7;margin:0 0 10px 10px}
+nav.toc ol{display:block;padding:0;margin:0;list-style:none}
+nav.toc li{margin:0 0 2px}
+nav.toc a{display:flex;gap:10px;align-items:baseline;padding:8px 10px;border-radius:8px;border-bottom:none;color:#c3cdea;font-size:13.5px;font-weight:500;text-decoration:none;transition:background .15s,color .15s}
+nav.toc a .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:#6f86c9;margin:0;min-width:20px}
+nav.toc a:hover{background:rgba(255,255,255,.08);color:#fff}
+nav.toc a.active{background:#fff;color:var(--side);font-weight:600}
+nav.toc a.active .n{color:var(--cyan)}
+nav.toc::-webkit-scrollbar{width:5px}
+nav.toc::-webkit-scrollbar-thumb{background:rgba(255,255,255,.22);border-radius:999px}
+
+/* hero */
+.masthead{background:#eaf4fd;border-bottom:1px solid #cfe3f6;padding:64px 56px 48px;background-image:none}
+.masthead .wrap{max-width:var(--maxw);margin:0;padding:0}
+.eyebrow{display:inline-block;margin:0 0 16px;padding:4px 12px;border-radius:999px;background:#fff;border:1px solid #cfe3f6;color:var(--blue);font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase}
+.masthead h1{margin:0 0 16px;font-weight:800;font-size:clamp(32px,4.6vw,48px);line-height:1.08;letter-spacing:-.02em;color:var(--ink)}
+.masthead p{max-width:62ch;color:var(--ink-soft);font-size:17px}
+.spec-strip{gap:10px;margin-top:26px;padding-top:0;border-top:none;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-soft)}
+.spec-strip span{background:#fff;border:1px solid #cfe3f6;padding:5px 13px;border-radius:8px}
+.spec-strip b{color:var(--blue);font-weight:600}
+
+/* content */
+.content{max-width:calc(var(--maxw) + 112px);margin:0;padding:12px 56px 90px}
+section{background:none;border:none;border-radius:0;box-shadow:none;padding:48px 0 12px;margin:0}
+section+section{border-top:1px solid var(--rule)}
+h2{font-weight:800;font-size:28px;line-height:1.2;letter-spacing:-.015em;color:var(--ink);margin:0 0 6px}
+h2 .num{display:block;margin:0 0 8px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--cyan);vertical-align:baseline;background:none;min-width:0;height:auto;padding:0;border-radius:0}
+h3{font-weight:700;font-size:19px;color:var(--ink);margin:32px 0 8px}
+h4{font-weight:600;color:var(--ink)}
+.lede{font-size:17px;color:var(--ink-faint);margin-bottom:24px}
+p,li{color:var(--ink-soft)}
+strong{color:var(--ink);font-weight:600}
+a{color:var(--blue)}
+code{font-family:"IBM Plex Mono",monospace;background:#eef2f9;color:var(--blue);padding:2px 6px;border-radius:5px;font-size:.86em}
+
+/* parameter list */
+.params{gap:0;margin:20px 0 8px;border:1px solid var(--rule);border-radius:12px;overflow:hidden}
+.param{background:#fff;border:none;border-left:none;border-radius:0;padding:16px 20px;transition:background .15s}
+.param+.param{border-top:1px solid var(--rule)}
+.param:hover{background:#f6faff}
+.param-name{font-weight:600;font-size:15.5px;color:var(--ink)}
+.param-range{background:#eef2f9;border:none;color:var(--blue);font-weight:500;border-radius:6px;padding:2px 9px}
+.param p{color:var(--ink-soft)}
+
+/* callouts */
+.note{border:none;border-left:4px solid;border-radius:0 10px 10px 0;padding:14px 18px}
+.note .tag{font-family:"IBM Plex Mono",monospace;font-weight:600}
+.note.watch{background:#fff6e8;border-left-color:#e29a2d;color:#5c3a08}
+.note.watch .tag{color:#a8620c}
+.note.key{background:#eaf4fd;border-left-color:var(--cyan);color:#14385c}
+.note.key .tag{color:var(--blue)}
+.note.good{background:#edf7e4;border-left-color:var(--green);color:#2c5a12}
+.note.good .tag{color:#3f7d16}
+
+/* formulae, steps, tables */
+.formula{background:#0f1b4d;color:#e3ecf8;border-radius:10px;padding:16px 20px}
+.formula .lbl{color:#7fd6f7}
+.formula em{color:#a6e26b}
+ol.steps>li::before{background:var(--ink);color:#fff;border:none;border-radius:6px;width:30px;height:26px}
+ol.steps>li b{color:var(--ink)}
+.tbl{border:1px solid var(--rule);border-radius:10px;overflow:hidden;background:#fff}
+.tbl th{background:#f1f5fb;color:var(--ink);font-weight:600;border-bottom:1px solid var(--rule)}
+.tbl td{border-top:1px solid var(--rule)}
+.tbl tr:nth-child(even) td{background:#fafcfe}
+.tbl td:first-child{color:var(--ink)}
+
+footer{background:var(--side);color:#9fb0d8;padding:26px 56px}
+footer .wrap{max-width:var(--maxw);margin:0;padding:0}
+footer b{color:#fff}
+
+.totop{position:fixed;right:24px;bottom:24px;width:42px;height:42px;border-radius:10px;border:1px solid var(--rule);background:#fff;color:var(--blue);font-size:18px;cursor:pointer;box-shadow:0 6px 18px rgba(15,27,61,.15);opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s,transform .2s,background .2s,color .2s;z-index:40}
+.totop.show{opacity:1;pointer-events:auto;transform:none}
+.totop:hover{background:var(--blue);color:#fff}
+
+@media(max-width:960px){
+  body{padding-left:0}
+  .progress{left:0}
+  nav.toc{position:static;width:auto;padding:20px}
+  nav.toc ol{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+  .masthead{padding:40px 22px 34px}
+  .content{padding:8px 22px 70px}
+  footer{padding:24px 22px}
+}
+
+/* ===================== reader v4: API-reference style (sidebar unchanged) ===================== */
+body{background:#fff}
+.masthead{background:#f6f9fd;border-bottom:1px solid var(--rule);padding:68px 64px 44px}
+.masthead .wrap{max-width:820px}
+.masthead h1{color:var(--ink)}
+.spec-strip{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.spec-strip span{display:inline-flex;gap:6px;align-items:baseline;padding:6px 14px;background:#fff;border:1px solid var(--rule);border-radius:999px;font-family:"Inter",sans-serif;font-size:13px;color:var(--ink-faint)}
+.spec-strip b{font-weight:600;color:var(--ink)}
+
+.content{max-width:none;padding:12px 64px 110px}
+.content > section{max-width:780px}
+section{background:none;border:none;border-radius:0;box-shadow:none;margin:0;padding:56px 0 6px}
+section+section{border-top:1px solid var(--rule)}
+section:first-of-type{padding-top:40px}
+section:hover{box-shadow:none;border-color:var(--rule)}
+
+h2{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 8px;font-size:30px;font-weight:800;letter-spacing:-.02em}
+h2 .num{display:inline-grid;place-items:center;flex:none;width:38px;height:38px;margin:0;border-radius:50%;background:#fff;border:2px solid var(--cyan);color:var(--blue);font-size:12px;font-weight:700;letter-spacing:0}
+h2 .anchor{font-family:"IBM Plex Mono",monospace;font-size:20px;font-weight:500;color:var(--cyan);text-decoration:none;opacity:0;transition:opacity .15s}
+h2:hover .anchor{opacity:1}
+h2 .toggle{margin-left:auto;width:32px;height:32px;border-radius:8px;border:1px solid var(--rule);background:#fff;color:var(--ink-faint);cursor:pointer;display:grid;place-items:center;transition:background .15s,color .15s}
+h2 .toggle:hover{background:var(--blue-wash);color:var(--blue)}
+h2 .toggle svg{width:16px;height:16px;transition:transform .25s}
+section.collapsed h2 .toggle svg{transform:rotate(-90deg)}
+section.collapsed > *:not(h2){display:none}
+section.collapsed{padding-bottom:20px}
+.lede{font-size:18px;line-height:1.6;color:var(--ink-faint);margin-bottom:26px}
+h3{font-size:19px;font-weight:700;color:var(--ink);margin:36px 0 10px;scroll-margin-top:24px}
+
+/* parameters as an API-style reference list */
+.params{display:block;margin:22px 0 10px;border:none;border-top:1px solid var(--rule);border-radius:0;overflow:visible}
+.param{display:grid;grid-template-columns:230px minmax(0,1fr);column-gap:28px;align-items:start;padding:18px 10px;background:transparent;border:none;border-bottom:1px solid var(--rule);border-radius:0;transform:none;box-shadow:none;transition:background .15s}
+.param+.param{border-top:none}
+.param:hover{background:#f5f9fe;transform:none;box-shadow:none;border-color:var(--rule)}
+.param-head{grid-row:1 / span 4;display:flex;flex-direction:column;align-items:flex-start;gap:7px;margin:0}
+.param-name{font-size:15px;font-weight:700;color:var(--ink)}
+.param-range{font-family:"IBM Plex Mono",monospace;font-size:11.5px;background:#eef2f9;color:var(--blue);border:none;border-radius:6px;padding:2px 8px}
+.param p{grid-column:2;margin:0;font-size:15.5px}
+.param p+p{margin-top:8px}
+
+/* steps as a vertical timeline */
+ol.steps{margin:26px 0 20px}
+ol.steps>li{position:relative;padding:2px 0 26px 60px;margin:0;border:none;border-radius:0;background:none;cursor:pointer;transition:opacity .15s}
+ol.steps>li::before{left:0;top:0;width:38px;height:38px;border-radius:50%;background:#fff;border:2px solid var(--rule);color:var(--blue);font-size:12.5px;font-weight:700;transition:background .15s,border-color .15s,color .15s}
+ol.steps>li::after{content:"";position:absolute;left:18px;top:42px;bottom:4px;width:2px;background:var(--rule)}
+ol.steps>li:last-child::after{display:none}
+ol.steps>li:hover::before{border-color:var(--cyan)}
+ol.steps>li.done{opacity:.6}
+ol.steps>li.done::before{content:"\2713";background:var(--green);border-color:var(--green);color:#fff}
+ol.steps>li b{font-size:16.5px}
+
+/* callouts with an icon badge */
+.note{position:relative;border:1px solid;border-left-width:1px;border-radius:12px;padding:16px 20px 16px 62px;margin:22px 0}
+.note::before{position:absolute;left:18px;top:16px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:14px;color:#fff}
+.note.key{background:#f1f8fe;border-color:#cde6f8}
+.note.key::before{content:"i";background:var(--cyan)}
+.note.watch{background:#fff8ec;border-color:#f1d9ab}
+.note.watch::before{content:"!";background:#e29a2d}
+.note.good{background:#f1f9ea;border-color:#cfe6bb}
+.note.good::before{content:"\2713";background:var(--green)}
+.note:hover{transform:none}
+
+/* code / formula blocks */
+.formula{position:relative;padding:18px 90px 18px 22px;border-radius:12px;background:#0f1b4d}
+.copy{position:absolute;top:10px;right:10px;padding:5px 11px;border-radius:7px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.1);color:#dce8fa;font-family:"Inter",sans-serif;font-size:11px;font-weight:500;cursor:pointer;transition:background .15s}
+.copy:hover{background:rgba(255,255,255,.22)}
+.copy.ok{background:var(--green);border-color:var(--green);color:#10230a}
+
+/* tables */
+.tbl{border:1px solid var(--rule);border-radius:12px;overflow:hidden;background:#fff}
+.tbl th{background:#f6f9fd;color:var(--ink-faint);font-size:11.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;border-bottom:1px solid var(--rule)}
+.tbl td{border-top:1px solid var(--rule)}
+.tbl tr:nth-child(even) td{background:#fff}
+.tbl tr:hover td{background:#f5f9fe}
+
+/* "in this section" rail (built from the section's own sub-headings) */
+.rail{position:fixed;top:96px;right:28px;width:210px;display:none;font-size:12.5px;z-index:30}
+.rail h4{margin:0 0 10px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint)}
+.rail ul{list-style:none;margin:0;padding:0;border-left:2px solid var(--rule)}
+.rail li{margin:0}
+.rail a{display:block;padding:5px 0 5px 14px;margin-left:-2px;border-left:2px solid transparent;color:var(--ink-faint);text-decoration:none;line-height:1.4;transition:color .15s,border-color .15s}
+.rail a:hover{color:var(--blue)}
+.rail a.active{color:var(--blue);border-left-color:var(--cyan);font-weight:600}
+@media(min-width:1540px){.rail.has{display:block}}
+
+.js section.reveal{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease}
+.js section.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js section.reveal{opacity:1;transform:none;transition:none}}
+
+@media(max-width:960px){
+  .masthead{padding:40px 22px 30px}
+  .content{padding:10px 20px 70px}
+  .param{grid-template-columns:1fr}
+  .param-head{grid-row:auto;margin-bottom:8px}
+  .param p{grid-column:1}
+  .note{padding-left:56px}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <!-- <p class="eyebrow">Operating Manual</p> -->
+    <h1>LPR Camera<br>Placement Tool</h1>
+    <p>Plan a licence-plate-recognition install before anyone climbs a pole. Set the road, mount, lens and plate, and the tool tells you where plates are actually readable — in pixels, in metres, and at what vehicle speed you still catch them.</p>
+    <!-- <div class="spec-strip">
+      <span>Runs <b>offline in a browser</b></span>
+      <span>Single <b>HTML file</b></span>
+      <span>Geometry <b>rectilinear pinhole</b></span>
+      <span>Worst case <b>per lane, full width</b></span>
+    </div> -->
+  </div>
+</header>
+
+<div class="progress" id="progress"></div>
+<div class="page">
+<nav class="toc" aria-label="Contents">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#start"><span class="n">01</span>Get a first result</a></li>
+    <li><a href="#scene"><span class="n">02</span>The 3D scene</a></li>
+    <li><a href="#road"><span class="n">03</span>Road &amp; camera</a></li>
+    <li><a href="#lens"><span class="n">04</span>Lens &amp; field of view</a></li>
+    <li><a href="#zoom"><span class="n">05</span>Zoom lenses</a></li>
+    <li><a href="#plate"><span class="n">06</span>Sensor &amp; plate</a></li>
+    <li><a href="#read"><span class="n">07</span>Reading the results</a></li>
+    <li><a href="#solver"><span class="n">08</span>Autocompute solver</a></li>
+    <li><a href="#math"><span class="n">09</span>The maths</a></li>
+    <li><a href="#files"><span class="n">10</span>Saving &amp; sharing</a></li>
+    <li><a href="#gotchas"><span class="n">11</span>Things to watch</a></li>
+  </ol>
+</nav>
+
+
+<main class="content">
+
+<!-- 01 -->
+<section id="start">
+  <h2><span class="num">01</span>Get a first result</h2>
+  <p class="lede">Five minutes from opening the file to a defensible answer.</p>
+
+  <ol class="steps">
+    <li><b>Describe the road</b>
+      Set <strong>Lanes</strong> and <strong>Lane width</strong>. The scene rebuilds as you drag. Road width is simply lanes × lane width.</li>
+    <li><b>Place the camera</b>
+      Set <strong>Height</strong> and <strong>Lateral&nbsp;X</strong>. X&nbsp;=&nbsp;0 puts the camera over the road centre (a gantry); move it sideways for a roadside pole. The badge under the controls tells you which one you've built.</li>
+    <li><b>Aim it</b>
+      Set <strong>Working distance</strong> — how far down the road you care about — then press <strong>Re-center on road</strong>. That computes the tilt and pan which point the lens at the road centre at that distance. Adjust from there.</li>
+    <li><b>Enter the real lens and sensor</b>
+      Type the <strong>Horizontal FOV</strong> from the lens datasheet and the <strong>Sensor resolution</strong> from the camera datasheet. Leave the vertical FOV locked (🔒) so it follows the sensor shape.</li>
+    <li><b>Pick the plate</b>
+      Choose a <strong>Plate type</strong> preset, or enter a custom size in inches.</li>
+    <li><b>Read the answer</b>
+      The <strong>Per-lane</strong> list gives plate width × height and character height in pixels for every lane. Compare against your ANPR engine's requirement — commonly 80–130&nbsp;px plate width, or 16–20&nbsp;px character height.</li>
+    <li><b>Let the solver finish the job</b>
+      Open <strong>Autocompute</strong>, enter your pixel and speed targets, tick the parameters you're willing to change, and press <strong>Solve</strong>.</li>
+  </ol>
+
+  <div class="note key">
+    <span class="tag">Orientation</span>
+    <p>Traffic travels away from the camera along +Z. Lane 1 is always the lane nearest the side the camera is mounted on, so the numbering flips automatically when you move the camera across the road.</p>
+  </div>
+</section>
+
+<!-- 02 -->
+<section id="scene">
+  <h2><span class="num">02</span>The 3D scene</h2>
+  <p class="lede">Two cameras exist. Don't confuse them.</p>
+
+  <p>The large 3D view is your <strong>orbit camera</strong> — drag to rotate, scroll to zoom, right-drag to pan. Moving it changes nothing about the design; it's just how you look at the model.</p>
+
+  <p>The <strong>Camera sensor view</strong> panel is the real thing: exactly what the camera being designed sees, rendered at the sensor's aspect ratio through the tilt, pan and FOV you've set. Click it to enlarge, and use <strong>Save PNG</strong> to export at full sensor resolution.</p>
+
+  <p>Road markings labelled <em>LANE&nbsp;1</em>, <em>LANE&nbsp;2</em>… sit painted on the tarmac near the camera. They are deliberately excluded from the sensor view so they can't be mistaken for something the camera would actually record.</p>
+</section>
+
+<!-- 03 -->
+<section id="road">
+  <h2><span class="num">03</span>Road &amp; camera</h2>
+  <p class="lede">Every slider value can also be typed — click the number beside a field to edit it directly.</p>
+
+  <div class="params">
+    <div class="param">
+      <div class="param-head"><span class="param-name">Lanes</span><span class="param-range">1 – 6 · step 1</span></div>
+      <p>How many lanes the camera must cover. Each lane is evaluated independently; results are reported for the worst one.</p>
+    </div>
+    <div class="param">
+      <div class="param-head"><span class="param-name">Lane width</span><span class="param-range">2.5 – 4.5 m · step 0.1</span></div>
+      <p>Centre-to-centre lane spacing. 3.5&nbsp;m is a typical motorway lane; 3.0–3.3&nbsp;m is common in dense urban layouts.</p>
+    </div>
+    <div class="param">
+      <div class="param-head"><span class="param-name">Height</span><span class="param-range">1 – 12 m · step 0.1</span></div>
+      <p>Mounting height above the road surface. Higher reduces the risk of vehicles occluding one another, but steepens the view angle onto the plate, which shortens it in the image.</p>
+    </div>
+    <div class="param">
+      <div class="param-head"><span class="param-name">Lateral X</span><span class="param-range">across the road ±4 m · step 0.1</span></div>
+      <p>Sideways offset from the road centreline. Zero is an overhead gantry. The slider range grows automatically with the road width.</p>
+      <p>This also sets lane numbering: positive X numbers lanes right-to-left, negative numbers them left-to-right, so <strong>Lane 1 is always nearest the camera</strong>.</p>
+    </div>
+    <div class="param">
+      <div class="param-head"><span class="param-name">Tilt — down angle</span><span class="param-range">0 – 89° · step 0.1</span></div>
+      <p>How far the lens is pitched below horizontal. 0° stares at the horizon; large values look steeply down at the road directly below.</p>
+    </div>
+    <div class="param">
+      <div class="param-head"><span class="param-name">Pan — aim L/R</span><span class="param-range">−90 – 90° · step 0.1</span></div>
+      <p>Horizontal rotation. Needed whenever the camera sits off to one side and must swing back across the carriageway.</p>
+    </div>
+    <div class="param">
+      <div class="param-head"><span class="param-name">Working distance</span><span class="param-range">0 – 150 m · step 1</span></div>
+      <p>The down-road distance you're designing for. It positions the sample vehicles and is the distance <strong>Re-center on road</strong> aims at. It does not itself constrain the readable zone — that comes out of the geometry.</p>
+    </div>
+  </div>
+
+  <h3>Re-center on road</h3>
+  <p>Computes tilt and pan that point the optical axis at the road centre, at plate height, at the current working distance. It's the fastest way out of a nonsensical aim, and a good starting point before running the solver.</p>
+</section>
+
+<!-- 04 -->
+<section id="lens">
+  <h2><span class="num">04</span>Lens &amp; field of view</h2>
+  <p class="lede">Horizontal and vertical FOV are not independent — the sensor shape ties them together.</p>
+
+  <p>Beside each FOV value is a padlock. <strong>Locking one axis derives it from the other plus the sensor resolution</strong>, which is the physically correct behaviour for a normal camera with square pixels. The locked slider greys out; the driving one stays live.</p>
+
+  <ul>
+    <li><strong>🔒 on vertical</strong> — you set hFOV, vFOV follows. This is the usual choice, since lens datasheets quote horizontal FOV.</li>
+    <li><strong>🔒 on horizontal</strong> — the reverse, for datasheets that quote vertical.</li>
+    <li><strong>Both unlocked</strong> — H and V set independently. Only correct for anamorphic optics or non-square pixels.</li>
+  </ul>
+
+  <p>Locking is exclusive: locking one releases the other. Click an active padlock again to release it.</p>
+
+  <div class="formula">
+    <span class="lbl">Vertical FOV when locked</span>
+    vFOV = 2 · atan( tan(hFOV / 2) · <em>SH</em> / <em>SW</em> )
+  </div>
+
+  <p>The <strong>Diagonal</strong> figure below the sliders is computed, never entered — it exists because many datasheets quote diagonal FOV and you'll want to cross-check.</p>
+
+  <div class="note watch">
+    <span class="tag">Don't do this</span>
+    <p>Diagonal FOV is <em>not</em> √(H² + V²). That angle-space shortcut is only valid for narrow fields; at 25–30° it is already off by more than half a degree, and at wide angles it is badly wrong. The tool uses the tangent form shown in section 09.</p>
+  </div>
+
+  <h3>Typing exact values</h3>
+  <p>Sliders step in 0.1°. To enter a datasheet value precisely, click the number itself — it becomes editable. Press <strong>Enter</strong> to commit or <strong>Esc</strong> to cancel. Values outside the valid range are clamped to the nearest limit.</p>
+</section>
+
+<!-- 05 -->
+<section id="zoom">
+  <h2><span class="num">05</span>Zoom lenses</h2>
+  <p class="lede">Model a varifocal lens by declaring both ends of its range.</p>
+
+  <p>Tick <strong>Zoom lens</strong>. The FOV you currently have becomes the <strong>wide</strong> end, and a second pair of fields appears for the <strong>tele</strong> end — the narrowest the lens goes. Both ends respect the same padlock, so the vertical figures stay consistent with your sensor.</p>
+
+  <p>With zoom active, the hFOV and vFOV sliders become the <strong>zoom position</strong>. A shaded band on each track marks the lens's real range, and the thumb will not move past either edge. The readout shows where you are:</p>
+
+  <div class="formula">
+    <span class="lbl">Zoom readout</span>
+    2.31× of 4.23× max &nbsp;(wide 29.4° → tele 7.1°)
+  </div>
+
+  <div class="formula">
+    <span class="lbl">Optical zoom factor</span>
+    zoom = tan(FOV<em>wide</em> / 2) / tan(FOV<em>tele</em> / 2)
+  </div>
+
+  <p>The factor is identical whether measured horizontally or vertically — the sensor aspect cancels — so a single number describes the lens.</p>
+
+  <div class="note key">
+    <span class="tag">Redefining the wide end</span>
+    <p>The wide bound is captured at the moment you tick the box, so it stays fixed while you zoom. To change it, untick Zoom lens, set the new wide FOV, and tick it again.</p>
+  </div>
+
+  <p>When the solver is allowed to vary FOV, it searches only within the lens's tele–wide range and reports the <strong>zoom factor needed</strong> for the solution it found — a figure you can take straight to a procurement spec.</p>
+</section>
+
+<!-- 06 -->
+<section id="plate">
+  <h2><span class="num">06</span>Sensor &amp; plate</h2>
+
+  <div class="params">
+    <div class="param">
+      <div class="param-head"><span class="param-name">Sensor resolution</span><span class="param-range">pixels, W × H</span></div>
+      <p>The camera's actual output resolution. Everything measured in pixels depends on this, and it drives the locked FOV axis. Use the real streaming resolution, not the sensor's maximum, if they differ.</p>
+    </div>
+    <div class="param">
+      <div class="param-head"><span class="param-name">Plate type</span><span class="param-range">US · EU · Indian · Custom</span></div>
+      <p>Presets fill in standard plate dimensions and change the rendered plate's appearance in the 3D scene.</p>
+    </div>
+    <div class="param">
+      <div class="param-head"><span class="param-name">Plate size</span><span class="param-range">inches, W × H</span></div>
+      <p>Editing either figure switches the preset to Custom. Physical plate size directly scales the pixel result — get this right for the region you're installing in.</p>
+    </div>
+    <div class="param">
+      <div class="param-head"><span class="param-name">Plate mount height</span><span class="param-range">0 – 2 m · step 0.05</span></div>
+      <p>Height of the plate centre above the road. 0.5&nbsp;m suits most cars; raise it for trucks and buses. The difference between camera height and this value is what sets the vertical geometry.</p>
+    </div>
+    <div class="param">
+      <div class="param-head"><span class="param-name">Approach angle</span><span class="param-range">−60 – 60° · step 1</span></div>
+      <p>Yaw of the vehicle relative to the lane direction — for vehicles crossing at an angle, or plates on a curve. Non-zero values foreshorten the plate and reduce readable width.</p>
+    </div>
+    <div class="param">
+      <div class="param-head"><span class="param-name">Char / plate height ratio</span><span class="param-range">0.3 – 0.95 · step 0.01</span></div>
+      <p>What fraction of the plate's height the characters occupy. Used to convert plate height into character height, since many ANPR specifications are written in character pixels.</p>
+    </div>
+    <div class="param">
+      <div class="param-head"><span class="param-name">Plate image</span><span class="param-range">optional upload</span></div>
+      <p>Drop in a photo of a real plate to see it mapped onto the vehicles. <strong>Use synthetic plate</strong> returns to the generated one.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section id="read">
+  <h2><span class="num">07</span>Reading the results</h2>
+
+  <h3>Coverage panel</h3>
+  <table class="tbl">
+    <tr><th>Readout</th><th>Meaning</th></tr>
+    <tr><td>Road width</td><td>Lanes × lane width.</td></tr>
+    <tr><td>Slant to plate</td><td>True 3D distance from lens to the plate at the working distance — always longer than the down-road distance.</td></tr>
+    <tr><td>Near on road</td><td>Closest point on the road inside the frame.</td></tr>
+    <tr><td>Far on road</td><td>Furthest point inside the frame.</td></tr>
+  </table>
+
+  <h3>Per-lane readout</h3>
+  <p>For each lane: plate <strong>width × height</strong> in pixels, and <strong>character height</strong> (prefixed <code>c</code>). A green dot means the plate is in frame at the working distance; grey means it isn't.</p>
+
+  <div class="note key">
+    <span class="tag">How pixels are measured</span>
+    <p>Plate height is the distance between the midpoints of the top and bottom edges — the projected centreline, not a bounding box. Under a skewed view a bounding box over-reports by up to a factor of two, which would quietly flatter every result.</p>
+  </div>
+
+  <h3>Camera sensor view</h3>
+  <p>The true camera image. If a plate isn't visible here, no amount of pixel arithmetic elsewhere matters — it isn't in frame. Click to enlarge and save at sensor resolution.</p>
+</section>
+
+<!-- 08 -->
+<section id="solver">
+  <h2><span class="num">08</span>Autocompute solver</h2>
+  <p class="lede">Fix what's constrained by the site. Let the tool work out the rest.</p>
+
+  <h3>Targets</h3>
+  <table class="tbl">
+    <tr><th>Field</th><th>What it does</th></tr>
+    <tr><td>Required plate pixels</td><td>The pixel threshold a plate must meet to count as readable.</td></tr>
+    <tr><td>Measure</td><td>Whether that threshold applies to plate <em>width</em> or to <em>character height</em>. Match whichever your ANPR vendor specifies.</td></tr>
+    <tr><td>Vehicle speed</td><td>Design speed in km/h, used for the capture guarantee.</td></tr>
+    <tr><td>Camera frame rate</td><td>Frames per second actually delivered by the camera.</td></tr>
+    <tr><td>Cover full lane width</td><td>On: a plate must be readable anywhere across the lane, not just on the centreline. Leave this on for honest results.</td></tr>
+  </table>
+
+  <h3>Free parameters</h3>
+  <p>Tick anything the solver may change: Height, Lateral X, Tilt, Pan, H-FOV, V-FOV, Lane width, Mount height. Everything unticked is held at its current value. A FOV axis that is padlocked appears greyed — it's derived, so freeing it would mean nothing.</p>
+
+  <h3>Constraints and objective</h3>
+  <p>The two <strong>constraints</strong> are pass/fail floors:</p>
+  <ul>
+    <li><strong>Plate pixels ≥ required</strong> — the worst lane must meet your pixel threshold.</li>
+    <li><strong>Capture guaranteed</strong> — the readable zone must be long enough that a vehicle at the design speed cannot pass through between frames.</li>
+  </ul>
+
+  <p>The <strong>objective</strong> is what gets maximised within those floors:</p>
+  <table class="tbl">
+    <tr><th>Objective</th><th>Maximises</th><th>Use when</th></tr>
+    <tr><td>max pixels</td><td>Worst-lane plate pixels</td><td>You want the sharpest possible plate.</td></tr>
+    <tr><td>max speed</td><td>Readable zone length</td><td>You want the widest speed tolerance.</td></tr>
+    <tr><td>max lanes</td><td>Number of lanes covered</td><td>You're asking how much road one camera can serve.</td></tr>
+  </table>
+
+  <p><strong>max lanes</strong> sweeps 1 through 6 lanes, optimising your free parameters at each count, and reports the largest that still satisfies every constraint — with a table showing exactly where it breaks down.</p>
+
+  <h3>Reading the result</h3>
+  <p>A green <strong>FEASIBLE</strong> pill means every enabled constraint is satisfied; the solved values are applied to the scene immediately so you can inspect them. <strong>INFEASIBLE</strong> means nothing in the allowed range works — what's shown is the closest the solver could get, which is useful for seeing how far off you are.</p>
+
+  <p>The report lists worst-lane pixels, readable zone length, guaranteed max speed, readable frames at your design speed, the zoom factor needed, and the readable range for every lane.</p>
+
+  <div class="note good">
+    <span class="tag">Tiebreaks</span>
+    <p>Where many solutions score identically, the solver prefers the sensible one: on equal pixels it takes the <strong>longer readable zone</strong>, and on otherwise equal results it takes the <strong>lower mounting height</strong>. These nudges are deliberately tiny and can never override a real gain in the objective.</p>
+  </div>
+</section>
+
+<!-- 09 -->
+<section id="math">
+  <h2><span class="num">09</span>The maths</h2>
+  <p class="lede">Everything the tool reports, and where it comes from.</p>
+
+  <h3>Scene axes</h3>
+  <p>+X right, +Y up, +Z down the road. The camera sits at (X,&nbsp;height,&nbsp;0); traffic occupies positive Z. Lane <em>i</em> (counting from zero) has its centre at:</p>
+  <div class="formula">
+    laneX = −roadW / 2 + (i + 0.5) · laneW &nbsp;&nbsp;where&nbsp; roadW = lanes · laneW
+  </div>
+
+  <h3>Lane numbering</h3>
+  <p>A display convention only — it never changes the physics, which always takes the worst lane.</p>
+  <div class="formula">
+    label = (camX &gt; 0) ? lanes − i : i + 1
+  </div>
+
+  <h3>Projection</h3>
+  <p>A rectilinear pinhole. From tilt and pan, build the forward vector, then the right and up vectors, and project a world point into normalised device coordinates:</p>
+  <div class="formula">
+    <span class="lbl">Basis</span>
+    f = [ sin(pan)·cos(tilt), −sin(tilt), cos(pan)·cos(tilt) ]<br>
+    r = normalize( f × up ) &nbsp;&nbsp; u = r × f
+  </div>
+  <div class="formula">
+    <span class="lbl">Point to pixels</span>
+    zc = v · f &nbsp;&nbsp;(depth along the axis; behind the camera ⇒ not visible)<br>
+    ndx = (v · r / zc) / tan(hFOV / 2)<br>
+    ndy = (v · u / zc) / tan(vFOV / 2)<br>
+    px&nbsp;&nbsp;= ( (ndx·0.5 + 0.5) · <em>SW</em>, &nbsp;(1 − (ndy·0.5 + 0.5)) · <em>SH</em> )
+  </div>
+  <p>The point is in frame when both ndx and ndy fall within −1…1.</p>
+
+  <h3>Field of view relationships</h3>
+  <div class="formula">
+    <span class="lbl">Vertical from horizontal (square pixels)</span>
+    vFOV = 2 · atan( tan(hFOV / 2) · <em>SH</em> / <em>SW</em> )
+  </div>
+  <div class="formula">
+    <span class="lbl">Diagonal — from the sensor rectangle, not the angles</span>
+    D = 2 · atan( √( tan²(H / 2) + tan²(V / 2) ) )
+  </div>
+  <p>Both fall out of the same pinhole triangle: half-width = <em>f</em>·tan(H/2), half-height = <em>f</em>·tan(V/2). Pythagoras applies on the sensor, in millimetres — never on the angles. The focal length cancels, which is why only the aspect ratio is needed.</p>
+
+  <h3>Plate size in pixels</h3>
+  <div class="formula">
+    hPx&nbsp;&nbsp;&nbsp;= | midpoint(TL,TR) − midpoint(BL,BR) |<br>
+    wPx&nbsp;&nbsp;&nbsp;= | midpoint(TL,BL) − midpoint(TR,BR) |<br>
+    charPx = hPx · charRatio
+  </div>
+
+  <h3>Readable zone and capture</h3>
+  <p>A plate is readable where it is both in frame and meets the pixel threshold. That produces a zone from <em>readNear</em> to <em>readFar</em>, of length <em>L</em>. With full-width coverage on, the tool samples across the whole lane and keeps the worst offset; it then takes the worst lane.</p>
+  <div class="formula">
+    <span class="lbl">Capture guarantee — the vehicle cannot skip the zone</span>
+    L ≥ speed / fps &nbsp;&nbsp;(speed in m/s)<br>
+    maxSpeed = L · fps · 3.6 &nbsp;km/h<br>
+    frames&nbsp;&nbsp;&nbsp;= floor( L · fps / (speed / 3.6) )
+  </div>
+
+  <h3>Solver scoring</h3>
+  <p>Feasible candidates are ranked by the objective plus the tiebreaks; infeasible ones by how badly they miss, so the search still converges toward the closest achievable design.</p>
+  <div class="formula">
+    <span class="lbl">Fitness · max pixels</span>
+    feasible&nbsp;&nbsp;: worstPeak + 0.001·worstL − 0.0001·camH<br>
+    infeasible: −10⁶ − violation · 1000
+  </div>
+  <p>The scale is deliberate: one pixel of real gain outweighs the entire zone tiebreak, which in turn outweighs the height tiebreak. Ties are broken sensibly; genuine improvements are never overridden.</p>
+</section>
+
+<!-- 10 -->
+<section id="files">
+  <h2><span class="num">10</span>Saving &amp; sharing</h2>
+
+  <table class="tbl">
+    <tr><th>Action</th><th>Produces</th></tr>
+    <tr><td>Save setup image</td><td>A 4K PNG of the scene with a legend: full configuration, autocompute results, and per-lane readable ranges. The drawing for the install file.</td></tr>
+    <tr><td>Save PNG <span style="font-weight:400">(sensor view)</span></td><td>The camera's own image at full sensor resolution — what the operator will actually see.</td></tr>
+    <tr><td>Export config</td><td>A JSON file holding every setting, including lens lock, zoom range and your last solver targets.</td></tr>
+    <tr><td>Import config</td><td>Restores a saved JSON exactly, re-deriving locked values and zoom bounds.</td></tr>
+  </table>
+
+  <div class="note key">
+    <span class="tag">Why JSON, not autosave</span>
+    <p>Nothing is stored in the browser. A configuration exists only as a file you exported, which means it can be version-controlled, attached to a tender, or emailed to whoever signs off the install.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section id="gotchas">
+  <h2><span class="num">11</span>Things to watch</h2>
+
+  <div class="note watch">
+    <span class="tag">Very wide lenses</span>
+    <p>The whole model assumes a <strong>rectilinear</strong> lens. Beyond roughly 90–100° horizontal, most real lenses are fisheye — equidistant or equisolid — and neither the derived vertical FOV nor the pixel figures will match the hardware. Check the datasheet's own vertical figure; if it disagrees materially with the derived one, the lens isn't rectilinear.</p>
+  </div>
+
+  <div class="note watch">
+    <span class="tag">Flat optima</span>
+    <p>Some geometries genuinely under-determine a parameter. A centred gantry at long range, for instance, can be almost insensitive to tilt — many values give the same pixel count. The solver's tiebreaks pick a reasonable member of that set, but if a solved value looks arbitrary, this is usually why. Compare the readable range against the aim to confirm it's physically sensible.</p>
+  </div>
+
+  <div class="note watch">
+    <span class="tag">Pixels can saturate</span>
+    <p>Under full-width coverage, zooming in shrinks the horizontal field and pushes the near edge of the readable zone further out, so worst-lane pixels can plateau instead of rising. When that happens, extra zoom buys <em>zone length</em> rather than sharpness — which is exactly what the zone tiebreak is there to capture.</p>
+  </div>
+
+  <div class="note watch">
+    <span class="tag">Model limits</span>
+    <p>Not modelled: motion blur and shutter speed, lens distortion, focus and depth of field, IR illumination and reflectivity, plate dirt or damage, headlight glare, weather, or vehicles occluding one another. Treat the pixel figures as a geometric ceiling — real-world performance sits below it.</p>
+  </div>
+
+  <div class="note good">
+    <span class="tag">Sanity check before you commit</span>
+    <p>Open the sensor view and confirm the plate is visibly in frame at the near and far ends of the reported readable zone. If the geometry says a range is readable but the camera clearly isn't looking there, trust the picture and re-check tilt, FOV and the padlock state.</p>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span><b>LPR Camera Placement Tool</b> — operating manual</span>
+    <span class="mono">rectilinear pinhole model</span>
+  </div>
+</footer>
+
+
+<button class="totop" id="totop" aria-label="Back to top">&uarr;</button>
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+  var secs=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  var bar=document.getElementById('progress'), top=document.getElementById('totop');
+  function onScroll(){
+    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    bar.style.setProperty('--w',(max>0?h.scrollTop/max*100:0)+'%');
+    top.classList.toggle('show',h.scrollTop>600);
+    var cur=0;
+    secs.forEach(function(s,i){ if(s && s.getBoundingClientRect().top<140) cur=i; });
+    links.forEach(function(a,i){ a.classList.toggle('active',i===cur); });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  onScroll();
+})();
+</script>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var chev='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+  var secs=[].slice.call(document.querySelectorAll('section'));
+
+  secs.forEach(function(sec){
+    sec.classList.add('reveal');
+    var h=sec.querySelector('h2'); if(!h) return;
+    var a=document.createElement('a'); a.className='anchor'; a.href='#'+sec.id; a.textContent='#'; a.setAttribute('aria-label','Link to this section');
+    var t=document.createElement('button'); t.type='button'; t.className='toggle'; t.setAttribute('aria-label','Collapse or expand section'); t.innerHTML=chev;
+    t.addEventListener('click',function(){ sec.classList.toggle('collapsed'); });
+    h.appendChild(a); h.appendChild(t);
+  });
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.06});
+    secs.forEach(function(s){io.observe(s);});
+  } else { secs.forEach(function(s){s.classList.add('in');}); }
+  // sections targeted by a sidebar jump must be visible immediately
+  window.addEventListener('hashchange',function(){var t=document.getElementById(location.hash.slice(1)); if(t) t.classList.add('in');});
+
+  [].slice.call(document.querySelectorAll('ol.steps > li')).forEach(function(li){
+    li.addEventListener('click',function(e){ if(e.target.closest('a')) return; li.classList.toggle('done'); });
+  });
+
+  [].slice.call(document.querySelectorAll('.formula')).forEach(function(f){
+    var b=document.createElement('button'); b.type='button'; b.className='copy'; b.textContent='Copy';
+    b.addEventListener('click',function(){
+      var clone=f.cloneNode(true); var l=clone.querySelector('.lbl'); if(l) l.remove(); var c=clone.querySelector('.copy'); if(c) c.remove();
+      var txt=clone.innerText||clone.textContent;
+      var done=function(){ b.textContent='Copied'; b.classList.add('ok'); setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok');},1400); };
+      if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt.trim()).then(done,done); } else { done(); }
+    });
+    f.appendChild(b);
+  });
+})();
+</script>
+
+<aside class="rail" id="rail" aria-label="In this section"></aside>
+<script>
+(function(){
+  var rail=document.getElementById('rail');
+  var secs=[].slice.call(document.querySelectorAll('section'));
+  var n=0;
+  secs.forEach(function(sec){ [].slice.call(sec.querySelectorAll('h3')).forEach(function(h){ if(!h.id) h.id='sub-'+(++n); }); });
+  var current=null;
+  function build(sec){
+    var hs=sec.querySelectorAll('h3');
+    if(!hs.length){ rail.classList.remove('has'); rail.innerHTML=''; return; }
+    var t=(sec.querySelector('h2')||{}).textContent||'';
+    rail.innerHTML='<h4>In this section</h4><ul>'+[].map.call(hs,function(h){return '<li><a href="#'+h.id+'">'+h.textContent+'</a></li>';}).join('')+'</ul>';
+    rail.classList.add('has');
+  }
+  function spy(){
+    var cur=secs[0];
+    secs.forEach(function(sec){ if(sec.getBoundingClientRect().top<160) cur=sec; });
+    if(cur!==current){ current=cur; build(cur); }
+    var links=[].slice.call(rail.querySelectorAll('a')), act=null;
+    links.forEach(function(a){ var h=document.getElementById(a.getAttribute('href').slice(1)); if(h && h.getBoundingClientRect().top<180) act=a; });
+    links.forEach(function(a){ a.classList.toggle('active',a===act); });
+  }
+  window.addEventListener('scroll',spy,{passive:true});
+  spy();
+})();
+</script>
+</body>
+</html>
