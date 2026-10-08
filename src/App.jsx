@@ -16,7 +16,7 @@ import ALPRCamera from './Components/ProductPages/ALPRCamera/ALPRCamera';
 import AiComputeBox from './Components/ProductPages/Ai-ComputeBox/Ai-ComputeBox';
 import Market from "./Components/Marketscomp/Market";
 import Hubpageblog from './Components/Hubpage Comp/Bloghubpages/Hubpageblog';
-import Casehubpage from './Components/Hubpage Comp/Casestudyhubpage/casehubpage';
+// import Casehubpage from './Components/Hubpage Comp/Casestudyhubpage/casehubpage';
 import AlprSoftware from './Components/ProductPages/alpr-software/AlprSoftware';
 import TrafficEnforcement from './Components/solutions/trafficeEnforcement/Itspage';
 import SpeedPage from './Components/solutions/speedcomp/Speedpage';
