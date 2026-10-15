@@ -13,6 +13,13 @@ import Licenseplaterecognition from "../../../assets/alpr-sdk/license-plate-reco
 import Licenseplateclassification from "../../../assets/alpr-sdk/license-plate-classification.png";
 import Vehiclemakemodel from "../../../assets/alpr-sdk/vehicle-make-model.png";
 import Vehiclecolor from "../../../assets/alpr-sdk/vehicle-color.png";
+
+import nivdia from "../../../assets/alpr-sdk/nvidia.jpg"
+import qualcomm from "../../../assets/alpr-sdk/qualcomm.png"
+import ambarella from "../../../assets/alpr-sdk/ambarella.png"
+import AI from "../../../assets/alpr-sdk/AI.jpg"
+
+
 import AlprSdkFaq from './AlprSdkFaq';
 const AlprSoftware = () => {
   const [animateOnScroll, setAnimateOnScroll] = useState(false);
@@ -51,34 +58,52 @@ const AlprSoftware = () => {
   const workflowSteps = [
     {
       icon: Vehicaldetection,
-      title: 'Vehicle Detection',
-      description: 'Accurately identify vehicles and license plates directly from live video feeds'
+      title: 'SDK & REST API',
+      description: 'Integrate ALPR directly into your application or access recognition results through supported REST APIs'
     },
-    {
-      icon: Licenseplatedetection,
-      title: 'License Plate Detection',
-      description: 'Support jurisdiction-level plate formats used in traffic systems - with inbuilt recognition logic'
+     {
+      icon: Vehicaldetection,
+      title: 'RTSP Live Streams',
+      description: 'Process live camera streams for continuous vehicle and license plate recognition'
+    }, {
+      icon: Vehicaldetection,
+      title: 'Recorded Video',
+      description: 'Analyze recorded traffic footage with timestamped vehicle and plate recognition results'
+    }, {
+      icon: Vehicaldetection,
+      title: 'Images & Batch Processing',
+      description: 'Examine individual vehicle images or batches of captured frames'
     },
-    {
-      icon: Licenseplaterecognition,
-      title: 'License Plate Recognition',
-      description: 'Classify based on plate format and usage for enforcement and access workflows'
-    },
-    {
-      icon: Licenseplateclassification,
-      title: 'License Plate Classification',
-      description: 'Preserve vehicle/plate identity to reduce duplicate reads and stabilize traffic analytics'
-    },
-    {
-      icon: Vehiclemakemodel,
-      title: 'Vehicle Make & Model',
-      description: 'Extract visual attributes like vehicle make, model and color detection from moving vehicles'
-    },
-    {
-      icon: Vehiclecolor,
-      title: 'Vehicle Color',
-      description: 'Estimate vehicle direction and average speed to quantify movement and generate precise metadata.'
-    }
+    //   {
+    //   icon: Vehicaldetection,
+    //   title: 'Vehicle Detection',
+    //   description: 'Accurately identify vehicles and license plates directly from live video feeds'
+    // },
+    // {
+    //   icon: Licenseplatedetection,
+    //   title: 'License Plate Detection',
+    //   description: 'Support jurisdiction-level plate formats used in traffic systems - with inbuilt recognition logic'
+    // },
+    // {
+    //   icon: Licenseplaterecognition,
+    //   title: 'License Plate Recognition',
+    //   description: 'Classify based on plate format and usage for enforcement and access workflows'
+    // },
+    // {
+    //   icon: Licenseplateclassification,
+    //   title: 'License Plate Classification',
+    //   description: 'Preserve vehicle/plate identity to reduce duplicate reads and stabilize traffic analytics'
+    // },
+    // {
+    //   icon: Vehiclemakemodel,
+    //   title: 'Vehicle Make & Model',
+    //   description: 'Extract visual attributes like vehicle make, model and color detection from moving vehicles'
+    // },
+    // {
+    //   icon: Vehiclecolor,
+    //   title: 'Vehicle Color',
+    //   description: 'Estimate vehicle direction and average speed to quantify movement and generate precise metadata.'
+    // }
   ];
 
   const features = [
@@ -116,53 +141,90 @@ const AlprSoftware = () => {
   ];
 
   const benefits = [
-    {
-      title: 'Accuracy',
-      description: '~99.1% recognition accuracy in industry standard datasets',
+
+
+  {
+      title: 'Real-Time Processing',
+      description: 'Inspect vehicle and plate data directly at the edge',
       image: 'https://www.e-consystems.com/images/anpr-software/accuracy.png'
     },
-    {
-      title: 'Tilt',
-      description: 'Up to 60° camera tilt and high vehicle speeds',
-      image: 'https://www.e-consystems.com/images/anpr-software/tilt.png'
+      {
+      title: 'Lower Bandwidth Requirements',
+      description: 'Reduce the need to continuously transmit high-bandwidth video to the cloud',
+      image: 'https://www.e-consystems.com/images/anpr-software/accuracy.png'
     },
-    {
-      title: 'Pixel Density',
-      description: 'Low plate pixel density (30-60 px)',
-      image: 'https://www.e-consystems.com/images/anpr-software/pixels.png'
+      {
+      title: 'More Data Control',
+      description: 'Keep image and video processing within the deployment environment',
+      image: 'https://www.e-consystems.com/images/anpr-software/accuracy.png'
     },
-    {
-      title: 'No Motion Blur',
-      description: 'No motion blur, skew, or shadows during fast transitions',
-      image: 'https://www.e-consystems.com/images/anpr-software/no-motion-blur.png'
+      {
+      title: 'Low-Latency Integration',
+      description: 'Make recognition results available directly to local applications and workflows',
+      image: 'https://www.e-consystems.com/images/anpr-software/accuracy.png'
     },
-    {
-      title: 'Varying light conditions',
-      description: 'Consistent performance in extreme brightness, tunnels, and night-time scenes',
-      image: 'https://www.e-consystems.com/images/anpr-software/performance.png'
-    },
-    {
-      title: 'Adverse Weather',
-      description: 'Stability in rain, fog, mist, and wet reflective roads',
-      image: 'https://www.e-consystems.com/images/anpr-software/adverse-weather.png'
-    }
+
+    // {
+    //   title: 'Accuracy',
+    //   description: '~99.1% recognition accuracy in industry standard datasets',
+    //   image: 'https://www.e-consystems.com/images/anpr-software/accuracy.png'
+    // },
+    // {
+    //   title: 'Tilt',
+    //   description: 'Up to 60° camera tilt and high vehicle speeds',
+    //   image: 'https://www.e-consystems.com/images/anpr-software/tilt.png'
+    // },
+    // {
+    //   title: 'Pixel Density',
+    //   description: 'Low plate pixel density (30-60 px)',
+    //   image: 'https://www.e-consystems.com/images/anpr-software/pixels.png'
+    // },
+    // {
+    //   title: 'No Motion Blur',
+    //   description: 'No motion blur, skew, or shadows during fast transitions',
+    //   image: 'https://www.e-consystems.com/images/anpr-software/no-motion-blur.png'
+    // },
+    // {
+    //   title: 'Varying light conditions',
+    //   description: 'Consistent performance in extreme brightness, tunnels, and night-time scenes',
+    //   image: 'https://www.e-consystems.com/images/anpr-software/performance.png'
+    // },
+    // {
+    //   title: 'Adverse Weather',
+    //   description: 'Stability in rain, fog, mist, and wet reflective roads',
+    //   image: 'https://www.e-consystems.com/images/anpr-software/adverse-weather.png'
+    // }
   ];
 
   const applications = [
     {
-      title: 'Traffic enforcement',
-      image: 'https://www.e-consystems.com/images/ptz-camera/red-light-violation.jpg',
-      link: '/solutions/traffic-enforcement-camera'
-    },
-    {
-      title: 'Automated Tolling and MLFF systems',
+      // title: 'Automated Tolling and MLFF systems',
+      title: 'Tolling',
       image: 'https://www.e-consystems.com/images/markets/its/tolling-highway-infrastructure.jpg'
     },
     {
-      title: 'Parking lot management',
+      title: 'Traffic Enforcement',
+      image: 'https://www.e-consystems.com/images/ptz-camera/red-light-violation.jpg',
+      // link: '/solutions/traffic-enforcement-camera'
+    },
+      {
+      title: 'Parking',
       image: 'https://www.e-consystems.com/images/markets/its/parking-management.jpg',
-      link: 'https://www.e-consystems.com/markets/smart-cities-cameras/parking-lot-management.asp'
-    }
+      // link: 'https://www.e-consystems.com/markets/smart-cities-cameras/parking-lot-management.asp'
+    },
+   
+    {
+      // title: 'Automated Tolling and MLFF systems',
+      title: 'Traffic Management',
+      image: 'https://www.e-consystems.com/images/markets/its/tolling-highway-infrastructure.jpg'
+    },
+    // {
+    //   // title: 'Parking lot management',
+    //   title: 'Traffic Management',
+    //   image: 'https://www.e-consystems.com/images/markets/its/parking-management.jpg',
+    //   link: 'https://www.e-consystems.com/markets/smart-cities-cameras/parking-lot-management.asp'
+    // },
+     
   ];
 
   const videoData = [
@@ -231,21 +293,56 @@ const AlprSoftware = () => {
         <div className="container">
           <div className="aboutParaMain">
              <h2 className="titlePrimary">
-                Automatic Licence Plate Recognition SDK
+              All-in-One SDK: From Vehicle Detection to Plate Recognition
               </h2>
-            <p className='paragraphtext'>e-con Systems' ALPR SDK leverages deep-learning models to support the complete ALPR workflow. This includes vehicle and plate detection, recognition, classification, tracking, and metadata generation.
-              Optimized for both edge compute and cloud-scale deployments, the models are trained and validated on diverse global datasets and stress-tested traffic conditions. They maintain reliable performance in fast motion, low-light environments, and adverse weather.
+            <p className='paragraphtext'>e-con Systems' ALPR SDK uses deep-learning models for vehicle and license plate detection, recognition, classification, tracking, and metadata generation.
             </p>
-            <p className='paragraphtext'>This ALPR SDK also integrates seamlessly across platforms, with hardware acceleration for NVIDIA Jetson, Qualcomm, Ambarella, and custom AI accelerators via ONNX/TensorRT.</p>
+            <p className='paragraphtext'>Designed primarily for edge AI deployments, the SDK processes vehicle and license plate data close to the camera. This reduces cloud dependency, bandwidth demands, and response latency.</p>
+            <p className='paragraphtext'>e-con Systems' ALPR SDK is ideal for challenging traffic conditions, such as fast-moving vehicles, low light, glare, multiple vehicles, and adverse weather.</p>
+
           </div>
         </div>
       </section>
+
+
+
+      
+{/* Real-World Plate Recognition Section */}
+<section className="real-world-recognition">
+  <div className="container">
+    <div className="real-world-header">
+       <h2 className="titlePrimary">
+Enabling Real-World Plate Recognition              </h2>
+      
+    </div>
+
+    <div className="recognition-conditions">
+      {[
+        "Low Light",
+        "Glare",
+        "High-Speed Traffic",
+        "Multi-Line License Plates",
+        "Multiple Vehicles",
+        "Rain",
+      ].map((condition, index) => (
+        <div className="recognition-condition" key={index}>
+          <span className="recognition-check">✓</span>
+   
+          <img src="" alt="" />
+          <span>{condition}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Workflow Section */}
       <section className="workflow">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">What our ALPR SDK Offers</h2>
+            {/* <h2 className="section-title">What our ALPR SDK Offers</h2> */}
+      <h2 className="section-title">      Easily Integrate ALPR into Your Application</h2>
           </div>
 
           <div className="workflow-steps">
@@ -255,6 +352,8 @@ const AlprSoftware = () => {
                   <img src={step.icon} alt={step.title} />
                 </div>
                 <h4 className="step-title">{step.title}</h4>
+                <p>{step.description}</p>
+
               </div>
             ))}
           </div>
@@ -266,10 +365,11 @@ const AlprSoftware = () => {
                   <img src={step.icon} alt={step.title} />
                 </div>
                 <h4 className="step-title">{step.title}</h4>
+                 <p>{step.description}</p>
               </div>
             ))}
           </div>
-          <div className="text-center mt-4">
+          {/* <div className="text-center mt-4">
             <Modelbutton
               className="Advancing-Img-diagnostic-button gtm-btn"
               text="Contact Us"
@@ -277,12 +377,12 @@ const AlprSoftware = () => {
               animationColor="#00aeef"
               hoverColor="#00aeef"
             />
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Features Zigzag Section */}
-      <section className="software-features-zigzag">
+      {/* <section className="software-features-zigzag">
         <div className="container">
           <div className="zigzag-header">
             <h2>Key ALPR SDK Features</h2>
@@ -313,13 +413,16 @@ const AlprSoftware = () => {
             );
           })}
         </div>
-      </section>
+      </section> */}
 
       {/* Performance Section */}
       <section className="performance">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title"> Performance Metrics</h2>
+            {/* <h2 className="section-title"> Performance Metrics</h2> */}
+                        <h2 className="section-title">Cloud-Ready and Perfect for Edge AI</h2>
+
+            
           </div>
           <div className="performance-details">
             {benefits.map((benefit, index) => (
@@ -332,6 +435,56 @@ const AlprSoftware = () => {
           </div>
         </div>
       </section>
+
+
+{/* Embedded AI Platforms Section */}
+
+<section className="ai-platforms">
+  <div className="container">
+    <h2 className="ai-platforms-title">
+      Optimized for Embedded AI Platforms
+    </h2>
+
+    {/* Row 1: Supported Platform */}
+    <div className="platform-row">
+      <h3>Supported Platform</h3>
+      <div className="platform-logo-card">
+        <img src={nivdia} alt="NVIDIA" />
+        <div>
+          <h4>NVIDIA Jetson</h4>
+          <p>with TensorRT acceleration</p>
+        </div>
+      </div>
+    </div>
+
+    {/* Row 2: Integration Options */}
+    <div className="platform-row">
+      <h3>Integration Options</h3>
+      <div className="integration-logos">
+        <div className="platform-logo-card">
+          <img src={qualcomm} alt="Qualcomm" />
+        </div>
+
+        <div className="platform-logo-card">
+          <img src={ambarella} alt="Ambarella" />
+        </div>
+
+       <div className="custom-accelerator-card">
+  <img
+    src={AI}
+    alt="Custom AI Accelerator Chip"
+    className="custom-accelerator-image"
+  />
+  <h4>Custom AI Accelerators</h4>
+  <p>Available on request</p>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
       {/* Applications Section */}
       <section className="applications" id="industries">
@@ -355,7 +508,35 @@ const AlprSoftware = () => {
         </div>
       </section>
 
-      {/* Video Section */}
+      
+      {/* ALPR FAQ section */}
+      <AlprSdkFaq />
+    
+
+ {/* Contact CTA Section */}
+      <section className="contact-cta">
+        <div className="contact-cta-inner">
+          <div className="contact-cta-content">
+            <h3 className="contact-cta-title">
+              Let's Build Your Next ALPR Solution
+            </h3>
+            <p className="contact-cta-description">
+              Ensure accuracy, speed, and long-term scalability — backed by 22+ years of proven expertise in embedded vision and AI systems.
+            </p>
+          </div>
+
+          <div className="contact-cta-action">
+            <Modelbutton
+              className="Advancing-Img-diagnostic-button gtm-btn"
+              text="Contact Us"
+              backgroundColor="#69ba2f"
+              animationColor="#00aeef"
+              hoverColor="#00aeef"
+            />
+          </div>
+        </div>
+      </section>
+{/* Video Section */}
       <section className="video-showcase">
         <FsLightbox
           toggler={toggler}
@@ -407,9 +588,7 @@ const AlprSoftware = () => {
           </div>
         </div>
       </section>
-      {/* ALPR FAQ section */}
-      <AlprSdkFaq />
-      {/* Hardware Section */}
+  {/* Hardware Section */}
       <section className="hardware" id="products">
         <div className="container">
           <div className="hardware-grid">
@@ -456,30 +635,7 @@ const AlprSoftware = () => {
           </div>
         </div>
       </section>
-
-      {/* Contact CTA Section */}
-      <section className="contact-cta">
-        <div className="contact-cta-inner">
-          <div className="contact-cta-content">
-            <h3 className="contact-cta-title">
-              Let's Build Your Next ALPR Solution
-            </h3>
-            <p className="contact-cta-description">
-              Ensure accuracy, speed, and long-term scalability — backed by 22+ years of proven expertise in embedded vision and AI systems.
-            </p>
-          </div>
-
-          <div className="contact-cta-action">
-            <Modelbutton
-              className="Advancing-Img-diagnostic-button gtm-btn"
-              text="Contact Us"
-              backgroundColor="#69ba2f"
-              animationColor="#00aeef"
-              hoverColor="#00aeef"
-            />
-          </div>
-        </div>
-      </section>
+     
     </div>
   );
 };

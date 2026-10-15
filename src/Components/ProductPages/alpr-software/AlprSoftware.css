@@ -57,7 +57,7 @@
 
 /* Section Common Styles */
 .alpr-software section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 @media (max-width: 768px) {
@@ -273,7 +273,7 @@
 
 .alpr-software .performance-details {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
 }
 
@@ -319,7 +319,7 @@
 
 .alpr-software .applications-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
 }
 
@@ -851,4 +851,247 @@
     .alpr-software .zigzag-row {
         gap: 30px;
     }
+}
+
+
+
+
+/* Real-World Plate Recognition */
+.real-world-recognition {
+  background: #ffffff;
+  
+}
+
+.real-world-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.real-world-header h2 {
+  color: #081b54;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.recognition-conditions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.recognition-condition {
+  display: flex;
+ 
+  gap: 10px;
+  padding: 18px 12px;
+  background: #ffffff;
+  border: 1px solid #d9eaff;
+  border-radius: 8px;
+  color: #10245c;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.recognition-condition:hover {
+  border-color: #087bff;
+  box-shadow: 0 4px 14px rgba(0, 123, 255, 0.12);
+  transform: translateY(-3px);
+}
+
+.recognition-check {
+  color: #087bff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .recognition-conditions {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .real-world-header h2 {
+    font-size: 23px;
+  }
+
+  .recognition-condition {
+    font-size: 14px;
+    padding: 14px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .recognition-conditions {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Embedded AI Platforms */
+.alpr-software .ai-platforms {
+  padding: 40px 0;
+  background: #ffffff;
+}
+
+.alpr-software .ai-platforms-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #196793;
+  margin-bottom: 30px;
+}
+
+.alpr-software .platform-row {
+  padding: 22px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.alpr-software .platform-row h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 18px;
+}
+
+/* NVIDIA Platform */
+.alpr-software .platform-logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 100px;
+  padding: 15px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  background: #ffffff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.alpr-software .platform-logo-card:hover,
+.alpr-software .custom-accelerator-card:hover {
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.alpr-software .platform-logo-card img {
+  width: 140px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.alpr-software .platform-logo-card h4,
+.alpr-software .custom-accelerator-card h4 {
+  margin: 0 0 5px;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.alpr-software .platform-logo-card p,
+.alpr-software .custom-accelerator-card p {
+  margin: 0;
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Integration Options */
+.alpr-software .integration-logos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.alpr-software .integration-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 130px;
+  padding: 20px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  background: #ffffff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.alpr-software .integration-item:hover {
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.alpr-software .integration-item img {
+  width: 140px;
+  height: 55px;
+  object-fit: contain;
+}
+
+/* Custom AI Accelerator */
+.alpr-software .custom-accelerator-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 130px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  background: #ffffff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.alpr-software .custom-accelerator-image {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 768px) {
+  .alpr-software .ai-platforms {
+    padding: 30px 0;
+  }
+
+  .alpr-software .ai-platforms-title {
+    font-size: 24px;
+  }
+
+  .alpr-software .integration-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .alpr-software .platform-logo-card img,
+  .alpr-software .integration-item img {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .alpr-software .ai-platforms-title {
+    font-size: 22px;
+  }
+
+  .alpr-software .platform-row {
+    padding: 18px 0;
+  }
+
+  .alpr-software .platform-logo-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .alpr-software .integration-logos {
+    grid-template-columns: 1fr;
+  }
+
+  .alpr-software .integration-item,
+  .alpr-software .custom-accelerator-card {
+    min-height: 110px;
+  }
 }
