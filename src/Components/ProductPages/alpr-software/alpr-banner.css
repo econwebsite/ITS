@@ -235,7 +235,7 @@
 
 .alpr-banner-btn {
   padding: 12px 25px;
-  background-color: #1e2f7ac9;
+  background-color: #69ba2f;
   color: #fff;
   border: 1px solid #fff;
   border-radius: 0;
@@ -245,7 +245,7 @@
 }
 
 .alpr-banner-btn:hover {
-  background-color: #69ba2f;
+  background-color: #1e2f7ac9;
 }
 
 @media (max-width: 576px) {
@@ -386,5 +386,11 @@ align-items: center;
   .number-plate img {
     max-width: 110px;
     max-height: 90px;
+  }
+}
+
+@media (max-width: 576px) {
+  .number-plate {
+    display: none;
   }
 }
