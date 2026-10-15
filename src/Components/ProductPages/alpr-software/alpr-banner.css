@@ -222,3 +222,35 @@
     font-size: 0.8rem;
   }
 }
+
+
+
+.alpr-banner-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.alpr-banner-btn {
+  padding: 12px 25px;
+  background-color: #1e2f7ac9;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.alpr-banner-btn:hover {
+  background-color: #69ba2f;
+}
+
+@media (max-width: 576px) {
+  .alpr-banner-buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

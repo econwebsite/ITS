@@ -6,8 +6,8 @@ import Modelbutton from "../../Button comp/Modelbutton";
 const banners = [
   {
     image: banner1,
-    title: "Automatic Licence Plate Recognition SDK",
-    subtitle: "Get accurate, real-time vehicle and license plate visual intelligence",
+    title: "Automatic License Plate Recognition SDK",
+    subtitle: "Real-Time Vehicle and License Plate Intelligence — Built for Edge Vision",
   }
 ];
 
@@ -26,9 +26,12 @@ const Banner = () => {
         <div className="banner-overlay">
           <h1>{banners[0].title}</h1>
           <p>{banners[0].subtitle}</p>
+
+     <div className="alpr-banner-buttons">
+  <button className="alpr-banner-btn">View Demo</button>
           <Modelbutton 
             className="alpr-banner-button gtm-btn" 
-            text="Talk to an ITS Expert &gt;&gt;" 
+            text="Get SDK Evaluation &gt;&gt;" 
             backgroundColor="#1e2f7ac9" 
             animationColor="#69ba2f" 
             hoverColor="#00aeef"
@@ -38,7 +41,13 @@ const Banner = () => {
             border="1px solid #fff"
             productName="ALPR Software Suite"
             title="ALPR Software Suite"
-          />
+          /> 
+          </div>
+
+       
+
+
+
         </div>
       </div>
 

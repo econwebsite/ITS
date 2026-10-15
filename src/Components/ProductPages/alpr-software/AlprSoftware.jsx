@@ -342,7 +342,7 @@ Enabling Real-World Plate Recognition              </h2>
         <div className="container">
           <div className="section-header">
             {/* <h2 className="section-title">What our ALPR SDK Offers</h2> */}
-      <h2 className="section-title">      Easily Integrate ALPR into Your Application</h2>
+      <h2 className="section-title">  Easily Integrate ALPR into Your Application</h2>
           </div>
 
           <div className="workflow-steps">
@@ -441,9 +441,13 @@ Enabling Real-World Plate Recognition              </h2>
 
 <section className="ai-platforms">
   <div className="container">
-    <h2 className="ai-platforms-title">
-      Optimized for Embedded AI Platforms
-    </h2>
+    <div className='section-header'>
+
+<h2 className="section-title">Optimized for Embedded AI Platforms</h2>
+
+
+    </div>
+                            
 
     {/* Row 1: Supported Platform */}
     <div className="platform-row">
@@ -490,7 +494,7 @@ Enabling Real-World Plate Recognition              </h2>
       <section className="applications" id="industries">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">Popular ALPR Use Cases</h2>
+            <h2 className="section-title">Empowering ITS Applications</h2>
           </div>
 
           <div className="applications-grid">
