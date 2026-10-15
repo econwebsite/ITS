@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./alpr-banner.css";
-import banner1 from "../../../assets/alpr/alpr-software-suite-banner.jpg"
+import banner1 from "../../../assets/alpr-sdk/banner.jpg"
+import numberplate from "../../../assets/alpr-sdk/numberplate.jpg"
+
 import Modelbutton from "../../Button comp/Modelbutton";
 // Temporary free images need to replace later)
 const banners = [
@@ -23,15 +25,17 @@ const Banner = () => {
           alt={banners[0].title}
           className="banner-image"
         />
-        <div className="banner-overlay">
-          <h1>{banners[0].title}</h1>
+        <div className="banner-new-overlay">
+         
+         <div>
+           <h1>{banners[0].title}</h1>
           <p>{banners[0].subtitle}</p>
 
      <div className="alpr-banner-buttons">
   <button className="alpr-banner-btn">View Demo</button>
           <Modelbutton 
             className="alpr-banner-button gtm-btn" 
-            text="Get SDK Evaluation &gt;&gt;" 
+            text="Get SDK Evaluation " 
             backgroundColor="#1e2f7ac9" 
             animationColor="#69ba2f" 
             hoverColor="#00aeef"
@@ -44,9 +48,12 @@ const Banner = () => {
           /> 
           </div>
 
-       
+      
+         </div>
 
-
+ <div className="number-plate">
+        <img  src={numberplate} alt="" />
+       </div>
 
         </div>
       </div>
