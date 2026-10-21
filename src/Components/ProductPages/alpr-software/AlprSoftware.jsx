@@ -19,6 +19,15 @@ import qualcomm from "../../../assets/alpr-sdk/qualcomm.png"
 import ambarella from "../../../assets/alpr-sdk/ambarella.png"
 import AI from "../../../assets/alpr-sdk/AI.jpg"
 
+import IntegrateALPRIcon01 from "../../../assets/alpr-sdk/IntegrateALPRIcon01.png"
+import IntegrateALPRIcon02 from "../../../assets/alpr-sdk/IntegrateALPRIcon02.png"
+import IntegrateALPRIcon03 from "../../../assets/alpr-sdk/IntegrateALPRIcon03.png"
+import IntegrateALPRIcon04 from "../../../assets/alpr-sdk/IntegrateALPRIcon04.png"
+
+import CloudReadyIcon01 from "../../../assets/alpr-sdk/Cloud-ReadyIcon01.png"
+import CloudReadyIcon02 from "../../../assets/alpr-sdk/Cloud-ReadyIcon02.png"
+import CloudReadyIcon03 from "../../../assets/alpr-sdk/Cloud-ReadyIcon03.png"
+import CloudReadyIcon04 from "../../../assets/alpr-sdk/Cloud-ReadyIcon04.png"
 
 import AlprSdkFaq from './AlprSdkFaq';
 const AlprSoftware = () => {
@@ -57,20 +66,20 @@ const AlprSoftware = () => {
 
   const workflowSteps = [
     {
-      icon: Vehicaldetection,
+      icon: IntegrateALPRIcon01,
       title: 'SDK & REST API',
       description: 'Integrate ALPR directly into your application or access recognition results through supported REST APIs'
     },
      {
-      icon: Vehicaldetection,
+      icon: IntegrateALPRIcon02,
       title: 'RTSP Live Streams',
       description: 'Process live camera streams for continuous vehicle and license plate recognition'
     }, {
-      icon: Vehicaldetection,
+      icon: IntegrateALPRIcon03,
       title: 'Recorded Video',
       description: 'Analyze recorded traffic footage with timestamped vehicle and plate recognition results'
     }, {
-      icon: Vehicaldetection,
+      icon: IntegrateALPRIcon04,
       title: 'Images & Batch Processing',
       description: 'Examine individual vehicle images or batches of captured frames'
     },
@@ -146,22 +155,22 @@ const AlprSoftware = () => {
   {
       title: 'Real-Time Processing',
       description: 'Inspect vehicle and plate data directly at the edge',
-      image: 'https://www.e-consystems.com/images/anpr-software/accuracy.png'
+      image: CloudReadyIcon01,
     },
       {
       title: 'Lower Bandwidth Requirements',
       description: 'Reduce the need to continuously transmit high-bandwidth video to the cloud',
-      image: 'https://www.e-consystems.com/images/anpr-software/accuracy.png'
+      image: CloudReadyIcon02
     },
       {
       title: 'More Data Control',
       description: 'Keep image and video processing within the deployment environment',
-      image: 'https://www.e-consystems.com/images/anpr-software/accuracy.png'
+      image: CloudReadyIcon03
     },
       {
       title: 'Low-Latency Integration',
       description: 'Make recognition results available directly to local applications and workflows',
-      image: 'https://www.e-consystems.com/images/anpr-software/accuracy.png'
+      image: CloudReadyIcon04
     },
 
     // {
