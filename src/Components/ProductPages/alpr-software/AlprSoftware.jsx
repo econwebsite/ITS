@@ -29,6 +29,11 @@ import CloudReadyIcon02 from "../../../assets/alpr-sdk/Cloud-ReadyIcon02.png"
 import CloudReadyIcon03 from "../../../assets/alpr-sdk/Cloud-ReadyIcon03.png"
 import CloudReadyIcon04 from "../../../assets/alpr-sdk/Cloud-ReadyIcon04.png"
 
+import TrafficManagement from "../../../assets/alpr-sdk/TrafficManagement.jpg"
+import TrafficEnforcement from "../../../assets/alpr-sdk/TrafficEnforcement.jpg"
+
+
+
 import AlprSdkFaq from './AlprSdkFaq';
 const AlprSoftware = () => {
   const [animateOnScroll, setAnimateOnScroll] = useState(false);
@@ -213,7 +218,7 @@ const AlprSoftware = () => {
     },
     {
       title: 'Traffic Enforcement',
-      image: 'https://www.e-consystems.com/images/ptz-camera/red-light-violation.jpg',
+      image: TrafficEnforcement,
       // link: '/solutions/traffic-enforcement-camera'
     },
       {
@@ -225,7 +230,7 @@ const AlprSoftware = () => {
     {
       // title: 'Automated Tolling and MLFF systems',
       title: 'Traffic Management',
-      image: 'https://www.e-consystems.com/images/markets/its/tolling-highway-infrastructure.jpg'
+      image:TrafficManagement
     },
     // {
     //   // title: 'Parking lot management',
