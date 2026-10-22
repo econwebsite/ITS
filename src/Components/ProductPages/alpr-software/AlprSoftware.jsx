@@ -32,6 +32,14 @@ import CloudReadyIcon04 from "../../../assets/alpr-sdk/Cloud-ReadyIcon04.png"
 import TrafficManagement from "../../../assets/alpr-sdk/TrafficManagement.jpg"
 import TrafficEnforcement from "../../../assets/alpr-sdk/TrafficEnforcement.jpg"
 
+import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
+import PaletteIcon from "@mui/icons-material/Palette";
+import CategoryIcon from "@mui/icons-material/Category";
+import PublicIcon from "@mui/icons-material/Public";
+import TextFieldsIcon from "@mui/icons-material/TextFields";
+import SearchIcon from "@mui/icons-material/Search";
+import RouteIcon from "@mui/icons-material/Route";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 
 
 import AlprSdkFaq from './AlprSdkFaq';
@@ -119,6 +127,18 @@ const AlprSoftware = () => {
     //   description: 'Estimate vehicle direction and average speed to quantify movement and generate precise metadata.'
     // }
   ];
+
+
+  const anprAnalyticsFeatures = [
+  { title: "Vehicle Color Recognition", icon: PaletteIcon },
+  { title: "Vehicle Type Classification", icon: CategoryIcon },
+  { title: "Vehicle Make & Model Recognition", icon: DirectionsCarIcon },
+  { title: "Plate Jurisdiction Classification", icon: PublicIcon },
+  { title: "License Plate Recognition (OCR)", icon: TextFieldsIcon },
+  { title: "License Plate Detection", icon: SearchIcon },
+  { title: "Vehicle Tracking", icon: RouteIcon },
+  { title: "Vehicle Detection", icon: LocalShippingIcon },
+];
 
   const features = [
     {
@@ -318,6 +338,28 @@ const AlprSoftware = () => {
         </div>
       </section>
 
+<section className="anpr-features-section">
+  <div className="anpr-features-heading">
+  
+    <h2 className="titlePrimary">AI-Powered ANPR &amp; Vehicle Analytics</h2>
+  </div>
+
+  <div className="anpr-features-grid">
+    {anprAnalyticsFeatures.map((feature, index) => {
+      const Icon = feature.icon;
+
+      return (
+        <div className="anpr-feature-card" key={feature.title}>
+        
+          <div className="anpr-feature-icon">
+            <Icon />
+          </div>
+          <p>{feature.title}</p>
+        </div>
+      );
+    })}
+  </div>
+</section>
 
 
       
@@ -330,23 +372,21 @@ Enabling Real-World Plate Recognition              </h2>
       
     </div>
 
-    <div className="recognition-conditions">
-      {[
-        "Low Light",
-        "Glare",
-        "High-Speed Traffic",
-        "Multi-Line License Plates",
-        "Multiple Vehicles",
-        "Rain",
-      ].map((condition, index) => (
-        <div className="recognition-condition" key={index}>
-          <span className="recognition-check">✓</span>
-   
-          <img src="" alt="" />
-          <span>{condition}</span>
-        </div>
-      ))}
+ <div className="alpr-condition-list">
+  {[
+    "Low Light",
+    "Glare",
+    "High-Speed Traffic",
+    "Multi-Line License Plates",
+    "Multiple Vehicles",
+    "Rain",
+  ].map((condition, index) => (
+    <div className="alpr-condition-item" key={index}>
+      <span className="alpr-condition-bullet">•</span>
+      <span>{condition}</span>
     </div>
+  ))}
+</div>
   </div>
 </section>
 
