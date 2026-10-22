@@ -28,8 +28,11 @@ const Banner = () => {
         <div className="banner-new-overlay">
          
          <div>
-           <h1>{banners[0].title}</h1>
-          <p>{banners[0].subtitle}</p>
+         
+         <div className="banner-text">
+            <h1 className="banner-heading">{banners[0].title}</h1>
+          <p className="banner-paragraph">{banners[0].subtitle}</p>
+         </div>
 
      <div className="alpr-banner-buttons">
   <button className="alpr-banner-btn">View Demo</button>

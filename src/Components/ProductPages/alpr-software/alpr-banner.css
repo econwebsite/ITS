@@ -230,7 +230,7 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .alpr-banner-btn {
@@ -393,4 +393,8 @@ align-items: center;
   .number-plate {
     display: none;
   }
+}
+
+.banner-text{
+  padding-bottom: 70px;
 }

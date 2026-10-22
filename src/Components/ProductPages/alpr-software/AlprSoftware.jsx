@@ -340,8 +340,9 @@ const AlprSoftware = () => {
 
 <section className="anpr-features-section">
   <div className="anpr-features-heading">
-  
-    <h2 className="titlePrimary">AI-Powered ANPR &amp; Vehicle Analytics</h2>
+    <h2 className="titlePrimary">
+      AI-Powered ANPR &amp; Vehicle Analytics
+    </h2>
   </div>
 
   <div className="anpr-features-grid">
@@ -349,11 +350,11 @@ const AlprSoftware = () => {
       const Icon = feature.icon;
 
       return (
-        <div className="anpr-feature-card" key={feature.title}>
-        
+        <div className="anpr-feature-item" key={feature.title}>
           <div className="anpr-feature-icon">
             <Icon />
           </div>
+
           <p>{feature.title}</p>
         </div>
       );
