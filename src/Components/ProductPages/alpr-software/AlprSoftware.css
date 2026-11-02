@@ -877,7 +877,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
-
+/* 
 .recognition-condition {
   display: flex;
  
@@ -932,7 +932,7 @@
 .alpr-software .ai-platforms {
   padding: 40px 0;
   background: #f9f9f9;
-}
+} */
 
 .alpr-software .ai-platforms-title {
   text-align: center;

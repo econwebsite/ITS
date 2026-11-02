@@ -9,7 +9,7 @@ const banners = [
   {
     image: banner1,
     title: "Automatic License Plate Recognition SDK",
-    subtitle: "Real-Time Vehicle and License Plate Intelligence — Built for Edge Vision",
+    subtitle: "Real-Time Vehicle and License Plate Intelligence — Built for Edge & Cloud",
   }
 ];
 
@@ -27,7 +27,7 @@ const Banner = () => {
         />
         <div className="banner-new-overlay">
          
-         <div>
+         <div className="banner-contents">
          
          <div className="banner-text">
             <h1 className="banner-heading">{banners[0].title}</h1>
@@ -35,8 +35,15 @@ const Banner = () => {
          </div>
 
      <div className="alpr-banner-buttons">
-  <button className="alpr-banner-btn">View Demo</button>
-          <Modelbutton 
+  <button className="alpr-banner-btn">  <a
+    href="https://try.trafficsenz.com/try-trafficsenz"
+    target="_blank"
+    rel="noopener noreferrer"
+  
+  >
+    Try Now <span >→</span>
+  </a></button>
+          {/* <Modelbutton 
             className="alpr-banner-button gtm-btn" 
             text="Get SDK Evaluation " 
             backgroundColor="#1e2f7ac9" 
@@ -48,7 +55,7 @@ const Banner = () => {
             border="1px solid #fff"
             productName="ALPR Software Suite"
             title="ALPR Software Suite"
-          /> 
+          />  */}
           </div>
 
       
